@@ -7,6 +7,8 @@ type Neighbor = {
   id: number;
   yaw: number;
   pitch: number;
+  viewYaw: number;
+  viewPitch: number;
   distance: number;
 };
 
@@ -37,18 +39,6 @@ type Manifest = {
 
 function wrapAngle(angle: number) {
   return ((angle + 180) % 360 + 360) % 360 - 180;
-}
-
-function selectHotspotNeighbors(neighbors: Neighbor[]) {
-  const selected: Neighbor[] = [];
-  for (const neighbor of [...neighbors].sort((a, b) => a.distance - b.distance)) {
-    const overlapsAnotherHotspot = selected.some(
-      (candidate) => Math.abs(wrapAngle(candidate.yaw - neighbor.yaw)) < 24,
-    );
-    if (!overlapsAnotherHotspot) selected.push(neighbor);
-    if (selected.length === 3) break;
-  }
-  return selected;
 }
 
 function MapPlot({
@@ -236,6 +226,9 @@ export default function Home() {
     materialRef.current = material;
     scene.add(new THREE.Mesh(geometry, material));
     const target = new THREE.Vector3();
+    const cameraDirection = new THREE.Vector3();
+    const hotspotDirection = new THREE.Vector3();
+    const projectedHotspot = new THREE.Vector3();
 
     const resize = () => {
       const rect = viewport.getBoundingClientRect();
@@ -306,20 +299,23 @@ export default function Home() {
       renderer.render(scene, camera);
 
       const rect = viewport.getBoundingClientRect();
-      selectHotspotNeighbors(activePanoRef.current?.neighbors ?? []).forEach((neighbor) => {
+      camera.getWorldDirection(cameraDirection);
+      activePanoRef.current?.neighbors.forEach((neighbor) => {
         const element = hotspotRefs.current[neighbor.id];
         if (!element) return;
-        const difference = wrapAngle(neighbor.yaw - lonRef.current);
-        const floorPitch = neighbor.pitch - THREE.MathUtils.radToDeg(
-          Math.atan2(1.75, Math.max(1.2, neighbor.distance)),
+        const yaw = THREE.MathUtils.degToRad(neighbor.yaw);
+        const pitch = THREE.MathUtils.degToRad(neighbor.pitch);
+        const horizontal = Math.cos(pitch);
+        hotspotDirection.set(
+          horizontal * Math.cos(yaw),
+          Math.sin(pitch),
+          horizontal * Math.sin(yaw),
         );
-        const vertical = latRef.current - floorPitch;
-        const x = rect.width / 2 + (difference / camera.fov) * rect.width * 0.88;
-        const unclampedY = rect.height * 0.56 + (vertical / camera.fov) * rect.height * 0.92;
-        const y = Math.max(rect.height * 0.54, Math.min(rect.height * 0.84, unclampedY));
-        const inView = Math.abs(difference) < camera.fov * 0.59
-          && unclampedY > rect.height * 0.46
-          && unclampedY < rect.height * 0.91;
+        const inFront = cameraDirection.dot(hotspotDirection) > 0.04;
+        projectedHotspot.copy(hotspotDirection).multiplyScalar(80).project(camera);
+        const inView = inFront
+          && Math.abs(projectedHotspot.x) < 1.08
+          && Math.abs(projectedHotspot.y) < 1.08;
 
         if (!inView) {
           element.style.opacity = "0";
@@ -327,7 +323,11 @@ export default function Home() {
           return;
         }
 
-        const scale = Math.max(0.78, Math.min(1.08, 1.12 - neighbor.distance * 0.03));
+        const x = (projectedHotspot.x * 0.5 + 0.5) * rect.width;
+        const y = (-projectedHotspot.y * 0.5 + 0.5) * rect.height;
+        const distanceScale = Math.max(0.78, Math.min(1.08, 1.12 - neighbor.distance * 0.03));
+        const zoomScale = Math.max(0.84, Math.min(1.28, 82 / camera.fov));
+        const scale = distanceScale * zoomScale;
         element.style.setProperty("--hotspot-scale", scale.toFixed(3));
         element.style.opacity = "1";
         element.style.pointerEvents = "auto";
@@ -381,20 +381,20 @@ export default function Home() {
           materialRef.current.map = texture;
           materialRef.current.needsUpdate = true;
         }
-        const routeNeighbors = selectHotspotNeighbors(currentPanorama.neighbors);
+        const routeNeighbors = currentPanorama.neighbors;
         const arrival = currentPanorama.neighbors.find((neighbor) => neighbor.id === previousPanoRef.current);
         const onwardNeighbors = routeNeighbors.filter((neighbor) => neighbor.id !== previousPanoRef.current);
         let initialNeighbor = routeNeighbors[0];
         if (arrival && onwardNeighbors.length) {
-          const onwardYaw = wrapAngle(arrival.yaw + 180);
+          const onwardYaw = wrapAngle(arrival.viewYaw + 180);
           initialNeighbor = [...onwardNeighbors].sort(
-            (a, b) => Math.abs(wrapAngle(a.yaw - onwardYaw)) - Math.abs(wrapAngle(b.yaw - onwardYaw)),
+            (a, b) => Math.abs(wrapAngle(a.viewYaw - onwardYaw)) - Math.abs(wrapAngle(b.viewYaw - onwardYaw)),
           )[0];
         } else if (arrival) {
           initialNeighbor = arrival;
         }
-        lonRef.current = initialNeighbor?.yaw ?? 0;
-        latRef.current = Math.min(18, (initialNeighbor?.pitch ?? 0) + 2);
+        lonRef.current = initialNeighbor?.viewYaw ?? 0;
+        latRef.current = Math.min(24, (initialNeighbor?.viewPitch ?? 0) + 2);
         fovRef.current = 82;
         if (cameraRef.current) {
           cameraRef.current.fov = 82;
@@ -444,8 +444,8 @@ export default function Home() {
   };
 
   const resetView = () => {
-    lonRef.current = currentPanorama?.neighbors[0]?.yaw ?? 0;
-    latRef.current = currentPanorama?.neighbors[0]?.pitch ?? 0;
+    lonRef.current = currentPanorama?.neighbors[0]?.viewYaw ?? 0;
+    latRef.current = currentPanorama?.neighbors[0]?.viewPitch ?? 0;
     fovRef.current = 82;
     zoom(0);
     setToast("Vue recentrée vers le prochain point");
@@ -486,7 +486,7 @@ export default function Home() {
         </div>
       </header>
 
-      {hotspotsVisible && selectHotspotNeighbors(currentPanorama?.neighbors ?? []).map((neighbor) => {
+      {hotspotsVisible && currentPanorama?.neighbors.map((neighbor) => {
         const destination = manifest?.panoramas.find((item) => item.id === neighbor.id);
         if (!destination) return null;
         return (
