@@ -39,6 +39,18 @@ function wrapAngle(angle: number) {
   return ((angle + 180) % 360 + 360) % 360 - 180;
 }
 
+function selectHotspotNeighbors(neighbors: Neighbor[]) {
+  const selected: Neighbor[] = [];
+  for (const neighbor of [...neighbors].sort((a, b) => a.distance - b.distance)) {
+    const overlapsAnotherHotspot = selected.some(
+      (candidate) => Math.abs(wrapAngle(candidate.yaw - neighbor.yaw)) < 24,
+    );
+    if (!overlapsAnotherHotspot) selected.push(neighbor);
+    if (selected.length === 3) break;
+  }
+  return selected;
+}
+
 function MapPlot({
   panoramas,
   currentId,
@@ -160,6 +172,7 @@ export default function Home() {
   const materialRef = useRef<THREE.MeshBasicMaterial | null>(null);
   const textureRef = useRef<THREE.Texture | null>(null);
   const activePanoRef = useRef<Panorama | null>(null);
+  const previousPanoRef = useRef<number | null>(null);
   const hotspotRefs = useRef<Record<number, HTMLButtonElement | null>>({});
   const compassRef = useRef<HTMLSpanElement>(null);
   const lonRef = useRef(0);
@@ -293,27 +306,29 @@ export default function Home() {
       renderer.render(scene, camera);
 
       const rect = viewport.getBoundingClientRect();
-      activePanoRef.current?.neighbors.forEach((neighbor, index) => {
+      selectHotspotNeighbors(activePanoRef.current?.neighbors ?? []).forEach((neighbor) => {
         const element = hotspotRefs.current[neighbor.id];
         if (!element) return;
         const difference = wrapAngle(neighbor.yaw - lonRef.current);
-        const vertical = latRef.current - neighbor.pitch;
-        const inView = Math.abs(difference) < camera.fov * 0.54;
+        const floorPitch = neighbor.pitch - THREE.MathUtils.radToDeg(
+          Math.atan2(1.75, Math.max(1.2, neighbor.distance)),
+        );
+        const vertical = latRef.current - floorPitch;
+        const x = rect.width / 2 + (difference / camera.fov) * rect.width * 0.88;
+        const unclampedY = rect.height * 0.56 + (vertical / camera.fov) * rect.height * 0.92;
+        const y = Math.max(rect.height * 0.54, Math.min(rect.height * 0.84, unclampedY));
+        const inView = Math.abs(difference) < camera.fov * 0.59
+          && unclampedY > rect.height * 0.46
+          && unclampedY < rect.height * 0.91;
 
-        let x: number;
-        let y: number;
-        if (inView) {
-          x = rect.width / 2 + (difference / camera.fov) * rect.width * 0.84;
-          y = rect.height * 0.62 + (vertical / camera.fov) * rect.height * 0.48;
-          element.dataset.edge = "center";
-          element.style.setProperty("--arrow-rotate", "0deg");
-        } else {
-          const onLeft = difference < 0;
-          x = onLeft ? 46 : rect.width - 46;
-          y = Math.min(rect.height - 150, rect.height * 0.45 + (index - 1.3) * 62);
-          element.dataset.edge = onLeft ? "left" : "right";
-          element.style.setProperty("--arrow-rotate", onLeft ? "-90deg" : "90deg");
+        if (!inView) {
+          element.style.opacity = "0";
+          element.style.pointerEvents = "none";
+          return;
         }
+
+        const scale = Math.max(0.78, Math.min(1.08, 1.12 - neighbor.distance * 0.03));
+        element.style.setProperty("--hotspot-scale", scale.toFixed(3));
         element.style.opacity = "1";
         element.style.pointerEvents = "auto";
         element.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`;
@@ -366,8 +381,20 @@ export default function Home() {
           materialRef.current.map = texture;
           materialRef.current.needsUpdate = true;
         }
-        lonRef.current = currentPanorama.neighbors[0]?.yaw ?? 0;
-        latRef.current = Math.min(10, currentPanorama.neighbors[0]?.pitch ?? 0);
+        const routeNeighbors = selectHotspotNeighbors(currentPanorama.neighbors);
+        const arrival = currentPanorama.neighbors.find((neighbor) => neighbor.id === previousPanoRef.current);
+        const onwardNeighbors = routeNeighbors.filter((neighbor) => neighbor.id !== previousPanoRef.current);
+        let initialNeighbor = routeNeighbors[0];
+        if (arrival && onwardNeighbors.length) {
+          const onwardYaw = wrapAngle(arrival.yaw + 180);
+          initialNeighbor = [...onwardNeighbors].sort(
+            (a, b) => Math.abs(wrapAngle(a.yaw - onwardYaw)) - Math.abs(wrapAngle(b.yaw - onwardYaw)),
+          )[0];
+        } else if (arrival) {
+          initialNeighbor = arrival;
+        }
+        lonRef.current = initialNeighbor?.yaw ?? 0;
+        latRef.current = Math.min(18, (initialNeighbor?.pitch ?? 0) + 2);
         fovRef.current = 82;
         if (cameraRef.current) {
           cameraRef.current.fov = 82;
@@ -403,6 +430,7 @@ export default function Home() {
   const goToPanorama = (id: number) => {
     const target = manifest?.panoramas.find((panorama) => panorama.id === id);
     if (!target || target.id === currentId) return;
+    previousPanoRef.current = currentId;
     setCurrentId(target.id);
     setMapOpen(false);
   };
@@ -458,7 +486,7 @@ export default function Home() {
         </div>
       </header>
 
-      {hotspotsVisible && currentPanorama?.neighbors.map((neighbor) => {
+      {hotspotsVisible && selectHotspotNeighbors(currentPanorama?.neighbors ?? []).map((neighbor) => {
         const destination = manifest?.panoramas.find((item) => item.id === neighbor.id);
         if (!destination) return null;
         return (
@@ -467,12 +495,10 @@ export default function Home() {
             ref={(element) => { hotspotRefs.current[neighbor.id] = element; }}
             className="nav-hotspot"
             onClick={() => goToPanorama(neighbor.id)}
-            aria-label={`Aller au point ${neighbor.id}, à ${neighbor.distance} mètres`}
+            aria-label={`Avancer vers le panorama ${neighbor.id}`}
           >
-            <span className="hotspot-arrow">↑</span>
-            <span className="hotspot-label">
-              <strong>{String(neighbor.id).padStart(2, "0")}</strong>
-              {neighbor.distance} m
+            <span className="hotspot-disc" aria-hidden="true">
+              <span className="hotspot-chevron" />
             </span>
           </button>
         );
