@@ -80,40 +80,13 @@ const minX = Math.min(...rows.map((row) => row.position.x));
 const maxX = Math.max(...rows.map((row) => row.position.x));
 const minY = Math.min(...rows.map((row) => row.position.y));
 const maxY = Math.max(...rows.map((row) => row.position.y));
-const cameraHeight = 1.65;
 
 const round = (value, digits) => Number(value.toFixed(digits));
-
-const anglesFor = (from, to) => {
-  const inverseOrientation = from.orientation.clone().invert();
-  const cameraVector = to.position.clone().sub(from.position).applyQuaternion(inverseOrientation);
-  const groundPosition = to.position.clone();
-  groundPosition.z -= cameraHeight;
-  const groundVector = groundPosition.sub(from.position).applyQuaternion(inverseOrientation);
-
-  const toAngles = (vector) => ({
-    yaw: THREE.MathUtils.radToDeg(Math.atan2(vector.y, vector.x)),
-    pitch: THREE.MathUtils.radToDeg(Math.atan2(vector.z, Math.hypot(vector.x, vector.y))),
-  });
-
-  const view = toAngles(cameraVector);
-  const ground = toAngles(groundVector);
-  return {
-    yaw: round(ground.yaw, 3),
-    pitch: round(Math.max(ground.pitch, view.pitch - 35), 3),
-    viewYaw: round(view.yaw, 3),
-    viewPitch: round(view.pitch, 3),
-    distance: round(cameraVector.length(), 2),
-  };
-};
 
 const panoramas = rows.map((row) => {
   const base = baseById.get(row.id);
   if (!base) throw new Error(`Panorama ${row.id} is missing from the current manifest.`);
-  const neighbors = [...adjacency.get(row.id)].map((neighborId) => {
-    const neighbor = poseById.get(neighborId);
-    return { id: neighborId, ...anglesFor(row, neighbor) };
-  });
+  const neighbors = [...adjacency.get(row.id)].map((neighborId) => ({ id: neighborId }));
 
   return {
     ...base,
@@ -157,6 +130,8 @@ const output = {
   site: {
     ...baseManifest.site,
     panoramaCount: panoramas.length,
+    poseSource: path.basename(sourcePath),
+    poseConvention: "NavVis local X forward, Y right, Z up; quaternion local-to-dataset",
     bounds: {
       width: round(maxX - minX, 3),
       height: round(maxY - minY, 3),

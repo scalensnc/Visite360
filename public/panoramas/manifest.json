@@ -6,7 +6,9 @@
     "bounds": {
       "width": 30.837,
       "height": 28.217
-    }
+    },
+    "poseSource": "pano-poses-registered.csv",
+    "poseConvention": "NavVis local X forward, Y right, Z up; quaternion local-to-dataset"
   },
   "panoramas": [
     {
@@ -30,12 +32,7 @@
       },
       "neighbors": [
         {
-          "id": 1,
-          "yaw": -168.09,
-          "pitch": 0.096,
-          "viewYaw": -167.874,
-          "viewPitch": 10.678,
-          "distance": 8.83
+          "id": 1
         }
       ],
       "timestamp": 1754982702.209542
@@ -61,20 +58,10 @@
       },
       "neighbors": [
         {
-          "id": 0,
-          "yaw": -152.621,
-          "pitch": -4.568,
-          "viewYaw": -152.456,
-          "viewPitch": 6.008,
-          "distance": 8.83
+          "id": 0
         },
         {
-          "id": 2,
-          "yaw": 13.981,
-          "pitch": -17.679,
-          "viewYaw": 14.095,
-          "viewPitch": -6.16,
-          "distance": 8.1
+          "id": 2
         }
       ],
       "timestamp": 1754982755.201394
@@ -100,20 +87,10 @@
       },
       "neighbors": [
         {
-          "id": 1,
-          "yaw": -175.405,
-          "pitch": -7.028,
-          "viewYaw": -175.475,
-          "viewPitch": 4.493,
-          "distance": 8.1
+          "id": 1
         },
         {
-          "id": 3,
-          "yaw": 17.257,
-          "pitch": -24.777,
-          "viewYaw": 17.02,
-          "viewPitch": -4.72,
-          "distance": 4.51
+          "id": 3
         }
       ],
       "timestamp": 1754982775.919873
@@ -139,20 +116,10 @@
       },
       "neighbors": [
         {
-          "id": 2,
-          "yaw": -151.207,
-          "pitch": -11.786,
-          "viewYaw": -150.071,
-          "viewPitch": 8.308,
-          "distance": 4.51
+          "id": 2
         },
         {
-          "id": 4,
-          "yaw": -66.093,
-          "pitch": -24.89,
-          "viewYaw": -63.136,
-          "viewPitch": -5.913,
-          "distance": 4.65
+          "id": 4
         }
       ],
       "timestamp": 1754982785.524896
@@ -178,20 +145,10 @@
       },
       "neighbors": [
         {
-          "id": 3,
-          "yaw": -177.84,
-          "pitch": -10.314,
-          "viewYaw": -178.191,
-          "viewPitch": 9.553,
-          "distance": 4.65
+          "id": 3
         },
         {
-          "id": 5,
-          "yaw": 134.722,
-          "pitch": -9.354,
-          "viewYaw": 133.231,
-          "viewPitch": 5.972,
-          "distance": 6.06
+          "id": 5
         }
       ],
       "timestamp": 1754982797.428447
@@ -217,20 +174,10 @@
       },
       "neighbors": [
         {
-          "id": 4,
-          "yaw": -77.164,
-          "pitch": -16.877,
-          "viewYaw": -75.399,
-          "viewPitch": -1.914,
-          "distance": 6.06
+          "id": 4
         },
         {
-          "id": 6,
-          "yaw": 64.297,
-          "pitch": -15.739,
-          "viewYaw": 63.396,
-          "viewPitch": -4.785,
-          "distance": 8.49
+          "id": 6
         }
       ],
       "timestamp": 1754982818.955949
@@ -256,20 +203,10 @@
       },
       "neighbors": [
         {
-          "id": 5,
-          "yaw": -163.919,
-          "pitch": -2.871,
-          "viewYaw": -163.804,
-          "viewPitch": 8.127,
-          "distance": 8.49
+          "id": 5
         },
         {
-          "id": 7,
-          "yaw": -52.191,
-          "pitch": -18.604,
-          "viewYaw": -50.426,
-          "viewPitch": -5.09,
-          "distance": 6.77
+          "id": 7
         }
       ],
       "timestamp": 1754982832.96262
@@ -295,20 +232,10 @@
       },
       "neighbors": [
         {
-          "id": 6,
-          "yaw": -63.683,
-          "pitch": -15.363,
-          "viewYaw": -62.454,
-          "viewPitch": -1.645,
-          "distance": 6.77
+          "id": 6
         },
         {
-          "id": 8,
-          "yaw": -16.64,
-          "pitch": -18.123,
-          "viewYaw": -16.326,
-          "viewPitch": -5.015,
-          "distance": 7.1
+          "id": 8
         }
       ],
       "timestamp": 1754982888.223438
@@ -334,20 +261,10 @@
       },
       "neighbors": [
         {
-          "id": 7,
-          "yaw": 159.829,
-          "pitch": -9.772,
-          "viewYaw": 159.783,
-          "viewPitch": 3.275,
-          "distance": 7.1
+          "id": 7
         },
         {
-          "id": 9,
-          "yaw": 85.23,
-          "pitch": -19.079,
-          "viewYaw": 84.02,
-          "viewPitch": -1.783,
-          "distance": 5.21
+          "id": 9
         }
       ],
       "timestamp": 1754982901.143129
@@ -373,20 +290,10 @@
       },
       "neighbors": [
         {
-          "id": 8,
-          "yaw": -93.407,
-          "pitch": -14.656,
-          "viewYaw": -92.107,
-          "viewPitch": 3.098,
-          "distance": 5.21
+          "id": 8
         },
         {
-          "id": 10,
-          "yaw": 64.09,
-          "pitch": -17.032,
-          "viewYaw": 63.249,
-          "viewPitch": -3.806,
-          "distance": 6.96
+          "id": 10
         }
       ],
       "timestamp": 1754982926.864513
@@ -412,20 +319,10 @@
       },
       "neighbors": [
         {
-          "id": 9,
-          "yaw": -48.288,
-          "pitch": -15.255,
-          "viewYaw": -47.347,
-          "viewPitch": -1.865,
-          "distance": 6.96
+          "id": 9
         },
         {
-          "id": 11,
-          "yaw": 62.929,
-          "pitch": -18.461,
-          "viewYaw": 61.576,
-          "viewPitch": -2.05,
-          "distance": 5.6
+          "id": 11
         }
       ],
       "timestamp": 1754982988.042163
@@ -451,20 +348,10 @@
       },
       "neighbors": [
         {
-          "id": 10,
-          "yaw": -110.7,
-          "pitch": -13.753,
-          "viewYaw": -109.17,
-          "viewPitch": 2.555,
-          "distance": 5.6
+          "id": 10
         },
         {
-          "id": 12,
-          "yaw": 76.053,
-          "pitch": -20.97,
-          "viewYaw": 74.153,
-          "viewPitch": -2.03,
-          "distance": 4.8
+          "id": 12
         }
       ],
       "timestamp": 1754982999.962952
@@ -490,20 +377,10 @@
       },
       "neighbors": [
         {
-          "id": 11,
-          "yaw": -112.884,
-          "pitch": -17.204,
-          "viewYaw": -111.234,
-          "viewPitch": 1.598,
-          "distance": 4.8
+          "id": 11
         },
         {
-          "id": 13,
-          "yaw": 66.719,
-          "pitch": -16.464,
-          "viewYaw": 65.462,
-          "viewPitch": -1.758,
-          "distance": 6.29
+          "id": 13
         }
       ],
       "timestamp": 1754983011.149685
@@ -529,36 +406,16 @@
       },
       "neighbors": [
         {
-          "id": 12,
-          "yaw": -166.313,
-          "pitch": -9.402,
-          "viewYaw": -166.11,
-          "viewPitch": 5.243,
-          "distance": 6.29
+          "id": 12
         },
         {
-          "id": 14,
-          "yaw": -44.45,
-          "pitch": -16.329,
-          "viewYaw": -43.279,
-          "viewPitch": -2.53,
-          "distance": 6.73
+          "id": 14
         },
         {
-          "id": 44,
-          "yaw": 25.971,
-          "pitch": -32.945,
-          "viewYaw": 24.903,
-          "viewPitch": -5.483,
-          "distance": 3.18
+          "id": 44
         },
         {
-          "id": 16,
-          "yaw": -146.665,
-          "pitch": -4.97,
-          "viewYaw": -146.158,
-          "viewPitch": 5.331,
-          "distance": 9.06
+          "id": 16
         }
       ],
       "timestamp": 1754983023.593465
@@ -584,20 +441,10 @@
       },
       "neighbors": [
         {
-          "id": 13,
-          "yaw": -73.3,
-          "pitch": -15.308,
-          "viewYaw": -72.403,
-          "viewPitch": -1.654,
-          "distance": 6.73
+          "id": 13
         },
         {
-          "id": 15,
-          "yaw": 4.742,
-          "pitch": -26.722,
-          "viewYaw": 5.008,
-          "viewPitch": -3.575,
-          "distance": 3.86
+          "id": 15
         }
       ],
       "timestamp": 1754983055.215767
@@ -623,12 +470,7 @@
       },
       "neighbors": [
         {
-          "id": 14,
-          "yaw": -166.362,
-          "pitch": -17.019,
-          "viewYaw": -166.142,
-          "viewPitch": 6.117,
-          "distance": 3.86
+          "id": 14
         }
       ],
       "timestamp": 1754983064.834509
@@ -654,28 +496,13 @@
       },
       "neighbors": [
         {
-          "id": 17,
-          "yaw": 14.806,
-          "pitch": -32.74,
-          "viewYaw": 15.13,
-          "viewPitch": 1.078,
-          "distance": 2.48
+          "id": 17
         },
         {
-          "id": 13,
-          "yaw": 97.729,
-          "pitch": -10.614,
-          "viewYaw": 97.81,
-          "viewPitch": -0.292,
-          "distance": 9.06
+          "id": 13
         },
         {
-          "id": 40,
-          "yaw": 10.348,
-          "pitch": -26.086,
-          "viewYaw": 10.581,
-          "viewPitch": 1.13,
-          "distance": 3.23
+          "id": 40
         }
       ],
       "timestamp": 1754983082.741111
@@ -701,20 +528,10 @@
       },
       "neighbors": [
         {
-          "id": 16,
-          "yaw": 115.97,
-          "pitch": -31.081,
-          "viewYaw": 111.187,
-          "viewPitch": 2.003,
-          "distance": 2.48
+          "id": 16
         },
         {
-          "id": 18,
-          "yaw": 15.56,
-          "pitch": -15.872,
-          "viewYaw": 14.283,
-          "viewPitch": 19.128,
-          "distance": 2.65
+          "id": 18
         }
       ],
       "timestamp": 1754983095.078881
@@ -740,20 +557,10 @@
       },
       "neighbors": [
         {
-          "id": 17,
-          "yaw": -171.641,
-          "pitch": -44.351,
-          "viewYaw": -170.482,
-          "viewPitch": -20.911,
-          "distance": 2.65
+          "id": 17
         },
         {
-          "id": 19,
-          "yaw": -39.266,
-          "pitch": 1.748,
-          "viewYaw": -36.079,
-          "viewPitch": 36.748,
-          "distance": 2.09
+          "id": 19
         }
       ],
       "timestamp": 1754983111.706513
@@ -779,20 +586,10 @@
       },
       "neighbors": [
         {
-          "id": 18,
-          "yaw": -94.911,
-          "pitch": -61.494,
-          "viewYaw": -89.813,
-          "viewPitch": -40.823,
-          "distance": 2.09
+          "id": 18
         },
         {
-          "id": 20,
-          "yaw": -43.704,
-          "pitch": -4.297,
-          "viewYaw": -39.552,
-          "viewPitch": 30.703,
-          "distance": 2.13
+          "id": 20
         }
       ],
       "timestamp": 1754983124.332247
@@ -818,28 +615,13 @@
       },
       "neighbors": [
         {
-          "id": 19,
-          "yaw": 140.102,
-          "pitch": -59.23,
-          "viewYaw": 141.811,
-          "viewPitch": -34.939,
-          "distance": 2.13
+          "id": 19
         },
         {
-          "id": 21,
-          "yaw": 74.404,
-          "pitch": -32.838,
-          "viewYaw": 75.967,
-          "viewPitch": 2.162,
-          "distance": 2.11
+          "id": 21
         },
         {
-          "id": 28,
-          "yaw": -5.833,
-          "pitch": -33.074,
-          "viewYaw": -6.648,
-          "viewPitch": 1.926,
-          "distance": 1.48
+          "id": 28
         }
       ],
       "timestamp": 1754983136.557011
@@ -865,20 +647,10 @@
       },
       "neighbors": [
         {
-          "id": 20,
-          "yaw": 117.289,
-          "pitch": -36.583,
-          "viewYaw": 119.352,
-          "viewPitch": -1.583,
-          "distance": 2.11
+          "id": 20
         },
         {
-          "id": 22,
-          "yaw": -124.726,
-          "pitch": -35.436,
-          "viewYaw": -125.962,
-          "viewPitch": -0.436,
-          "distance": 2.07
+          "id": 22
         }
       ],
       "timestamp": 1754983164.231396
@@ -904,20 +676,10 @@
       },
       "neighbors": [
         {
-          "id": 21,
-          "yaw": 148.211,
-          "pitch": -36.361,
-          "viewYaw": 148.647,
-          "viewPitch": -1.361,
-          "distance": 2.07
+          "id": 21
         },
         {
-          "id": 23,
-          "yaw": 7.79,
-          "pitch": -41.212,
-          "viewYaw": 7.34,
-          "viewPitch": -12.016,
-          "distance": 2.54
+          "id": 23
         }
       ],
       "timestamp": 1754983177.994093
@@ -943,20 +705,10 @@
       },
       "neighbors": [
         {
-          "id": 22,
-          "yaw": -170.314,
-          "pitch": -50.62,
-          "viewYaw": -174.738,
-          "viewPitch": -15.62,
-          "distance": 2.54
+          "id": 22
         },
         {
-          "id": 24,
-          "yaw": -117.911,
-          "pitch": -24.714,
-          "viewYaw": -125.192,
-          "viewPitch": -9.746,
-          "distance": 5.7
+          "id": 24
         }
       ],
       "timestamp": 1754983192.193787
@@ -982,20 +734,10 @@
       },
       "neighbors": [
         {
-          "id": 23,
-          "yaw": 48.697,
-          "pitch": -19.192,
-          "viewYaw": 48.81,
-          "viewPitch": -3.475,
-          "distance": 5.7
+          "id": 23
         },
         {
-          "id": 25,
-          "yaw": -88.896,
-          "pitch": -23.55,
-          "viewYaw": -89.458,
-          "viewPitch": -0.764,
-          "distance": 3.93
+          "id": 25
         }
       ],
       "timestamp": 1754983228.616039
@@ -1021,20 +763,10 @@
       },
       "neighbors": [
         {
-          "id": 24,
-          "yaw": 176.092,
-          "pitch": -24.132,
-          "viewYaw": 175.895,
-          "viewPitch": -1.382,
-          "distance": 3.93
+          "id": 24
         },
         {
-          "id": 26,
-          "yaw": 68.602,
-          "pitch": -33.011,
-          "viewYaw": 69.267,
-          "viewPitch": -8.374,
-          "distance": 3.32
+          "id": 26
         }
       ],
       "timestamp": 1754983277.194997
@@ -1060,20 +792,10 @@
       },
       "neighbors": [
         {
-          "id": 25,
-          "yaw": 165.472,
-          "pitch": -39.399,
-          "viewYaw": 167.489,
-          "viewPitch": -11.555,
-          "distance": 3.32
+          "id": 25
         },
         {
-          "id": 27,
-          "yaw": -173.042,
-          "pitch": -30.423,
-          "viewYaw": -173.963,
-          "viewPitch": -15.434,
-          "distance": 6.26
+          "id": 27
         }
       ],
       "timestamp": 1754983299.413564
@@ -1099,12 +821,7 @@
       },
       "neighbors": [
         {
-          "id": 26,
-          "yaw": -175.883,
-          "pitch": -14.952,
-          "viewYaw": -175.948,
-          "viewPitch": -0.515,
-          "distance": 6.26
+          "id": 26
         }
       ],
       "timestamp": 1754983320.545119
@@ -1130,20 +847,10 @@
       },
       "neighbors": [
         {
-          "id": 29,
-          "yaw": 21.653,
-          "pitch": -19.772,
-          "viewYaw": 26.373,
-          "viewPitch": 15.228,
-          "distance": 1.73
+          "id": 29
         },
         {
-          "id": 20,
-          "yaw": -22.618,
-          "pitch": -20.252,
-          "viewYaw": -32.857,
-          "viewPitch": 14.748,
-          "distance": 1.48
+          "id": 20
         }
       ],
       "timestamp": 1754983370.925075
@@ -1169,20 +876,10 @@
       },
       "neighbors": [
         {
-          "id": 28,
-          "yaw": -174.948,
-          "pitch": -41.33,
-          "viewYaw": -176.622,
-          "viewPitch": -6.33,
-          "distance": 1.73
+          "id": 28
         },
         {
-          "id": 30,
-          "yaw": 174.938,
-          "pitch": -38.815,
-          "viewYaw": 174.677,
-          "viewPitch": -3.815,
-          "distance": 1.44
+          "id": 30
         }
       ],
       "timestamp": 1754983402.568428
@@ -1208,20 +905,10 @@
       },
       "neighbors": [
         {
-          "id": 29,
-          "yaw": -3.731,
-          "pitch": -30.2,
-          "viewYaw": -7.353,
-          "viewPitch": 4.8,
-          "distance": 1.44
+          "id": 29
         },
         {
-          "id": 31,
-          "yaw": 58.082,
-          "pitch": -16.885,
-          "viewYaw": 61.507,
-          "viewPitch": 8.332,
-          "distance": 3.5
+          "id": 31
         }
       ],
       "timestamp": 1754983413.152201
@@ -1247,20 +934,10 @@
       },
       "neighbors": [
         {
-          "id": 30,
-          "yaw": -119.83,
-          "pitch": -22.372,
-          "viewYaw": -117.935,
-          "viewPitch": 2.542,
-          "distance": 3.5
+          "id": 30
         },
         {
-          "id": 32,
-          "yaw": -96.766,
-          "pitch": -19.263,
-          "viewYaw": -94.876,
-          "viewPitch": 0.295,
-          "distance": 4.58
+          "id": 32
         }
       ],
       "timestamp": 1754983433.129731
@@ -1286,20 +963,10 @@
       },
       "neighbors": [
         {
-          "id": 31,
-          "yaw": 84.612,
-          "pitch": -17.095,
-          "viewYaw": 84.785,
-          "viewPitch": 2.913,
-          "distance": 4.58
+          "id": 31
         },
         {
-          "id": 33,
-          "yaw": -95.456,
-          "pitch": 5.051,
-          "viewYaw": -95.913,
-          "viewPitch": 40.051,
-          "distance": 2.26
+          "id": 33
         }
       ],
       "timestamp": 1754983493.21062
@@ -1325,20 +992,10 @@
       },
       "neighbors": [
         {
-          "id": 32,
-          "yaw": -86.728,
-          "pitch": -60.738,
-          "viewYaw": -87.541,
-          "viewPitch": -40.453,
-          "distance": 2.26
+          "id": 32
         },
         {
-          "id": 34,
-          "yaw": -50.019,
-          "pitch": -3.023,
-          "viewYaw": -50.122,
-          "viewPitch": 31.977,
-          "distance": 2.05
+          "id": 34
         }
       ],
       "timestamp": 1754983524.745929
@@ -1364,20 +1021,10 @@
       },
       "neighbors": [
         {
-          "id": 33,
-          "yaw": -120.602,
-          "pitch": -58.523,
-          "viewYaw": -127.008,
-          "viewPitch": -32.756,
-          "distance": 2.05
+          "id": 33
         },
         {
-          "id": 35,
-          "yaw": 37.954,
-          "pitch": -16.287,
-          "viewYaw": 43.041,
-          "viewPitch": 18.713,
-          "distance": 2
+          "id": 35
         }
       ],
       "timestamp": 1754983542.601595
@@ -1403,20 +1050,10 @@
       },
       "neighbors": [
         {
-          "id": 34,
-          "yaw": 30.118,
-          "pitch": -36.12,
-          "viewYaw": 34.622,
-          "viewPitch": -3.354,
-          "distance": 2
+          "id": 34
         },
         {
-          "id": 36,
-          "yaw": -156.839,
-          "pitch": -57.278,
-          "viewYaw": -160.485,
-          "viewPitch": -22.278,
-          "distance": 1.89
+          "id": 36
         }
       ],
       "timestamp": 1754983565.847089
@@ -1442,20 +1079,10 @@
       },
       "neighbors": [
         {
-          "id": 35,
-          "yaw": -179.032,
-          "pitch": -52.054,
-          "viewYaw": -179.481,
-          "viewPitch": -17.054,
-          "distance": 1.89
+          "id": 35
         },
         {
-          "id": 37,
-          "yaw": 1.017,
-          "pitch": -5.986,
-          "viewYaw": 1.365,
-          "viewPitch": 25.534,
-          "distance": 2.69
+          "id": 37
         }
       ],
       "timestamp": 1754983590.831608
@@ -1481,20 +1108,10 @@
       },
       "neighbors": [
         {
-          "id": 36,
-          "yaw": -151.692,
-          "pitch": -69.652,
-          "viewYaw": -165.238,
-          "viewPitch": -38.898,
-          "distance": 2.69
+          "id": 36
         },
         {
-          "id": 38,
-          "yaw": -2.784,
-          "pitch": 11.126,
-          "viewYaw": -4.131,
-          "viewPitch": 36.208,
-          "distance": 3.41
+          "id": 38
         }
       ],
       "timestamp": 1754983608.645265
@@ -1520,12 +1137,7 @@
       },
       "neighbors": [
         {
-          "id": 37,
-          "yaw": 174.788,
-          "pitch": -35.676,
-          "viewYaw": 174.305,
-          "viewPitch": -9.222,
-          "distance": 3.41
+          "id": 37
         }
       ],
       "timestamp": 1754983620.84103
@@ -1551,12 +1163,7 @@
       },
       "neighbors": [
         {
-          "id": 40,
-          "yaw": -89.257,
-          "pitch": -72.657,
-          "viewYaw": -93.286,
-          "viewPitch": -66.711,
-          "distance": 4.16
+          "id": 40
         }
       ],
       "timestamp": 1754983678.92463
@@ -1582,28 +1189,13 @@
       },
       "neighbors": [
         {
-          "id": 39,
-          "yaw": 163.935,
-          "pitch": 49.232,
-          "viewYaw": 164.747,
-          "viewPitch": 62.285,
-          "distance": 4.16
+          "id": 39
         },
         {
-          "id": 41,
-          "yaw": 149.628,
-          "pitch": -33.488,
-          "viewYaw": 150.816,
-          "viewPitch": -8.051,
-          "distance": 3.39
+          "id": 41
         },
         {
-          "id": 16,
-          "yaw": -95.46,
-          "pitch": -27.623,
-          "viewYaw": -98.594,
-          "viewPitch": -0.868,
-          "distance": 3.23
+          "id": 16
         }
       ],
       "timestamp": 1754983715.256123
@@ -1629,20 +1221,10 @@
       },
       "neighbors": [
         {
-          "id": 40,
-          "yaw": 175.162,
-          "pitch": -36.952,
-          "viewYaw": 175.582,
-          "viewPitch": -10.594,
-          "distance": 3.39
+          "id": 40
         },
         {
-          "id": 42,
-          "yaw": -157.229,
-          "pitch": -83.434,
-          "viewYaw": -167.087,
-          "viewPitch": -73.384,
-          "distance": 3.06
+          "id": 42
         }
       ],
       "timestamp": 1754983731.633802
@@ -1668,20 +1250,10 @@
       },
       "neighbors": [
         {
-          "id": 41,
-          "yaw": 104.883,
-          "pitch": 31.823,
-          "viewYaw": 126.976,
-          "viewPitch": 53.106,
-          "distance": 3.06
+          "id": 41
         },
         {
-          "id": 43,
-          "yaw": -28.749,
-          "pitch": -9.848,
-          "viewYaw": -37.17,
-          "viewPitch": 21.516,
-          "distance": 2.63
+          "id": 43
         }
       ],
       "timestamp": 1754983761.375213
@@ -1707,12 +1279,7 @@
       },
       "neighbors": [
         {
-          "id": 42,
-          "yaw": 136.383,
-          "pitch": -47.862,
-          "viewYaw": 145.282,
-          "viewPitch": -16.91,
-          "distance": 2.63
+          "id": 42
         }
       ],
       "timestamp": 1754983799.915516
@@ -1738,12 +1305,7 @@
       },
       "neighbors": [
         {
-          "id": 13,
-          "yaw": 176.268,
-          "pitch": -28.295,
-          "viewYaw": 175.524,
-          "viewPitch": -0.979,
-          "distance": 3.18
+          "id": 13
         }
       ],
       "timestamp": 1754983858.055313

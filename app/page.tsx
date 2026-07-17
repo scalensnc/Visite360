@@ -5,11 +5,6 @@ import { type MouseEvent as ReactMouseEvent, useEffect, useMemo, useRef, useStat
 
 type Neighbor = {
   id: number;
-  yaw: number;
-  pitch: number;
-  viewYaw: number;
-  viewPitch: number;
-  distance: number;
 };
 
 type Panorama = {
@@ -25,6 +20,12 @@ type Panorama = {
     mapX: number;
     mapY: number;
   };
+  orientation: {
+    w: number;
+    x: number;
+    y: number;
+    z: number;
+  };
   neighbors: Neighbor[];
 };
 
@@ -39,6 +40,36 @@ type Manifest = {
 
 function wrapAngle(angle: number) {
   return ((angle + 180) % 360 + 360) % 360 - 180;
+}
+
+const MARKER_HEIGHT_METERS = 1.65;
+
+function vectorBetweenPanoramas(from: Panorama, to: Panorama, onFloor: boolean) {
+  const vector = new THREE.Vector3(
+    to.position.x - from.position.x,
+    to.position.y - from.position.y,
+    to.position.z - from.position.z - (onFloor ? MARKER_HEIGHT_METERS : 0),
+  );
+  const inverseOrientation = new THREE.Quaternion(
+    from.orientation.x,
+    from.orientation.y,
+    from.orientation.z,
+    from.orientation.w,
+  ).normalize().invert();
+
+  // NavVis pose axes are X forward, Y right and Z up. The equirectangular
+  // raster used here faces -X at its horizontal centre, so this proper 3D
+  // basis change (determinant +1) maps a local pose vector into the viewer.
+  vector.applyQuaternion(inverseOrientation);
+  return new THREE.Vector3(-vector.x, vector.z, vector.y);
+}
+
+function viewAngles(from: Panorama, to: Panorama) {
+  const vector = vectorBetweenPanoramas(from, to, false);
+  return {
+    yaw: THREE.MathUtils.radToDeg(Math.atan2(vector.z, vector.x)),
+    pitch: THREE.MathUtils.radToDeg(Math.atan2(vector.y, Math.hypot(vector.x, vector.z))),
+  };
 }
 
 function MapPlot({
@@ -162,6 +193,7 @@ export default function Home() {
   const materialRef = useRef<THREE.MeshBasicMaterial | null>(null);
   const textureRef = useRef<THREE.Texture | null>(null);
   const activePanoRef = useRef<Panorama | null>(null);
+  const panoramasByIdRef = useRef<Map<number, Panorama>>(new Map());
   const previousPanoRef = useRef<number | null>(null);
   const hotspotRefs = useRef<Record<number, HTMLButtonElement | null>>({});
   const compassRef = useRef<HTMLSpanElement>(null);
@@ -193,6 +225,7 @@ export default function Home() {
       })
       .then((data) => {
         if (cancelled) return;
+        panoramasByIdRef.current = new Map(data.panoramas.map((panorama) => [panorama.id, panorama]));
         setManifest(data);
         setCurrentId(data.panoramas[0]?.id ?? 0);
       })
@@ -300,17 +333,14 @@ export default function Home() {
 
       const rect = viewport.getBoundingClientRect();
       camera.getWorldDirection(cameraDirection);
-      activePanoRef.current?.neighbors.forEach((neighbor) => {
+      const activePanorama = activePanoRef.current;
+      activePanorama?.neighbors.forEach((neighbor) => {
         const element = hotspotRefs.current[neighbor.id];
         if (!element) return;
-        const yaw = THREE.MathUtils.degToRad(neighbor.yaw);
-        const pitch = THREE.MathUtils.degToRad(neighbor.pitch);
-        const horizontal = Math.cos(pitch);
-        hotspotDirection.set(
-          horizontal * Math.cos(yaw),
-          Math.sin(pitch),
-          horizontal * Math.sin(yaw),
-        );
+        const destination = panoramasByIdRef.current.get(neighbor.id);
+        if (!destination) return;
+
+        hotspotDirection.copy(vectorBetweenPanoramas(activePanorama, destination, true)).normalize();
         const inFront = cameraDirection.dot(hotspotDirection) > 0.04;
         projectedHotspot.copy(hotspotDirection).multiplyScalar(80).project(camera);
         const inView = inFront
@@ -325,7 +355,12 @@ export default function Home() {
 
         const x = (projectedHotspot.x * 0.5 + 0.5) * rect.width;
         const y = (-projectedHotspot.y * 0.5 + 0.5) * rect.height;
-        const distanceScale = Math.max(0.78, Math.min(1.08, 1.12 - neighbor.distance * 0.03));
+        const distance = Math.hypot(
+          destination.position.x - activePanorama.position.x,
+          destination.position.y - activePanorama.position.y,
+          destination.position.z - activePanorama.position.z,
+        );
+        const distanceScale = Math.max(0.78, Math.min(1.08, 1.12 - distance * 0.03));
         const zoomScale = Math.max(0.84, Math.min(1.28, 82 / camera.fov));
         const scale = distanceScale * zoomScale;
         element.style.setProperty("--hotspot-scale", scale.toFixed(3));
@@ -386,15 +421,29 @@ export default function Home() {
         const onwardNeighbors = routeNeighbors.filter((neighbor) => neighbor.id !== previousPanoRef.current);
         let initialNeighbor = routeNeighbors[0];
         if (arrival && onwardNeighbors.length) {
-          const onwardYaw = wrapAngle(arrival.viewYaw + 180);
+          const arrivalPanorama = panoramasByIdRef.current.get(arrival.id);
+          const arrivalYaw = arrivalPanorama ? viewAngles(currentPanorama, arrivalPanorama).yaw : 0;
+          const onwardYaw = wrapAngle(arrivalYaw + 180);
           initialNeighbor = [...onwardNeighbors].sort(
-            (a, b) => Math.abs(wrapAngle(a.viewYaw - onwardYaw)) - Math.abs(wrapAngle(b.viewYaw - onwardYaw)),
+            (a, b) => {
+              const panoramaA = panoramasByIdRef.current.get(a.id);
+              const panoramaB = panoramasByIdRef.current.get(b.id);
+              const yawA = panoramaA ? viewAngles(currentPanorama, panoramaA).yaw : 0;
+              const yawB = panoramaB ? viewAngles(currentPanorama, panoramaB).yaw : 0;
+              return Math.abs(wrapAngle(yawA - onwardYaw)) - Math.abs(wrapAngle(yawB - onwardYaw));
+            },
           )[0];
         } else if (arrival) {
           initialNeighbor = arrival;
         }
-        lonRef.current = initialNeighbor?.viewYaw ?? 0;
-        latRef.current = Math.min(24, (initialNeighbor?.viewPitch ?? 0) + 2);
+        const initialPanorama = initialNeighbor
+          ? panoramasByIdRef.current.get(initialNeighbor.id)
+          : null;
+        const initialView = initialPanorama
+          ? viewAngles(currentPanorama, initialPanorama)
+          : { yaw: 0, pitch: 0 };
+        lonRef.current = initialView.yaw;
+        latRef.current = Math.min(24, initialView.pitch + 2);
         fovRef.current = 82;
         if (cameraRef.current) {
           cameraRef.current.fov = 82;
@@ -444,8 +493,13 @@ export default function Home() {
   };
 
   const resetView = () => {
-    lonRef.current = currentPanorama?.neighbors[0]?.viewYaw ?? 0;
-    latRef.current = currentPanorama?.neighbors[0]?.viewPitch ?? 0;
+    const nextId = currentPanorama?.neighbors[0]?.id;
+    const nextPanorama = nextId === undefined ? null : panoramasByIdRef.current.get(nextId);
+    const direction = currentPanorama && nextPanorama
+      ? viewAngles(currentPanorama, nextPanorama)
+      : { yaw: 0, pitch: 0 };
+    lonRef.current = direction.yaw;
+    latRef.current = direction.pitch;
     fovRef.current = 82;
     zoom(0);
     setToast("Vue recentrée vers le prochain point");

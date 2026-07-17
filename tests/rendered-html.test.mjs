@@ -1,11 +1,6 @@
 import assert from "node:assert/strict";
-import { access, readFile, readdir } from "node:fs/promises";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
-
-const developmentPreviewMeta =
-  /<meta(?=[^>]*\bname=["']codex-preview["'])(?=[^>]*\bcontent=["']development["'])[^>]*>/i;
-const templateRoot = new URL("../", import.meta.url);
-const previewRoot = new URL("../app/_sites-preview/", import.meta.url);
 
 async function render() {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
@@ -28,64 +23,76 @@ async function render() {
   );
 }
 
-test("server-renders the starter loading skeleton", async () => {
+function rotateByQuaternion(vector, quaternion) {
+  const q = [-quaternion.x, -quaternion.y, -quaternion.z];
+  const w = quaternion.w;
+  const cross = (a, b) => [
+    a[1] * b[2] - a[2] * b[1],
+    a[2] * b[0] - a[0] * b[2],
+    a[0] * b[1] - a[1] * b[0],
+  ];
+  const firstCross = cross(q, vector);
+  const inner = firstCross.map((value, index) => value + w * vector[index]);
+  const secondCross = cross(q, inner);
+  return vector.map((value, index) => value + 2 * secondCross[index]);
+}
+
+function viewerYaw(from, to) {
+  const datasetVector = [
+    to.position.x - from.position.x,
+    to.position.y - from.position.y,
+    to.position.z - from.position.z,
+  ];
+  const local = rotateByQuaternion(datasetVector, from.orientation);
+  const viewer = [-local[0], local[2], local[1]];
+  return Math.atan2(viewer[2], viewer[0]) * 180 / Math.PI;
+}
+
+test("server-renders the Arnex 360 loading shell", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, developmentPreviewMeta);
-  assert.match(html, /<title>Your site is taking shape<\/title>/i);
-  assert.match(html, /Building your site/);
-  assert.match(html, /Your site is taking shape/);
-  assert.match(
-    html,
-    /Your first version will appear here automatically when it’s ready\./,
-  );
-  assert.doesNotMatch(html, /Codex/);
-  assert.match(html, /react-loading-skeleton/);
-  assert.match(html, /role="status"/);
+  assert.match(html, /<title>Arnex 360 — Visite immersive<\/title>/i);
+  assert.match(html, /Préparation de la visite d’Arnex/);
+  assert.match(html, /Glisser pour regarder/);
+  assert.match(html, /Hotspots/);
+  assert.doesNotMatch(html, /Outil de mesure|Rechercher un lieu/);
 });
 
-test("keeps the loading skeleton scoped and disposable", async () => {
-  const [preview, css, page, layout, packageJson, files] = await Promise.all([
-    readFile(new URL("SkeletonPreview.tsx", previewRoot), "utf8"),
-    readFile(new URL("preview.css", previewRoot), "utf8"),
-    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
-    readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
-    readFile(new URL("../package.json", import.meta.url), "utf8"),
-    readdir(previewRoot),
-  ]);
-
-  assert.deepEqual(files.sort(), ["SkeletonPreview.tsx", "preview.css"]);
-  assert.match(preview, /from "react-loading-skeleton"/);
-  assert.match(preview, /baseColor="#eceae7"/);
-  assert.match(preview, /highlightColor="#f9f8f6"/);
-  assert.match(preview, /duration=\{2\.8\}/);
-  assert.match(preview, /sites-skeleton-search-placeholder/);
-  assert.match(packageJson, /"react-loading-skeleton": "3\.5\.0"/);
-
-  const shellIndex = preview.indexOf('className="sites-skeleton-shell"');
-  const statusIndex = preview.indexOf('className="sites-skeleton-status"');
-  assert.ok(shellIndex >= 0 && statusIndex > shellIndex);
-  assert.match(css, /position:\s*fixed/);
-  assert.match(css, /inset:\s*0/);
-  assert.match(css, /opacity:\s*0\.52/);
-  assert.match(css, /prefers-reduced-motion:\s*reduce/);
-  assert.doesNotMatch(css, /#020617|canvas|pets|progress/i);
-  assert.doesNotMatch(
-    preview,
-    /loading-spinner|status-mark|status-progress|canvas|cookie|random/i,
+test("keeps all NavVis poses and projects navigation in a proper 3D basis", async () => {
+  const manifest = JSON.parse(
+    await readFile(new URL("../public/panoramas/manifest.json", import.meta.url), "utf8"),
   );
+  assert.equal(manifest.panoramas.length, 45);
+  assert.equal(manifest.site.poseSource, "pano-poses-registered.csv");
 
-  assert.match(page, /export const metadata:\s*Metadata/);
-  assert.match(page, /"codex-preview": "development"/);
-  assert.match(page, /<SkeletonPreview \/>/);
-  assert.match(layout, /title:\s*"Starter Project"/);
-  assert.doesNotMatch(layout, /codex-preview|_sites-preview|themeColor|\bViewport\b/);
-  assert.doesNotMatch(css, /(^|\s)(html|body)\s*\{/m);
+  const byId = new Map(manifest.panoramas.map((panorama) => [panorama.id, panorama]));
+  for (const panorama of manifest.panoramas) {
+    assert.ok(Number.isFinite(panorama.position.x));
+    assert.ok(Number.isFinite(panorama.position.y));
+    assert.ok(Number.isFinite(panorama.position.z));
+    assert.ok(Number.isFinite(panorama.orientation.w));
+    assert.ok(Number.isFinite(panorama.orientation.x));
+    assert.ok(Number.isFinite(panorama.orientation.y));
+    assert.ok(Number.isFinite(panorama.orientation.z));
+    assert.ok(panorama.neighbors.every((neighbor) => Object.keys(neighbor).join() === "id"));
+  }
 
-  await assert.rejects(
-    access(new URL("public/_sites-preview", templateRoot)),
-  );
+  const reached = new Set([0]);
+  const queue = [0];
+  while (queue.length) {
+    const current = byId.get(queue.shift());
+    for (const neighbor of current.neighbors) {
+      if (!reached.has(neighbor.id)) {
+        reached.add(neighbor.id);
+        queue.push(neighbor.id);
+      }
+    }
+  }
+  assert.equal(reached.size, 45);
+
+  assert.ok(Math.abs(viewerYaw(byId.get(0), byId.get(1)) - (-12.126)) < 0.02);
+  assert.ok(Math.abs(viewerYaw(byId.get(3), byId.get(4)) - (-116.864)) < 0.02);
 });
