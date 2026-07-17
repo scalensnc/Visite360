@@ -1,0 +1,2065 @@
+{
+  "site": {
+    "name": "Gare d’Arnex",
+    "captured": "12 août 2025",
+    "panoramaCount": 45,
+    "bounds": {
+      "width": 30.837,
+      "height": 28.217
+    }
+  },
+  "panoramas": [
+    {
+      "id": 0,
+      "image": "/panoramas/00000.webp",
+      "label": "Point 00",
+      "area": "Extérieurs et quais",
+      "floor": 0,
+      "position": {
+        "x": 0.0,
+        "y": 4.112,
+        "z": 554.917,
+        "mapX": 0.0,
+        "mapY": 0.85426
+      },
+      "orientation": {
+        "w": -0.324297,
+        "x": 0.084314,
+        "y": 0.038894,
+        "z": 0.941387
+      },
+      "neighbors": [
+        {
+          "id": 1,
+          "yaw": -167.87,
+          "pitch": 10.68,
+          "distance": 8.8
+        },
+        {
+          "id": 14,
+          "yaw": 145.41,
+          "pitch": 7.37,
+          "distance": 10.2
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "image": "/panoramas/00001.webp",
+      "label": "Point 01",
+      "area": "Extérieurs et quais",
+      "floor": 0,
+      "position": {
+        "x": 5.674,
+        "y": 10.882,
+        "z": 554.93,
+        "mapX": 0.184,
+        "mapY": 0.61434
+      },
+      "orientation": {
+        "w": 0.979311,
+        "x": 0.027216,
+        "y": -0.046331,
+        "z": 0.195098
+      },
+      "neighbors": [
+        {
+          "id": 15,
+          "yaw": -46.18,
+          "pitch": -3.77,
+          "distance": 7.3
+        },
+        {
+          "id": 14,
+          "yaw": -76.0,
+          "pitch": -0.61,
+          "distance": 7.6
+        },
+        {
+          "id": 2,
+          "yaw": 14.1,
+          "pitch": -6.16,
+          "distance": 8.1
+        },
+        {
+          "id": 0,
+          "yaw": -152.46,
+          "pitch": 6.01,
+          "distance": 8.8
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "/panoramas/00002.webp",
+      "label": "Point 02",
+      "area": "Extérieurs et quais",
+      "floor": 0,
+      "position": {
+        "x": 12.168,
+        "y": 15.715,
+        "z": 554.927,
+        "mapX": 0.3946,
+        "mapY": 0.44305
+      },
+      "orientation": {
+        "w": 0.960238,
+        "x": 0.016533,
+        "y": -0.035439,
+        "z": 0.27643
+      },
+      "neighbors": [
+        {
+          "id": 23,
+          "yaw": -65.94,
+          "pitch": 20,
+          "distance": 3.6
+        },
+        {
+          "id": 3,
+          "yaw": 17.02,
+          "pitch": -4.72,
+          "distance": 4.5
+        },
+        {
+          "id": 22,
+          "yaw": -70.94,
+          "pitch": 20,
+          "distance": 5.7
+        },
+        {
+          "id": 43,
+          "yaw": -67.11,
+          "pitch": -28,
+          "distance": 5.9
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image": "/panoramas/00003.webp",
+      "label": "Point 03",
+      "area": "Extérieurs et quais",
+      "floor": 0,
+      "position": {
+        "x": 15.121,
+        "y": 19.125,
+        "z": 554.905,
+        "mapX": 0.49035,
+        "mapY": 0.3222
+      },
+      "orientation": {
+        "w": 0.98286,
+        "x": 0.022816,
+        "y": -0.071866,
+        "z": 0.168229
+      },
+      "neighbors": [
+        {
+          "id": 2,
+          "yaw": -150.07,
+          "pitch": 8.31,
+          "distance": 4.5
+        },
+        {
+          "id": 5,
+          "yaw": 19.89,
+          "pitch": -8.37,
+          "distance": 4.6
+        },
+        {
+          "id": 4,
+          "yaw": -63.14,
+          "pitch": -5.91,
+          "distance": 4.6
+        },
+        {
+          "id": 23,
+          "yaw": -123.05,
+          "pitch": 20,
+          "distance": 5.8
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "image": "/panoramas/00004.webp",
+      "label": "Point 04",
+      "area": "Extérieurs et quais",
+      "floor": 0,
+      "position": {
+        "x": 18.511,
+        "y": 15.957,
+        "z": 554.657,
+        "mapX": 0.60028,
+        "mapY": 0.4345
+      },
+      "orientation": {
+        "w": 0.922391,
+        "x": -0.011731,
+        "y": -0.056165,
+        "z": -0.381972
+      },
+      "neighbors": [
+        {
+          "id": 24,
+          "yaw": -3.02,
+          "pitch": 20,
+          "distance": 4.0
+        },
+        {
+          "id": 40,
+          "yaw": -40.48,
+          "pitch": -4.58,
+          "distance": 4.5
+        },
+        {
+          "id": 43,
+          "yaw": -85.64,
+          "pitch": -28,
+          "distance": 4.6
+        },
+        {
+          "id": 3,
+          "yaw": -178.19,
+          "pitch": 9.55,
+          "distance": 4.6
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "image": "/panoramas/00005.webp",
+      "label": "Point 05",
+      "area": "Extérieurs et quais",
+      "floor": 0,
+      "position": {
+        "x": 18.654,
+        "y": 22.005,
+        "z": 554.912,
+        "mapX": 0.60491,
+        "mapY": 0.22014
+      },
+      "orientation": {
+        "w": 0.988419,
+        "x": 0.010854,
+        "y": -0.055883,
+        "z": -0.140669
+      },
+      "neighbors": [
+        {
+          "id": 26,
+          "yaw": -17.36,
+          "pitch": 20,
+          "distance": 3.7
+        },
+        {
+          "id": 3,
+          "yaw": -124.44,
+          "pitch": 5.16,
+          "distance": 4.6
+        },
+        {
+          "id": 8,
+          "yaw": 23.69,
+          "pitch": -7.41,
+          "distance": 5.9
+        },
+        {
+          "id": 4,
+          "yaw": -75.4,
+          "pitch": -1.91,
+          "distance": 6.1
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "image": "/panoramas/00006.webp",
+      "label": "Point 06",
+      "area": "Extérieurs et quais",
+      "floor": 0,
+      "position": {
+        "x": 24.446,
+        "y": 28.217,
+        "z": 554.897,
+        "mapX": 0.79274,
+        "mapY": 0.0
+      },
+      "orientation": {
+        "w": 0.961606,
+        "x": 0.032178,
+        "y": -0.06234,
+        "z": 0.265315
+      },
+      "neighbors": [
+        {
+          "id": 8,
+          "yaw": -119.99,
+          "pitch": 4.57,
+          "distance": 5.4
+        },
+        {
+          "id": 7,
+          "yaw": -50.43,
+          "pitch": -5.09,
+          "distance": 6.8
+        },
+        {
+          "id": 5,
+          "yaw": -163.8,
+          "pitch": 8.13,
+          "distance": 8.5
+        },
+        {
+          "id": 26,
+          "yaw": -148.53,
+          "pitch": 20,
+          "distance": 9.2
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "image": "/panoramas/00007.webp",
+      "label": "Point 07",
+      "area": "Extérieurs et quais",
+      "floor": 0,
+      "position": {
+        "x": 30.837,
+        "y": 25.994,
+        "z": 554.741,
+        "mapX": 1.0,
+        "mapY": 0.07878
+      },
+      "orientation": {
+        "w": -0.368159,
+        "x": 0.047983,
+        "y": 0.015996,
+        "z": 0.928386
+      },
+      "neighbors": [
+        {
+          "id": 6,
+          "yaw": -62.45,
+          "pitch": -1.65,
+          "distance": 6.8
+        },
+        {
+          "id": 8,
+          "yaw": -16.33,
+          "pitch": -5.01,
+          "distance": 7.1
+        },
+        {
+          "id": 9,
+          "yaw": 24.75,
+          "pitch": -6.26,
+          "distance": 7.7
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "image": "/panoramas/00008.webp",
+      "label": "Point 08",
+      "area": "Extérieurs et quais",
+      "floor": 0,
+      "position": {
+        "x": 24.509,
+        "y": 22.772,
+        "z": 554.819,
+        "mapX": 0.79479,
+        "mapY": 0.19298
+      },
+      "orientation": {
+        "w": -0.40011,
+        "x": 0.033928,
+        "y": 0.003769,
+        "z": 0.915831
+      },
+      "neighbors": [
+        {
+          "id": 9,
+          "yaw": 84.02,
+          "pitch": -1.78,
+          "distance": 5.2
+        },
+        {
+          "id": 6,
+          "yaw": -136.43,
+          "pitch": 2.73,
+          "distance": 5.4
+        },
+        {
+          "id": 26,
+          "yaw": -20.6,
+          "pitch": 20,
+          "distance": 5.7
+        },
+        {
+          "id": 5,
+          "yaw": -39.77,
+          "pitch": -2.71,
+          "distance": 5.9
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "image": "/panoramas/00009.webp",
+      "label": "Point 09",
+      "area": "Extérieurs et quais",
+      "floor": 0,
+      "position": {
+        "x": 27.927,
+        "y": 18.85,
+        "z": 554.588,
+        "mapX": 0.90563,
+        "mapY": 0.33196
+      },
+      "orientation": {
+        "w": -0.369379,
+        "x": 0.032201,
+        "y": 0.016523,
+        "z": 0.928574
+      },
+      "neighbors": [
+        {
+          "id": 8,
+          "yaw": -92.11,
+          "pitch": 3.1,
+          "distance": 5.2
+        },
+        {
+          "id": 27,
+          "yaw": -4.62,
+          "pitch": 20,
+          "distance": 5.4
+        },
+        {
+          "id": 10,
+          "yaw": 63.25,
+          "pitch": -3.81,
+          "distance": 7.0
+        },
+        {
+          "id": 25,
+          "yaw": -32.21,
+          "pitch": 20,
+          "distance": 7.2
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "image": "/panoramas/00010.webp",
+      "label": "Point 10",
+      "area": "Extérieurs et quais",
+      "floor": 0,
+      "position": {
+        "x": 29.898,
+        "y": 12.181,
+        "z": 554.395,
+        "mapX": 0.96956,
+        "mapY": 0.56832
+      },
+      "orientation": {
+        "w": 0.226366,
+        "x": 0.044559,
+        "y": -0.009345,
+        "z": 0.972978
+      },
+      "neighbors": [
+        {
+          "id": 11,
+          "yaw": 61.58,
+          "pitch": -2.05,
+          "distance": 5.6
+        },
+        {
+          "id": 9,
+          "yaw": -47.35,
+          "pitch": -1.87,
+          "distance": 7.0
+        },
+        {
+          "id": 27,
+          "yaw": -14.43,
+          "pitch": 20,
+          "distance": 7.7
+        },
+        {
+          "id": 16,
+          "yaw": 42.63,
+          "pitch": -2.67,
+          "distance": 8.6
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "image": "/panoramas/00011.webp",
+      "label": "Point 11",
+      "area": "Extérieurs et quais",
+      "floor": 0,
+      "position": {
+        "x": 25.331,
+        "y": 8.944,
+        "z": 554.448,
+        "mapX": 0.82144,
+        "mapY": 0.68303
+      },
+      "orientation": {
+        "w": 0.30373,
+        "x": 0.053002,
+        "y": -0.006107,
+        "z": 0.951263
+      },
+      "neighbors": [
+        {
+          "id": 16,
+          "yaw": 23.23,
+          "pitch": -3.94,
+          "distance": 3.8
+        },
+        {
+          "id": 12,
+          "yaw": 74.15,
+          "pitch": -2.03,
+          "distance": 4.8
+        },
+        {
+          "id": 10,
+          "yaw": -109.17,
+          "pitch": 2.55,
+          "distance": 5.6
+        },
+        {
+          "id": 17,
+          "yaw": 17.2,
+          "pitch": -4.56,
+          "distance": 6.2
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "image": "/panoramas/00012.webp",
+      "label": "Point 12",
+      "area": "Extérieurs et quais",
+      "floor": 0,
+      "position": {
+        "x": 21.58,
+        "y": 5.942,
+        "z": 554.511,
+        "mapX": 0.69981,
+        "mapY": 0.78943
+      },
+      "orientation": {
+        "w": 0.258983,
+        "x": 0.046427,
+        "y": -0.008688,
+        "z": 0.964726
+      },
+      "neighbors": [
+        {
+          "id": 16,
+          "yaw": -60.59,
+          "pitch": -1.2,
+          "distance": 3.8
+        },
+        {
+          "id": 18,
+          "yaw": -10.31,
+          "pitch": 10.6,
+          "distance": 4.8
+        },
+        {
+          "id": 11,
+          "yaw": -111.23,
+          "pitch": 1.6,
+          "distance": 4.8
+        },
+        {
+          "id": 17,
+          "yaw": -36.42,
+          "pitch": -3.01,
+          "distance": 5.4
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "image": "/panoramas/00013.webp",
+      "label": "Point 13",
+      "area": "Extérieurs et quais",
+      "floor": 0,
+      "position": {
+        "x": 16.453,
+        "y": 2.302,
+        "z": 554.606,
+        "mapX": 0.53356,
+        "mapY": 0.91842
+      },
+      "orientation": {
+        "w": -0.186354,
+        "x": 0.05132,
+        "y": 0.015934,
+        "z": 0.981012
+      },
+      "neighbors": [
+        {
+          "id": 44,
+          "yaw": 24.9,
+          "pitch": -5.48,
+          "distance": 3.2
+        },
+        {
+          "id": 12,
+          "yaw": -166.11,
+          "pitch": 5.24,
+          "distance": 6.3
+        },
+        {
+          "id": 14,
+          "yaw": -43.28,
+          "pitch": -2.53,
+          "distance": 6.7
+        },
+        {
+          "id": 18,
+          "yaw": -124.57,
+          "pitch": 14.08,
+          "distance": 6.9
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "image": "/panoramas/00014.webp",
+      "label": "Point 14",
+      "area": "Extérieurs et quais",
+      "floor": 0,
+      "position": {
+        "x": 10.2,
+        "y": 4.793,
+        "z": 554.776,
+        "mapX": 0.33077,
+        "mapY": 0.83012
+      },
+      "orientation": {
+        "w": 0.903692,
+        "x": 0.02046,
+        "y": -0.024564,
+        "z": 0.426989
+      },
+      "neighbors": [
+        {
+          "id": 15,
+          "yaw": 5.01,
+          "pitch": -3.57,
+          "distance": 3.9
+        },
+        {
+          "id": 44,
+          "yaw": -100.38,
+          "pitch": 0.17,
+          "distance": 6.3
+        },
+        {
+          "id": 13,
+          "yaw": -72.4,
+          "pitch": -1.65,
+          "distance": 6.7
+        },
+        {
+          "id": 41,
+          "yaw": -13.28,
+          "pitch": -5.47,
+          "distance": 7.6
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "image": "/panoramas/00015.webp",
+      "label": "Point 15",
+      "area": "Extérieurs et quais",
+      "floor": 0,
+      "position": {
+        "x": 12.381,
+        "y": 7.979,
+        "z": 554.779,
+        "mapX": 0.40148,
+        "mapY": 0.71723
+      },
+      "orientation": {
+        "w": 0.932915,
+        "x": 0.026761,
+        "y": -0.046788,
+        "z": 0.35604
+      },
+      "neighbors": [
+        {
+          "id": 14,
+          "yaw": -166.14,
+          "pitch": 6.12,
+          "distance": 3.9
+        },
+        {
+          "id": 41,
+          "yaw": -21.96,
+          "pitch": -9.47,
+          "distance": 4.1
+        },
+        {
+          "id": 19,
+          "yaw": -29.62,
+          "pitch": 20,
+          "distance": 4.9
+        },
+        {
+          "id": 21,
+          "yaw": -1.37,
+          "pitch": 20,
+          "distance": 5.6
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "image": "/panoramas/00016.webp",
+      "label": "Point 16",
+      "area": "Extérieurs et quais",
+      "floor": 0,
+      "position": {
+        "x": 21.622,
+        "y": 9.746,
+        "z": 554.583,
+        "mapX": 0.70118,
+        "mapY": 0.65459
+      },
+      "orientation": {
+        "w": 0.363121,
+        "x": -0.002888,
+        "y": 0.004611,
+        "z": 0.931726
+      },
+      "neighbors": [
+        {
+          "id": 17,
+          "yaw": 15.13,
+          "pitch": 1.08,
+          "distance": 2.5
+        },
+        {
+          "id": 40,
+          "yaw": 10.58,
+          "pitch": 1.13,
+          "distance": 3.2
+        },
+        {
+          "id": 11,
+          "yaw": -149.6,
+          "pitch": -2.28,
+          "distance": 3.8
+        },
+        {
+          "id": 12,
+          "yaw": 131.95,
+          "pitch": -1.7,
+          "distance": 3.8
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "image": "/panoramas/00017.webp",
+      "label": "Point 17",
+      "area": "Extérieurs et quais",
+      "floor": 0,
+      "position": {
+        "x": 19.419,
+        "y": 10.891,
+        "z": 554.613,
+        "mapX": 0.62975,
+        "mapY": 0.61402
+      },
+      "orientation": {
+        "w": -0.35153,
+        "x": 0.064073,
+        "y": 0.025901,
+        "z": 0.933622
+      },
+      "neighbors": [
+        {
+          "id": 40,
+          "yaw": -87.83,
+          "pitch": 0.62,
+          "distance": 0.8
+        },
+        {
+          "id": 16,
+          "yaw": 111.19,
+          "pitch": 2.0,
+          "distance": 2.5
+        },
+        {
+          "id": 18,
+          "yaw": 14.28,
+          "pitch": 19.13,
+          "distance": 2.6
+        },
+        {
+          "id": 41,
+          "yaw": -16.42,
+          "pitch": -9.64,
+          "distance": 3.6
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "image": "/panoramas/00018.webp",
+      "label": "Point 18",
+      "area": "Accès principal",
+      "floor": 0,
+      "position": {
+        "x": 18.11,
+        "y": 8.926,
+        "z": 555.808,
+        "mapX": 0.58727,
+        "mapY": 0.68368
+      },
+      "orientation": {
+        "w": -0.389831,
+        "x": 0.052454,
+        "y": 0.014168,
+        "z": 0.919282
+      },
+      "neighbors": [
+        {
+          "id": 19,
+          "yaw": -36.08,
+          "pitch": 20,
+          "distance": 2.1
+        },
+        {
+          "id": 41,
+          "yaw": -63.08,
+          "pitch": -28,
+          "distance": 2.4
+        },
+        {
+          "id": 17,
+          "yaw": -170.48,
+          "pitch": -20.91,
+          "distance": 2.6
+        },
+        {
+          "id": 32,
+          "yaw": -119.11,
+          "pitch": 20,
+          "distance": 2.7
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "image": "/panoramas/00019.webp",
+      "label": "Point 19",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 16.57,
+        "y": 8.727,
+        "z": 557.214,
+        "mapX": 0.53735,
+        "mapY": 0.69072
+      },
+      "orientation": {
+        "w": 0.68989,
+        "x": 0.041287,
+        "y": -0.020547,
+        "z": 0.722444
+      },
+      "neighbors": [
+        {
+          "id": 18,
+          "yaw": -89.81,
+          "pitch": -28,
+          "distance": 2.1
+        },
+        {
+          "id": 20,
+          "yaw": -39.55,
+          "pitch": 20,
+          "distance": 2.1
+        },
+        {
+          "id": 32,
+          "yaw": -61.54,
+          "pitch": 20,
+          "distance": 2.2
+        },
+        {
+          "id": 39,
+          "yaw": -39.94,
+          "pitch": 20,
+          "distance": 2.4
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "image": "/panoramas/00020.webp",
+      "label": "Point 20",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 17.708,
+        "y": 10.096,
+        "z": 558.392,
+        "mapX": 0.57425,
+        "mapY": 0.6422
+      },
+      "orientation": {
+        "w": 0.723649,
+        "x": -0.016569,
+        "y": 0.010943,
+        "z": 0.689883
+      },
+      "neighbors": [
+        {
+          "id": 39,
+          "yaw": -39.41,
+          "pitch": 20,
+          "distance": 0.3
+        },
+        {
+          "id": 32,
+          "yaw": -134.4,
+          "pitch": -1.88,
+          "distance": 0.7
+        },
+        {
+          "id": 28,
+          "yaw": -6.65,
+          "pitch": 1.93,
+          "distance": 1.5
+        },
+        {
+          "id": 30,
+          "yaw": -21.0,
+          "pitch": 3.71,
+          "distance": 1.5
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "image": "/panoramas/00021.webp",
+      "label": "Point 21",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 15.687,
+        "y": 10.707,
+        "z": 558.434,
+        "mapX": 0.50871,
+        "mapY": 0.62054
+      },
+      "orientation": {
+        "w": -0.372552,
+        "x": -0.017413,
+        "y": -0.015386,
+        "z": 0.927721
+      },
+      "neighbors": [
+        {
+          "id": 22,
+          "yaw": -125.96,
+          "pitch": -0.44,
+          "distance": 2.1
+        },
+        {
+          "id": 20,
+          "yaw": 119.35,
+          "pitch": -1.58,
+          "distance": 2.1
+        },
+        {
+          "id": 39,
+          "yaw": 125.66,
+          "pitch": 0.63,
+          "distance": 2.2
+        },
+        {
+          "id": 28,
+          "yaw": 156.78,
+          "pitch": -3.08,
+          "distance": 2.4
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "image": "/panoramas/00022.webp",
+      "label": "Point 22",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 15.405,
+        "y": 12.76,
+        "z": 558.497,
+        "mapX": 0.49958,
+        "mapY": 0.54779
+      },
+      "orientation": {
+        "w": 0.429305,
+        "x": -0.00212,
+        "y": -0.005542,
+        "z": 0.90314
+      },
+      "neighbors": [
+        {
+          "id": 21,
+          "yaw": 148.65,
+          "pitch": -1.36,
+          "distance": 2.1
+        },
+        {
+          "id": 23,
+          "yaw": 7.34,
+          "pitch": -12.02,
+          "distance": 2.5
+        },
+        {
+          "id": 28,
+          "yaw": -154.47,
+          "pitch": -2.5,
+          "distance": 2.8
+        },
+        {
+          "id": 30,
+          "yaw": -152.42,
+          "pitch": -1.28,
+          "distance": 3.2
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "image": "/panoramas/00023.webp",
+      "label": "Point 23",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 13.606,
+        "y": 14.477,
+        "z": 557.967,
+        "mapX": 0.44123,
+        "mapY": 0.48694
+      },
+      "orientation": {
+        "w": 0.400535,
+        "x": -0.212356,
+        "y": 0.116698,
+        "z": 0.883662
+      },
+      "neighbors": [
+        {
+          "id": 22,
+          "yaw": -174.74,
+          "pitch": -15.62,
+          "distance": 2.5
+        },
+        {
+          "id": 2,
+          "yaw": 3.18,
+          "pitch": -28,
+          "distance": 3.6
+        },
+        {
+          "id": 21,
+          "yaw": 167.12,
+          "pitch": -21.58,
+          "distance": 4.3
+        },
+        {
+          "id": 28,
+          "yaw": -163.65,
+          "pitch": -21.83,
+          "distance": 5.2
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "image": "/panoramas/00024.webp",
+      "label": "Point 24",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 19.258,
+        "y": 14.975,
+        "z": 558.466,
+        "mapX": 0.62451,
+        "mapY": 0.4693
+      },
+      "orientation": {
+        "w": 0.372977,
+        "x": -0.013681,
+        "y": -0.003119,
+        "z": 0.927734
+      },
+      "neighbors": [
+        {
+          "id": 36,
+          "yaw": 126.73,
+          "pitch": 20,
+          "distance": 3.1
+        },
+        {
+          "id": 37,
+          "yaw": -108.91,
+          "pitch": 20,
+          "distance": 3.1
+        },
+        {
+          "id": 31,
+          "yaw": 178.57,
+          "pitch": -0.43,
+          "distance": 3.4
+        },
+        {
+          "id": 30,
+          "yaw": 118.76,
+          "pitch": -0.24,
+          "distance": 3.6
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "image": "/panoramas/00025.webp",
+      "label": "Point 25",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 21.952,
+        "y": 17.837,
+        "z": 558.476,
+        "mapX": 0.71188,
+        "mapY": 0.36786
+      },
+      "orientation": {
+        "w": 0.903113,
+        "x": -0.000164,
+        "y": 0.011577,
+        "z": 0.429248
+      },
+      "neighbors": [
+        {
+          "id": 38,
+          "yaw": -50.79,
+          "pitch": 20,
+          "distance": 2.8
+        },
+        {
+          "id": 27,
+          "yaw": -74.23,
+          "pitch": 0.98,
+          "distance": 3.3
+        },
+        {
+          "id": 26,
+          "yaw": 69.27,
+          "pitch": -8.37,
+          "distance": 3.3
+        },
+        {
+          "id": 37,
+          "yaw": -174.42,
+          "pitch": 20,
+          "distance": 3.7
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "image": "/panoramas/00026.webp",
+      "label": "Point 26",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 20.294,
+        "y": 20.675,
+        "z": 557.998,
+        "mapX": 0.6581,
+        "mapY": 0.2673
+      },
+      "orientation": {
+        "w": 0.394843,
+        "x": -0.156229,
+        "y": 0.077975,
+        "z": 0.902004
+      },
+      "neighbors": [
+        {
+          "id": 25,
+          "yaw": 167.49,
+          "pitch": -11.55,
+          "distance": 3.3
+        },
+        {
+          "id": 5,
+          "yaw": 4.83,
+          "pitch": -28,
+          "distance": 3.7
+        },
+        {
+          "id": 38,
+          "yaw": -177.7,
+          "pitch": 16.3,
+          "distance": 5.0
+        },
+        {
+          "id": 8,
+          "yaw": -92.01,
+          "pitch": -28,
+          "distance": 5.7
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "image": "/panoramas/00027.webp",
+      "label": "Point 27",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 24.966,
+        "y": 16.534,
+        "z": 558.483,
+        "mapX": 0.80963,
+        "mapY": 0.41403
+      },
+      "orientation": {
+        "w": 0.921375,
+        "x": -0.008931,
+        "y": -0.0332,
+        "z": -0.387151
+      },
+      "neighbors": [
+        {
+          "id": 25,
+          "yaw": -157.76,
+          "pitch": 3.69,
+          "distance": 3.3
+        },
+        {
+          "id": 38,
+          "yaw": -171.41,
+          "pitch": 20,
+          "distance": 3.3
+        },
+        {
+          "id": 31,
+          "yaw": -83.9,
+          "pitch": 0.51,
+          "distance": 5.2
+        },
+        {
+          "id": 37,
+          "yaw": -121.81,
+          "pitch": 20,
+          "distance": 5.2
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "image": "/panoramas/00028.webp",
+      "label": "Point 28",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 17.949,
+        "y": 11.558,
+        "z": 558.387,
+        "mapX": 0.58207,
+        "mapY": 0.5904
+      },
+      "orientation": {
+        "w": 0.81802,
+        "x": 0.074429,
+        "y": 0.142623,
+        "z": -0.552235
+      },
+      "neighbors": [
+        {
+          "id": 30,
+          "yaw": 63.8,
+          "pitch": 18.74,
+          "distance": 0.4
+        },
+        {
+          "id": 39,
+          "yaw": -27.11,
+          "pitch": 20,
+          "distance": 1.3
+        },
+        {
+          "id": 20,
+          "yaw": -32.86,
+          "pitch": 14.75,
+          "distance": 1.5
+        },
+        {
+          "id": 29,
+          "yaw": 26.37,
+          "pitch": 15.23,
+          "distance": 1.7
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "image": "/panoramas/00029.webp",
+      "label": "Point 29",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 19.226,
+        "y": 10.393,
+        "z": 558.319,
+        "mapX": 0.62346,
+        "mapY": 0.63167
+      },
+      "orientation": {
+        "w": 0.918843,
+        "x": 0.037239,
+        "y": 0.066048,
+        "z": -0.38727
+      },
+      "neighbors": [
+        {
+          "id": 32,
+          "yaw": -96.69,
+          "pitch": 3.21,
+          "distance": 1.3
+        },
+        {
+          "id": 39,
+          "yaw": -130.71,
+          "pitch": 2.27,
+          "distance": 1.4
+        },
+        {
+          "id": 30,
+          "yaw": 174.68,
+          "pitch": -3.81,
+          "distance": 1.4
+        },
+        {
+          "id": 20,
+          "yaw": -123.32,
+          "pitch": -1.21,
+          "distance": 1.5
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "image": "/panoramas/00030.webp",
+      "label": "Point 30",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 18.326,
+        "y": 11.505,
+        "z": 558.441,
+        "mapX": 0.59428,
+        "mapY": 0.59225
+      },
+      "orientation": {
+        "w": 0.924435,
+        "x": 0.012409,
+        "y": 0.089664,
+        "z": -0.370442
+      },
+      "neighbors": [
+        {
+          "id": 28,
+          "yaw": -143.35,
+          "pitch": -17.8,
+          "distance": 0.4
+        },
+        {
+          "id": 39,
+          "yaw": -66.9,
+          "pitch": 3.74,
+          "distance": 1.3
+        },
+        {
+          "id": 29,
+          "yaw": -7.35,
+          "pitch": 4.8,
+          "distance": 1.4
+        },
+        {
+          "id": 20,
+          "yaw": -69.77,
+          "pitch": -0.71,
+          "distance": 1.5
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "image": "/panoramas/00031.webp",
+      "label": "Point 31",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 21.672,
+        "y": 12.541,
+        "z": 558.519,
+        "mapX": 0.7028,
+        "mapY": 0.55556
+      },
+      "orientation": {
+        "w": 0.923335,
+        "x": -0.006704,
+        "y": -0.048687,
+        "z": -0.380837
+      },
+      "neighbors": [
+        {
+          "id": 29,
+          "yaw": -94.14,
+          "pitch": -1.71,
+          "distance": 3.3
+        },
+        {
+          "id": 24,
+          "yaw": 179.55,
+          "pitch": 4.57,
+          "distance": 3.4
+        },
+        {
+          "id": 30,
+          "yaw": -117.93,
+          "pitch": 2.54,
+          "distance": 3.5
+        },
+        {
+          "id": 28,
+          "yaw": -120.38,
+          "pitch": 2.02,
+          "distance": 3.9
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "image": "/panoramas/00032.webp",
+      "label": "Point 32",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 18.187,
+        "y": 9.579,
+        "z": 558.393,
+        "mapX": 0.58979,
+        "mapY": 0.66051
+      },
+      "orientation": {
+        "w": 0.925763,
+        "x": -0.008377,
+        "y": 0.009105,
+        "z": -0.377902
+      },
+      "neighbors": [
+        {
+          "id": 20,
+          "yaw": 177.25,
+          "pitch": -0.57,
+          "distance": 0.7
+        },
+        {
+          "id": 39,
+          "yaw": 157.53,
+          "pitch": 6.86,
+          "distance": 0.8
+        },
+        {
+          "id": 29,
+          "yaw": 82.48,
+          "pitch": -1.84,
+          "distance": 1.3
+        },
+        {
+          "id": 30,
+          "yaw": 130.33,
+          "pitch": 2.03,
+          "distance": 1.9
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "image": "/panoramas/00033.webp",
+      "label": "Point 33",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 16.892,
+        "y": 8.489,
+        "z": 559.885,
+        "mapX": 0.54777,
+        "mapY": 0.69916
+      },
+      "orientation": {
+        "w": 0.435405,
+        "x": -0.003632,
+        "y": 0.010509,
+        "z": 0.900166
+      },
+      "neighbors": [
+        {
+          "id": 34,
+          "yaw": -50.12,
+          "pitch": 20,
+          "distance": 2.0
+        },
+        {
+          "id": 32,
+          "yaw": -87.54,
+          "pitch": -28,
+          "distance": 2.3
+        },
+        {
+          "id": 20,
+          "yaw": -64.95,
+          "pitch": -28,
+          "distance": 2.3
+        },
+        {
+          "id": 39,
+          "yaw": -66.85,
+          "pitch": -28,
+          "distance": 2.5
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "image": "/panoramas/00034.webp",
+      "label": "Point 34",
+      "area": "Niveau 2",
+      "floor": 2,
+      "position": {
+        "x": 17.248,
+        "y": 10.215,
+        "z": 560.932,
+        "mapX": 0.55934,
+        "mapY": 0.63799
+      },
+      "orientation": {
+        "w": 0.965726,
+        "x": 0.006997,
+        "y": 0.058729,
+        "z": 0.252736
+      },
+      "neighbors": [
+        {
+          "id": 35,
+          "yaw": 43.04,
+          "pitch": 18.71,
+          "distance": 2.0
+        },
+        {
+          "id": 33,
+          "yaw": -127.01,
+          "pitch": -28,
+          "distance": 2.0
+        },
+        {
+          "id": 39,
+          "yaw": -21.93,
+          "pitch": -28,
+          "distance": 2.5
+        },
+        {
+          "id": 20,
+          "yaw": -35.26,
+          "pitch": -28,
+          "distance": 2.6
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "image": "/panoramas/00035.webp",
+      "label": "Point 35",
+      "area": "Niveau 2",
+      "floor": 2,
+      "position": {
+        "x": 17.891,
+        "y": 12.027,
+        "z": 561.472,
+        "mapX": 0.58017,
+        "mapY": 0.57376
+      },
+      "orientation": {
+        "w": -0.296443,
+        "x": -0.11086,
+        "y": -0.050215,
+        "z": 0.947264
+      },
+      "neighbors": [
+        {
+          "id": 36,
+          "yaw": -160.49,
+          "pitch": -22.28,
+          "distance": 1.9
+        },
+        {
+          "id": 34,
+          "yaw": 34.62,
+          "pitch": -3.35,
+          "distance": 2.0
+        },
+        {
+          "id": 30,
+          "yaw": 49.0,
+          "pitch": -28,
+          "distance": 3.1
+        },
+        {
+          "id": 28,
+          "yaw": 28.15,
+          "pitch": -28,
+          "distance": 3.1
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "image": "/panoramas/00036.webp",
+      "label": "Point 36",
+      "area": "Niveau 2",
+      "floor": 2,
+      "position": {
+        "x": 19.001,
+        "y": 13.526,
+        "z": 561.19,
+        "mapX": 0.61618,
+        "mapY": 0.52065
+      },
+      "orientation": {
+        "w": 0.872748,
+        "x": -0.098442,
+        "y": 0.199058,
+        "z": 0.434737
+      },
+      "neighbors": [
+        {
+          "id": 35,
+          "yaw": -179.48,
+          "pitch": -17.05,
+          "distance": 1.9
+        },
+        {
+          "id": 37,
+          "yaw": 1.37,
+          "pitch": 20,
+          "distance": 2.7
+        },
+        {
+          "id": 24,
+          "yaw": 15.73,
+          "pitch": -28,
+          "distance": 3.1
+        },
+        {
+          "id": 30,
+          "yaw": -132.74,
+          "pitch": -28,
+          "distance": 3.5
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "image": "/panoramas/00037.webp",
+      "label": "Point 37",
+      "area": "Niveau 2",
+      "floor": 2,
+      "position": {
+        "x": 20.574,
+        "y": 15.704,
+        "z": 561.184,
+        "mapX": 0.66718,
+        "mapY": 0.44345
+      },
+      "orientation": {
+        "w": 0.875958,
+        "x": -0.127772,
+        "y": 0.316111,
+        "z": 0.341241
+      },
+      "neighbors": [
+        {
+          "id": 36,
+          "yaw": -165.24,
+          "pitch": -28,
+          "distance": 2.7
+        },
+        {
+          "id": 24,
+          "yaw": 31.53,
+          "pitch": -28,
+          "distance": 3.1
+        },
+        {
+          "id": 38,
+          "yaw": -4.13,
+          "pitch": 20,
+          "distance": 3.4
+        },
+        {
+          "id": 25,
+          "yaw": 10.23,
+          "pitch": -7.7,
+          "distance": 3.7
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "image": "/panoramas/00038.webp",
+      "label": "Point 38",
+      "area": "Niveau 2",
+      "floor": 2,
+      "position": {
+        "x": 23.206,
+        "y": 17.864,
+        "z": 560.972,
+        "mapX": 0.75254,
+        "mapY": 0.36691
+      },
+      "orientation": {
+        "w": 0.917759,
+        "x": -0.02489,
+        "y": 0.108726,
+        "z": 0.381153
+      },
+      "neighbors": [
+        {
+          "id": 25,
+          "yaw": 113.32,
+          "pitch": -28,
+          "distance": 2.8
+        },
+        {
+          "id": 27,
+          "yaw": -69.99,
+          "pitch": -28,
+          "distance": 3.3
+        },
+        {
+          "id": 37,
+          "yaw": 174.31,
+          "pitch": -9.22,
+          "distance": 3.4
+        },
+        {
+          "id": 26,
+          "yaw": 81.27,
+          "pitch": -28,
+          "distance": 5.0
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "image": "/panoramas/00039.webp",
+      "label": "Point 39",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 17.884,
+        "y": 10.295,
+        "z": 558.487,
+        "mapX": 0.57996,
+        "mapY": 0.63514
+      },
+      "orientation": {
+        "w": 0.232725,
+        "x": -0.029725,
+        "y": 0.027365,
+        "z": 0.971703
+      },
+      "neighbors": [
+        {
+          "id": 20,
+          "yaw": 73.8,
+          "pitch": -20.73,
+          "distance": 0.3
+        },
+        {
+          "id": 32,
+          "yaw": 139.75,
+          "pitch": -11.47,
+          "distance": 0.8
+        },
+        {
+          "id": 28,
+          "yaw": -65.89,
+          "pitch": -0.83,
+          "distance": 1.3
+        },
+        {
+          "id": 30,
+          "yaw": -83.07,
+          "pitch": 0.69,
+          "distance": 1.3
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "image": "/panoramas/00040.webp",
+      "label": "Point 40",
+      "area": "Accès principal",
+      "floor": 0,
+      "position": {
+        "x": 18.885,
+        "y": 11.458,
+        "z": 554.623,
+        "mapX": 0.61241,
+        "mapY": 0.59395
+      },
+      "orientation": {
+        "w": 0.834288,
+        "x": -0.023657,
+        "y": 0.04807,
+        "z": 0.54872
+      },
+      "neighbors": [
+        {
+          "id": 17,
+          "yaw": -113.16,
+          "pitch": -2.43,
+          "distance": 0.8
+        },
+        {
+          "id": 18,
+          "yaw": -174.23,
+          "pitch": 18.14,
+          "distance": 2.9
+        },
+        {
+          "id": 16,
+          "yaw": -98.59,
+          "pitch": -0.87,
+          "distance": 3.2
+        },
+        {
+          "id": 41,
+          "yaw": 150.82,
+          "pitch": -8.05,
+          "distance": 3.4
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "image": "/panoramas/00041.webp",
+      "label": "Point 41",
+      "area": "Accès principal",
+      "floor": 0,
+      "position": {
+        "x": 16.201,
+        "y": 9.384,
+        "z": 554.483,
+        "mapX": 0.52537,
+        "mapY": 0.66744
+      },
+      "orientation": {
+        "w": -0.356524,
+        "x": -0.106146,
+        "y": -0.038575,
+        "z": 0.927435
+      },
+      "neighbors": [
+        {
+          "id": 18,
+          "yaw": 130.33,
+          "pitch": 20,
+          "distance": 2.4
+        },
+        {
+          "id": 19,
+          "yaw": 121.13,
+          "pitch": 20,
+          "distance": 2.8
+        },
+        {
+          "id": 42,
+          "yaw": -167.09,
+          "pitch": -28,
+          "distance": 3.1
+        },
+        {
+          "id": 40,
+          "yaw": 175.58,
+          "pitch": -10.59,
+          "distance": 3.4
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "image": "/panoramas/00042.webp",
+      "label": "Point 42",
+      "area": "Sous-sol",
+      "floor": -1,
+      "position": {
+        "x": 17.182,
+        "y": 10.516,
+        "z": 551.82,
+        "mapX": 0.55719,
+        "mapY": 0.62731
+      },
+      "orientation": {
+        "w": 0.325855,
+        "x": -0.209533,
+        "y": 0.067766,
+        "z": 0.919414
+      },
+      "neighbors": [
+        {
+          "id": 43,
+          "yaw": -37.17,
+          "pitch": 20,
+          "distance": 2.6
+        },
+        {
+          "id": 41,
+          "yaw": 126.98,
+          "pitch": 20,
+          "distance": 3.1
+        },
+        {
+          "id": 40,
+          "yaw": -135.35,
+          "pitch": 20,
+          "distance": 3.4
+        },
+        {
+          "id": 17,
+          "yaw": -145.86,
+          "pitch": 20,
+          "distance": 3.6
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "image": "/panoramas/00043.webp",
+      "label": "Point 43",
+      "area": "Sous-sol",
+      "floor": -1,
+      "position": {
+        "x": 16.417,
+        "y": 13.03,
+        "z": 551.872,
+        "mapX": 0.53238,
+        "mapY": 0.53822
+      },
+      "orientation": {
+        "w": 0.338401,
+        "x": -0.159503,
+        "y": 0.052848,
+        "z": 0.925878
+      },
+      "neighbors": [
+        {
+          "id": 42,
+          "yaw": 145.28,
+          "pitch": -16.91,
+          "distance": 2.6
+        },
+        {
+          "id": 40,
+          "yaw": -173.55,
+          "pitch": 20,
+          "distance": 4.0
+        },
+        {
+          "id": 41,
+          "yaw": 135.29,
+          "pitch": 20,
+          "distance": 4.5
+        },
+        {
+          "id": 4,
+          "yaw": -100.12,
+          "pitch": 20,
+          "distance": 4.6
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "image": "/panoramas/00044.webp",
+      "label": "Point 44",
+      "area": "Extérieurs et quais",
+      "floor": 0,
+      "position": {
+        "x": 14.255,
+        "y": 0.0,
+        "z": 554.626,
+        "mapX": 0.46228,
+        "mapY": 1.0
+      },
+      "orientation": {
+        "w": -0.429052,
+        "x": -0.009459,
+        "y": 0.009707,
+        "z": 0.903178
+      },
+      "neighbors": [
+        {
+          "id": 13,
+          "yaw": 175.52,
+          "pitch": -0.98,
+          "distance": 3.2
+        },
+        {
+          "id": 14,
+          "yaw": -100.61,
+          "pitch": 2.73,
+          "distance": 6.3
+        },
+        {
+          "id": 15,
+          "yaw": -127.63,
+          "pitch": 1.93,
+          "distance": 8.2
+        },
+        {
+          "id": 19,
+          "yaw": -156.12,
+          "pitch": 16.14,
+          "distance": 9.4
+        }
+      ]
+    }
+  ]
+}
