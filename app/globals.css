@@ -546,6 +546,63 @@ button {
   font-size: 14px;
 }
 
+.drawer-setting {
+  margin: 0 16px 16px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+}
+
+.drawer-setting-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.drawer-setting-head small,
+.drawer-setting-head strong {
+  display: block;
+}
+
+.drawer-setting-head small {
+  color: var(--ink-soft);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.drawer-setting-head strong {
+  margin-top: 2px;
+  font-size: 13px;
+}
+
+.drawer-setting output {
+  flex: 0 0 auto;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: var(--blue-soft);
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.drawer-setting input[type="range"] {
+  width: 100%;
+  margin: 14px 0 0;
+  accent-color: var(--blue);
+  cursor: pointer;
+}
+
+.drawer-setting-scale {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1px;
+  color: var(--ink-soft);
+  font-size: 9px;
+}
+
 .side-drawer nav {
   flex: 1;
   overflow-y: auto;

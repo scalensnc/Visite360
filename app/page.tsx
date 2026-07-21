@@ -43,6 +43,9 @@ function wrapAngle(angle: number) {
 }
 
 const MARKER_HEIGHT_METERS = 1.65;
+const MIN_VISIBLE_PANORAMAS = 2;
+const MAX_VISIBLE_PANORAMAS = 8;
+const VISIBLE_PANORAMAS_STORAGE_KEY = "arnex360.visiblePanoramas";
 const DATASET_UP = new THREE.Vector3(0, 0, 1);
 const VIEWER_UP = new THREE.Vector3(0, 1, 0);
 const levelingCache = new WeakMap<Panorama, THREE.Quaternion>();
@@ -232,6 +235,7 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [mapOpen, setMapOpen] = useState(false);
   const [hotspotsVisible, setHotspotsVisible] = useState(true);
+  const [visiblePanoramaLimit, setVisiblePanoramaLimit] = useState(MAX_VISIBLE_PANORAMAS);
   const [ready, setReady] = useState(false);
   const [transitioning, setTransitioning] = useState(false);
   const [toast, setToast] = useState("");
@@ -240,6 +244,21 @@ export default function Home() {
     () => manifest?.panoramas.find((panorama) => panorama.id === currentId) ?? null,
     [currentId, manifest],
   );
+  const visibleNeighbors = useMemo(
+    () => currentPanorama?.neighbors.slice(0, visiblePanoramaLimit) ?? [],
+    [currentPanorama, visiblePanoramaLimit],
+  );
+
+  useEffect(() => {
+    let cancelled = false;
+    const savedLimit = Number(window.localStorage.getItem(VISIBLE_PANORAMAS_STORAGE_KEY));
+    if (Number.isInteger(savedLimit) && savedLimit >= MIN_VISIBLE_PANORAMAS && savedLimit <= MAX_VISIBLE_PANORAMAS) {
+      queueMicrotask(() => {
+        if (!cancelled) setVisiblePanoramaLimit(savedLimit);
+      });
+    }
+    return () => { cancelled = true; };
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -545,6 +564,12 @@ export default function Home() {
     else await document.exitFullscreen();
   };
 
+  const updateVisiblePanoramaLimit = (limit: number) => {
+    const nextLimit = Math.max(MIN_VISIBLE_PANORAMAS, Math.min(MAX_VISIBLE_PANORAMAS, limit));
+    setVisiblePanoramaLimit(nextLimit);
+    window.localStorage.setItem(VISIBLE_PANORAMAS_STORAGE_KEY, String(nextLimit));
+  };
+
   return (
     <main className="tour-shell">
       <div ref={viewportRef} className="panorama-viewport" />
@@ -569,7 +594,7 @@ export default function Home() {
         </div>
       </header>
 
-      {hotspotsVisible && currentPanorama?.neighbors.map((neighbor) => {
+      {hotspotsVisible && visibleNeighbors.map((neighbor) => {
         const destination = manifest?.panoramas.find((item) => item.id === neighbor.id);
         if (!destination) return null;
         return (
@@ -595,6 +620,23 @@ export default function Home() {
         <div className="drawer-place">
           <span className="place-dot" />
           <div><small>Site actuel</small><strong>{manifest?.site.name ?? "Gare d’Arnex"}</strong></div>
+        </div>
+        <div className="drawer-setting">
+          <div className="drawer-setting-head">
+            <div><small>Navigation</small><strong>Panoramas autour</strong></div>
+            <output htmlFor="visible-panorama-limit" aria-live="polite">{visiblePanoramaLimit} max.</output>
+          </div>
+          <input
+            id="visible-panorama-limit"
+            type="range"
+            min={MIN_VISIBLE_PANORAMAS}
+            max={MAX_VISIBLE_PANORAMAS}
+            step="1"
+            value={visiblePanoramaLimit}
+            onChange={(event) => updateVisiblePanoramaLimit(Number(event.target.value))}
+            aria-label="Nombre maximum de panoramas visibles autour"
+          />
+          <div className="drawer-setting-scale" aria-hidden="true"><span>2</span><span>8</span></div>
         </div>
         <nav>
           <button onClick={() => { setMapOpen(true); setMenuOpen(false); }}><span>▦</span><div><strong>Plan du parcours</strong><small>{manifest?.site.panoramaCount ?? 45} panoramas</small></div></button>

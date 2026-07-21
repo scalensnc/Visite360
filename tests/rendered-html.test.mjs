@@ -58,7 +58,16 @@ test("server-renders the Arnex 360 loading shell", async () => {
   assert.match(html, /Préparation de la visite d’Arnex/);
   assert.match(html, /Glisser pour regarder/);
   assert.match(html, /Hotspots/);
+  assert.match(html, /Panoramas autour/);
   assert.doesNotMatch(html, /Outil de mesure|Rechercher un lieu/);
+});
+
+test("lets the user limit and persist surrounding panorama hotspots", async () => {
+  const pageSource = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  assert.match(pageSource, /currentPanorama\?\.neighbors\.slice\(0, visiblePanoramaLimit\)/);
+  assert.match(pageSource, /arnex360\.visiblePanoramas/);
+  assert.match(pageSource, /min=\{MIN_VISIBLE_PANORAMAS\}/);
+  assert.match(pageSource, /max=\{MAX_VISIBLE_PANORAMAS\}/);
 });
 
 test("keeps all NavVis poses and projects navigation in a proper 3D basis", async () => {
