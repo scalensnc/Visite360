@@ -101,3 +101,22 @@ test("keeps all NavVis poses and projects navigation in a proper 3D basis", asyn
   assert.ok(Math.abs(viewerYaw(byId.get(0), byId.get(1)) - (-12.126)) < 0.02);
   assert.ok(Math.abs(viewerYaw(byId.get(3), byId.get(4)) - (-116.864)) < 0.02);
 });
+
+test("levels each panorama from its NavVis orientation", async () => {
+  const [manifest, pageSource] = await Promise.all([
+    readFile(new URL("../public/panoramas/manifest.json", import.meta.url), "utf8").then(JSON.parse),
+    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
+  ]);
+
+  const tilts = manifest.panoramas.map((panorama) => {
+    const localUp = rotateByQuaternion([0, 0, 1], panorama.orientation);
+    const viewerUp = [-localUp[0], localUp[2], localUp[1]];
+    const length = Math.hypot(...viewerUp);
+    return Math.acos(Math.max(-1, Math.min(1, viewerUp[1] / length))) * 180 / Math.PI;
+  });
+
+  assert.ok(Math.max(...tilts) > 35);
+  assert.ok(Math.max(...tilts) < 60);
+  assert.match(pageSource, /setFromUnitVectors\(worldUpInViewer, VIEWER_UP\)/);
+  assert.match(pageSource, /panoramaMeshRef\.current\?\.quaternion\.copy\(levelingQuaternion\(currentPanorama\)\)/);
+});

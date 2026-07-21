@@ -43,6 +43,30 @@ function wrapAngle(angle: number) {
 }
 
 const MARKER_HEIGHT_METERS = 1.65;
+const DATASET_UP = new THREE.Vector3(0, 0, 1);
+const VIEWER_UP = new THREE.Vector3(0, 1, 0);
+const levelingCache = new WeakMap<Panorama, THREE.Quaternion>();
+
+function navvisLocalToViewer(vector: THREE.Vector3) {
+  return new THREE.Vector3(-vector.x, vector.z, vector.y);
+}
+
+function levelingQuaternion(panorama: Panorama) {
+  const cached = levelingCache.get(panorama);
+  if (cached) return cached;
+
+  const inverseOrientation = new THREE.Quaternion(
+    panorama.orientation.x,
+    panorama.orientation.y,
+    panorama.orientation.z,
+    panorama.orientation.w,
+  ).normalize().invert();
+  const worldUpInPanorama = DATASET_UP.clone().applyQuaternion(inverseOrientation);
+  const worldUpInViewer = navvisLocalToViewer(worldUpInPanorama).normalize();
+  const correction = new THREE.Quaternion().setFromUnitVectors(worldUpInViewer, VIEWER_UP);
+  levelingCache.set(panorama, correction);
+  return correction;
+}
 
 function vectorBetweenPanoramas(from: Panorama, to: Panorama, onFloor: boolean) {
   const vector = new THREE.Vector3(
@@ -61,7 +85,7 @@ function vectorBetweenPanoramas(from: Panorama, to: Panorama, onFloor: boolean) 
   // raster used here faces -X at its horizontal centre, so this proper 3D
   // basis change (determinant +1) maps a local pose vector into the viewer.
   vector.applyQuaternion(inverseOrientation);
-  return new THREE.Vector3(-vector.x, vector.z, vector.y);
+  return navvisLocalToViewer(vector).applyQuaternion(levelingQuaternion(from));
 }
 
 function viewAngles(from: Panorama, to: Panorama) {
@@ -191,6 +215,7 @@ export default function Home() {
   const viewportRef = useRef<HTMLDivElement>(null);
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
   const materialRef = useRef<THREE.MeshBasicMaterial | null>(null);
+  const panoramaMeshRef = useRef<THREE.Mesh | null>(null);
   const textureRef = useRef<THREE.Texture | null>(null);
   const activePanoRef = useRef<Panorama | null>(null);
   const panoramasByIdRef = useRef<Map<number, Panorama>>(new Map());
@@ -257,7 +282,9 @@ export default function Home() {
     geometry.scale(-1, 1, 1);
     const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
     materialRef.current = material;
-    scene.add(new THREE.Mesh(geometry, material));
+    const panoramaMesh = new THREE.Mesh(geometry, material);
+    panoramaMeshRef.current = panoramaMesh;
+    scene.add(panoramaMesh);
     const target = new THREE.Vector3();
     const cameraDirection = new THREE.Vector3();
     const hotspotDirection = new THREE.Vector3();
@@ -391,6 +418,7 @@ export default function Home() {
       renderer.domElement.remove();
       cameraRef.current = null;
       materialRef.current = null;
+      panoramaMeshRef.current = null;
     };
   }, []);
 
@@ -416,6 +444,7 @@ export default function Home() {
           materialRef.current.map = texture;
           materialRef.current.needsUpdate = true;
         }
+        panoramaMeshRef.current?.quaternion.copy(levelingQuaternion(currentPanorama));
         const routeNeighbors = currentPanorama.neighbors;
         const arrival = currentPanorama.neighbors.find((neighbor) => neighbor.id === previousPanoRef.current);
         const onwardNeighbors = routeNeighbors.filter((neighbor) => neighbor.id !== previousPanoRef.current);
