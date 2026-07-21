@@ -93,6 +93,11 @@ test("keeps all NavVis poses and projects navigation in a proper 3D basis", asyn
   }
   assert.equal(reached.size, 45);
 
+  const neighborCounts = manifest.panoramas.map((panorama) => panorama.neighbors.length);
+  const averageNeighborCount = neighborCounts.reduce((sum, count) => sum + count, 0) / neighborCounts.length;
+  assert.ok(averageNeighborCount >= 3.5);
+  assert.ok(Math.max(...neighborCounts) >= 7);
+
   assert.ok(Math.abs(viewerYaw(byId.get(0), byId.get(1)) - (-12.126)) < 0.02);
   assert.ok(Math.abs(viewerYaw(byId.get(3), byId.get(4)) - (-116.864)) < 0.02);
 });

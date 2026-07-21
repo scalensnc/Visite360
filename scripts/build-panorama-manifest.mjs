@@ -76,6 +76,48 @@ for (const [from, to] of [
   [20, 28],
 ]) addEdge(from, to);
 
+// NavVis normally exposes several capture locations in the surrounding 3D
+// space, not only the immediately previous and next frames. Expand the base
+// walk graph to locations reachable within three capture steps when the route
+// remains close to a straight line. The path/direct-distance ratio prevents
+// shortcuts through walls and around sharp corners.
+const baseAdjacency = new Map(
+  [...adjacency].map(([id, neighbors]) => [id, new Set(neighbors)]),
+);
+const distanceBetween = (from, to) => (
+  poseById.get(from).position.distanceTo(poseById.get(to).position)
+);
+const expandedEdges = new Set();
+
+for (const row of rows) {
+  const bestPathDistance = new Map([[row.id, 0]]);
+  const routeQueue = [{ id: row.id, hops: 0, pathDistance: 0 }];
+
+  while (routeQueue.length) {
+    const current = routeQueue.shift();
+    if (current.hops === 3) continue;
+
+    for (const neighborId of baseAdjacency.get(current.id)) {
+      const pathDistance = current.pathDistance + distanceBetween(current.id, neighborId);
+      if (bestPathDistance.has(neighborId) && bestPathDistance.get(neighborId) <= pathDistance) continue;
+      bestPathDistance.set(neighborId, pathDistance);
+      routeQueue.push({ id: neighborId, hops: current.hops + 1, pathDistance });
+    }
+  }
+
+  for (const [candidateId, pathDistance] of bestPathDistance) {
+    if (candidateId === row.id) continue;
+    const directDistance = distanceBetween(row.id, candidateId);
+    if (directDistance > 20 || pathDistance / Math.max(directDistance, 0.01) > 1.3) continue;
+    expandedEdges.add([Math.min(row.id, candidateId), Math.max(row.id, candidateId)].join(":"));
+  }
+}
+
+for (const edge of expandedEdges) {
+  const [from, to] = edge.split(":").map(Number);
+  addEdge(from, to);
+}
+
 const minX = Math.min(...rows.map((row) => row.position.x));
 const maxX = Math.max(...rows.map((row) => row.position.x));
 const minY = Math.min(...rows.map((row) => row.position.y));
