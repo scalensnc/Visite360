@@ -81,6 +81,14 @@ test("provides a navigable 3D route map with direct panorama selection", async (
   assert.doesNotMatch(pageSource, /getContext\("2d"\)/);
 });
 
+test("gives panorama hotspots a strong distance-based perspective", async () => {
+  const pageSource = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  assert.match(pageSource, /Math\.pow\(5 \/ Math\.max\(distanceMeters, 2\.5\), 0\.48\)/);
+  assert.match(pageSource, /hotspotPerspectiveScale\(distance, camera\.fov\)/);
+  assert.match(pageSource, /hotspotPerspectiveOpacity\(distance\)\.toFixed\(3\)/);
+  assert.match(pageSource, /element\.style\.zIndex = String/);
+});
+
 test("keeps all NavVis poses and projects navigation in a proper 3D basis", async () => {
   const manifest = JSON.parse(
     await readFile(new URL("../public/panoramas/manifest.json", import.meta.url), "utf8"),

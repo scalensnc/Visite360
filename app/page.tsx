@@ -109,6 +109,20 @@ function distanceBetweenPanoramas(from: Panorama, to: Panorama) {
   );
 }
 
+function hotspotPerspectiveScale(distanceMeters: number, fieldOfView: number) {
+  const distanceScale = THREE.MathUtils.clamp(
+    Math.pow(5 / Math.max(distanceMeters, 2.5), 0.48),
+    0.44,
+    1.42,
+  );
+  const zoomScale = THREE.MathUtils.clamp(82 / fieldOfView, 0.82, 1.25);
+  return THREE.MathUtils.clamp(distanceScale * zoomScale, 0.38, 1.7);
+}
+
+function hotspotPerspectiveOpacity(distanceMeters: number) {
+  return THREE.MathUtils.clamp(1.06 - distanceMeters / 85, 0.68, 1);
+}
+
 const MAP_VERTICAL_SCALE = 1.6;
 const MAP_FLOOR_COLORS = new Map([
   [-1, 0x8aa5ff],
@@ -575,11 +589,10 @@ export default function Home() {
         const x = (projectedHotspot.x * 0.5 + 0.5) * rect.width;
         const y = (-projectedHotspot.y * 0.5 + 0.5) * rect.height;
         const distance = distanceBetweenPanoramas(activePanorama, destination);
-        const distanceScale = Math.max(0.78, Math.min(1.08, 1.12 - distance * 0.03));
-        const zoomScale = Math.max(0.84, Math.min(1.28, 82 / camera.fov));
-        const scale = distanceScale * zoomScale;
+        const scale = hotspotPerspectiveScale(distance, camera.fov);
         element.style.setProperty("--hotspot-scale", scale.toFixed(3));
-        element.style.opacity = "1";
+        element.style.opacity = hotspotPerspectiveOpacity(distance).toFixed(3);
+        element.style.zIndex = String(Math.round(18 - Math.min(distance, 32) / 4));
         element.style.pointerEvents = "auto";
         element.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`;
       });
