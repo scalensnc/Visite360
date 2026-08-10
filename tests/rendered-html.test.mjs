@@ -71,6 +71,16 @@ test("lets the user choose and persist a panorama visibility radius", async () =
   assert.match(pageSource, /<span>30 m<\/span>/);
 });
 
+test("provides a navigable 3D route map with direct panorama selection", async () => {
+  const pageSource = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  assert.match(pageSource, /OrbitControls/);
+  assert.match(pageSource, /new THREE\.Raycaster\(\)/);
+  assert.match(pageSource, /intersectObjects\(pointMeshes, false\)/);
+  assert.match(pageSource, /onSelectRef\.current\(Number\(mesh\.userData\.panoramaId\)\)/);
+  assert.match(pageSource, /<MapScene panoramas=\{manifest\.panoramas\}/);
+  assert.doesNotMatch(pageSource, /getContext\("2d"\)/);
+});
+
 test("keeps all NavVis poses and projects navigation in a proper 3D basis", async () => {
   const manifest = JSON.parse(
     await readFile(new URL("../public/panoramas/manifest.json", import.meta.url), "utf8"),

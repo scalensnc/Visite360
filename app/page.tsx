@@ -1,7 +1,8 @@
 "use client";
 
 import * as THREE from "three";
-import { type MouseEvent as ReactMouseEvent, useEffect, useMemo, useRef, useState } from "react";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 type Neighbor = {
   id: number;
@@ -108,7 +109,15 @@ function distanceBetweenPanoramas(from: Panorama, to: Panorama) {
   );
 }
 
-function MapPlot({
+const MAP_VERTICAL_SCALE = 1.6;
+const MAP_FLOOR_COLORS = new Map([
+  [-1, 0x8aa5ff],
+  [0, 0x48a3ff],
+  [1, 0x63d8b3],
+  [2, 0xf4bd59],
+]);
+
+function MapScene({
   panoramas,
   currentId,
   onSelect,
@@ -117,108 +126,255 @@ function MapPlot({
   currentId: number;
   onSelect: (id: number) => void;
 }) {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const onSelectRef = useRef(onSelect);
+  const resetViewRef = useRef<() => void>(() => undefined);
+  const [hoveredId, setHoveredId] = useState<number | null>(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const context = canvas.getContext("2d");
-    if (!context) return;
+    onSelectRef.current = onSelect;
+  }, [onSelect]);
 
-    const draw = () => {
-      const rect = canvas.getBoundingClientRect();
-      const ratio = Math.min(window.devicePixelRatio || 1, 2);
-      canvas.width = Math.round(rect.width * ratio);
-      canvas.height = Math.round(rect.height * ratio);
-      context.setTransform(ratio, 0, 0, ratio, 0, 0);
-      context.clearRect(0, 0, rect.width, rect.height);
+  const hoveredPanorama = hoveredId === null
+    ? null
+    : panoramas.find((panorama) => panorama.id === hoveredId) ?? null;
 
-      context.strokeStyle = "rgba(109, 131, 153, .16)";
-      context.lineWidth = 1;
-      for (let x = 24; x < rect.width; x += 32) {
-        context.beginPath();
-        context.moveTo(x, 0);
-        context.lineTo(x, rect.height);
-        context.stroke();
-      }
-      for (let y = 24; y < rect.height; y += 32) {
-        context.beginPath();
-        context.moveTo(0, y);
-        context.lineTo(rect.width, y);
-        context.stroke();
-      }
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container || panoramas.length === 0) return;
 
-      const pad = 30;
-      const point = (panorama: Panorama) => ({
-        x: pad + panorama.position.mapX * (rect.width - pad * 2),
-        y: pad + panorama.position.mapY * (rect.height - pad * 2),
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x0a1722);
+    scene.fog = new THREE.FogExp2(0x0a1722, 0.016);
+
+    const camera = new THREE.PerspectiveCamera(48, 1, 0.1, 400);
+    const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: "high-performance" });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    renderer.domElement.tabIndex = 0;
+    renderer.domElement.setAttribute("role", "application");
+    renderer.domElement.setAttribute(
+      "aria-label",
+      "Carte 3D du parcours. Faites glisser pour tourner, utilisez la molette pour zoomer et cliquez sur un point pour ouvrir son panorama.",
+    );
+    container.prepend(renderer.domElement);
+
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.075;
+    controls.screenSpacePanning = true;
+    controls.zoomToCursor = true;
+    controls.minPolarAngle = THREE.MathUtils.degToRad(14);
+    controls.maxPolarAngle = THREE.MathUtils.degToRad(84);
+    controls.listenToKeyEvents(renderer.domElement);
+
+    const minX = Math.min(...panoramas.map((panorama) => panorama.position.x));
+    const maxX = Math.max(...panoramas.map((panorama) => panorama.position.x));
+    const minY = Math.min(...panoramas.map((panorama) => panorama.position.y));
+    const maxY = Math.max(...panoramas.map((panorama) => panorama.position.y));
+    const minZ = Math.min(...panoramas.map((panorama) => panorama.position.z));
+    const maxZ = Math.max(...panoramas.map((panorama) => panorama.position.z));
+    const centerX = (minX + maxX) / 2;
+    const centerY = (minY + maxY) / 2;
+    const mapPosition = (panorama: Panorama) => new THREE.Vector3(
+      panorama.position.x - centerX,
+      (panorama.position.z - minZ) * MAP_VERTICAL_SCALE,
+      panorama.position.y - centerY,
+    );
+    const sceneSpan = Math.max(maxX - minX, maxY - minY, (maxZ - minZ) * MAP_VERTICAL_SCALE, 12);
+    const target = new THREE.Vector3(0, (maxZ - minZ) * MAP_VERTICAL_SCALE * 0.32, 0);
+    const initialCameraPosition = new THREE.Vector3(sceneSpan * 0.88, sceneSpan * 0.78, sceneSpan * 0.92);
+    const resetView = () => {
+      camera.position.copy(initialCameraPosition);
+      controls.target.copy(target);
+      controls.update();
+    };
+    resetViewRef.current = resetView;
+    controls.minDistance = sceneSpan * 0.3;
+    controls.maxDistance = sceneSpan * 3.2;
+    resetView();
+
+    scene.add(new THREE.HemisphereLight(0xc7e4ff, 0x102337, 1.7));
+    const keyLight = new THREE.DirectionalLight(0xffffff, 2.4);
+    keyLight.position.set(sceneSpan, sceneSpan * 1.4, sceneSpan * 0.5);
+    scene.add(keyLight);
+
+    const floorGroups = new Map<number, Panorama[]>();
+    panoramas.forEach((panorama) => {
+      const group = floorGroups.get(panorama.floor) ?? [];
+      group.push(panorama);
+      floorGroups.set(panorama.floor, group);
+    });
+    floorGroups.forEach((floorPanoramas, floor) => {
+      const color = MAP_FLOOR_COLORS.get(floor) ?? 0x48a3ff;
+      const grid = new THREE.GridHelper(sceneSpan + 8, 18, color, color);
+      const gridMaterial = grid.material as THREE.Material;
+      gridMaterial.transparent = true;
+      gridMaterial.opacity = floor === 0 ? 0.18 : 0.1;
+      grid.position.y = floorPanoramas.reduce(
+        (sum, panorama) => sum + mapPosition(panorama).y,
+        0,
+      ) / floorPanoramas.length - 0.28;
+      scene.add(grid);
+    });
+
+    const byId = new Map(panoramas.map((panorama) => [panorama.id, panorama]));
+    const routeVertices: number[] = [];
+    panoramas.forEach((panorama) => {
+      panorama.neighbors.forEach((neighbor) => {
+        const destination = byId.get(neighbor.id);
+        if (!destination || destination.id < panorama.id) return;
+        const from = mapPosition(panorama);
+        const to = mapPosition(destination);
+        routeVertices.push(from.x, from.y, from.z, to.x, to.y, to.z);
       });
-      const byId = new Map(panoramas.map((item) => [item.id, item]));
+    });
+    const routeGeometry = new THREE.BufferGeometry();
+    routeGeometry.setAttribute("position", new THREE.Float32BufferAttribute(routeVertices, 3));
+    const routeMaterial = new THREE.LineBasicMaterial({
+      color: 0x75bbff,
+      transparent: true,
+      opacity: 0.52,
+    });
+    scene.add(new THREE.LineSegments(routeGeometry, routeMaterial));
 
-      context.lineCap = "round";
-      context.lineWidth = 2.5;
-      context.strokeStyle = "rgba(52, 143, 240, .34)";
-      panoramas.forEach((panorama) => {
-        panorama.neighbors.forEach((neighbor) => {
-          const destination = byId.get(neighbor.id);
-          if (!destination || destination.id < panorama.id) return;
-          const from = point(panorama);
-          const to = point(destination);
-          context.beginPath();
-          context.moveTo(from.x, from.y);
-          context.lineTo(to.x, to.y);
-          context.stroke();
+    const pointGeometry = new THREE.SphereGeometry(0.42, 18, 12);
+    const pointMaterials = new Map<number, THREE.MeshStandardMaterial>();
+    const pointMeshes: THREE.Mesh[] = [];
+    panoramas.forEach((panorama) => {
+      const color = MAP_FLOOR_COLORS.get(panorama.floor) ?? 0x48a3ff;
+      let material = pointMaterials.get(color);
+      if (!material) {
+        material = new THREE.MeshStandardMaterial({
+          color,
+          emissive: color,
+          emissiveIntensity: 0.22,
+          roughness: 0.36,
+          metalness: 0.12,
         });
-      });
+        pointMaterials.set(color, material);
+      }
+      const mesh = new THREE.Mesh(pointGeometry, material);
+      mesh.position.copy(mapPosition(panorama));
+      mesh.userData.panoramaId = panorama.id;
+      mesh.userData.baseScale = panorama.id === currentId ? 1.55 : 1;
+      mesh.scale.setScalar(mesh.userData.baseScale);
+      scene.add(mesh);
+      pointMeshes.push(mesh);
+    });
 
-      panoramas.forEach((panorama) => {
-        const position = point(panorama);
-        const active = panorama.id === currentId;
-        context.beginPath();
-        context.arc(position.x, position.y, active ? 7 : 3.2, 0, Math.PI * 2);
-        context.fillStyle = active ? "#ffffff" : "#48a3ff";
-        context.fill();
-        if (active) {
-          context.beginPath();
-          context.arc(position.x, position.y, 12, 0, Math.PI * 2);
-          context.strokeStyle = "rgba(72, 163, 255, .8)";
-          context.lineWidth = 3;
-          context.stroke();
+    const currentPanorama = byId.get(currentId);
+    const ringMaterial = new THREE.MeshBasicMaterial({
+      color: 0xffffff,
+      transparent: true,
+      opacity: 0.82,
+      side: THREE.DoubleSide,
+      depthWrite: false,
+    });
+    const currentRing = new THREE.Mesh(new THREE.RingGeometry(0.72, 0.92, 40), ringMaterial);
+    currentRing.rotation.x = -Math.PI / 2;
+    if (currentPanorama) {
+      currentRing.position.copy(mapPosition(currentPanorama));
+      currentRing.position.y -= 0.05;
+      scene.add(currentRing);
+    }
+
+    const raycaster = new THREE.Raycaster();
+    const pointer = new THREE.Vector2();
+    let hoveredMesh: THREE.Mesh | null = null;
+    let pointerStart = { x: 0, y: 0 };
+    const panoramaAtPointer = (event: PointerEvent) => {
+      const rect = renderer.domElement.getBoundingClientRect();
+      pointer.set(
+        ((event.clientX - rect.left) / rect.width) * 2 - 1,
+        -((event.clientY - rect.top) / rect.height) * 2 + 1,
+      );
+      raycaster.setFromCamera(pointer, camera);
+      return raycaster.intersectObjects(pointMeshes, false)[0]?.object as THREE.Mesh | undefined;
+    };
+    const setHoveredMesh = (mesh: THREE.Mesh | null) => {
+      if (mesh === hoveredMesh) return;
+      if (hoveredMesh) hoveredMesh.scale.setScalar(hoveredMesh.userData.baseScale);
+      hoveredMesh = mesh;
+      if (hoveredMesh) hoveredMesh.scale.setScalar(hoveredMesh.userData.baseScale * 1.42);
+      renderer.domElement.classList.toggle("is-point-hovered", Boolean(hoveredMesh));
+      setHoveredId(hoveredMesh ? Number(hoveredMesh.userData.panoramaId) : null);
+    };
+    const pointerMove = (event: PointerEvent) => setHoveredMesh(panoramaAtPointer(event) ?? null);
+    const pointerDown = (event: PointerEvent) => {
+      pointerStart = { x: event.clientX, y: event.clientY };
+    };
+    const pointerUp = (event: PointerEvent) => {
+      if (event.pointerType === "mouse" && event.button !== 0) return;
+      if (Math.hypot(event.clientX - pointerStart.x, event.clientY - pointerStart.y) > 5) return;
+      const mesh = panoramaAtPointer(event);
+      if (mesh) onSelectRef.current(Number(mesh.userData.panoramaId));
+    };
+    const pointerLeave = () => setHoveredMesh(null);
+    renderer.domElement.addEventListener("pointermove", pointerMove);
+    renderer.domElement.addEventListener("pointerdown", pointerDown);
+    renderer.domElement.addEventListener("pointerup", pointerUp);
+    renderer.domElement.addEventListener("pointerleave", pointerLeave);
+
+    const resize = () => {
+      const rect = container.getBoundingClientRect();
+      renderer.setSize(rect.width, rect.height, false);
+      camera.aspect = rect.width / Math.max(rect.height, 1);
+      camera.updateProjectionMatrix();
+    };
+    const observer = new ResizeObserver(resize);
+    observer.observe(container);
+    resize();
+
+    let frame = 0;
+    const animate = (time: number) => {
+      frame = requestAnimationFrame(animate);
+      controls.update();
+      const pulse = 1 + Math.sin(time * 0.004) * 0.12;
+      currentRing.scale.setScalar(pulse);
+      ringMaterial.opacity = 0.68 + Math.sin(time * 0.004) * 0.16;
+      renderer.render(scene, camera);
+    };
+    frame = requestAnimationFrame(animate);
+
+    return () => {
+      cancelAnimationFrame(frame);
+      observer.disconnect();
+      controls.stopListenToKeyEvents();
+      controls.dispose();
+      renderer.domElement.removeEventListener("pointermove", pointerMove);
+      renderer.domElement.removeEventListener("pointerdown", pointerDown);
+      renderer.domElement.removeEventListener("pointerup", pointerUp);
+      renderer.domElement.removeEventListener("pointerleave", pointerLeave);
+      scene.traverse((object) => {
+        if (object instanceof THREE.Mesh || object instanceof THREE.Line || object instanceof THREE.LineSegments) {
+          object.geometry.dispose();
+          const materials = Array.isArray(object.material) ? object.material : [object.material];
+          materials.forEach((material) => material.dispose());
         }
       });
+      renderer.dispose();
+      renderer.domElement.remove();
+      resetViewRef.current = () => undefined;
     };
-
-    draw();
-    const observer = new ResizeObserver(draw);
-    observer.observe(canvas);
-    return () => observer.disconnect();
   }, [currentId, panoramas]);
 
-  const selectNearest = (event: ReactMouseEvent<HTMLCanvasElement>) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    const normalizedX = (event.clientX - rect.left - 30) / (rect.width - 60);
-    const normalizedY = (event.clientY - rect.top - 30) / (rect.height - 60);
-    const nearest = panoramas.reduce<{ panorama: Panorama; distance: number } | null>(
-      (best, panorama) => {
-        const distance = Math.hypot(
-          panorama.position.mapX - normalizedX,
-          panorama.position.mapY - normalizedY,
-        );
-        return !best || distance < best.distance ? { panorama, distance } : best;
-      },
-      null,
-    );
-    if (nearest && nearest.distance < 0.12) onSelect(nearest.panorama.id);
-  };
-
   return (
-    <div className="map-plot">
-      <canvas
-        ref={canvasRef}
-        onClick={selectNearest}
-        aria-label="Plan de tous les panoramas"
-      />
-      <div className="map-scale"><span />5 m</div>
+    <div ref={containerRef} className="map-plot map-scene">
+      <div className="map-orbit-hint">
+        <span className="map-orbit-hint-desktop">Glisser pour tourner · clic droit pour déplacer · molette pour zoomer</span>
+        <span className="map-orbit-hint-mobile">Glisser · pincer · toucher un point</span>
+      </div>
+      <button className="map-reset-view" onClick={() => resetViewRef.current()} aria-label="Réinitialiser la vue 3D">
+        Vue 3D
+      </button>
+      {hoveredPanorama && (
+        <button className="map-point-preview" onClick={() => onSelect(hoveredPanorama.id)}>
+          <span>Panorama {String(hoveredPanorama.id).padStart(2, "0")}</span>
+          <strong>{hoveredPanorama.area}</strong>
+          <small>Ouvrir ce point →</small>
+        </button>
+      )}
     </div>
   );
 }
@@ -672,11 +828,11 @@ export default function Home() {
       {mapOpen && manifest && (
         <section className="map-panel simplified-map" role="dialog" aria-label="Plan de la visite">
           <div className="map-panel-head">
-            <div><small>Parcours complet</small><strong>{manifest.site.name}</strong></div>
+            <div><small>Parcours complet · 3D</small><strong>{manifest.site.name}</strong></div>
             <button onClick={() => setMapOpen(false)} aria-label="Fermer le plan">×</button>
           </div>
-          <MapPlot panoramas={manifest.panoramas} currentId={currentId} onSelect={goToPanorama} />
-          <div className="map-panel-foot"><span><i className="legend-current" />Position actuelle</span><span><i />Point disponible</span></div>
+          <MapScene panoramas={manifest.panoramas} currentId={currentId} onSelect={goToPanorama} />
+          <div className="map-panel-foot"><span><i className="legend-current" />Position actuelle</span><span><i />Panorama</span><span className="map-nav-legend">4 niveaux navigables</span></div>
         </section>
       )}
 
