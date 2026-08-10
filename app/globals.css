@@ -161,6 +161,30 @@ button {
   letter-spacing: 0.04em;
 }
 
+.folder-input {
+  display: none;
+}
+
+.loading-folder-button {
+  min-height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 8px;
+  padding: 0 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.loading-folder-button:hover,
+.loading-folder-button:focus-visible {
+  border-color: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.16);
+  outline: none;
+}
+
 @keyframes load-sweep {
   from { transform: translateX(-105%); }
   to { transform: translateX(235%); }
@@ -663,6 +687,15 @@ button {
   margin-top: 3px;
   color: var(--ink-soft);
   font-size: 10px;
+}
+
+.drawer-folder-note {
+  margin: 0;
+  padding: 13px 20px 16px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 10px;
+  line-height: 1.5;
 }
 
 .data-summary {

@@ -2,42 +2,8 @@
 
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import { useEffect, useMemo, useRef, useState } from "react";
-
-type Neighbor = {
-  id: number;
-};
-
-type Panorama = {
-  id: number;
-  image: string;
-  label: string;
-  area: string;
-  floor: number;
-  position: {
-    x: number;
-    y: number;
-    z: number;
-    mapX: number;
-    mapY: number;
-  };
-  orientation: {
-    w: number;
-    x: number;
-    y: number;
-    z: number;
-  };
-  neighbors: Neighbor[];
-};
-
-type Manifest = {
-  site: {
-    name: string;
-    captured: string;
-    panoramaCount: number;
-  };
-  panoramas: Panorama[];
-};
+import { useEffect, useMemo, useRef, useState, type InputHTMLAttributes } from "react";
+import { loadPanoramaFolder, type Manifest, type Panorama } from "./panorama-folder";
 
 function wrapAngle(angle: number) {
   return ((angle + 180) % 360 + 360) % 360 - 180;
@@ -47,7 +13,10 @@ const MARKER_HEIGHT_METERS = 1.65;
 const MIN_VISIBLE_RADIUS_METERS = 2;
 const MAX_VISIBLE_RADIUS_METERS = 30;
 const DEFAULT_VISIBLE_RADIUS_METERS = 5;
-const VISIBLE_RADIUS_STORAGE_KEY = "arnex360.visibleRadiusMeters";
+const VISIBLE_RADIUS_STORAGE_KEY = "panorama360.visibleRadiusMeters";
+const DIRECTORY_PICKER_ATTRIBUTES = {
+  webkitdirectory: "",
+} as unknown as InputHTMLAttributes<HTMLInputElement>;
 const DATASET_UP = new THREE.Vector3(0, 0, 1);
 const VIEWER_UP = new THREE.Vector3(0, 1, 0);
 const levelingCache = new WeakMap<Panorama, THREE.Quaternion>();
@@ -404,6 +373,9 @@ export default function Home() {
   const previousPanoRef = useRef<number | null>(null);
   const hotspotRefs = useRef<Record<number, HTMLButtonElement | null>>({});
   const compassRef = useRef<HTMLSpanElement>(null);
+  const folderInputRef = useRef<HTMLInputElement>(null);
+  const folderLoadIdRef = useRef(0);
+  const objectUrlsRef = useRef<string[]>([]);
   const lonRef = useRef(0);
   const latRef = useRef(0);
   const fovRef = useRef(82);
@@ -418,6 +390,8 @@ export default function Home() {
   const [ready, setReady] = useState(false);
   const [transitioning, setTransitioning] = useState(false);
   const [toast, setToast] = useState("");
+  const [datasetLoading, setDatasetLoading] = useState(true);
+  const [datasetError, setDatasetError] = useState("");
 
   const currentPanorama = useMemo(
     () => manifest?.panoramas.find((panorama) => panorama.id === currentId) ?? null,
@@ -449,20 +423,32 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    let cancelled = false;
+    const loadId = ++folderLoadIdRef.current;
     fetch("/panoramas/manifest.json")
       .then((response) => {
         if (!response.ok) throw new Error("Manifest indisponible");
         return response.json() as Promise<Manifest>;
       })
       .then((data) => {
-        if (cancelled) return;
+        if (folderLoadIdRef.current !== loadId) return;
         panoramasByIdRef.current = new Map(data.panoramas.map((panorama) => [panorama.id, panorama]));
         setManifest(data);
         setCurrentId(data.panoramas[0]?.id ?? 0);
+        setDatasetLoading(false);
       })
-      .catch(() => setToast("Impossible de charger les panoramas."));
-    return () => { cancelled = true; };
+      .catch(() => {
+        if (folderLoadIdRef.current !== loadId) return;
+        setDatasetLoading(false);
+        setDatasetError("La visite intégrée n’a pas pu être chargée.");
+      });
+    return () => {
+      if (folderLoadIdRef.current === loadId) folderLoadIdRef.current += 1;
+    };
+  }, []);
+
+  useEffect(() => () => {
+    folderLoadIdRef.current += 1;
+    objectUrlsRef.current.forEach((url) => URL.revokeObjectURL(url));
   }, []);
 
   useEffect(() => {
@@ -737,7 +723,9 @@ export default function Home() {
 
   const copyLink = async () => {
     await navigator.clipboard.writeText(window.location.href);
-    setToast("Lien de la visite copié");
+    setToast(manifest?.site.source === "local-folder"
+      ? "Lien de l’application copié — le dossier reste local"
+      : "Lien de la visite copié");
     setMenuOpen(false);
   };
 
@@ -752,17 +740,79 @@ export default function Home() {
     window.localStorage.setItem(VISIBLE_RADIUS_STORAGE_KEY, String(nextRadius));
   };
 
+  const openFolderPicker = () => folderInputRef.current?.click();
+
+  const importFolder = async (files: FileList | null) => {
+    if (!files?.length) return;
+    const loadId = ++folderLoadIdRef.current;
+    setDatasetLoading(true);
+    setDatasetError("");
+    setReady(false);
+    setMenuOpen(false);
+    setMapOpen(false);
+
+    try {
+      const loaded = await loadPanoramaFolder(files);
+      if (folderLoadIdRef.current !== loadId) {
+        loaded.objectUrls.forEach((url) => URL.revokeObjectURL(url));
+        return;
+      }
+
+      textureRef.current?.dispose();
+      textureRef.current = null;
+      if (materialRef.current) {
+        materialRef.current.map = null;
+        materialRef.current.needsUpdate = true;
+      }
+      objectUrlsRef.current.forEach((url) => URL.revokeObjectURL(url));
+      objectUrlsRef.current = loaded.objectUrls;
+      previousPanoRef.current = null;
+      hotspotRefs.current = {};
+      panoramasByIdRef.current = new Map(
+        loaded.manifest.panoramas.map((panorama) => [panorama.id, panorama]),
+      );
+      setManifest(loaded.manifest);
+      setCurrentId(loaded.manifest.panoramas[0]?.id ?? 0);
+      setDatasetLoading(false);
+      setToast(`${loaded.manifest.site.panoramaCount} panoramas chargés depuis le dossier`);
+    } catch (error) {
+      if (folderLoadIdRef.current !== loadId) return;
+      const message = error instanceof Error ? error.message : "Ce dossier n’a pas pu être ouvert.";
+      setDatasetLoading(false);
+      setDatasetError(message);
+      setReady(Boolean(manifest));
+      setToast(message);
+    }
+  };
+
   return (
     <main className="tour-shell">
+      <input
+        {...DIRECTORY_PICKER_ATTRIBUTES}
+        ref={folderInputRef}
+        className="folder-input"
+        type="file"
+        multiple
+        onClick={(event) => { event.currentTarget.value = ""; }}
+        onChange={(event) => { void importFolder(event.currentTarget.files); }}
+        aria-label="Choisir un dossier de panoramas"
+      />
       <div ref={viewportRef} className="panorama-viewport" />
       <div className="viewer-vignette" aria-hidden="true" />
       <div className={`scene-transition ${transitioning ? "is-visible" : ""}`} />
 
-      {!ready && (
+      {(!ready || datasetLoading) && (
         <div className="loading-screen">
-          <div className="loader-mark"><span>A</span><small>360</small></div>
+          <div className="loader-mark"><span>P</span><small>360</small></div>
           <div className="loading-line"><span /></div>
-          <p>Préparation de la visite d’Arnex…</p>
+          <p>{datasetLoading
+            ? `Préparation de ${manifest?.site.name ?? "la visite"}…`
+            : datasetError || `Chargement du premier panorama de ${manifest?.site.name ?? "la visite"}…`}</p>
+          {!datasetLoading && datasetError && (
+            <button className="loading-folder-button" onClick={openFolderPicker}>
+              Choisir un dossier de panoramas
+            </button>
+          )}
         </div>
       )}
 
@@ -771,7 +821,7 @@ export default function Home() {
           <span className="hamburger" aria-hidden="true"><i /><i /><i /></span>
         </button>
         <div className="site-title">
-          <strong>Arnex 360</strong>
+          <strong>{manifest?.site.name ?? "Panorama 360"}</strong>
           <small>{currentPanorama?.area ?? "Visite immersive"}</small>
         </div>
       </header>
@@ -792,12 +842,12 @@ export default function Home() {
 
       <aside className={`side-drawer compact-drawer ${menuOpen ? "is-open" : ""}`} aria-hidden={!menuOpen}>
         <div className="drawer-head">
-          <div className="brand-lockup"><span>A</span><div><strong>Arnex 360</strong><small>Visite immersive</small></div></div>
+          <div className="brand-lockup"><span>P</span><div><strong>Panorama 360</strong><small>Visite immersive</small></div></div>
           <button onClick={() => setMenuOpen(false)} aria-label="Fermer le menu">×</button>
         </div>
         <div className="drawer-place">
           <span className="place-dot" />
-          <div><small>Site actuel</small><strong>{manifest?.site.name ?? "Gare d’Arnex"}</strong></div>
+          <div><small>Dossier actuel</small><strong>{manifest?.site.sourceFolder ?? manifest?.site.name ?? "Visite intégrée"}</strong></div>
         </div>
         <div className="drawer-setting">
           <div className="drawer-setting-head">
@@ -817,18 +867,20 @@ export default function Home() {
           <div className="drawer-setting-scale" aria-hidden="true"><span>2 m</span><span>30 m</span></div>
         </div>
         <nav>
-          <button onClick={() => { setMapOpen(true); setMenuOpen(false); }}><span>▦</span><div><strong>Plan du parcours</strong><small>{manifest?.site.panoramaCount ?? 45} panoramas</small></div></button>
+          <button onClick={openFolderPicker}><span>⌂</span><div><strong>Ouvrir un dossier</strong><small>Images 360° avec ou sans fichier de poses</small></div></button>
+          <button onClick={() => { setMapOpen(true); setMenuOpen(false); }}><span>▦</span><div><strong>Plan du parcours</strong><small>{manifest?.site.panoramaCount ?? 0} panoramas</small></div></button>
           <button onClick={() => { setHotspotsVisible((visible) => !visible); setMenuOpen(false); }}><span>◉</span><div><strong>Hotspots</strong><small>{hotspotsVisible ? "Masquer les flèches" : "Afficher les flèches"}</small></div></button>
           <button onClick={() => { resetView(); setMenuOpen(false); }}><span>⌖</span><div><strong>Recentrer la vue</strong><small>Regarder vers le prochain point</small></div></button>
           <button onClick={copyLink}><span>↗</span><div><strong>Partager</strong><small>Copier le lien de la visite</small></div></button>
           <button onClick={requestFullscreen}><span>⛶</span><div><strong>Plein écran</strong><small>Masquer le navigateur</small></div></button>
         </nav>
+        <p className="drawer-folder-note">Le dossier est lu uniquement sur cet appareil. Aucune image n’est envoyée.</p>
       </aside>
       {menuOpen && <button className="drawer-scrim" onClick={() => setMenuOpen(false)} aria-label="Fermer le menu" />}
 
       <section className="location-card simple-location">
         <span className="location-index">{String(currentId).padStart(2, "0")}</span>
-        <div><strong>{currentPanorama?.area ?? "Chargement"}</strong><small>{manifest?.site.captured ?? "12 août 2025"}</small></div>
+        <div><strong>{currentPanorama?.area ?? "Chargement"}</strong><small>{manifest?.site.captured ?? "Date inconnue"}</small></div>
       </section>
 
       <div className="view-controls simplified-controls">
@@ -845,7 +897,7 @@ export default function Home() {
             <button onClick={() => setMapOpen(false)} aria-label="Fermer le plan">×</button>
           </div>
           <MapScene panoramas={manifest.panoramas} currentId={currentId} onSelect={goToPanorama} />
-          <div className="map-panel-foot"><span><i className="legend-current" />Position actuelle</span><span><i />Panorama</span><span className="map-nav-legend">4 niveaux navigables</span></div>
+          <div className="map-panel-foot"><span><i className="legend-current" />Position actuelle</span><span><i />Panorama</span><span className="map-nav-legend">{new Set(manifest.panoramas.map((panorama) => panorama.floor)).size} niveau(x) navigable(s)</span></div>
         </section>
       )}
 

@@ -48,27 +48,43 @@ function viewerYaw(from, to) {
   return Math.atan2(viewer[2], viewer[0]) * 180 / Math.PI;
 }
 
-test("server-renders the Arnex 360 loading shell", async () => {
+test("server-renders the generic panorama loading shell", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>Arnex 360 — Visite immersive<\/title>/i);
-  assert.match(html, /Préparation de la visite d’Arnex/);
+  assert.match(html, /<title>Panorama 360 — Visionneuse immersive<\/title>/i);
+  assert.match(html, /Préparation de la visite/);
   assert.match(html, /Glisser pour regarder/);
   assert.match(html, /Hotspots/);
   assert.match(html, /Rayon d’affichage/);
+  assert.match(html, /Ouvrir un dossier/);
   assert.doesNotMatch(html, /Outil de mesure|Rechercher un lieu/);
 });
 
 test("lets the user choose and persist a panorama visibility radius", async () => {
   const pageSource = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
   assert.match(pageSource, /distanceBetweenPanoramas\(currentPanorama, panorama\) <= visibleRadiusMeters/);
-  assert.match(pageSource, /arnex360\.visibleRadiusMeters/);
+  assert.match(pageSource, /panorama360\.visibleRadiusMeters/);
   assert.match(pageSource, /min=\{MIN_VISIBLE_RADIUS_METERS\}/);
   assert.match(pageSource, /max=\{MAX_VISIBLE_RADIUS_METERS\}/);
   assert.match(pageSource, /<span>30 m<\/span>/);
+});
+
+test("loads arbitrary local panorama folders without uploading their images", async () => {
+  const [pageSource, loaderSource] = await Promise.all([
+    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/panorama-folder.ts", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(pageSource, /webkitdirectory/);
+  assert.match(pageSource, /loadPanoramaFolder\(files\)/);
+  assert.match(pageSource, /Aucune image n’est envoyée/);
+  assert.match(loaderSource, /pano_pos_x/);
+  assert.match(loaderSource, /URL\.createObjectURL\(row\.file\)/);
+  assert.match(loaderSource, /Parcours séquentiel sans fichier de poses/);
+  assert.doesNotMatch(loaderSource, /fetch\(|XMLHttpRequest|FormData/);
 });
 
 test("provides a navigable 3D route map with direct panorama selection", async () => {
