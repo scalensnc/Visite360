@@ -21,6 +21,29 @@ const DATASET_UP = new THREE.Vector3(0, 0, 1);
 const VIEWER_UP = new THREE.Vector3(0, 1, 0);
 const levelingCache = new WeakMap<Panorama, THREE.Quaternion>();
 
+type TourPointer = {
+  manifest: string;
+  release?: string;
+};
+
+function initialManifestUrl() {
+  const tourMatch = window.location.pathname.match(/^\/v\/([a-z0-9][a-z0-9-]*)\/?$/i);
+  if (!tourMatch) return Promise.resolve<string | null>(null);
+
+  const slug = tourMatch[1].toLocaleLowerCase();
+  return fetch(`/tours/${encodeURIComponent(slug)}/current.json`, { cache: "no-store" })
+    .then((response) => {
+      if (!response.ok) throw new Error(`Visite ${slug} introuvable`);
+      return response.json() as Promise<TourPointer>;
+    })
+    .then((pointer) => {
+      if (!pointer.manifest || !pointer.manifest.endsWith("/manifest.json")) {
+        throw new Error("Le pointeur de visite est invalide");
+      }
+      return new URL(pointer.manifest, window.location.origin).toString();
+    });
+}
+
 function navvisLocalToViewer(vector: THREE.Vector3) {
   return new THREE.Vector3(-vector.x, vector.z, vector.y);
 }
@@ -390,7 +413,7 @@ export default function Home() {
   const [ready, setReady] = useState(false);
   const [transitioning, setTransitioning] = useState(false);
   const [toast, setToast] = useState("");
-  const [datasetLoading, setDatasetLoading] = useState(true);
+  const [datasetLoading, setDatasetLoading] = useState(false);
   const [datasetError, setDatasetError] = useState("");
 
   const currentPanorama = useMemo(
@@ -424,23 +447,28 @@ export default function Home() {
 
   useEffect(() => {
     const loadId = ++folderLoadIdRef.current;
-    fetch("/panoramas/manifest.json")
-      .then((response) => {
+    const loadInitialTour = async () => {
+      try {
+        const manifestUrl = await initialManifestUrl();
+        if (!manifestUrl || folderLoadIdRef.current !== loadId) return;
+        setDatasetLoading(true);
+        const response = await fetch(manifestUrl);
         if (!response.ok) throw new Error("Manifest indisponible");
-        return response.json() as Promise<Manifest>;
-      })
-      .then((data) => {
+        const data = await response.json() as Manifest;
         if (folderLoadIdRef.current !== loadId) return;
         panoramasByIdRef.current = new Map(data.panoramas.map((panorama) => [panorama.id, panorama]));
         setManifest(data);
         setCurrentId(data.panoramas[0]?.id ?? 0);
         setDatasetLoading(false);
-      })
-      .catch(() => {
+      } catch (error: unknown) {
         if (folderLoadIdRef.current !== loadId) return;
         setDatasetLoading(false);
-        setDatasetError("La visite intégrée n’a pas pu être chargée.");
-      });
+        setDatasetError(error instanceof Error
+          ? error.message
+          : "La visite publiée n’a pas pu être chargée.");
+      }
+    };
+    void loadInitialTour();
     return () => {
       if (folderLoadIdRef.current === loadId) folderLoadIdRef.current += 1;
     };
@@ -802,16 +830,31 @@ export default function Home() {
       <div className={`scene-transition ${transitioning ? "is-visible" : ""}`} />
 
       {(!ready || datasetLoading) && (
-        <div className="loading-screen">
-          <div className="loader-mark"><span>P</span><small>360</small></div>
-          <div className="loading-line"><span /></div>
-          <p>{datasetLoading
-            ? `Préparation de ${manifest?.site.name ?? "la visite"}…`
-            : datasetError || `Chargement du premier panorama de ${manifest?.site.name ?? "la visite"}…`}</p>
-          {!datasetLoading && datasetError && (
-            <button className="loading-folder-button" onClick={openFolderPicker}>
-              Choisir un dossier de panoramas
-            </button>
+        <div className={`loading-screen ${!manifest && !datasetLoading ? "is-folder-prompt" : ""}`}>
+          {!manifest && !datasetLoading ? (
+            <section className="folder-start-card" aria-labelledby="folder-start-title">
+              <div className="loader-mark"><span>P</span><small>360</small></div>
+              <div className="folder-start-copy">
+                <span>Visionneuse locale</span>
+                <h1 id="folder-start-title">Chargez vos panoramas</h1>
+                <p>Sélectionnez le dossier complet de votre visite pour commencer l’exploration.</p>
+              </div>
+              {datasetError && <p className="folder-start-error" role="alert">{datasetError}</p>}
+              <button className="loading-folder-button is-primary" onClick={openFolderPicker}>
+                Choisir un dossier
+              </button>
+              <small className="folder-start-note">
+                Le fichier de poses est détecté automatiquement. Vos images restent sur cet appareil.
+              </small>
+            </section>
+          ) : (
+            <>
+              <div className="loader-mark"><span>P</span><small>360</small></div>
+              <div className="loading-line"><span /></div>
+              <p>{datasetLoading
+                ? `Préparation de ${manifest?.site.name ?? "la visite"}…`
+                : `Chargement du premier panorama de ${manifest?.site.name ?? "la visite"}…`}</p>
+            </>
           )}
         </div>
       )}

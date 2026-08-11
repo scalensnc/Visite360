@@ -30,7 +30,7 @@ export type Manifest = {
     name: string;
     captured: string;
     panoramaCount: number;
-    source?: "local-folder";
+    source?: "local-folder" | "remote-tour";
     sourceFolder?: string;
     poseSource?: string;
     poseConvention?: string;
@@ -334,7 +334,6 @@ export async function loadPanoramaFolder(input: File[] | FileList): Promise<Load
   const maxX = Math.max(...parsed.rows.map((row) => row.x));
   const minY = Math.min(...parsed.rows.map((row) => row.y));
   const maxY = Math.max(...parsed.rows.map((row) => row.y));
-  const minZ = Math.min(...parsed.rows.map((row) => row.z));
   const baseElevation = dominantElevation(parsed.rows);
   const spanX = Math.max(maxX - minX, 0.001);
   const spanY = Math.max(maxY - minY, 0.001);

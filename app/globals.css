@@ -161,6 +161,74 @@ button {
   letter-spacing: 0.04em;
 }
 
+.loading-screen.is-folder-prompt {
+  padding: 24px;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(72, 163, 255, 0.18), transparent 34%),
+    linear-gradient(145deg, #071522, #0d1b2a 58%, #10283b);
+}
+
+.folder-start-card {
+  display: grid;
+  justify-items: center;
+  width: min(460px, calc(100vw - 32px));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  padding: 42px 42px 34px;
+  background: rgba(8, 24, 38, 0.78);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.32);
+  text-align: center;
+  backdrop-filter: blur(18px);
+}
+
+.folder-start-copy {
+  margin-top: 30px;
+}
+
+.folder-start-copy > span {
+  color: #72b9ff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.folder-start-copy h1 {
+  margin: 9px 0 10px;
+  color: #fff;
+  font-size: clamp(25px, 5vw, 34px);
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.folder-start-copy p {
+  max-width: 350px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: 1.6;
+}
+
+.folder-start-error {
+  max-width: 360px;
+  margin-top: 18px !important;
+  border-radius: 8px;
+  padding: 9px 12px;
+  background: rgba(244, 101, 101, 0.12);
+  color: #ffb3b3 !important;
+  font-size: 11px !important;
+  letter-spacing: 0 !important;
+  line-height: 1.45;
+}
+
+.folder-start-note {
+  max-width: 340px;
+  margin-top: 16px;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
 .folder-input {
   display: none;
 }
@@ -178,6 +246,20 @@ button {
   cursor: pointer;
 }
 
+.loading-folder-button.is-primary {
+  min-width: 210px;
+  margin-top: 24px;
+  border-color: #48a3ff;
+  background: #48a3ff;
+  box-shadow: 0 12px 28px rgba(72, 163, 255, 0.24);
+}
+
+.loading-folder-button.is-primary:hover,
+.loading-folder-button.is-primary:focus-visible {
+  border-color: #6bb5ff;
+  background: #5aafff;
+}
+
 .loading-folder-button:hover,
 .loading-folder-button:focus-visible {
   border-color: rgba(255, 255, 255, 0.72);
@@ -188,6 +270,13 @@ button {
 @keyframes load-sweep {
   from { transform: translateX(-105%); }
   to { transform: translateX(235%); }
+}
+
+@media (max-width: 520px) {
+  .folder-start-card {
+    border-radius: 14px;
+    padding: 34px 22px 28px;
+  }
 }
 
 .topbar {
