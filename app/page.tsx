@@ -891,9 +891,7 @@ export default function Home() {
             onClick={() => goToPanorama(destination.id)}
             aria-label={`Avancer vers le panorama ${destination.id}, à ${Math.round(distanceBetweenPanoramas(currentPanorama!, destination))} mètres`}
           >
-            <span className="hotspot-disc" aria-hidden="true">
-              <span className="hotspot-chevron" />
-            </span>
+            <span className="hotspot-disc" aria-hidden="true" />
           </button>
       ))}
 
