@@ -1660,9 +1660,11 @@ button {
   width: 112px;
   height: 78px;
   padding: 0;
-  filter: drop-shadow(0 11px 14px rgba(0, 0, 0, 0.28));
+  filter:
+    drop-shadow(0 12px 16px rgba(0, 0, 0, 0.34))
+    drop-shadow(0 0 7px rgba(255, 255, 255, 0.22));
   transform-origin: center;
-  transition: opacity 120ms ease, filter 140ms ease;
+  transition: opacity 220ms ease, filter 160ms ease;
 }
 
 .hotspot-disc {
@@ -1670,16 +1672,17 @@ button {
   display: block;
   width: 94px;
   height: 57px;
-  border: 1px solid rgba(255, 255, 255, 0.86);
+  border: 2px solid #fff;
   border-radius: 50%;
-  background:
-    radial-gradient(ellipse at 50% 38%, rgba(255, 255, 255, 0.98) 0 38%, rgba(232, 235, 237, 0.95) 72%, rgba(207, 212, 216, 0.92) 100%);
+  background: rgba(255, 255, 255, 0.13);
   box-shadow:
-    0 3px 5px rgba(15, 24, 32, 0.2),
-    0 13px 22px rgba(15, 24, 32, 0.2),
-    inset 0 1px 1px rgba(255, 255, 255, 0.96);
+    0 4px 8px rgba(8, 18, 27, 0.26),
+    0 15px 25px rgba(8, 18, 27, 0.3),
+    inset 0 0 22px rgba(255, 255, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
   transform: scale(var(--hotspot-scale, 1));
   transition: transform 150ms ease, background 150ms ease, box-shadow 150ms ease;
+  backdrop-filter: blur(2px);
 }
 
 .hotspot-chevron {
@@ -1695,8 +1698,8 @@ button {
   width: 31px;
   height: 7px;
   border-radius: 999px;
-  background: #36414a;
-  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.36);
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(8, 18, 27, 0.3);
 }
 
 .hotspot-chevron::before {
@@ -1713,17 +1716,19 @@ button {
 
 .nav-hotspot:hover,
 .nav-hotspot:focus-visible {
-  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.34));
+  filter:
+    drop-shadow(0 14px 20px rgba(0, 0, 0, 0.38))
+    drop-shadow(0 0 11px rgba(255, 255, 255, 0.38));
 }
 
 .nav-hotspot:hover .hotspot-disc,
 .nav-hotspot:focus-visible .hotspot-disc {
-  background:
-    radial-gradient(ellipse at 50% 38%, #fff 0 42%, #f3f5f6 72%, #dfe3e6 100%);
+  background: rgba(255, 255, 255, 0.22);
   box-shadow:
-    0 3px 5px rgba(15, 24, 32, 0.22),
-    0 16px 25px rgba(15, 24, 32, 0.24),
-    0 0 0 4px rgba(255, 255, 255, 0.34);
+    0 4px 9px rgba(8, 18, 27, 0.28),
+    0 18px 28px rgba(8, 18, 27, 0.34),
+    0 0 0 4px rgba(255, 255, 255, 0.28),
+    inset 0 0 24px rgba(255, 255, 255, 0.28);
   transform: translateY(-3px) scale(var(--hotspot-scale, 1));
 }
 

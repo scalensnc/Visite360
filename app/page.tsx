@@ -13,6 +13,7 @@ const MARKER_HEIGHT_METERS = 1.65;
 const MIN_VISIBLE_RADIUS_METERS = 2;
 const MAX_VISIBLE_RADIUS_METERS = 30;
 const DEFAULT_VISIBLE_RADIUS_METERS = 5;
+const HOTSPOT_REVEAL_DURATION_MS = 950;
 const VISIBLE_RADIUS_STORAGE_KEY = "panorama360.visibleRadiusMeters";
 const DIRECTORY_PICKER_ATTRIBUTES = {
   webkitdirectory: "",
@@ -103,16 +104,16 @@ function distanceBetweenPanoramas(from: Panorama, to: Panorama) {
 
 function hotspotPerspectiveScale(distanceMeters: number, fieldOfView: number) {
   const distanceScale = THREE.MathUtils.clamp(
-    Math.pow(5 / Math.max(distanceMeters, 2.5), 0.48),
-    0.44,
-    1.42,
+    Math.pow(4.5 / Math.max(distanceMeters, 2.2), 0.72),
+    0.28,
+    1.78,
   );
-  const zoomScale = THREE.MathUtils.clamp(82 / fieldOfView, 0.82, 1.25);
-  return THREE.MathUtils.clamp(distanceScale * zoomScale, 0.38, 1.7);
+  const zoomScale = THREE.MathUtils.clamp(82 / fieldOfView, 0.76, 1.34);
+  return THREE.MathUtils.clamp(distanceScale * zoomScale, 0.24, 2.05);
 }
 
 function hotspotPerspectiveOpacity(distanceMeters: number) {
-  return THREE.MathUtils.clamp(1.06 - distanceMeters / 85, 0.68, 1);
+  return THREE.MathUtils.clamp(1.08 - distanceMeters / 55, 0.5, 1);
 }
 
 const MAP_VERTICAL_SCALE = 1.6;
@@ -399,6 +400,7 @@ export default function Home() {
   const folderInputRef = useRef<HTMLInputElement>(null);
   const folderLoadIdRef = useRef(0);
   const objectUrlsRef = useRef<string[]>([]);
+  const hotspotRevealUntilRef = useRef(0);
   const lonRef = useRef(0);
   const latRef = useRef(0);
   const fovRef = useRef(82);
@@ -538,6 +540,9 @@ export default function Home() {
       }
       renderer.domElement.classList.remove("is-dragging");
     };
+    const revealHotspots = () => {
+      hotspotRevealUntilRef.current = performance.now() + HOTSPOT_REVEAL_DURATION_MS;
+    };
     const wheel = (event: WheelEvent) => {
       event.preventDefault();
       fovRef.current = Math.max(38, Math.min(95, fovRef.current + event.deltaY * 0.025));
@@ -560,13 +565,14 @@ export default function Home() {
     renderer.domElement.addEventListener("pointerup", pointerUp);
     renderer.domElement.addEventListener("pointercancel", pointerUp);
     renderer.domElement.addEventListener("wheel", wheel, { passive: false });
+    window.addEventListener("pointermove", revealHotspots, { passive: true });
     window.addEventListener("keydown", keyDown);
     const observer = new ResizeObserver(resize);
     observer.observe(viewport);
     resize();
 
     let frame = 0;
-    const animate = () => {
+    const animate = (time = performance.now()) => {
       frame = requestAnimationFrame(animate);
       latRef.current = Math.max(-82, Math.min(82, latRef.current));
       const phi = THREE.MathUtils.degToRad(90 - latRef.current);
@@ -582,6 +588,7 @@ export default function Home() {
       const rect = viewport.getBoundingClientRect();
       camera.getWorldDirection(cameraDirection);
       const activePanorama = activePanoRef.current;
+      const hotspotsRevealed = time < hotspotRevealUntilRef.current;
       Object.entries(hotspotRefs.current).forEach(([panoramaId, element]) => {
         if (!element || !activePanorama) return;
         const destination = panoramasByIdRef.current.get(Number(panoramaId));
@@ -595,6 +602,12 @@ export default function Home() {
           && Math.abs(projectedHotspot.y) < 1.08;
 
         if (!inView) {
+          element.style.opacity = "0";
+          element.style.pointerEvents = "none";
+          return;
+        }
+
+        if (!hotspotsRevealed && document.activeElement !== element) {
           element.style.opacity = "0";
           element.style.pointerEvents = "none";
           return;
@@ -620,6 +633,7 @@ export default function Home() {
     return () => {
       cancelAnimationFrame(frame);
       observer.disconnect();
+      window.removeEventListener("pointermove", revealHotspots);
       window.removeEventListener("keydown", keyDown);
       renderer.domElement.removeEventListener("pointerdown", pointerDown);
       renderer.domElement.removeEventListener("pointermove", pointerMove);
