@@ -1604,8 +1604,12 @@ button {
   place-items: center;
   width: 104px;
   height: 58px;
-  padding: 0;
+  padding: 4px 10px;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow);
   pointer-events: none;
 }
 
@@ -1738,7 +1742,7 @@ button {
     right: 10px;
     width: 78px;
     height: 52px;
-    padding: 0;
+    padding: 4px 7px;
   }
 
   .scalen-logo img {
