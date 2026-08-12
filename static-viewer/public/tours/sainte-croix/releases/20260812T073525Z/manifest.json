@@ -1,0 +1,5061 @@
+{
+  "site": {
+    "name": "Sainte-Croix — Visite exemple",
+    "captured": "22 juillet 2026",
+    "panoramaCount": 140,
+    "source": "remote-tour",
+    "sourceFolder": "panorama_1725_ste_croix",
+    "poseSource": "pano-poses-registered.csv",
+    "poseConvention": "NavVis local X forward, Y right, Z up; quaternion local-to-dataset",
+    "bounds": {
+      "width": 43.359,
+      "height": 34.66
+    }
+  },
+  "panoramas": [
+    {
+      "id": 0,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00000.webp",
+      "label": "00000-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 19.3059,
+        "y": 31.1398,
+        "z": 1272.3716,
+        "mapX": 0.44526,
+        "mapY": 0.10157
+      },
+      "orientation": {
+        "w": 0.89886,
+        "x": -0.011462,
+        "y": -0.083104,
+        "z": -0.430131
+      },
+      "neighbors": [
+        {
+          "id": 138
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 50
+        },
+        {
+          "id": 139
+        }
+      ],
+      "timestamp": 1784707418.508438
+    },
+    {
+      "id": 1,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00001.webp",
+      "label": "00001-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 21.3665,
+        "y": 26.9047,
+        "z": 1272.4502,
+        "mapX": 0.49278,
+        "mapY": 0.22376
+      },
+      "orientation": {
+        "w": 0.750371,
+        "x": -0.001317,
+        "y": -0.037669,
+        "z": -0.659942
+      },
+      "neighbors": [
+        {
+          "id": 138
+        },
+        {
+          "id": 51
+        },
+        {
+          "id": 50
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 135
+        },
+        {
+          "id": 0
+        }
+      ],
+      "timestamp": 1784707427.143253
+    },
+    {
+      "id": 2,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00002.webp",
+      "label": "00002-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 22.5212,
+        "y": 23.297,
+        "z": 1272.4977,
+        "mapX": 0.51942,
+        "mapY": 0.32784
+      },
+      "orientation": {
+        "w": 0.867985,
+        "x": 0.018267,
+        "y": -0.04231,
+        "z": -0.494447
+      },
+      "neighbors": [
+        {
+          "id": 51
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 52
+        },
+        {
+          "id": 136
+        },
+        {
+          "id": 1
+        }
+      ],
+      "timestamp": 1784707435.470106
+    },
+    {
+      "id": 3,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00003.webp",
+      "label": "00003-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 24.7089,
+        "y": 22.7206,
+        "z": 1272.508,
+        "mapX": 0.56987,
+        "mapY": 0.34447
+      },
+      "orientation": {
+        "w": 0.999706,
+        "x": 0.021332,
+        "y": -0.009082,
+        "z": -0.007166
+      },
+      "neighbors": [
+        {
+          "id": 52
+        },
+        {
+          "id": 4
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 85
+        },
+        {
+          "id": 51
+        }
+      ],
+      "timestamp": 1784707443.047886
+    },
+    {
+      "id": 4,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00004.webp",
+      "label": "00004-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 26.8467,
+        "y": 22.7877,
+        "z": 1272.541,
+        "mapX": 0.61918,
+        "mapY": 0.34254
+      },
+      "orientation": {
+        "w": 0.999865,
+        "x": 0.012092,
+        "y": -0.009767,
+        "z": -0.005292
+      },
+      "neighbors": [
+        {
+          "id": 8
+        },
+        {
+          "id": 52
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 39
+        },
+        {
+          "id": 5
+        }
+      ],
+      "timestamp": 1784707450.67389
+    },
+    {
+      "id": 5,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00005.webp",
+      "label": "00005-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 28.0877,
+        "y": 25.5631,
+        "z": 1272.5542,
+        "mapX": 0.6478,
+        "mapY": 0.26246
+      },
+      "orientation": {
+        "w": 0.72909,
+        "x": 0.020104,
+        "y": 0.00559,
+        "z": 0.684099
+      },
+      "neighbors": [
+        {
+          "id": 90
+        },
+        {
+          "id": 4
+        },
+        {
+          "id": 91
+        },
+        {
+          "id": 6
+        }
+      ],
+      "timestamp": 1784707459.516531
+    },
+    {
+      "id": 6,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00006.webp",
+      "label": "00006-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 31.2604,
+        "y": 25.8142,
+        "z": 1272.5098,
+        "mapX": 0.72097,
+        "mapY": 0.25522
+      },
+      "orientation": {
+        "w": 0.99976,
+        "x": 0.020003,
+        "y": -0.008902,
+        "z": 0.000837
+      },
+      "neighbors": [
+        {
+          "id": 93
+        },
+        {
+          "id": 7
+        },
+        {
+          "id": 92
+        },
+        {
+          "id": 5
+        }
+      ],
+      "timestamp": 1784707468.469351
+    },
+    {
+      "id": 7,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00007.webp",
+      "label": "00007-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 31.6131,
+        "y": 22.9483,
+        "z": 1272.5249,
+        "mapX": 0.7291,
+        "mapY": 0.3379
+      },
+      "orientation": {
+        "w": 0.661107,
+        "x": 0.006679,
+        "y": -0.019192,
+        "z": -0.750017
+      },
+      "neighbors": [
+        {
+          "id": 53
+        },
+        {
+          "id": 87
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 44
+        },
+        {
+          "id": 8
+        }
+      ],
+      "timestamp": 1784707475.970143
+    },
+    {
+      "id": 8,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00008.webp",
+      "label": "00008-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 27.0246,
+        "y": 21.3812,
+        "z": 1272.5482,
+        "mapX": 0.62328,
+        "mapY": 0.38312
+      },
+      "orientation": {
+        "w": 0.692185,
+        "x": -0.00571,
+        "y": -0.017494,
+        "z": -0.721485
+      },
+      "neighbors": [
+        {
+          "id": 4
+        },
+        {
+          "id": 39
+        },
+        {
+          "id": 52
+        },
+        {
+          "id": 40
+        },
+        {
+          "id": 9
+        },
+        {
+          "id": 7
+        }
+      ],
+      "timestamp": 1784707493.747775
+    },
+    {
+      "id": 9,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00009.webp",
+      "label": "00009-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 25.2197,
+        "y": 19.0574,
+        "z": 1272.4444,
+        "mapX": 0.58165,
+        "mapY": 0.45016
+      },
+      "orientation": {
+        "w": 0.010097,
+        "x": -0.112144,
+        "y": 0.041277,
+        "z": 0.992783
+      },
+      "neighbors": [
+        {
+          "id": 10
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 81
+        }
+      ],
+      "timestamp": 1784707510.41536
+    },
+    {
+      "id": 10,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00010.webp",
+      "label": "00010-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 24.5392,
+        "y": 17.0719,
+        "z": 1272.4817,
+        "mapX": 0.56596,
+        "mapY": 0.50745
+      },
+      "orientation": {
+        "w": 0.729537,
+        "x": 0.056253,
+        "y": 0.02273,
+        "z": -0.681245
+      },
+      "neighbors": [
+        {
+          "id": 11
+        },
+        {
+          "id": 9
+        },
+        {
+          "id": 14
+        }
+      ],
+      "timestamp": 1784707520.59113
+    },
+    {
+      "id": 11,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00011.webp",
+      "label": "00011-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 26.3758,
+        "y": 16.2155,
+        "z": 1272.5167,
+        "mapX": 0.60832,
+        "mapY": 0.53216
+      },
+      "orientation": {
+        "w": 0.760948,
+        "x": 0.044455,
+        "y": 0.030105,
+        "z": -0.646588
+      },
+      "neighbors": [
+        {
+          "id": 10
+        },
+        {
+          "id": 55
+        },
+        {
+          "id": 54
+        },
+        {
+          "id": 41
+        },
+        {
+          "id": 12
+        }
+      ],
+      "timestamp": 1784707530.929971
+    },
+    {
+      "id": 12,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00012.webp",
+      "label": "00012-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 21.3001,
+        "y": 17.8973,
+        "z": 1272.4788,
+        "mapX": 0.49125,
+        "mapY": 0.48364
+      },
+      "orientation": {
+        "w": 0.64788,
+        "x": -0.108683,
+        "y": 0.090977,
+        "z": 0.74844
+      },
+      "neighbors": [
+        {
+          "id": 13
+        },
+        {
+          "id": 79
+        },
+        {
+          "id": 15
+        },
+        {
+          "id": 11
+        }
+      ],
+      "timestamp": 1784707562.638179
+    },
+    {
+      "id": 13,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00013.webp",
+      "label": "00013-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 20.2657,
+        "y": 18.9175,
+        "z": 1272.5199,
+        "mapX": 0.4674,
+        "mapY": 0.4542
+      },
+      "orientation": {
+        "w": 0.854566,
+        "x": 0.062519,
+        "y": 0.048431,
+        "z": -0.513286
+      },
+      "neighbors": [
+        {
+          "id": 12
+        },
+        {
+          "id": 136
+        },
+        {
+          "id": 80
+        },
+        {
+          "id": 124
+        },
+        {
+          "id": 14
+        }
+      ],
+      "timestamp": 1784707646.150268
+    },
+    {
+      "id": 14,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00014.webp",
+      "label": "00014-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 23.8373,
+        "y": 14.8017,
+        "z": 1272.4292,
+        "mapX": 0.54977,
+        "mapY": 0.57295
+      },
+      "orientation": {
+        "w": 0.585334,
+        "x": 0.080622,
+        "y": 0.046729,
+        "z": -0.80542
+      },
+      "neighbors": [
+        {
+          "id": 54
+        },
+        {
+          "id": 17
+        },
+        {
+          "id": 15
+        },
+        {
+          "id": 10
+        },
+        {
+          "id": 13
+        }
+      ],
+      "timestamp": 1784707668.545722
+    },
+    {
+      "id": 15,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00015.webp",
+      "label": "00015-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 22.0015,
+        "y": 15.339,
+        "z": 1272.5098,
+        "mapX": 0.50743,
+        "mapY": 0.55744
+      },
+      "orientation": {
+        "w": 0.125161,
+        "x": -0.070032,
+        "y": 0.013214,
+        "z": 0.989574
+      },
+      "neighbors": [
+        {
+          "id": 14
+        },
+        {
+          "id": 16
+        },
+        {
+          "id": 12
+        },
+        {
+          "id": 75
+        }
+      ],
+      "timestamp": 1784707699.303124
+    },
+    {
+      "id": 16,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00016.webp",
+      "label": "00016-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 19.7443,
+        "y": 15.2169,
+        "z": 1272.5164,
+        "mapX": 0.45537,
+        "mapY": 0.56097
+      },
+      "orientation": {
+        "w": 0.350874,
+        "x": -0.017055,
+        "y": 0.02342,
+        "z": 0.935975
+      },
+      "neighbors": [
+        {
+          "id": 15
+        },
+        {
+          "id": 75
+        },
+        {
+          "id": 125
+        },
+        {
+          "id": 17
+        }
+      ],
+      "timestamp": 1784707708.964842
+    },
+    {
+      "id": 17,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00017.webp",
+      "label": "00017-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 23.9448,
+        "y": 13.2075,
+        "z": 1272.5334,
+        "mapX": 0.55225,
+        "mapY": 0.61894
+      },
+      "orientation": {
+        "w": 0.701625,
+        "x": 0.101199,
+        "y": 0.081593,
+        "z": -0.700588
+      },
+      "neighbors": [
+        {
+          "id": 18
+        },
+        {
+          "id": 19
+        },
+        {
+          "id": 54
+        },
+        {
+          "id": 14
+        },
+        {
+          "id": 22
+        },
+        {
+          "id": 16
+        }
+      ],
+      "timestamp": 1784707726.973409
+    },
+    {
+      "id": 18,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00018.webp",
+      "label": "00018-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 22.8231,
+        "y": 12.7649,
+        "z": 1272.4794,
+        "mapX": 0.52638,
+        "mapY": 0.63171
+      },
+      "orientation": {
+        "w": 0.048451,
+        "x": -0.217544,
+        "y": 0.016908,
+        "z": 0.974701
+      },
+      "neighbors": [
+        {
+          "id": 22
+        },
+        {
+          "id": 17
+        },
+        {
+          "id": 20
+        },
+        {
+          "id": 19
+        },
+        {
+          "id": 23
+        }
+      ],
+      "timestamp": 1784707744.860998
+    },
+    {
+      "id": 19,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00019.webp",
+      "label": "00019-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 25.1579,
+        "y": 13.0421,
+        "z": 1272.5443,
+        "mapX": 0.58023,
+        "mapY": 0.62371
+      },
+      "orientation": {
+        "w": 0.993135,
+        "x": 0.02496,
+        "y": 0.04162,
+        "z": -0.106432
+      },
+      "neighbors": [
+        {
+          "id": 17
+        },
+        {
+          "id": 54
+        },
+        {
+          "id": 55
+        },
+        {
+          "id": 20
+        },
+        {
+          "id": 18
+        }
+      ],
+      "timestamp": 1784707769.595478
+    },
+    {
+      "id": 20,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00020.webp",
+      "label": "00020-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 23.891,
+        "y": 11.1754,
+        "z": 1272.5032,
+        "mapX": 0.55101,
+        "mapY": 0.67757
+      },
+      "orientation": {
+        "w": 0.980916,
+        "x": 0.005644,
+        "y": 0.129134,
+        "z": -0.145244
+      },
+      "neighbors": [
+        {
+          "id": 22
+        },
+        {
+          "id": 28
+        },
+        {
+          "id": 21
+        },
+        {
+          "id": 18
+        },
+        {
+          "id": 19
+        }
+      ],
+      "timestamp": 1784707783.770303
+    },
+    {
+      "id": 21,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00021.webp",
+      "label": "00021-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 23.9345,
+        "y": 9.363,
+        "z": 1272.4989,
+        "mapX": 0.55201,
+        "mapY": 0.72986
+      },
+      "orientation": {
+        "w": 0.725436,
+        "x": 0.108155,
+        "y": 0.079452,
+        "z": -0.67508
+      },
+      "neighbors": [
+        {
+          "id": 20
+        },
+        {
+          "id": 28
+        },
+        {
+          "id": 22
+        },
+        {
+          "id": 114
+        },
+        {
+          "id": 115
+        }
+      ],
+      "timestamp": 1784707794.059902
+    },
+    {
+      "id": 22,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00022.webp",
+      "label": "00022-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 23.1674,
+        "y": 11.7163,
+        "z": 1272.4757,
+        "mapX": 0.53432,
+        "mapY": 0.66196
+      },
+      "orientation": {
+        "w": 0.02735,
+        "x": -0.137141,
+        "y": 0.009154,
+        "z": 0.990132
+      },
+      "neighbors": [
+        {
+          "id": 20
+        },
+        {
+          "id": 18
+        },
+        {
+          "id": 17
+        },
+        {
+          "id": 28
+        },
+        {
+          "id": 21
+        },
+        {
+          "id": 23
+        }
+      ],
+      "timestamp": 1784707813.046477
+    },
+    {
+      "id": 23,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00023.webp",
+      "label": "00023-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 20.3435,
+        "y": 12.0957,
+        "z": 1272.628,
+        "mapX": 0.46919,
+        "mapY": 0.65102
+      },
+      "orientation": {
+        "w": 0.19224,
+        "x": -0.071361,
+        "y": 0.008204,
+        "z": 0.978716
+      },
+      "neighbors": [
+        {
+          "id": 27
+        },
+        {
+          "id": 18
+        },
+        {
+          "id": 24
+        },
+        {
+          "id": 72
+        },
+        {
+          "id": 22
+        },
+        {
+          "id": 126
+        }
+      ],
+      "timestamp": 1784707824.266346
+    },
+    {
+      "id": 24,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00024.webp",
+      "label": "00024-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 20.4654,
+        "y": 9.4668,
+        "z": 1272.6224,
+        "mapX": 0.472,
+        "mapY": 0.72687
+      },
+      "orientation": {
+        "w": 0.630416,
+        "x": 0.049974,
+        "y": 0.023334,
+        "z": -0.774296
+      },
+      "neighbors": [
+        {
+          "id": 27
+        },
+        {
+          "id": 23
+        },
+        {
+          "id": 115
+        },
+        {
+          "id": 25
+        }
+      ],
+      "timestamp": 1784707836.338964
+    },
+    {
+      "id": 25,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00025.webp",
+      "label": "00025-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 17.1188,
+        "y": 11.0078,
+        "z": 1272.8757,
+        "mapX": 0.39482,
+        "mapY": 0.68241
+      },
+      "orientation": {
+        "w": -0.049051,
+        "x": -0.105551,
+        "y": 0.006986,
+        "z": 0.993179
+      },
+      "neighbors": [
+        {
+          "id": 126
+        },
+        {
+          "id": 27
+        },
+        {
+          "id": 26
+        },
+        {
+          "id": 24
+        },
+        {
+          "id": 119
+        }
+      ],
+      "timestamp": 1784707861.523416
+    },
+    {
+      "id": 26,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00026.webp",
+      "label": "00026-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 14.0046,
+        "y": 10.9305,
+        "z": 1272.9406,
+        "mapX": 0.32299,
+        "mapY": 0.68464
+      },
+      "orientation": {
+        "w": 0.99638,
+        "x": 0.011835,
+        "y": -0.052147,
+        "z": 0.066082
+      },
+      "neighbors": [
+        {
+          "id": 25
+        },
+        {
+          "id": 126
+        },
+        {
+          "id": 120
+        },
+        {
+          "id": 119
+        },
+        {
+          "id": 27
+        }
+      ],
+      "timestamp": 1784707907.515378
+    },
+    {
+      "id": 27,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00027.webp",
+      "label": "00027-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 19.8913,
+        "y": 11.2717,
+        "z": 1272.5821,
+        "mapX": 0.45876,
+        "mapY": 0.67479
+      },
+      "orientation": {
+        "w": 0.741857,
+        "x": 0.056559,
+        "y": 0.043306,
+        "z": -0.666764
+      },
+      "neighbors": [
+        {
+          "id": 23
+        },
+        {
+          "id": 24
+        },
+        {
+          "id": 72
+        },
+        {
+          "id": 25
+        },
+        {
+          "id": 126
+        },
+        {
+          "id": 28
+        },
+        {
+          "id": 26
+        }
+      ],
+      "timestamp": 1784707927.039934
+    },
+    {
+      "id": 28,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00028.webp",
+      "label": "00028-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 24.7897,
+        "y": 11.0382,
+        "z": 1272.4519,
+        "mapX": 0.57174,
+        "mapY": 0.68153
+      },
+      "orientation": {
+        "w": 0.991606,
+        "x": 0.010616,
+        "y": 0.121088,
+        "z": 0.044081
+      },
+      "neighbors": [
+        {
+          "id": 20
+        },
+        {
+          "id": 22
+        },
+        {
+          "id": 21
+        },
+        {
+          "id": 29
+        },
+        {
+          "id": 27
+        }
+      ],
+      "timestamp": 1784707951.527411
+    },
+    {
+      "id": 29,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00029.webp",
+      "label": "00029-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 27.3813,
+        "y": 11.0879,
+        "z": 1272.4551,
+        "mapX": 0.63151,
+        "mapY": 0.68009
+      },
+      "orientation": {
+        "w": 0.975107,
+        "x": 0.004953,
+        "y": 0.053451,
+        "z": 0.215139
+      },
+      "neighbors": [
+        {
+          "id": 30
+        },
+        {
+          "id": 28
+        },
+        {
+          "id": 66
+        },
+        {
+          "id": 67
+        }
+      ],
+      "timestamp": 1784707965.241118
+    },
+    {
+      "id": 30,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00030.webp",
+      "label": "00030-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 29.7484,
+        "y": 10.0496,
+        "z": 1272.506,
+        "mapX": 0.6861,
+        "mapY": 0.71005
+      },
+      "orientation": {
+        "w": 0.785779,
+        "x": -0.002021,
+        "y": -0.010529,
+        "z": -0.618414
+      },
+      "neighbors": [
+        {
+          "id": 31
+        },
+        {
+          "id": 29
+        },
+        {
+          "id": 32
+        },
+        {
+          "id": 110
+        },
+        {
+          "id": 64
+        }
+      ],
+      "timestamp": 1784707976.878833
+    },
+    {
+      "id": 31,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00031.webp",
+      "label": "00031-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 31.758,
+        "y": 10.7699,
+        "z": 1272.4448,
+        "mapX": 0.73245,
+        "mapY": 0.68927
+      },
+      "orientation": {
+        "w": 0.914891,
+        "x": 0.007566,
+        "y": -0.019166,
+        "z": 0.403175
+      },
+      "neighbors": [
+        {
+          "id": 32
+        },
+        {
+          "id": 30
+        },
+        {
+          "id": 64
+        }
+      ],
+      "timestamp": 1784707996.256394
+    },
+    {
+      "id": 32,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00032.webp",
+      "label": "00032-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 32.6273,
+        "y": 10.648,
+        "z": 1272.157,
+        "mapX": 0.7525,
+        "mapY": 0.69279
+      },
+      "orientation": {
+        "w": 0.997639,
+        "x": -0.009192,
+        "y": 0.068065,
+        "z": -0.000273
+      },
+      "neighbors": [
+        {
+          "id": 31
+        },
+        {
+          "id": 33
+        },
+        {
+          "id": 30
+        },
+        {
+          "id": 64
+        }
+      ],
+      "timestamp": 1784708049.18325
+    },
+    {
+      "id": 33,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00033.webp",
+      "label": "00033-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 35.2649,
+        "y": 10.9705,
+        "z": 1272.3644,
+        "mapX": 0.81333,
+        "mapY": 0.68348
+      },
+      "orientation": {
+        "w": -0.071519,
+        "x": -0.062725,
+        "y": 0.019051,
+        "z": 0.995283
+      },
+      "neighbors": [
+        {
+          "id": 34
+        },
+        {
+          "id": 97
+        },
+        {
+          "id": 96
+        },
+        {
+          "id": 32
+        },
+        {
+          "id": 103
+        }
+      ],
+      "timestamp": 1784708059.28
+    },
+    {
+      "id": 34,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00034.webp",
+      "label": "00034-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 37.0195,
+        "y": 10.7652,
+        "z": 1272.3906,
+        "mapX": 0.85379,
+        "mapY": 0.68941
+      },
+      "orientation": {
+        "w": 0.720031,
+        "x": -0.025211,
+        "y": -0.052024,
+        "z": -0.69153
+      },
+      "neighbors": [
+        {
+          "id": 96
+        },
+        {
+          "id": 33
+        },
+        {
+          "id": 97
+        },
+        {
+          "id": 35
+        },
+        {
+          "id": 103
+        },
+        {
+          "id": 102
+        }
+      ],
+      "timestamp": 1784708089.631378
+    },
+    {
+      "id": 35,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00035.webp",
+      "label": "00035-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 38.676,
+        "y": 8.7001,
+        "z": 1272.4001,
+        "mapX": 0.892,
+        "mapY": 0.74899
+      },
+      "orientation": {
+        "w": 0.999977,
+        "x": -0.001718,
+        "y": 0.000332,
+        "z": -0.006588
+      },
+      "neighbors": [
+        {
+          "id": 37
+        },
+        {
+          "id": 96
+        },
+        {
+          "id": 36
+        },
+        {
+          "id": 34
+        },
+        {
+          "id": 102
+        },
+        {
+          "id": 104
+        }
+      ],
+      "timestamp": 1784708113.205798
+    },
+    {
+      "id": 36,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00036.webp",
+      "label": "00036-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 36.9831,
+        "y": 7.3192,
+        "z": 1272.4401,
+        "mapX": 0.85296,
+        "mapY": 0.78883
+      },
+      "orientation": {
+        "w": 0.974453,
+        "x": 0.001927,
+        "y": -0.034853,
+        "z": -0.221861
+      },
+      "neighbors": [
+        {
+          "id": 37
+        },
+        {
+          "id": 98
+        },
+        {
+          "id": 97
+        },
+        {
+          "id": 35
+        },
+        {
+          "id": 38
+        },
+        {
+          "id": 99
+        }
+      ],
+      "timestamp": 1784708137.083356
+    },
+    {
+      "id": 37,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00037.webp",
+      "label": "00037-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 38.3138,
+        "y": 7.1293,
+        "z": 1272.4271,
+        "mapX": 0.88365,
+        "mapY": 0.79431
+      },
+      "orientation": {
+        "w": 0.999178,
+        "x": 0.013533,
+        "y": -0.037452,
+        "z": 0.007569
+      },
+      "neighbors": [
+        {
+          "id": 36
+        },
+        {
+          "id": 38
+        },
+        {
+          "id": 35
+        },
+        {
+          "id": 100
+        }
+      ],
+      "timestamp": 1784708149.425981
+    },
+    {
+      "id": 38,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00038.webp",
+      "label": "00038-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 38.8411,
+        "y": 5.8839,
+        "z": 1272.4334,
+        "mapX": 0.89581,
+        "mapY": 0.83024
+      },
+      "orientation": {
+        "w": 0.999112,
+        "x": 0.007031,
+        "y": 0.006698,
+        "z": 0.041005
+      },
+      "neighbors": [
+        {
+          "id": 37
+        },
+        {
+          "id": 100
+        },
+        {
+          "id": 36
+        },
+        {
+          "id": 106
+        },
+        {
+          "id": 104
+        }
+      ],
+      "timestamp": 1784708159.22482
+    },
+    {
+      "id": 39,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00039.webp",
+      "label": "00039-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 29.0346,
+        "y": 21.2714,
+        "z": 1272.4975,
+        "mapX": 0.66964,
+        "mapY": 0.38629
+      },
+      "orientation": {
+        "w": 0.691779,
+        "x": 0.007375,
+        "y": -0.018026,
+        "z": -0.721847
+      },
+      "neighbors": [
+        {
+          "id": 40
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 4
+        }
+      ],
+      "timestamp": 1784708240.372001
+    },
+    {
+      "id": 40,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00040.webp",
+      "label": "00040-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 28.7806,
+        "y": 19.4194,
+        "z": 1272.5554,
+        "mapX": 0.66378,
+        "mapY": 0.43972
+      },
+      "orientation": {
+        "w": 0.992113,
+        "x": -0.000225,
+        "y": 0.00486,
+        "z": -0.12525
+      },
+      "neighbors": [
+        {
+          "id": 39
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 86
+        },
+        {
+          "id": 41
+        }
+      ],
+      "timestamp": 1784708248.628795
+    },
+    {
+      "id": 41,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00041.webp",
+      "label": "00041-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 29.4157,
+        "y": 16.0233,
+        "z": 1272.5913,
+        "mapX": 0.67843,
+        "mapY": 0.5377
+      },
+      "orientation": {
+        "w": 0.726334,
+        "x": 0.000054,
+        "y": -0.019532,
+        "z": -0.687064
+      },
+      "neighbors": [
+        {
+          "id": 11
+        },
+        {
+          "id": 59
+        },
+        {
+          "id": 58
+        },
+        {
+          "id": 40
+        },
+        {
+          "id": 42
+        }
+      ],
+      "timestamp": 1784708259.43156
+    },
+    {
+      "id": 42,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00042.webp",
+      "label": "00042-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 32.7729,
+        "y": 17.1807,
+        "z": 1272.3956,
+        "mapX": 0.75585,
+        "mapY": 0.50431
+      },
+      "orientation": {
+        "w": 0.996271,
+        "x": 0.003628,
+        "y": 0.081279,
+        "z": 0.028703
+      },
+      "neighbors": [
+        {
+          "id": 43
+        },
+        {
+          "id": 60
+        },
+        {
+          "id": 41
+        }
+      ],
+      "timestamp": 1784708286.177716
+    },
+    {
+      "id": 43,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00043.webp",
+      "label": "00043-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 35.1742,
+        "y": 17.2297,
+        "z": 1272.4091,
+        "mapX": 0.81124,
+        "mapY": 0.5029
+      },
+      "orientation": {
+        "w": 0.02667,
+        "x": 0.0128,
+        "y": 0.00651,
+        "z": 0.999541
+      },
+      "neighbors": [
+        {
+          "id": 42
+        },
+        {
+          "id": 103
+        },
+        {
+          "id": 61
+        },
+        {
+          "id": 44
+        },
+        {
+          "id": 101
+        }
+      ],
+      "timestamp": 1784708299.451669
+    },
+    {
+      "id": 44,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00044.webp",
+      "label": "00044-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 35.8818,
+        "y": 22.0556,
+        "z": 1272.1775,
+        "mapX": 0.82756,
+        "mapY": 0.36366
+      },
+      "orientation": {
+        "w": 0.718277,
+        "x": 0.022604,
+        "y": -0.011392,
+        "z": 0.695297
+      },
+      "neighbors": [
+        {
+          "id": 53
+        },
+        {
+          "id": 45
+        },
+        {
+          "id": 7
+        },
+        {
+          "id": 43
+        }
+      ],
+      "timestamp": 1784708314.622357
+    },
+    {
+      "id": 45,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00045.webp",
+      "label": "00045-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 35.8407,
+        "y": 25.3784,
+        "z": 1271.8727,
+        "mapX": 0.82661,
+        "mapY": 0.26779
+      },
+      "orientation": {
+        "w": 0.723403,
+        "x": 0.029587,
+        "y": -0.019615,
+        "z": 0.689513
+      },
+      "neighbors": [
+        {
+          "id": 44
+        },
+        {
+          "id": 46
+        },
+        {
+          "id": 53
+        }
+      ],
+      "timestamp": 1784708321.920215
+    },
+    {
+      "id": 46,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00046.webp",
+      "label": "00046-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 35.3291,
+        "y": 29.592,
+        "z": 1271.5845,
+        "mapX": 0.81481,
+        "mapY": 0.14622
+      },
+      "orientation": {
+        "w": 0.529466,
+        "x": 0.033225,
+        "y": 0.003573,
+        "z": 0.847673
+      },
+      "neighbors": [
+        {
+          "id": 48
+        },
+        {
+          "id": 45
+        },
+        {
+          "id": 47
+        }
+      ],
+      "timestamp": 1784708329.68306
+    },
+    {
+      "id": 47,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00047.webp",
+      "label": "00047-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 33.2045,
+        "y": 34.6601,
+        "z": 1271.4721,
+        "mapX": 0.76581,
+        "mapY": 0
+      },
+      "orientation": {
+        "w": 0.546764,
+        "x": 0.039469,
+        "y": -0.001386,
+        "z": 0.836355
+      },
+      "neighbors": [
+        {
+          "id": 48
+        },
+        {
+          "id": 46
+        }
+      ],
+      "timestamp": 1784708338.951784
+    },
+    {
+      "id": 48,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00048.webp",
+      "label": "00048-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 31.5584,
+        "y": 30.9779,
+        "z": 1271.7242,
+        "mapX": 0.72784,
+        "mapY": 0.10624
+      },
+      "orientation": {
+        "w": 0.700565,
+        "x": -0.020771,
+        "y": -0.030026,
+        "z": -0.712654
+      },
+      "neighbors": [
+        {
+          "id": 49
+        },
+        {
+          "id": 46
+        },
+        {
+          "id": 47
+        }
+      ],
+      "timestamp": 1784708373.549116
+    },
+    {
+      "id": 49,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00049.webp",
+      "label": "00049-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 28.3755,
+        "y": 30.3709,
+        "z": 1271.9513,
+        "mapX": 0.65444,
+        "mapY": 0.12375
+      },
+      "orientation": {
+        "w": -0.209386,
+        "x": 0.035571,
+        "y": 0.009444,
+        "z": 0.97714
+      },
+      "neighbors": [
+        {
+          "id": 48
+        },
+        {
+          "id": 50
+        },
+        {
+          "id": 91
+        }
+      ],
+      "timestamp": 1784708382.363886
+    },
+    {
+      "id": 50,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00050.webp",
+      "label": "00050-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 23.9018,
+        "y": 29.5567,
+        "z": 1272.3042,
+        "mapX": 0.55126,
+        "mapY": 0.14724
+      },
+      "orientation": {
+        "w": -0.416526,
+        "x": 0.025737,
+        "y": 0.027526,
+        "z": 0.908343
+      },
+      "neighbors": [
+        {
+          "id": 138
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 51
+        },
+        {
+          "id": 49
+        },
+        {
+          "id": 0
+        }
+      ],
+      "timestamp": 1784708394.03761
+    },
+    {
+      "id": 51,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00051.webp",
+      "label": "00051-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 23.2653,
+        "y": 25.4177,
+        "z": 1272.4478,
+        "mapX": 0.53658,
+        "mapY": 0.26666
+      },
+      "orientation": {
+        "w": 0.99701,
+        "x": 0.013996,
+        "y": -0.062537,
+        "z": -0.043184
+      },
+      "neighbors": [
+        {
+          "id": 2
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 52
+        },
+        {
+          "id": 50
+        }
+      ],
+      "timestamp": 1784708414.09415
+    },
+    {
+      "id": 52,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00052.webp",
+      "label": "00052-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 24.9523,
+        "y": 22.249,
+        "z": 1272.4275,
+        "mapX": 0.57548,
+        "mapY": 0.35808
+      },
+      "orientation": {
+        "w": 0.703216,
+        "x": 0.024082,
+        "y": 0.024612,
+        "z": -0.710142
+      },
+      "neighbors": [
+        {
+          "id": 3
+        },
+        {
+          "id": 4
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 51
+        },
+        {
+          "id": 53
+        }
+      ],
+      "timestamp": 1784708423.603948
+    },
+    {
+      "id": 53,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00053.webp",
+      "label": "00053-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 32.7534,
+        "y": 22.4649,
+        "z": 1272.5113,
+        "mapX": 0.7554,
+        "mapY": 0.35185
+      },
+      "orientation": {
+        "w": 0.955789,
+        "x": -0.05898,
+        "y": 0.024303,
+        "z": 0.287051
+      },
+      "neighbors": [
+        {
+          "id": 7
+        },
+        {
+          "id": 87
+        },
+        {
+          "id": 44
+        },
+        {
+          "id": 45
+        },
+        {
+          "id": 52
+        }
+      ],
+      "timestamp": 1784708448.687419
+    },
+    {
+      "id": 54,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00054.webp",
+      "label": "00054-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 24.5637,
+        "y": 14.4353,
+        "z": 1272.7546,
+        "mapX": 0.56652,
+        "mapY": 0.58352
+      },
+      "orientation": {
+        "w": 0.995131,
+        "x": 0.025507,
+        "y": 0.06511,
+        "z": -0.069452
+      },
+      "neighbors": [
+        {
+          "id": 14
+        },
+        {
+          "id": 55
+        },
+        {
+          "id": 17
+        },
+        {
+          "id": 19
+        },
+        {
+          "id": 11
+        }
+      ],
+      "timestamp": 1784708532.865567
+    },
+    {
+      "id": 55,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00055.webp",
+      "label": "00055-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 25.3431,
+        "y": 14.47,
+        "z": 1273.7426,
+        "mapX": 0.5845,
+        "mapY": 0.58252
+      },
+      "orientation": {
+        "w": 0.99844,
+        "x": 0.009613,
+        "y": -0.047096,
+        "z": 0.028419
+      },
+      "neighbors": [
+        {
+          "id": 54
+        },
+        {
+          "id": 56
+        },
+        {
+          "id": 19
+        },
+        {
+          "id": 76
+        },
+        {
+          "id": 11
+        }
+      ],
+      "timestamp": 1784708542.058415
+    },
+    {
+      "id": 56,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00056.webp",
+      "label": "00056-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 26.6515,
+        "y": 14.607,
+        "z": 1274.7163,
+        "mapX": 0.61467,
+        "mapY": 0.57856
+      },
+      "orientation": {
+        "w": 0.61748,
+        "x": -0.051237,
+        "y": -0.024245,
+        "z": -0.784542
+      },
+      "neighbors": [
+        {
+          "id": 57
+        },
+        {
+          "id": 55
+        },
+        {
+          "id": 62
+        }
+      ],
+      "timestamp": 1784708551.15517
+    },
+    {
+      "id": 57,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00057.webp",
+      "label": "00057-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 27.4357,
+        "y": 13.4434,
+        "z": 1275.0691,
+        "mapX": 0.63276,
+        "mapY": 0.61214
+      },
+      "orientation": {
+        "w": 0.977887,
+        "x": 0.012274,
+        "y": -0.019747,
+        "z": 0.207835
+      },
+      "neighbors": [
+        {
+          "id": 62
+        },
+        {
+          "id": 56
+        },
+        {
+          "id": 63
+        },
+        {
+          "id": 58
+        },
+        {
+          "id": 95
+        }
+      ],
+      "timestamp": 1784708561.800982
+    },
+    {
+      "id": 58,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00058.webp",
+      "label": "00058-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 28.9417,
+        "y": 13.6119,
+        "z": 1275.0078,
+        "mapX": 0.66749,
+        "mapY": 0.60727
+      },
+      "orientation": {
+        "w": 0.68633,
+        "x": -0.021207,
+        "y": 0.032571,
+        "z": 0.726251
+      },
+      "neighbors": [
+        {
+          "id": 57
+        },
+        {
+          "id": 63
+        },
+        {
+          "id": 62
+        },
+        {
+          "id": 59
+        },
+        {
+          "id": 41
+        }
+      ],
+      "timestamp": 1784708569.26685
+    },
+    {
+      "id": 59,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00059.webp",
+      "label": "00059-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 31.1002,
+        "y": 15.3474,
+        "z": 1275.075,
+        "mapX": 0.71728,
+        "mapY": 0.5572
+      },
+      "orientation": {
+        "w": 0.696207,
+        "x": -0.030797,
+        "y": 0.042183,
+        "z": 0.715938
+      },
+      "neighbors": [
+        {
+          "id": 60
+        },
+        {
+          "id": 58
+        },
+        {
+          "id": 41
+        }
+      ],
+      "timestamp": 1784708579.154561
+    },
+    {
+      "id": 60,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00060.webp",
+      "label": "00060-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 30.821,
+        "y": 18.0338,
+        "z": 1275.0797,
+        "mapX": 0.71084,
+        "mapY": 0.4797
+      },
+      "orientation": {
+        "w": 0.686188,
+        "x": 0.018191,
+        "y": 0.007441,
+        "z": 0.727158
+      },
+      "neighbors": [
+        {
+          "id": 61
+        },
+        {
+          "id": 59
+        },
+        {
+          "id": 86
+        },
+        {
+          "id": 42
+        }
+      ],
+      "timestamp": 1784708587.067441
+    },
+    {
+      "id": 61,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00061.webp",
+      "label": "00061-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 32.2941,
+        "y": 19.8285,
+        "z": 1275.1463,
+        "mapX": 0.74481,
+        "mapY": 0.42792
+      },
+      "orientation": {
+        "w": -0.104816,
+        "x": -0.053045,
+        "y": -0.011925,
+        "z": 0.993004
+      },
+      "neighbors": [
+        {
+          "id": 60
+        },
+        {
+          "id": 87
+        },
+        {
+          "id": 86
+        },
+        {
+          "id": 43
+        }
+      ],
+      "timestamp": 1784708633.627453
+    },
+    {
+      "id": 62,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00062.webp",
+      "label": "00062-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 27.1461,
+        "y": 12.5068,
+        "z": 1275.053,
+        "mapX": 0.62608,
+        "mapY": 0.63916
+      },
+      "orientation": {
+        "w": 0.771501,
+        "x": 0.023143,
+        "y": 0.014338,
+        "z": -0.635645
+      },
+      "neighbors": [
+        {
+          "id": 57
+        },
+        {
+          "id": 65
+        },
+        {
+          "id": 63
+        },
+        {
+          "id": 95
+        },
+        {
+          "id": 66
+        },
+        {
+          "id": 58
+        },
+        {
+          "id": 56
+        }
+      ],
+      "timestamp": 1784708659.188871
+    },
+    {
+      "id": 63,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00063.webp",
+      "label": "00063-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 28.3065,
+        "y": 12.2324,
+        "z": 1274.9495,
+        "mapX": 0.65284,
+        "mapY": 0.64708
+      },
+      "orientation": {
+        "w": 0.989849,
+        "x": 0.011145,
+        "y": 0.070596,
+        "z": -0.122846
+      },
+      "neighbors": [
+        {
+          "id": 62
+        },
+        {
+          "id": 57
+        },
+        {
+          "id": 58
+        },
+        {
+          "id": 95
+        },
+        {
+          "id": 64
+        }
+      ],
+      "timestamp": 1784708668.208643
+    },
+    {
+      "id": 64,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00064.webp",
+      "label": "00064-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 31.5524,
+        "y": 10.9652,
+        "z": 1275.0727,
+        "mapX": 0.72771,
+        "mapY": 0.68364
+      },
+      "orientation": {
+        "w": 0.841722,
+        "x": 0.020447,
+        "y": 0.01025,
+        "z": -0.539427
+      },
+      "neighbors": [
+        {
+          "id": 31
+        },
+        {
+          "id": 32
+        },
+        {
+          "id": 30
+        },
+        {
+          "id": 63
+        },
+        {
+          "id": 65
+        }
+      ],
+      "timestamp": 1784708679.209404
+    },
+    {
+      "id": 65,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00065.webp",
+      "label": "00065-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 26.5895,
+        "y": 11.6899,
+        "z": 1275.0455,
+        "mapX": 0.61324,
+        "mapY": 0.66273
+      },
+      "orientation": {
+        "w": 0.748632,
+        "x": 0.00341,
+        "y": -0.008019,
+        "z": -0.662928
+      },
+      "neighbors": [
+        {
+          "id": 62
+        },
+        {
+          "id": 66
+        },
+        {
+          "id": 68
+        },
+        {
+          "id": 67
+        },
+        {
+          "id": 64
+        }
+      ],
+      "timestamp": 1784708761.018726
+    },
+    {
+      "id": 66,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00066.webp",
+      "label": "00066-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 26.6079,
+        "y": 10.6477,
+        "z": 1274.9654,
+        "mapX": 0.61367,
+        "mapY": 0.6928
+      },
+      "orientation": {
+        "w": 0.765772,
+        "x": 0.05131,
+        "y": 0.045219,
+        "z": -0.639465
+      },
+      "neighbors": [
+        {
+          "id": 65
+        },
+        {
+          "id": 67
+        },
+        {
+          "id": 62
+        },
+        {
+          "id": 29
+        }
+      ],
+      "timestamp": 1784708773.741408
+    },
+    {
+      "id": 67,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00067.webp",
+      "label": "00067-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 27.2733,
+        "y": 9.6989,
+        "z": 1274.7584,
+        "mapX": 0.62902,
+        "mapY": 0.72017
+      },
+      "orientation": {
+        "w": 0.987629,
+        "x": 0.017188,
+        "y": 0.150282,
+        "z": -0.041343
+      },
+      "neighbors": [
+        {
+          "id": 66
+        },
+        {
+          "id": 65
+        },
+        {
+          "id": 29
+        },
+        {
+          "id": 68
+        }
+      ],
+      "timestamp": 1784708779.235387
+    },
+    {
+      "id": 68,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00068.webp",
+      "label": "00068-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 25.3364,
+        "y": 12.7816,
+        "z": 1275.0748,
+        "mapX": 0.58434,
+        "mapY": 0.63123
+      },
+      "orientation": {
+        "w": -0.003615,
+        "x": 0.005213,
+        "y": 0.010304,
+        "z": 0.999927
+      },
+      "neighbors": [
+        {
+          "id": 69
+        },
+        {
+          "id": 65
+        },
+        {
+          "id": 70
+        },
+        {
+          "id": 67
+        }
+      ],
+      "timestamp": 1784708805.283743
+    },
+    {
+      "id": 69,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00069.webp",
+      "label": "00069-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 24.2071,
+        "y": 11.8814,
+        "z": 1275.0642,
+        "mapX": 0.5583,
+        "mapY": 0.6572
+      },
+      "orientation": {
+        "w": 0.746017,
+        "x": -0.010511,
+        "y": 0.016527,
+        "z": 0.665638
+      },
+      "neighbors": [
+        {
+          "id": 70
+        },
+        {
+          "id": 68
+        },
+        {
+          "id": 71
+        }
+      ],
+      "timestamp": 1784708834.479171
+    },
+    {
+      "id": 70,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00070.webp",
+      "label": "00070-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 23.5684,
+        "y": 13.0262,
+        "z": 1274.9467,
+        "mapX": 0.54357,
+        "mapY": 0.62417
+      },
+      "orientation": {
+        "w": 0.556952,
+        "x": -0.033955,
+        "y": 0.021561,
+        "z": 0.82957
+      },
+      "neighbors": [
+        {
+          "id": 73
+        },
+        {
+          "id": 71
+        },
+        {
+          "id": 69
+        },
+        {
+          "id": 68
+        }
+      ],
+      "timestamp": 1784708842.693977
+    },
+    {
+      "id": 71,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00071.webp",
+      "label": "00071-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 22.5688,
+        "y": 13.2612,
+        "z": 1275.0759,
+        "mapX": 0.52051,
+        "mapY": 0.61739
+      },
+      "orientation": {
+        "w": 0.745063,
+        "x": 0.040116,
+        "y": 0.03162,
+        "z": -0.665035
+      },
+      "neighbors": [
+        {
+          "id": 70
+        },
+        {
+          "id": 74
+        },
+        {
+          "id": 73
+        },
+        {
+          "id": 69
+        },
+        {
+          "id": 75
+        },
+        {
+          "id": 72
+        }
+      ],
+      "timestamp": 1784708850.204799
+    },
+    {
+      "id": 72,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00072.webp",
+      "label": "00072-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 20.4874,
+        "y": 11.4182,
+        "z": 1275.1754,
+        "mapX": 0.47251,
+        "mapY": 0.67057
+      },
+      "orientation": {
+        "w": 0.710093,
+        "x": 0.03494,
+        "y": 0.021086,
+        "z": -0.702924
+      },
+      "neighbors": [
+        {
+          "id": 23
+        },
+        {
+          "id": 27
+        },
+        {
+          "id": 71
+        },
+        {
+          "id": 73
+        }
+      ],
+      "timestamp": 1784708859.360553
+    },
+    {
+      "id": 73,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00073.webp",
+      "label": "00073-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 23.7666,
+        "y": 14.0027,
+        "z": 1275.0174,
+        "mapX": 0.54814,
+        "mapY": 0.596
+      },
+      "orientation": {
+        "w": 0.704288,
+        "x": -0.008611,
+        "y": 0.009043,
+        "z": 0.709805
+      },
+      "neighbors": [
+        {
+          "id": 76
+        },
+        {
+          "id": 74
+        },
+        {
+          "id": 70
+        },
+        {
+          "id": 71
+        },
+        {
+          "id": 72
+        }
+      ],
+      "timestamp": 1784708917.328395
+    },
+    {
+      "id": 74,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00074.webp",
+      "label": "00074-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 22.8394,
+        "y": 14.3022,
+        "z": 1275.0908,
+        "mapX": 0.52675,
+        "mapY": 0.58736
+      },
+      "orientation": {
+        "w": 0.700706,
+        "x": -0.043597,
+        "y": 0.046166,
+        "z": 0.710619
+      },
+      "neighbors": [
+        {
+          "id": 73
+        },
+        {
+          "id": 71
+        },
+        {
+          "id": 76
+        },
+        {
+          "id": 75
+        },
+        {
+          "id": 94
+        }
+      ],
+      "timestamp": 1784708928.992095
+    },
+    {
+      "id": 75,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00075.webp",
+      "label": "00075-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 20.9591,
+        "y": 15.1814,
+        "z": 1275.1455,
+        "mapX": 0.48339,
+        "mapY": 0.56199
+      },
+      "orientation": {
+        "w": 0.005477,
+        "x": -0.022898,
+        "y": -0.004496,
+        "z": 0.999713
+      },
+      "neighbors": [
+        {
+          "id": 74
+        },
+        {
+          "id": 71
+        },
+        {
+          "id": 15
+        },
+        {
+          "id": 16
+        },
+        {
+          "id": 76
+        }
+      ],
+      "timestamp": 1784708936.624956
+    },
+    {
+      "id": 76,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00076.webp",
+      "label": "00076-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 24.0923,
+        "y": 14.9079,
+        "z": 1275.1021,
+        "mapX": 0.55565,
+        "mapY": 0.56988
+      },
+      "orientation": {
+        "w": 0.727966,
+        "x": 0.026846,
+        "y": -0.015039,
+        "z": 0.684923
+      },
+      "neighbors": [
+        {
+          "id": 73
+        },
+        {
+          "id": 74
+        },
+        {
+          "id": 55
+        },
+        {
+          "id": 94
+        },
+        {
+          "id": 77
+        },
+        {
+          "id": 75
+        }
+      ],
+      "timestamp": 1784708976.449127
+    },
+    {
+      "id": 77,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00077.webp",
+      "label": "00077-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 23.8437,
+        "y": 17.1516,
+        "z": 1275.0797,
+        "mapX": 0.54992,
+        "mapY": 0.50515
+      },
+      "orientation": {
+        "w": 0.077066,
+        "x": -0.039755,
+        "y": -0.035371,
+        "z": 0.995605
+      },
+      "neighbors": [
+        {
+          "id": 81
+        },
+        {
+          "id": 78
+        },
+        {
+          "id": 94
+        },
+        {
+          "id": 76
+        },
+        {
+          "id": 79
+        }
+      ],
+      "timestamp": 1784709000.196617
+    },
+    {
+      "id": 78,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00078.webp",
+      "label": "00078-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 22.6024,
+        "y": 17.7454,
+        "z": 1275.0669,
+        "mapX": 0.52129,
+        "mapY": 0.48802
+      },
+      "orientation": {
+        "w": 0.62074,
+        "x": -0.067357,
+        "y": -0.033094,
+        "z": -0.780416
+      },
+      "neighbors": [
+        {
+          "id": 79
+        },
+        {
+          "id": 77
+        },
+        {
+          "id": 81
+        }
+      ],
+      "timestamp": 1784709009.686416
+    },
+    {
+      "id": 79,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00079.webp",
+      "label": "00079-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 21.6357,
+        "y": 18.2256,
+        "z": 1275.0553,
+        "mapX": 0.49899,
+        "mapY": 0.47416
+      },
+      "orientation": {
+        "w": 0.106513,
+        "x": 0.016344,
+        "y": -0.000868,
+        "z": 0.994177
+      },
+      "neighbors": [
+        {
+          "id": 78
+        },
+        {
+          "id": 80
+        },
+        {
+          "id": 77
+        },
+        {
+          "id": 12
+        }
+      ],
+      "timestamp": 1784709023.517144
+    },
+    {
+      "id": 80,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00080.webp",
+      "label": "00080-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 19.5003,
+        "y": 18.7301,
+        "z": 1275.0296,
+        "mapX": 0.44974,
+        "mapY": 0.45961
+      },
+      "orientation": {
+        "w": -0.075689,
+        "x": -0.020038,
+        "y": 0.013317,
+        "z": 0.996841
+      },
+      "neighbors": [
+        {
+          "id": 79
+        },
+        {
+          "id": 13
+        },
+        {
+          "id": 124
+        },
+        {
+          "id": 81
+        }
+      ],
+      "timestamp": 1784709034.463862
+    },
+    {
+      "id": 81,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00081.webp",
+      "label": "00081-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 24.9733,
+        "y": 17.6628,
+        "z": 1275.1119,
+        "mapX": 0.57597,
+        "mapY": 0.4904
+      },
+      "orientation": {
+        "w": 0.998057,
+        "x": 0.01987,
+        "y": -0.039193,
+        "z": 0.044169
+      },
+      "neighbors": [
+        {
+          "id": 77
+        },
+        {
+          "id": 78
+        },
+        {
+          "id": 94
+        },
+        {
+          "id": 82
+        },
+        {
+          "id": 9
+        },
+        {
+          "id": 80
+        }
+      ],
+      "timestamp": 1784709088.597801
+    },
+    {
+      "id": 82,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00082.webp",
+      "label": "00082-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 26.5801,
+        "y": 20.0723,
+        "z": 1275.2882,
+        "mapX": 0.61303,
+        "mapY": 0.42088
+      },
+      "orientation": {
+        "w": 0.997973,
+        "x": 0.006253,
+        "y": -0.033316,
+        "z": -0.053856
+      },
+      "neighbors": [
+        {
+          "id": 83
+        },
+        {
+          "id": 137
+        },
+        {
+          "id": 84
+        },
+        {
+          "id": 81
+        }
+      ],
+      "timestamp": 1784709115.349217
+    },
+    {
+      "id": 83,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00083.webp",
+      "label": "00083-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 26.9771,
+        "y": 20.8164,
+        "z": 1275.273,
+        "mapX": 0.62218,
+        "mapY": 0.39941
+      },
+      "orientation": {
+        "w": 0.750393,
+        "x": 0.037395,
+        "y": -0.012046,
+        "z": 0.659823
+      },
+      "neighbors": [
+        {
+          "id": 82
+        },
+        {
+          "id": 84
+        },
+        {
+          "id": 86
+        },
+        {
+          "id": 137
+        },
+        {
+          "id": 85
+        }
+      ],
+      "timestamp": 1784709123.136018
+    },
+    {
+      "id": 84,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00084.webp",
+      "label": "00084-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 27.0717,
+        "y": 22.6095,
+        "z": 1275.2858,
+        "mapX": 0.62437,
+        "mapY": 0.34768
+      },
+      "orientation": {
+        "w": 0.871006,
+        "x": 0.009035,
+        "y": 0.027749,
+        "z": 0.490406
+      },
+      "neighbors": [
+        {
+          "id": 85
+        },
+        {
+          "id": 83
+        },
+        {
+          "id": 90
+        },
+        {
+          "id": 82
+        }
+      ],
+      "timestamp": 1784709148.55544
+    },
+    {
+      "id": 85,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00085.webp",
+      "label": "00085-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 25.3388,
+        "y": 22.907,
+        "z": 1275.1173,
+        "mapX": 0.5844,
+        "mapY": 0.3391
+      },
+      "orientation": {
+        "w": 0.07167,
+        "x": -0.303908,
+        "y": -0.003165,
+        "z": 0.949996
+      },
+      "neighbors": [
+        {
+          "id": 84
+        },
+        {
+          "id": 137
+        },
+        {
+          "id": 83
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 86
+        }
+      ],
+      "timestamp": 1784709159.509295
+    },
+    {
+      "id": 86,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00086.webp",
+      "label": "00086-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 29.3261,
+        "y": 21.0978,
+        "z": 1275.2191,
+        "mapX": 0.67636,
+        "mapY": 0.39129
+      },
+      "orientation": {
+        "w": 0.9984,
+        "x": 0.010574,
+        "y": 0.041964,
+        "z": 0.036402
+      },
+      "neighbors": [
+        {
+          "id": 88
+        },
+        {
+          "id": 83
+        },
+        {
+          "id": 87
+        },
+        {
+          "id": 40
+        },
+        {
+          "id": 61
+        },
+        {
+          "id": 60
+        },
+        {
+          "id": 85
+        }
+      ],
+      "timestamp": 1784709180.594778
+    },
+    {
+      "id": 87,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00087.webp",
+      "label": "00087-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 31.5628,
+        "y": 22.1955,
+        "z": 1275.2549,
+        "mapX": 0.72795,
+        "mapY": 0.35962
+      },
+      "orientation": {
+        "w": 0.890198,
+        "x": 0.015112,
+        "y": -0.01519,
+        "z": 0.455069
+      },
+      "neighbors": [
+        {
+          "id": 88
+        },
+        {
+          "id": 61
+        },
+        {
+          "id": 86
+        },
+        {
+          "id": 7
+        },
+        {
+          "id": 53
+        }
+      ],
+      "timestamp": 1784709197.501413
+    },
+    {
+      "id": 88,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00088.webp",
+      "label": "00088-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 29.8314,
+        "y": 22.8361,
+        "z": 1275.237,
+        "mapX": 0.68801,
+        "mapY": 0.34114
+      },
+      "orientation": {
+        "w": 0.643089,
+        "x": 0.023584,
+        "y": -0.002816,
+        "z": 0.765423
+      },
+      "neighbors": [
+        {
+          "id": 89
+        },
+        {
+          "id": 86
+        },
+        {
+          "id": 87
+        },
+        {
+          "id": 92
+        }
+      ],
+      "timestamp": 1784709253.563241
+    },
+    {
+      "id": 89,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00089.webp",
+      "label": "00089-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 29.8491,
+        "y": 24.3457,
+        "z": 1275.1894,
+        "mapX": 0.68842,
+        "mapY": 0.29759
+      },
+      "orientation": {
+        "w": 0.685449,
+        "x": 0.044438,
+        "y": -0.022576,
+        "z": 0.726412
+      },
+      "neighbors": [
+        {
+          "id": 92
+        },
+        {
+          "id": 88
+        },
+        {
+          "id": 90
+        },
+        {
+          "id": 93
+        },
+        {
+          "id": 91
+        }
+      ],
+      "timestamp": 1784709264.565038
+    },
+    {
+      "id": 90,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00090.webp",
+      "label": "00090-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 28.2201,
+        "y": 24.8202,
+        "z": 1275.2331,
+        "mapX": 0.65085,
+        "mapY": 0.2839
+      },
+      "orientation": {
+        "w": 0.753849,
+        "x": 0.029182,
+        "y": 0.000948,
+        "z": 0.656399
+      },
+      "neighbors": [
+        {
+          "id": 89
+        },
+        {
+          "id": 91
+        },
+        {
+          "id": 92
+        },
+        {
+          "id": 84
+        },
+        {
+          "id": 5
+        }
+      ],
+      "timestamp": 1784709274.750814
+    },
+    {
+      "id": 91,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00091.webp",
+      "label": "00091-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 28.2149,
+        "y": 27.0246,
+        "z": 1275.2367,
+        "mapX": 0.65073,
+        "mapY": 0.2203
+      },
+      "orientation": {
+        "w": 0.705451,
+        "x": 0.071613,
+        "y": -0.06423,
+        "z": 0.7022
+      },
+      "neighbors": [
+        {
+          "id": 90
+        },
+        {
+          "id": 5
+        },
+        {
+          "id": 89
+        },
+        {
+          "id": 92
+        },
+        {
+          "id": 49
+        }
+      ],
+      "timestamp": 1784709291.800412
+    },
+    {
+      "id": 92,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00092.webp",
+      "label": "00092-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 30.4543,
+        "y": 24.7707,
+        "z": 1275.1365,
+        "mapX": 0.70238,
+        "mapY": 0.28532
+      },
+      "orientation": {
+        "w": 0.947198,
+        "x": -0.022577,
+        "y": 0.109953,
+        "z": 0.300359
+      },
+      "neighbors": [
+        {
+          "id": 89
+        },
+        {
+          "id": 93
+        },
+        {
+          "id": 88
+        },
+        {
+          "id": 90
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 91
+        }
+      ],
+      "timestamp": 1784709336.263496
+    },
+    {
+      "id": 93,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00093.webp",
+      "label": "00093-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 31.9189,
+        "y": 25.7546,
+        "z": 1275.2573,
+        "mapX": 0.73616,
+        "mapY": 0.25694
+      },
+      "orientation": {
+        "w": 0.90476,
+        "x": 0.008034,
+        "y": 0.014101,
+        "z": 0.425612
+      },
+      "neighbors": [
+        {
+          "id": 92
+        },
+        {
+          "id": 89
+        },
+        {
+          "id": 6
+        }
+      ],
+      "timestamp": 1784709344.243997
+    },
+    {
+      "id": 94,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00094.webp",
+      "label": "00094-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 23.6587,
+        "y": 16.0127,
+        "z": 1276.7308,
+        "mapX": 0.54565,
+        "mapY": 0.53801
+      },
+      "orientation": {
+        "w": 0.620137,
+        "x": 0.012844,
+        "y": -0.089074,
+        "z": -0.779315
+      },
+      "neighbors": [
+        {
+          "id": 77
+        },
+        {
+          "id": 76
+        },
+        {
+          "id": 74
+        },
+        {
+          "id": 81
+        },
+        {
+          "id": 95
+        }
+      ],
+      "timestamp": 1784709762.946521
+    },
+    {
+      "id": 95,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00095.webp",
+      "label": "00095-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 27.5165,
+        "y": 12.3988,
+        "z": 1276.746,
+        "mapX": 0.63462,
+        "mapY": 0.64228
+      },
+      "orientation": {
+        "w": 0.672586,
+        "x": 0.062802,
+        "y": -0.084849,
+        "z": 0.732451
+      },
+      "neighbors": [
+        {
+          "id": 62
+        },
+        {
+          "id": 63
+        },
+        {
+          "id": 57
+        },
+        {
+          "id": 94
+        }
+      ],
+      "timestamp": 1784709905.022559
+    },
+    {
+      "id": 96,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00096.webp",
+      "label": "00096-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 37.1565,
+        "y": 9.4842,
+        "z": 1272.2757,
+        "mapX": 0.85696,
+        "mapY": 0.72637
+      },
+      "orientation": {
+        "w": 0.687899,
+        "x": 0.000755,
+        "y": -0.002121,
+        "z": -0.725803
+      },
+      "neighbors": [
+        {
+          "id": 34
+        },
+        {
+          "id": 97
+        },
+        {
+          "id": 35
+        },
+        {
+          "id": 33
+        }
+      ],
+      "timestamp": 1784710083.769859
+    },
+    {
+      "id": 97,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00097.webp",
+      "label": "00097-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 35.734,
+        "y": 8.6592,
+        "z": 1272.4878,
+        "mapX": 0.82415,
+        "mapY": 0.75017
+      },
+      "orientation": {
+        "w": -0.366679,
+        "x": 0.045523,
+        "y": 0.022326,
+        "z": 0.928965
+      },
+      "neighbors": [
+        {
+          "id": 98
+        },
+        {
+          "id": 96
+        },
+        {
+          "id": 36
+        },
+        {
+          "id": 33
+        },
+        {
+          "id": 34
+        }
+      ],
+      "timestamp": 1784710097.048571
+    },
+    {
+      "id": 98,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00098.webp",
+      "label": "00098-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 35.628,
+        "y": 7.2049,
+        "z": 1272.5539,
+        "mapX": 0.8217,
+        "mapY": 0.79213
+      },
+      "orientation": {
+        "w": 0.733,
+        "x": -0.033347,
+        "y": -0.044294,
+        "z": -0.677965
+      },
+      "neighbors": [
+        {
+          "id": 36
+        },
+        {
+          "id": 97
+        },
+        {
+          "id": 99
+        },
+        {
+          "id": 108
+        }
+      ],
+      "timestamp": 1784710112.277291
+    },
+    {
+      "id": 99,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00099.webp",
+      "label": "00099-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 36.0666,
+        "y": 4.8333,
+        "z": 1272.6244,
+        "mapX": 0.83182,
+        "mapY": 0.86055
+      },
+      "orientation": {
+        "w": 0.840474,
+        "x": -0.008924,
+        "y": -0.067315,
+        "z": -0.53758
+      },
+      "neighbors": [
+        {
+          "id": 108
+        },
+        {
+          "id": 98
+        },
+        {
+          "id": 36
+        },
+        {
+          "id": 100
+        },
+        {
+          "id": 106
+        }
+      ],
+      "timestamp": 1784710121.419092
+    },
+    {
+      "id": 100,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00100.webp",
+      "label": "00100-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 39.0335,
+        "y": 4.1798,
+        "z": 1272.6278,
+        "mapX": 0.90025,
+        "mapY": 0.87941
+      },
+      "orientation": {
+        "w": 0.615237,
+        "x": 0.066444,
+        "y": -0.031931,
+        "z": 0.784888
+      },
+      "neighbors": [
+        {
+          "id": 38
+        },
+        {
+          "id": 99
+        },
+        {
+          "id": 37
+        },
+        {
+          "id": 106
+        }
+      ],
+      "timestamp": 1784710130.408836
+    },
+    {
+      "id": 101,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00101.webp",
+      "label": "00101-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 40.9953,
+        "y": 17.201,
+        "z": 1272.0832,
+        "mapX": 0.94549,
+        "mapY": 0.50372
+      },
+      "orientation": {
+        "w": 0.716626,
+        "x": -0.044152,
+        "y": -0.044133,
+        "z": -0.694658
+      },
+      "neighbors": [
+        {
+          "id": 43
+        },
+        {
+          "id": 102
+        }
+      ],
+      "timestamp": 1784710187.019983
+    },
+    {
+      "id": 102,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00102.webp",
+      "label": "00102-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 41.469,
+        "y": 10.9584,
+        "z": 1272.0777,
+        "mapX": 0.95642,
+        "mapY": 0.68383
+      },
+      "orientation": {
+        "w": -0.198628,
+        "x": 0.061667,
+        "y": 0.030858,
+        "z": 0.977646
+      },
+      "neighbors": [
+        {
+          "id": 35
+        },
+        {
+          "id": 104
+        },
+        {
+          "id": 34
+        },
+        {
+          "id": 103
+        },
+        {
+          "id": 101
+        }
+      ],
+      "timestamp": 1784710198.325465
+    },
+    {
+      "id": 103,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00103.webp",
+      "label": "00103-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 36.3569,
+        "y": 13.4273,
+        "z": 1272.3698,
+        "mapX": 0.83851,
+        "mapY": 0.6126
+      },
+      "orientation": {
+        "w": 0.599733,
+        "x": -0.061936,
+        "y": -0.078434,
+        "z": -0.793935
+      },
+      "neighbors": [
+        {
+          "id": 33
+        },
+        {
+          "id": 34
+        },
+        {
+          "id": 43
+        },
+        {
+          "id": 102
+        }
+      ],
+      "timestamp": 1784710212.013221
+    },
+    {
+      "id": 104,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00104.webp",
+      "label": "00104-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 43.3588,
+        "y": 7.4884,
+        "z": 1272.1502,
+        "mapX": 1,
+        "mapY": 0.78395
+      },
+      "orientation": {
+        "w": 0.524758,
+        "x": -0.057486,
+        "y": -0.028426,
+        "z": -0.848833
+      },
+      "neighbors": [
+        {
+          "id": 102
+        },
+        {
+          "id": 38
+        },
+        {
+          "id": 35
+        },
+        {
+          "id": 105
+        }
+      ],
+      "timestamp": 1784710266.816067
+    },
+    {
+      "id": 105,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00105.webp",
+      "label": "00105-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 43.3577,
+        "y": 1.2335,
+        "z": 1272.842,
+        "mapX": 0.99998,
+        "mapY": 0.96441
+      },
+      "orientation": {
+        "w": -0.001024,
+        "x": 0.054939,
+        "y": -0.010287,
+        "z": 0.998436
+      },
+      "neighbors": [
+        {
+          "id": 106
+        },
+        {
+          "id": 104
+        }
+      ],
+      "timestamp": 1784710279.141819
+    },
+    {
+      "id": 106,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00106.webp",
+      "label": "00106-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 38.4427,
+        "y": 1.3577,
+        "z": 1273.7162,
+        "mapX": 0.88662,
+        "mapY": 0.96083
+      },
+      "orientation": {
+        "w": 0.285201,
+        "x": 0.113461,
+        "y": -0.027042,
+        "z": 0.951344
+      },
+      "neighbors": [
+        {
+          "id": 100
+        },
+        {
+          "id": 99
+        },
+        {
+          "id": 38
+        },
+        {
+          "id": 105
+        },
+        {
+          "id": 107
+        }
+      ],
+      "timestamp": 1784710295.041599
+    },
+    {
+      "id": 107,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00107.webp",
+      "label": "00107-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 32.7062,
+        "y": 0.9181,
+        "z": 1273.271,
+        "mapX": 0.75432,
+        "mapY": 0.97351
+      },
+      "orientation": {
+        "w": 0.707287,
+        "x": 0.036415,
+        "y": -0.019123,
+        "z": 0.705729
+      },
+      "neighbors": [
+        {
+          "id": 108
+        },
+        {
+          "id": 117
+        },
+        {
+          "id": 109
+        },
+        {
+          "id": 106
+        }
+      ],
+      "timestamp": 1784710314.15713
+    },
+    {
+      "id": 108,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00108.webp",
+      "label": "00108-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 34.0674,
+        "y": 4.5345,
+        "z": 1272.8331,
+        "mapX": 0.78571,
+        "mapY": 0.86917
+      },
+      "orientation": {
+        "w": 0.692152,
+        "x": -0.003489,
+        "y": 0.020952,
+        "z": 0.721439
+      },
+      "neighbors": [
+        {
+          "id": 99
+        },
+        {
+          "id": 109
+        },
+        {
+          "id": 98
+        },
+        {
+          "id": 107
+        }
+      ],
+      "timestamp": 1784710326.698967
+    },
+    {
+      "id": 109,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00109.webp",
+      "label": "00109-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 31.6343,
+        "y": 4.7163,
+        "z": 1272.9095,
+        "mapX": 0.72959,
+        "mapY": 0.86393
+      },
+      "orientation": {
+        "w": 0.693003,
+        "x": 0.032478,
+        "y": -0.013595,
+        "z": 0.720074
+      },
+      "neighbors": [
+        {
+          "id": 110
+        },
+        {
+          "id": 108
+        },
+        {
+          "id": 111
+        },
+        {
+          "id": 107
+        }
+      ],
+      "timestamp": 1784710345.613421
+    },
+    {
+      "id": 110,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00110.webp",
+      "label": "00110-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 30.7121,
+        "y": 6.95,
+        "z": 1272.8384,
+        "mapX": 0.70833,
+        "mapY": 0.79948
+      },
+      "orientation": {
+        "w": -0.17339,
+        "x": -0.285642,
+        "y": 0.053752,
+        "z": 0.940986
+      },
+      "neighbors": [
+        {
+          "id": 109
+        },
+        {
+          "id": 30
+        },
+        {
+          "id": 113
+        },
+        {
+          "id": 111
+        }
+      ],
+      "timestamp": 1784710358.033166
+    },
+    {
+      "id": 111,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00111.webp",
+      "label": "00111-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 28.0946,
+        "y": 4.568,
+        "z": 1272.9017,
+        "mapX": 0.64796,
+        "mapY": 0.86821
+      },
+      "orientation": {
+        "w": 0.449403,
+        "x": 0.021529,
+        "y": -0.01912,
+        "z": 0.892865
+      },
+      "neighbors": [
+        {
+          "id": 112
+        },
+        {
+          "id": 113
+        },
+        {
+          "id": 114
+        },
+        {
+          "id": 110
+        },
+        {
+          "id": 109
+        },
+        {
+          "id": 117
+        }
+      ],
+      "timestamp": 1784710375.433782
+    },
+    {
+      "id": 112,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00112.webp",
+      "label": "00112-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 27.3366,
+        "y": 4.7915,
+        "z": 1272.909,
+        "mapX": 0.63047,
+        "mapY": 0.86176
+      },
+      "orientation": {
+        "w": 0.7131,
+        "x": 0.029882,
+        "y": -0.036144,
+        "z": 0.699492
+      },
+      "neighbors": [
+        {
+          "id": 113
+        },
+        {
+          "id": 111
+        },
+        {
+          "id": 114
+        },
+        {
+          "id": 117
+        },
+        {
+          "id": 116
+        }
+      ],
+      "timestamp": 1784710390.00848
+    },
+    {
+      "id": 113,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00113.webp",
+      "label": "00113-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 27.5636,
+        "y": 5.416,
+        "z": 1272.8443,
+        "mapX": 0.63571,
+        "mapY": 0.84374
+      },
+      "orientation": {
+        "w": 0.266665,
+        "x": -0.059264,
+        "y": 0.017171,
+        "z": 0.961812
+      },
+      "neighbors": [
+        {
+          "id": 112
+        },
+        {
+          "id": 111
+        },
+        {
+          "id": 114
+        },
+        {
+          "id": 110
+        }
+      ],
+      "timestamp": 1784710414.32302
+    },
+    {
+      "id": 114,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00114.webp",
+      "label": "00114-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 25.7173,
+        "y": 6.65,
+        "z": 1272.9802,
+        "mapX": 0.59313,
+        "mapY": 0.80814
+      },
+      "orientation": {
+        "w": 0.283811,
+        "x": 0.006721,
+        "y": 0.014502,
+        "z": 0.958747
+      },
+      "neighbors": [
+        {
+          "id": 113
+        },
+        {
+          "id": 112
+        },
+        {
+          "id": 111
+        },
+        {
+          "id": 21
+        },
+        {
+          "id": 115
+        }
+      ],
+      "timestamp": 1784710427.448619
+    },
+    {
+      "id": 115,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00115.webp",
+      "label": "00115-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 21.2347,
+        "y": 6.9558,
+        "z": 1272.9852,
+        "mapX": 0.48974,
+        "mapY": 0.79931
+      },
+      "orientation": {
+        "w": -0.157456,
+        "x": -0.232604,
+        "y": -0.020435,
+        "z": 0.959524
+      },
+      "neighbors": [
+        {
+          "id": 24
+        },
+        {
+          "id": 21
+        },
+        {
+          "id": 114
+        },
+        {
+          "id": 116
+        }
+      ],
+      "timestamp": 1784710446.002383
+    },
+    {
+      "id": 116,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00116.webp",
+      "label": "00116-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 23.0973,
+        "y": 2.0022,
+        "z": 1273.1599,
+        "mapX": 0.5327,
+        "mapY": 0.94223
+      },
+      "orientation": {
+        "w": 0.709749,
+        "x": 0.054215,
+        "y": -0.028217,
+        "z": 0.701798
+      },
+      "neighbors": [
+        {
+          "id": 112
+        },
+        {
+          "id": 115
+        },
+        {
+          "id": 117
+        }
+      ],
+      "timestamp": 1784710521.822824
+    },
+    {
+      "id": 117,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00117.webp",
+      "label": "00117-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 28.8633,
+        "y": 0,
+        "z": 1273.2464,
+        "mapX": 0.66569,
+        "mapY": 1
+      },
+      "orientation": {
+        "w": 0.695911,
+        "x": 0.051624,
+        "y": -0.053092,
+        "z": 0.714299
+      },
+      "neighbors": [
+        {
+          "id": 107
+        },
+        {
+          "id": 111
+        },
+        {
+          "id": 112
+        },
+        {
+          "id": 116
+        }
+      ],
+      "timestamp": 1784710538.359419
+    },
+    {
+      "id": 118,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00118.webp",
+      "label": "00118-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 14.7262,
+        "y": 1.0881,
+        "z": 1273.3849,
+        "mapX": 0.33964,
+        "mapY": 0.96861
+      },
+      "orientation": {
+        "w": 0.455834,
+        "x": 0.050182,
+        "y": 0.003339,
+        "z": 0.888643
+      },
+      "neighbors": [
+        {
+          "id": 119
+        }
+      ],
+      "timestamp": 1784710564.384947
+    },
+    {
+      "id": 119,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00119.webp",
+      "label": "00119-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 15.0958,
+        "y": 7.2732,
+        "z": 1273.0866,
+        "mapX": 0.34816,
+        "mapY": 0.79016
+      },
+      "orientation": {
+        "w": 0.998971,
+        "x": -0.003551,
+        "y": -0.021144,
+        "z": 0.039957
+      },
+      "neighbors": [
+        {
+          "id": 26
+        },
+        {
+          "id": 25
+        },
+        {
+          "id": 120
+        },
+        {
+          "id": 118
+        }
+      ],
+      "timestamp": 1784710582.31956
+    },
+    {
+      "id": 120,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00120.webp",
+      "label": "00120-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 10.4577,
+        "y": 10.6021,
+        "z": 1272.9633,
+        "mapX": 0.24119,
+        "mapY": 0.69411
+      },
+      "orientation": {
+        "w": 0.995194,
+        "x": 0.013051,
+        "y": -0.071818,
+        "z": -0.065269
+      },
+      "neighbors": [
+        {
+          "id": 127
+        },
+        {
+          "id": 26
+        },
+        {
+          "id": 119
+        },
+        {
+          "id": 121
+        }
+      ],
+      "timestamp": 1784710609.503033
+    },
+    {
+      "id": 121,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00121.webp",
+      "label": "00121-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 13.4816,
+        "y": 15.9542,
+        "z": 1272.8956,
+        "mapX": 0.31093,
+        "mapY": 0.5397
+      },
+      "orientation": {
+        "w": 0.825258,
+        "x": 0.032819,
+        "y": -0.052634,
+        "z": 0.561339
+      },
+      "neighbors": [
+        {
+          "id": 125
+        },
+        {
+          "id": 122
+        },
+        {
+          "id": 124
+        },
+        {
+          "id": 120
+        }
+      ],
+      "timestamp": 1784710642.234327
+    },
+    {
+      "id": 122,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00122.webp",
+      "label": "00122-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 14.0639,
+        "y": 20.4259,
+        "z": 1272.8604,
+        "mapX": 0.32436,
+        "mapY": 0.41068
+      },
+      "orientation": {
+        "w": 0.731352,
+        "x": 0.01675,
+        "y": -0.016489,
+        "z": 0.681595
+      },
+      "neighbors": [
+        {
+          "id": 124
+        },
+        {
+          "id": 123
+        },
+        {
+          "id": 133
+        },
+        {
+          "id": 121
+        }
+      ],
+      "timestamp": 1784710652.254138
+    },
+    {
+      "id": 123,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00123.webp",
+      "label": "00123-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 17.2957,
+        "y": 21.6891,
+        "z": 1272.7918,
+        "mapX": 0.3989,
+        "mapY": 0.37423
+      },
+      "orientation": {
+        "w": 0.755236,
+        "x": 0.015767,
+        "y": 0.011697,
+        "z": -0.655159
+      },
+      "neighbors": [
+        {
+          "id": 124
+        },
+        {
+          "id": 135
+        },
+        {
+          "id": 136
+        },
+        {
+          "id": 122
+        }
+      ],
+      "timestamp": 1784710668.021779
+    },
+    {
+      "id": 124,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00124.webp",
+      "label": "00124-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 17.0934,
+        "y": 19.0654,
+        "z": 1272.9181,
+        "mapX": 0.39423,
+        "mapY": 0.44993
+      },
+      "orientation": {
+        "w": 0.676311,
+        "x": -0.009855,
+        "y": -0.013268,
+        "z": -0.736431
+      },
+      "neighbors": [
+        {
+          "id": 123
+        },
+        {
+          "id": 13
+        },
+        {
+          "id": 80
+        },
+        {
+          "id": 122
+        },
+        {
+          "id": 125
+        },
+        {
+          "id": 121
+        }
+      ],
+      "timestamp": 1784710678.280603
+    },
+    {
+      "id": 125,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00125.webp",
+      "label": "00125-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 16.8211,
+        "y": 15.5113,
+        "z": 1272.9225,
+        "mapX": 0.38795,
+        "mapY": 0.55247
+      },
+      "orientation": {
+        "w": 0.749334,
+        "x": -0.008877,
+        "y": -0.036151,
+        "z": -0.661145
+      },
+      "neighbors": [
+        {
+          "id": 16
+        },
+        {
+          "id": 121
+        },
+        {
+          "id": 126
+        },
+        {
+          "id": 124
+        }
+      ],
+      "timestamp": 1784710694.172242
+    },
+    {
+      "id": 126,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00126.webp",
+      "label": "00126-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 17.2187,
+        "y": 12.1398,
+        "z": 1272.8697,
+        "mapX": 0.39712,
+        "mapY": 0.64975
+      },
+      "orientation": {
+        "w": 0.891329,
+        "x": 0.002886,
+        "y": -0.037049,
+        "z": -0.451832
+      },
+      "neighbors": [
+        {
+          "id": 25
+        },
+        {
+          "id": 27
+        },
+        {
+          "id": 23
+        },
+        {
+          "id": 125
+        },
+        {
+          "id": 26
+        }
+      ],
+      "timestamp": 1784710717.36377
+    },
+    {
+      "id": 127,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00127.webp",
+      "label": "00127-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 8.2311,
+        "y": 13.1052,
+        "z": 1272.9643,
+        "mapX": 0.18984,
+        "mapY": 0.62189
+      },
+      "orientation": {
+        "w": 0.407657,
+        "x": 0.044585,
+        "y": -0.027539,
+        "z": 0.91163
+      },
+      "neighbors": [
+        {
+          "id": 120
+        },
+        {
+          "id": 128
+        }
+      ],
+      "timestamp": 1784710749.986064
+    },
+    {
+      "id": 128,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00128.webp",
+      "label": "00128-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 0.9114,
+        "y": 14.8019,
+        "z": 1272.9288,
+        "mapX": 0.02102,
+        "mapY": 0.57294
+      },
+      "orientation": {
+        "w": 0.464865,
+        "x": 0.050461,
+        "y": -0.021861,
+        "z": 0.883672
+      },
+      "neighbors": [
+        {
+          "id": 129
+        },
+        {
+          "id": 127
+        }
+      ],
+      "timestamp": 1784710763.057835
+    },
+    {
+      "id": 129,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00129.webp",
+      "label": "00129-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 0.2981,
+        "y": 20.3543,
+        "z": 1272.8707,
+        "mapX": 0.00687,
+        "mapY": 0.41275
+      },
+      "orientation": {
+        "w": 0.571157,
+        "x": 0.029333,
+        "y": -0.00859,
+        "z": 0.820272
+      },
+      "neighbors": [
+        {
+          "id": 130
+        },
+        {
+          "id": 132
+        },
+        {
+          "id": 128
+        }
+      ],
+      "timestamp": 1784710772.96964
+    },
+    {
+      "id": 130,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00130.webp",
+      "label": "00130-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 0,
+        "y": 24.9774,
+        "z": 1272.8522,
+        "mapX": 0,
+        "mapY": 0.27936
+      },
+      "orientation": {
+        "w": 0.877745,
+        "x": 0.027924,
+        "y": -0.058495,
+        "z": 0.474723
+      },
+      "neighbors": [
+        {
+          "id": 131
+        },
+        {
+          "id": 129
+        }
+      ],
+      "timestamp": 1784710783.240383
+    },
+    {
+      "id": 131,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00131.webp",
+      "label": "00131-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 4.3424,
+        "y": 24.0131,
+        "z": 1272.9327,
+        "mapX": 0.10015,
+        "mapY": 0.30718
+      },
+      "orientation": {
+        "w": 0.959177,
+        "x": -0.019225,
+        "y": -0.053014,
+        "z": -0.277128
+      },
+      "neighbors": [
+        {
+          "id": 132
+        },
+        {
+          "id": 130
+        }
+      ],
+      "timestamp": 1784710814.251787
+    },
+    {
+      "id": 132,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00132.webp",
+      "label": "00132-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 5.3779,
+        "y": 20.7373,
+        "z": 1273.0137,
+        "mapX": 0.12403,
+        "mapY": 0.4017
+      },
+      "orientation": {
+        "w": 0.562464,
+        "x": -0.04837,
+        "y": -0.024755,
+        "z": -0.825035
+      },
+      "neighbors": [
+        {
+          "id": 131
+        },
+        {
+          "id": 133
+        },
+        {
+          "id": 129
+        }
+      ],
+      "timestamp": 1784710822.978533
+    },
+    {
+      "id": 133,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00133.webp",
+      "label": "00133-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 9.7476,
+        "y": 20.2455,
+        "z": 1273.0216,
+        "mapX": 0.22481,
+        "mapY": 0.41588
+      },
+      "orientation": {
+        "w": 0.999379,
+        "x": 0.005071,
+        "y": -0.031582,
+        "z": 0.014764
+      },
+      "neighbors": [
+        {
+          "id": 122
+        },
+        {
+          "id": 132
+        },
+        {
+          "id": 134
+        }
+      ],
+      "timestamp": 1784710832.367375
+    },
+    {
+      "id": 134,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00134.webp",
+      "label": "00134-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 11.488,
+        "y": 25.0681,
+        "z": 1272.8883,
+        "mapX": 0.26495,
+        "mapY": 0.27675
+      },
+      "orientation": {
+        "w": 0.889762,
+        "x": 0.02006,
+        "y": -0.038086,
+        "z": 0.454389
+      },
+      "neighbors": [
+        {
+          "id": 133
+        },
+        {
+          "id": 135
+        }
+      ],
+      "timestamp": 1784710846.214103
+    },
+    {
+      "id": 135,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00135.webp",
+      "label": "00135-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 17.6533,
+        "y": 24.5872,
+        "z": 1272.8292,
+        "mapX": 0.40714,
+        "mapY": 0.29062
+      },
+      "orientation": {
+        "w": 0.995025,
+        "x": 0.006074,
+        "y": -0.058413,
+        "z": -0.080474
+      },
+      "neighbors": [
+        {
+          "id": 123
+        },
+        {
+          "id": 136
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 134
+        }
+      ],
+      "timestamp": 1784710862.686794
+    },
+    {
+      "id": 136,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00136.webp",
+      "label": "00136-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 20.6274,
+        "y": 21.3691,
+        "z": 1272.5141,
+        "mapX": 0.47574,
+        "mapY": 0.38347
+      },
+      "orientation": {
+        "w": 0.998847,
+        "x": -0.003084,
+        "y": -0.046523,
+        "z": -0.011408
+      },
+      "neighbors": [
+        {
+          "id": 13
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 123
+        },
+        {
+          "id": 135
+        },
+        {
+          "id": 137
+        }
+      ],
+      "timestamp": 1784710872.888659
+    },
+    {
+      "id": 137,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00137.webp",
+      "label": "00137-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 24.5102,
+        "y": 21.3552,
+        "z": 1274.9586,
+        "mapX": 0.56529,
+        "mapY": 0.38387
+      },
+      "orientation": {
+        "w": 0.99529,
+        "x": -0.011306,
+        "y": -0.031908,
+        "z": -0.090841
+      },
+      "neighbors": [
+        {
+          "id": 85
+        },
+        {
+          "id": 82
+        },
+        {
+          "id": 83
+        },
+        {
+          "id": 136
+        }
+      ],
+      "timestamp": 1784710889.119144
+    },
+    {
+      "id": 138,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00138.webp",
+      "label": "00138-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 20.4107,
+        "y": 28.8473,
+        "z": 1272.4021,
+        "mapX": 0.47074,
+        "mapY": 0.16771
+      },
+      "orientation": {
+        "w": 0.752977,
+        "x": 0.01312,
+        "y": -0.008364,
+        "z": 0.657863
+      },
+      "neighbors": [
+        {
+          "id": 1
+        },
+        {
+          "id": 0
+        },
+        {
+          "id": 50
+        },
+        {
+          "id": 139
+        }
+      ],
+      "timestamp": 1784710918.150302
+    },
+    {
+      "id": 139,
+      "image": "/tours/sainte-croix/releases/20260812T073525Z/panoramas/00139.webp",
+      "label": "00139-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 13.9684,
+        "y": 32.3705,
+        "z": 1272.5126,
+        "mapX": 0.32216,
+        "mapY": 0.06606
+      },
+      "orientation": {
+        "w": 0.090592,
+        "x": 0.06821,
+        "y": -0.002278,
+        "z": 0.993547
+      },
+      "neighbors": [
+        {
+          "id": 0
+        },
+        {
+          "id": 138
+        }
+      ],
+      "timestamp": 1784710933.00835
+    }
+  ]
+}

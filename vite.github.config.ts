@@ -5,7 +5,7 @@ import { defineConfig } from "vite";
 export default defineConfig({
   root: resolve(import.meta.dirname, "static-viewer"),
   base: "/Visite360/",
-  publicDir: false,
+  publicDir: "public",
   plugins: [react()],
   build: {
     outDir: resolve(import.meta.dirname, "dist-github"),

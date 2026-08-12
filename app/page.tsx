@@ -28,11 +28,20 @@ type TourPointer = {
 };
 
 function initialManifestUrl() {
-  const tourMatch = window.location.pathname.match(/^\/v\/([a-z0-9][a-z0-9-]*)\/?$/i);
-  if (!tourMatch) return Promise.resolve<string | null>(null);
+  const baseUrl = new URL(import.meta.env.BASE_URL, window.location.origin);
+  const relativePath = window.location.pathname.startsWith(baseUrl.pathname)
+    ? window.location.pathname.slice(baseUrl.pathname.length)
+    : window.location.pathname.replace(/^\//, "");
+  const tourMatch = relativePath.match(/^v\/([a-z0-9][a-z0-9-]*)\/?$/i);
+  const requestedTour = new URLSearchParams(window.location.search).get("tour");
+  const slugCandidate = tourMatch?.[1] ?? requestedTour;
+  if (!slugCandidate || !/^[a-z0-9][a-z0-9-]*$/i.test(slugCandidate)) {
+    return Promise.resolve<string | null>(null);
+  }
 
-  const slug = tourMatch[1].toLocaleLowerCase();
-  return fetch(`/tours/${encodeURIComponent(slug)}/current.json`, { cache: "no-store" })
+  const slug = slugCandidate.toLocaleLowerCase();
+  const pointerUrl = new URL(`tours/${encodeURIComponent(slug)}/current.json`, baseUrl);
+  return fetch(pointerUrl, { cache: "no-store" })
     .then((response) => {
       if (!response.ok) throw new Error(`Visite ${slug} introuvable`);
       return response.json() as Promise<TourPointer>;
@@ -41,7 +50,7 @@ function initialManifestUrl() {
       if (!pointer.manifest || !pointer.manifest.endsWith("/manifest.json")) {
         throw new Error("Le pointeur de visite est invalide");
       }
-      return new URL(pointer.manifest, window.location.origin).toString();
+      return new URL(pointer.manifest.replace(/^\//, ""), baseUrl).toString();
     });
 }
 
@@ -456,7 +465,15 @@ export default function Home() {
         setDatasetLoading(true);
         const response = await fetch(manifestUrl);
         if (!response.ok) throw new Error("Manifest indisponible");
-        const data = await response.json() as Manifest;
+        const rawData = await response.json() as Manifest;
+        const siteBaseUrl = new URL(import.meta.env.BASE_URL, window.location.origin);
+        const data: Manifest = {
+          ...rawData,
+          panoramas: rawData.panoramas.map((panorama) => ({
+            ...panorama,
+            image: new URL(panorama.image.replace(/^\//, ""), siteBaseUrl).toString(),
+          })),
+        };
         if (folderLoadIdRef.current !== loadId) return;
         panoramasByIdRef.current = new Map(data.panoramas.map((panorama) => [panorama.id, panorama]));
         setManifest(data);
