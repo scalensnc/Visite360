@@ -891,6 +891,9 @@ export default function Home() {
       )}
 
       <header className="topbar minimal-topbar">
+        <div className="scalen-logo">
+          <img src={`${import.meta.env.BASE_URL}logo-scalen.png`} alt="SCALEN" />
+        </div>
         <button className="icon-button menu-button" onClick={() => setMenuOpen(true)} aria-label="Ouvrir le menu">
           <span className="hamburger" aria-hidden="true"><i /><i /><i /></span>
         </button>
