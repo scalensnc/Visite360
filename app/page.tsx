@@ -405,7 +405,6 @@ export default function Home() {
   const panoramasByIdRef = useRef<Map<number, Panorama>>(new Map());
   const previousPanoRef = useRef<number | null>(null);
   const hotspotRefs = useRef<Record<number, HTMLButtonElement | null>>({});
-  const compassRef = useRef<HTMLSpanElement>(null);
   const folderInputRef = useRef<HTMLInputElement>(null);
   const folderLoadIdRef = useRef(0);
   const objectUrlsRef = useRef<string[]>([]);
@@ -641,9 +640,6 @@ export default function Home() {
         element.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`;
       });
 
-      if (compassRef.current) {
-        compassRef.current.style.transform = `rotate(${-lonRef.current}deg)`;
-      }
     };
     animate();
 
@@ -900,7 +896,7 @@ export default function Home() {
         </div>
       </header>
       <div className="scalen-logo">
-        <img src={`${import.meta.env.BASE_URL}logo-scalen.png`} alt="SCALEN" />
+        <img src={`${import.meta.env.BASE_URL}logo-scalen-transparent.png`} alt="SCALEN" />
       </div>
 
       {hotspotsVisible && visiblePanoramas.map((destination) => (
@@ -961,7 +957,6 @@ export default function Home() {
       <div className="view-controls simplified-controls">
         <button onClick={() => zoom(-8)} aria-label="Zoomer">+</button>
         <button onClick={() => zoom(8)} aria-label="Dézoomer">−</button>
-        <button className="compass-button" onClick={resetView} aria-label="Recentrer la vue"><span ref={compassRef}>▲</span><small>N</small></button>
         <button className={mapOpen ? "is-active" : ""} onClick={() => setMapOpen((open) => !open)} aria-label="Afficher le plan"><span className="map-glyph">▦</span></button>
       </div>
 
@@ -972,7 +967,7 @@ export default function Home() {
             <button onClick={() => setMapOpen(false)} aria-label="Fermer le plan">×</button>
           </div>
           <MapScene panoramas={manifest.panoramas} currentId={currentId} onSelect={goToPanorama} />
-          <div className="map-panel-foot"><span><i className="legend-current" />Position actuelle</span><span><i />Panorama</span><span className="map-nav-legend">{new Set(manifest.panoramas.map((panorama) => panorama.floor)).size} niveau(x) navigable(s)</span></div>
+          <div className="map-panel-foot"><span><i className="legend-current" />Position actuelle</span><span><i />Panorama</span></div>
         </section>
       )}
 
