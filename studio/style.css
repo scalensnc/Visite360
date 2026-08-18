@@ -262,6 +262,17 @@ input:focus-visible {
 .row-actions a { width: 32px; font-size: 14px; }
 .row-actions button:hover,
 .row-actions a:hover { border-color: #abccef; background: var(--blue-soft); color: var(--blue); }
+.row-actions button:disabled { cursor: wait; opacity: 0.55; }
+.row-actions .finalize-button { border-color: #b7d3f3; background: var(--blue-soft); color: var(--blue); }
+
+.share-card { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 24px; padding: 22px 24px; border: 1px solid rgba(45, 137, 96, 0.24); border-radius: 15px; background: linear-gradient(135deg, #f2fbf6, #f7fbff); box-shadow: 0 12px 32px rgba(24, 76, 54, 0.06); }
+.share-card strong { display: block; margin-top: 5px; font-size: 16px; }
+.share-card a { color: #176dcc; font-size: 11px; overflow-wrap: anywhere; }
+.share-card > div:first-child > a { display: block; margin-top: 6px; }
+.share-actions { display: flex; flex: 0 0 auto; gap: 8px; }
+.share-actions button,
+.share-actions a { display: inline-flex; align-items: center; min-height: 38px; padding: 0 14px; border: 1px solid #b7d3f3; border-radius: 9px; background: #fff; color: #176dcc; cursor: pointer; font-size: 10px; font-weight: 700; text-decoration: none; }
+.share-actions a { border-color: var(--blue); background: var(--blue); color: #fff; }
 
 .create-card { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 38px; margin-top: 38px; padding: 32px; border: 1px solid var(--line); border-radius: 17px; background: var(--white); box-shadow: 0 15px 40px rgba(13, 35, 50, 0.06); }
 .create-copy > p:not(.eyebrow) { margin: 13px 0 0; color: var(--muted); font-size: 12px; line-height: 1.65; }
@@ -316,6 +327,8 @@ input:focus-visible {
   .workspace-head .primary-button::after { content: "+"; font-size: 20px; }
   .metrics { grid-template-columns: 1fr; }
   .metrics article { min-height: 100px; }
+  .share-card { align-items: stretch; flex-direction: column; }
+  .share-actions > * { flex: 1; justify-content: center; }
   .table-labels { display: none; }
   .table-row { grid-template-columns: 1fr auto; gap: 8px; padding: 14px; }
   .table-row > :nth-child(2), .table-row > :nth-child(4) { display: none; }

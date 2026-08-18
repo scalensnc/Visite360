@@ -246,6 +246,8 @@ function Studio({ config, token, onSignOut }: { config: RuntimeConfig; token: st
   const [folderManifest, setFolderManifest] = useState<Manifest | null>(null);
   const [preparingFolder, setPreparingFolder] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [publishingVisitId, setPublishingVisitId] = useState("");
+  const [latestPublished, setLatestPublished] = useState<Visit | null>(null);
   const [progress, setProgress] = useState(0);
   const [notice, setNotice] = useState("");
 
@@ -334,6 +336,7 @@ function Studio({ config, token, onSignOut }: { config: RuntimeConfig; token: st
           sharePath: "/v/demo/",
         };
         setVisits((current) => [created, ...current]);
+        setLatestPublished(created);
         setNotice("Démo terminée : la visite serait maintenant accessible par son lien client.");
       } else {
         const created = await api<{ visit: Visit }>("/api/visits", {
@@ -381,6 +384,7 @@ function Studio({ config, token, onSignOut }: { config: RuntimeConfig; token: st
         }
         const published = await api<{ visit: Visit }>(`/api/visits/${created.visit.id}/publish`, { method: "POST" });
         setVisits((current) => [published.visit, ...current]);
+        setLatestPublished(published.visit);
         setNotice("La visite est publiée. Son lien peut maintenant être transmis au client.");
       }
       setTitle("");
@@ -399,6 +403,23 @@ function Studio({ config, token, onSignOut }: { config: RuntimeConfig; token: st
     const link = new URL(visit.sharePath, window.location.origin).toString();
     await navigator.clipboard.writeText(link);
     setNotice("Lien client copié.");
+  }
+
+  async function publishPendingVisit(visit: Visit) {
+    setPublishingVisitId(visit.id);
+    setNotice(`Création du lien de « ${visit.title} »…`);
+    try {
+      const published = isLocalPreview
+        ? { ...visit, status: "published" as const, publishedAt: new Date().toISOString(), sharePath: `/v/${visit.shareId}/` }
+        : (await api<{ visit: Visit }>(`/api/visits/${visit.id}/publish`, { method: "POST" })).visit;
+      setVisits((current) => current.map((candidate) => candidate.id === published.id ? published : candidate));
+      setLatestPublished(published);
+      setNotice("Le lien client est prêt. Vous pouvez le copier ou ouvrir la visite.");
+    } catch (error) {
+      setNotice(friendlyError(error));
+    } finally {
+      setPublishingVisitId("");
+    }
   }
 
   return (
@@ -433,6 +454,22 @@ function Studio({ config, token, onSignOut }: { config: RuntimeConfig; token: st
           <article><span>Stockage estimé</span><strong>{Math.max(0.1, panoramaCount * 0.006).toFixed(1)} Go</strong><small>optimisation incluse</small></article>
         </section>
 
+        {latestPublished?.sharePath && (
+          <section className="share-card" aria-label="Lien client disponible">
+            <div>
+              <p className="eyebrow">LIEN CLIENT DISPONIBLE</p>
+              <strong>{latestPublished.title}</strong>
+              <a href={latestPublished.sharePath} target="_blank" rel="noreferrer">
+                {new URL(latestPublished.sharePath, window.location.origin).toString()}
+              </a>
+            </div>
+            <div className="share-actions">
+              <button onClick={() => copyLink(latestPublished)}>Copier le lien</button>
+              <a href={latestPublished.sharePath} target="_blank" rel="noreferrer">Ouvrir la visite ↗</a>
+            </div>
+          </section>
+        )}
+
         <section className="visit-section">
           <div className="section-head"><div><p className="eyebrow">BIBLIOTHÈQUE</p><h2>Visites récentes</h2></div><span>{visits.length} visite{visits.length > 1 ? "s" : ""}</span></div>
           <div className="visit-table">
@@ -441,11 +478,16 @@ function Studio({ config, token, onSignOut }: { config: RuntimeConfig; token: st
               <article className="table-row" key={visit.id}>
                 <div className="visit-name"><i>{visit.title.slice(0, 1).toLocaleUpperCase()}</i><span><strong>{visit.title}</strong><small>{visit.slug}</small></span></div>
                 <span>{visit.panoramaCount}</span>
-                <span><b className={`status status-${visit.status}`}>{visit.status === "published" ? "Publiée" : visit.status === "uploading" ? "Import" : "Brouillon"}</b></span>
+                <span><b className={`status status-${visit.status}`}>{visit.status === "published" ? "Publiée" : visit.status === "uploading" ? "À finaliser" : "Brouillon"}</b></span>
                 <span>{formatDate(visit.publishedAt ?? visit.createdAt)}</span>
                 <div className="row-actions">
                   {visit.sharePath && <button onClick={() => copyLink(visit)}>Copier le lien</button>}
                   {visit.sharePath && <a href={visit.sharePath} target="_blank" rel="noreferrer" aria-label={`Ouvrir ${visit.title}`}>↗</a>}
+                  {visit.status === "uploading" && (
+                    <button className="finalize-button" disabled={Boolean(publishingVisitId)} onClick={() => void publishPendingVisit(visit)}>
+                      {publishingVisitId === visit.id ? "Création…" : "Créer le lien"}
+                    </button>
+                  )}
                 </div>
               </article>
             ))}
