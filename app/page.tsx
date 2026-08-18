@@ -40,7 +40,7 @@ function initialManifestUrl() {
   }
 
   const slug = slugCandidate.toLocaleLowerCase();
-  const pointerUrl = new URL(`tours/${encodeURIComponent(slug)}/current.json`, baseUrl);
+  const pointerUrl = new URL(`/tours/${encodeURIComponent(slug)}/current.json`, baseUrl);
   return fetch(pointerUrl, { cache: "no-store" })
     .then((response) => {
       if (!response.ok) throw new Error(`Visite ${slug} introuvable`);
@@ -50,7 +50,7 @@ function initialManifestUrl() {
       if (!pointer.manifest || !pointer.manifest.endsWith("/manifest.json")) {
         throw new Error("Le pointeur de visite est invalide");
       }
-      return new URL(pointer.manifest.replace(/^\//, ""), baseUrl).toString();
+      return new URL(pointer.manifest, window.location.origin).toString();
     });
 }
 

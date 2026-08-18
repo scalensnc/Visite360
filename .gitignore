@@ -37,6 +37,14 @@ yarn-error.log*
 # typescript
 next-env.d.ts
 /dist/
+/dist-static/
+/dist-studio/
+/cdk.out/
 /.wrangler/
 /outputs/
 /work/
+/.npm-cache/
+/.pnpm-store/
+/dist-github/
+*.tsbuildinfo
+/infra/iam/

@@ -45,6 +45,7 @@ export type Manifest = {
 export type LoadedPanoramaFolder = {
   manifest: Manifest;
   objectUrls: string[];
+  panoramaFiles: File[];
 };
 
 type PoseRow = {
@@ -367,6 +368,7 @@ export async function loadPanoramaFolder(input: File[] | FileList): Promise<Load
 
     return {
       objectUrls,
+      panoramaFiles: parsed.rows.map((row) => row.file),
       manifest: {
         site: {
           name: displayName(sourceFolder),

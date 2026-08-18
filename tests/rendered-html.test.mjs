@@ -48,14 +48,16 @@ function viewerYaw(from, to) {
   return Math.atan2(viewer[2], viewer[0]) * 180 / Math.PI;
 }
 
-test("server-renders the generic panorama loading shell", async () => {
+test("server-renders the panorama folder prompt", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
   assert.match(html, /<title>Panorama 360 — Visionneuse immersive<\/title>/i);
-  assert.match(html, /Préparation de la visite/);
+  assert.match(html, /Chargez vos panoramas/);
+  assert.match(html, /Choisir un dossier/);
+  assert.match(html, /Vos images restent sur cet appareil/);
   assert.match(html, /Glisser pour regarder/);
   assert.match(html, /Hotspots/);
   assert.match(html, /Rayon d’affichage/);
@@ -81,10 +83,22 @@ test("loads arbitrary local panorama folders without uploading their images", as
   assert.match(pageSource, /webkitdirectory/);
   assert.match(pageSource, /loadPanoramaFolder\(files\)/);
   assert.match(pageSource, /Aucune image n’est envoyée/);
+  assert.match(pageSource, /Promise\.resolve<string \| null>\(null\)/);
+  assert.doesNotMatch(pageSource, /Promise\.resolve\("\/panoramas\/manifest\.json"\)/);
   assert.match(loaderSource, /pano_pos_x/);
   assert.match(loaderSource, /URL\.createObjectURL\(row\.file\)/);
   assert.match(loaderSource, /Parcours séquentiel sans fichier de poses/);
   assert.doesNotMatch(loaderSource, /fetch\(|XMLHttpRequest|FormData/);
+});
+
+test("loads a published tour from its versioned current pointer", async () => {
+  const pageSource = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const staticEntry = await readFile(new URL("../static-viewer/main.tsx", import.meta.url), "utf8");
+
+  assert.match(pageSource, /\/tours\/\$\{encodeURIComponent\(slug\)\}\/current\.json/);
+  assert.match(pageSource, /new URL\(pointer\.manifest, window\.location\.origin\)/);
+  assert.match(pageSource, /cache: "no-store"/);
+  assert.match(staticEntry, /import Home from "\.\.\/app\/page"/);
 });
 
 test("provides a navigable 3D route map with direct panorama selection", async () => {
@@ -98,10 +112,18 @@ test("provides a navigable 3D route map with direct panorama selection", async (
 });
 
 test("gives panorama hotspots a strong distance-based perspective", async () => {
-  const pageSource = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
-  assert.match(pageSource, /Math\.pow\(5 \/ Math\.max\(distanceMeters, 2\.5\), 0\.48\)/);
+  const [pageSource, cssSource] = await Promise.all([
+    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+  ]);
+  assert.match(pageSource, /Math\.pow\(4\.5 \/ Math\.max\(distanceMeters, 2\.2\), 0\.72\)/);
   assert.match(pageSource, /hotspotPerspectiveScale\(distance, camera\.fov\)/);
   assert.match(pageSource, /hotspotPerspectiveOpacity\(distance\)\.toFixed\(3\)/);
+  assert.match(pageSource, /hotspotRevealUntilRef\.current = performance\.now\(\) \+ HOTSPOT_REVEAL_DURATION_MS/);
+  assert.match(pageSource, /time < hotspotRevealUntilRef\.current/);
+  assert.match(cssSource, /border: 2px solid #fff/);
+  assert.doesNotMatch(pageSource, /hotspot-chevron/);
+  assert.doesNotMatch(cssSource, /\.hotspot-chevron/);
   assert.match(pageSource, /element\.style\.zIndex = String/);
 });
 
