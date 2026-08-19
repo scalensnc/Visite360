@@ -27,6 +27,12 @@ type TourPointer = {
   release?: string;
 };
 
+function publishedTourBaseUrl() {
+  const applicationBasePath = import.meta.env.BASE_URL;
+  const tourBasePath = applicationBasePath === "/viewer/v1/" ? "/" : applicationBasePath;
+  return new URL(tourBasePath, window.location.origin);
+}
+
 function initialManifestUrl() {
   const baseUrl = new URL(import.meta.env.BASE_URL, window.location.origin);
   const relativePath = window.location.pathname.startsWith(baseUrl.pathname)
@@ -40,7 +46,8 @@ function initialManifestUrl() {
   }
 
   const slug = slugCandidate.toLocaleLowerCase();
-  const pointerUrl = new URL(`/tours/${encodeURIComponent(slug)}/current.json`, baseUrl);
+  const tourBaseUrl = publishedTourBaseUrl();
+  const pointerUrl = new URL(`tours/${encodeURIComponent(slug)}/current.json`, tourBaseUrl);
   return fetch(pointerUrl, { cache: "no-store" })
     .then((response) => {
       if (!response.ok) throw new Error(`Visite ${slug} introuvable`);
@@ -50,7 +57,7 @@ function initialManifestUrl() {
       if (!pointer.manifest || !pointer.manifest.endsWith("/manifest.json")) {
         throw new Error("Le pointeur de visite est invalide");
       }
-      return new URL(pointer.manifest, window.location.origin).toString();
+      return new URL(pointer.manifest.replace(/^\//, ""), tourBaseUrl).toString();
     });
 }
 
@@ -465,12 +472,12 @@ export default function Home() {
         const response = await fetch(manifestUrl);
         if (!response.ok) throw new Error("Manifest indisponible");
         const rawData = await response.json() as Manifest;
-        const siteBaseUrl = new URL(import.meta.env.BASE_URL, window.location.origin);
+        const tourBaseUrl = publishedTourBaseUrl();
         const data: Manifest = {
           ...rawData,
           panoramas: rawData.panoramas.map((panorama) => ({
             ...panorama,
-            image: new URL(panorama.image.replace(/^\//, ""), siteBaseUrl).toString(),
+            image: new URL(panorama.image.replace(/^\//, ""), tourBaseUrl).toString(),
           })),
         };
         if (folderLoadIdRef.current !== loadId) return;

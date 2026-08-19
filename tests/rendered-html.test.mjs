@@ -95,8 +95,11 @@ test("loads a published tour from its versioned current pointer", async () => {
   const pageSource = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
   const staticEntry = await readFile(new URL("../static-viewer/main.tsx", import.meta.url), "utf8");
 
-  assert.match(pageSource, /\/tours\/\$\{encodeURIComponent\(slug\)\}\/current\.json/);
-  assert.match(pageSource, /new URL\(pointer\.manifest, window\.location\.origin\)/);
+  assert.match(pageSource, /`tours\/\$\{encodeURIComponent\(slug\)\}\/current\.json`/);
+  assert.match(pageSource, /function publishedTourBaseUrl\(\)/);
+  assert.match(pageSource, /applicationBasePath === "\/viewer\/v1\/" \? "\/" : applicationBasePath/);
+  assert.match(pageSource, /new URL\(`tours\/\$\{encodeURIComponent\(slug\)\}\/current\.json`, tourBaseUrl\)/);
+  assert.ok(pageSource.includes('return new URL(pointer.manifest.replace(/^\\//, ""), tourBaseUrl).toString();'));
   assert.match(pageSource, /cache: "no-store"/);
   assert.match(staticEntry, /import Home from "\.\.\/app\/page"/);
 });

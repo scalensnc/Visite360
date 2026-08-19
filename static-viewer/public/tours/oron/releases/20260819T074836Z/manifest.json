@@ -1,0 +1,4350 @@
+{
+  "site": {
+    "name": "Oron — Visite exemple",
+    "captured": "2 juillet 2025",
+    "panoramaCount": 119,
+    "source": "remote-tour",
+    "sourceFolder": "panorama_1416-oron",
+    "poseSource": "pano-poses.csv",
+    "poseConvention": "NavVis local X forward, Y right, Z up; quaternion local-to-dataset",
+    "bounds": {
+      "width": 44.989,
+      "height": 47.745
+    }
+  },
+  "panoramas": [
+    {
+      "id": 0,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00000.webp",
+      "label": "00000-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 26.694,
+        "y": 32.1799,
+        "z": 0.9903,
+        "mapX": 0.59335,
+        "mapY": 0.326
+      },
+      "orientation": {
+        "w": 0.666764,
+        "x": 0.026732,
+        "y": -0.027364,
+        "z": 0.744286
+      },
+      "neighbors": [
+        {
+          "id": 108
+        },
+        {
+          "id": 24
+        },
+        {
+          "id": 1
+        }
+      ],
+      "timestamp": 1751445522.721836
+    },
+    {
+      "id": 1,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00001.webp",
+      "label": "00001-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 31.3317,
+        "y": 33.4805,
+        "z": 0.9875,
+        "mapX": 0.69643,
+        "mapY": 0.29876
+      },
+      "orientation": {
+        "w": -0.047421,
+        "x": 0.033525,
+        "y": 0.024698,
+        "z": 0.998007
+      },
+      "neighbors": [
+        {
+          "id": 3
+        },
+        {
+          "id": 108
+        },
+        {
+          "id": 17
+        },
+        {
+          "id": 0
+        },
+        {
+          "id": 2
+        }
+      ],
+      "timestamp": 1751445543.379412
+    },
+    {
+      "id": 2,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00002.webp",
+      "label": "00002-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 25.0991,
+        "y": 39.3513,
+        "z": 0.7305,
+        "mapX": 0.55789,
+        "mapY": 0.1758
+      },
+      "orientation": {
+        "w": 0.719053,
+        "x": 0.048661,
+        "y": -0.001384,
+        "z": 0.693248
+      },
+      "neighbors": [
+        {
+          "id": 11
+        },
+        {
+          "id": 12
+        },
+        {
+          "id": 16
+        },
+        {
+          "id": 1
+        }
+      ],
+      "timestamp": 1751445562.442013
+    },
+    {
+      "id": 3,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00003.webp",
+      "label": "00003-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 33.7062,
+        "y": 35.4922,
+        "z": 0.9727,
+        "mapX": 0.74921,
+        "mapY": 0.25663
+      },
+      "orientation": {
+        "w": 0.984581,
+        "x": 0.014545,
+        "y": -0.035838,
+        "z": 0.170598
+      },
+      "neighbors": [
+        {
+          "id": 1
+        },
+        {
+          "id": 7
+        },
+        {
+          "id": 17
+        },
+        {
+          "id": 4
+        }
+      ],
+      "timestamp": 1751445586.299642
+    },
+    {
+      "id": 4,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00004.webp",
+      "label": "00004-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 38.5545,
+        "y": 36.8257,
+        "z": 0.9037,
+        "mapX": 0.85698,
+        "mapY": 0.2287
+      },
+      "orientation": {
+        "w": 0.759318,
+        "x": 0.011171,
+        "y": -0.02191,
+        "z": 0.650255
+      },
+      "neighbors": [
+        {
+          "id": 7
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 9
+        }
+      ],
+      "timestamp": 1751445596.135278
+    },
+    {
+      "id": 5,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00005.webp",
+      "label": "00005-pano",
+      "area": "Niveau -1",
+      "floor": -1,
+      "position": {
+        "x": 35.3142,
+        "y": 47.7449,
+        "z": -1.2334,
+        "mapX": 0.78495,
+        "mapY": 0
+      },
+      "orientation": {
+        "w": -0.165805,
+        "x": 0.046965,
+        "y": 0.014178,
+        "z": 0.984938
+      },
+      "neighbors": [
+        {
+          "id": 10
+        },
+        {
+          "id": 6
+        }
+      ],
+      "timestamp": 1751445630.709522
+    },
+    {
+      "id": 6,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00006.webp",
+      "label": "00006-pano",
+      "area": "Niveau -1",
+      "floor": -1,
+      "position": {
+        "x": 28.0267,
+        "y": 47.1282,
+        "z": -1.4513,
+        "mapX": 0.62297,
+        "mapY": 0.01292
+      },
+      "orientation": {
+        "w": -0.462197,
+        "x": 0.01862,
+        "y": 0.023224,
+        "z": 0.886278
+      },
+      "neighbors": [
+        {
+          "id": 13
+        },
+        {
+          "id": 14
+        },
+        {
+          "id": 12
+        },
+        {
+          "id": 5
+        }
+      ],
+      "timestamp": 1751445646.353197
+    },
+    {
+      "id": 7,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00007.webp",
+      "label": "00007-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 36.4391,
+        "y": 37.0579,
+        "z": 0.844,
+        "mapX": 0.80995,
+        "mapY": 0.22384
+      },
+      "orientation": {
+        "w": 0.260722,
+        "x": 0.005713,
+        "y": 0.013795,
+        "z": 0.965298
+      },
+      "neighbors": [
+        {
+          "id": 4
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 9
+        },
+        {
+          "id": 8
+        }
+      ],
+      "timestamp": 1751445694.457173
+    },
+    {
+      "id": 8,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00008.webp",
+      "label": "00008-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 30.2094,
+        "y": 39.9997,
+        "z": 0.7958,
+        "mapX": 0.67148,
+        "mapY": 0.16222
+      },
+      "orientation": {
+        "w": 0.996296,
+        "x": 0.029792,
+        "y": -0.003725,
+        "z": -0.080584
+      },
+      "neighbors": [
+        {
+          "id": 15
+        },
+        {
+          "id": 11
+        },
+        {
+          "id": 18
+        },
+        {
+          "id": 9
+        },
+        {
+          "id": 7
+        }
+      ],
+      "timestamp": 1751445729.137442
+    },
+    {
+      "id": 9,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00009.webp",
+      "label": "00009-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 34.5386,
+        "y": 41.0031,
+        "z": 0.0196,
+        "mapX": 0.76771,
+        "mapY": 0.1412
+      },
+      "orientation": {
+        "w": 0.983308,
+        "x": 0.035874,
+        "y": -0.012033,
+        "z": 0.17797
+      },
+      "neighbors": [
+        {
+          "id": 10
+        },
+        {
+          "id": 7
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 4
+        }
+      ],
+      "timestamp": 1751445751.579902
+    },
+    {
+      "id": 10,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00010.webp",
+      "label": "00010-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 34.5441,
+        "y": 44.5571,
+        "z": -0.0502,
+        "mapX": 0.76783,
+        "mapY": 0.06677
+      },
+      "orientation": {
+        "w": 0.362379,
+        "x": 0.024277,
+        "y": 0.010301,
+        "z": 0.931658
+      },
+      "neighbors": [
+        {
+          "id": 5
+        },
+        {
+          "id": 9
+        },
+        {
+          "id": 14
+        },
+        {
+          "id": 11
+        }
+      ],
+      "timestamp": 1751445760.129757
+    },
+    {
+      "id": 11,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00011.webp",
+      "label": "00011-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 28.0545,
+        "y": 40.0415,
+        "z": 0.6877,
+        "mapX": 0.62358,
+        "mapY": 0.16134
+      },
+      "orientation": {
+        "w": 0.585208,
+        "x": -0.038194,
+        "y": -0.02882,
+        "z": -0.80947
+      },
+      "neighbors": [
+        {
+          "id": 12
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 15
+        },
+        {
+          "id": 16
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 10
+        }
+      ],
+      "timestamp": 1751445786.281167
+    },
+    {
+      "id": 12,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00012.webp",
+      "label": "00012-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 27.3807,
+        "y": 41.7614,
+        "z": 0.7841,
+        "mapX": 0.60861,
+        "mapY": 0.12532
+      },
+      "orientation": {
+        "w": 0.63853,
+        "x": 0.013492,
+        "y": 0.015873,
+        "z": 0.769315
+      },
+      "neighbors": [
+        {
+          "id": 11
+        },
+        {
+          "id": 13
+        },
+        {
+          "id": 15
+        },
+        {
+          "id": 22
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 6
+        }
+      ],
+      "timestamp": 1751445796.040997
+    },
+    {
+      "id": 13,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00013.webp",
+      "label": "00013-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 27.719,
+        "y": 43.8404,
+        "z": 0.7951,
+        "mapX": 0.61613,
+        "mapY": 0.08178
+      },
+      "orientation": {
+        "w": 0.999253,
+        "x": 0.026428,
+        "y": 0.022933,
+        "z": -0.016379
+      },
+      "neighbors": [
+        {
+          "id": 14
+        },
+        {
+          "id": 12
+        },
+        {
+          "id": 22
+        },
+        {
+          "id": 6
+        }
+      ],
+      "timestamp": 1751445802.901798
+    },
+    {
+      "id": 14,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00014.webp",
+      "label": "00014-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 29.6544,
+        "y": 43.7719,
+        "z": 0.7973,
+        "mapX": 0.65915,
+        "mapY": 0.08321
+      },
+      "orientation": {
+        "w": 0.999165,
+        "x": 0.030953,
+        "y": 0.007191,
+        "z": -0.025683
+      },
+      "neighbors": [
+        {
+          "id": 13
+        },
+        {
+          "id": 15
+        },
+        {
+          "id": 21
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 10
+        }
+      ],
+      "timestamp": 1751445810.061835
+    },
+    {
+      "id": 15,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00015.webp",
+      "label": "00015-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 29.9779,
+        "y": 41.5863,
+        "z": 0.793,
+        "mapX": 0.66634,
+        "mapY": 0.12899
+      },
+      "orientation": {
+        "w": 0.953708,
+        "x": 0.006328,
+        "y": 0.028533,
+        "z": 0.29931
+      },
+      "neighbors": [
+        {
+          "id": 8
+        },
+        {
+          "id": 14
+        },
+        {
+          "id": 20
+        },
+        {
+          "id": 11
+        },
+        {
+          "id": 12
+        },
+        {
+          "id": 21
+        },
+        {
+          "id": 16
+        }
+      ],
+      "timestamp": 1751445818.018472
+    },
+    {
+      "id": 16,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00016.webp",
+      "label": "00016-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 28.2041,
+        "y": 37.3866,
+        "z": 1.274,
+        "mapX": 0.62691,
+        "mapY": 0.21695
+      },
+      "orientation": {
+        "w": 0.992673,
+        "x": 0.013012,
+        "y": 0.026972,
+        "z": 0.117061
+      },
+      "neighbors": [
+        {
+          "id": 23
+        },
+        {
+          "id": 19
+        },
+        {
+          "id": 11
+        },
+        {
+          "id": 17
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 15
+        }
+      ],
+      "timestamp": 1751445854.460719
+    },
+    {
+      "id": 17,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00017.webp",
+      "label": "00017-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 31.0357,
+        "y": 37.7072,
+        "z": 3.0526,
+        "mapX": 0.68985,
+        "mapY": 0.21024
+      },
+      "orientation": {
+        "w": 0.815383,
+        "x": 0.023654,
+        "y": 0.042072,
+        "z": 0.576907
+      },
+      "neighbors": [
+        {
+          "id": 18
+        },
+        {
+          "id": 23
+        },
+        {
+          "id": 19
+        },
+        {
+          "id": 16
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 1
+        }
+      ],
+      "timestamp": 1751445869.047408
+    },
+    {
+      "id": 18,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00018.webp",
+      "label": "00018-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 30.6382,
+        "y": 39.62,
+        "z": 3.085,
+        "mapX": 0.68102,
+        "mapY": 0.17017
+      },
+      "orientation": {
+        "w": 0.531763,
+        "x": 0.050506,
+        "y": -0.006681,
+        "z": 0.845359
+      },
+      "neighbors": [
+        {
+          "id": 17
+        },
+        {
+          "id": 20
+        },
+        {
+          "id": 19
+        },
+        {
+          "id": 8
+        }
+      ],
+      "timestamp": 1751445880.219185
+    },
+    {
+      "id": 19,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00019.webp",
+      "label": "00019-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 28.3524,
+        "y": 39.18,
+        "z": 3.1621,
+        "mapX": 0.63021,
+        "mapY": 0.17939
+      },
+      "orientation": {
+        "w": 0.713834,
+        "x": 0.026874,
+        "y": 0.000823,
+        "z": 0.699798
+      },
+      "neighbors": [
+        {
+          "id": 23
+        },
+        {
+          "id": 18
+        },
+        {
+          "id": 16
+        },
+        {
+          "id": 20
+        },
+        {
+          "id": 17
+        }
+      ],
+      "timestamp": 1751445887.899009
+    },
+    {
+      "id": 20,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00020.webp",
+      "label": "00020-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 29.9914,
+        "y": 41.6085,
+        "z": 3.158,
+        "mapX": 0.66664,
+        "mapY": 0.12852
+      },
+      "orientation": {
+        "w": 0.971913,
+        "x": 0.006947,
+        "y": 0.02874,
+        "z": 0.233474
+      },
+      "neighbors": [
+        {
+          "id": 18
+        },
+        {
+          "id": 21
+        },
+        {
+          "id": 15
+        },
+        {
+          "id": 19
+        },
+        {
+          "id": 22
+        }
+      ],
+      "timestamp": 1751445895.922798
+    },
+    {
+      "id": 21,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00021.webp",
+      "label": "00021-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 30.5197,
+        "y": 43.7439,
+        "z": 3.1769,
+        "mapX": 0.67838,
+        "mapY": 0.0838
+      },
+      "orientation": {
+        "w": 0.414168,
+        "x": -0.005449,
+        "y": 0.024838,
+        "z": 0.909845
+      },
+      "neighbors": [
+        {
+          "id": 20
+        },
+        {
+          "id": 14
+        },
+        {
+          "id": 15
+        },
+        {
+          "id": 22
+        }
+      ],
+      "timestamp": 1751445901.51677
+    },
+    {
+      "id": 22,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00022.webp",
+      "label": "00022-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 27.1045,
+        "y": 42.9091,
+        "z": 3.176,
+        "mapX": 0.60247,
+        "mapY": 0.10128
+      },
+      "orientation": {
+        "w": 0.721879,
+        "x": 0.030373,
+        "y": 0.021633,
+        "z": -0.691014
+      },
+      "neighbors": [
+        {
+          "id": 13
+        },
+        {
+          "id": 12
+        },
+        {
+          "id": 20
+        },
+        {
+          "id": 21
+        },
+        {
+          "id": 23
+        }
+      ],
+      "timestamp": 1751445908.964542
+    },
+    {
+      "id": 23,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00023.webp",
+      "label": "00023-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 29.1691,
+        "y": 37.5269,
+        "z": 2.2258,
+        "mapX": 0.64836,
+        "mapY": 0.21401
+      },
+      "orientation": {
+        "w": -0.049591,
+        "x": -0.026819,
+        "y": 0.020126,
+        "z": 0.998207
+      },
+      "neighbors": [
+        {
+          "id": 16
+        },
+        {
+          "id": 17
+        },
+        {
+          "id": 19
+        },
+        {
+          "id": 22
+        }
+      ],
+      "timestamp": 1751445942.652849
+    },
+    {
+      "id": 24,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00024.webp",
+      "label": "00024-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 27.1588,
+        "y": 28.199,
+        "z": 1.1707,
+        "mapX": 0.60367,
+        "mapY": 0.40938
+      },
+      "orientation": {
+        "w": -0.283257,
+        "x": 0.014518,
+        "y": 0.040687,
+        "z": 0.958071
+      },
+      "neighbors": [
+        {
+          "id": 26
+        },
+        {
+          "id": 108
+        },
+        {
+          "id": 25
+        },
+        {
+          "id": 71
+        },
+        {
+          "id": 27
+        },
+        {
+          "id": 0
+        }
+      ],
+      "timestamp": 1751445963.267429
+    },
+    {
+      "id": 25,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00025.webp",
+      "label": "00025-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 26.9595,
+        "y": 25.316,
+        "z": 1.239,
+        "mapX": 0.59925,
+        "mapY": 0.46977
+      },
+      "orientation": {
+        "w": 0.991098,
+        "x": 0.002475,
+        "y": 0.013589,
+        "z": 0.132418
+      },
+      "neighbors": [
+        {
+          "id": 67
+        },
+        {
+          "id": 26
+        },
+        {
+          "id": 106
+        },
+        {
+          "id": 24
+        },
+        {
+          "id": 71
+        },
+        {
+          "id": 27
+        }
+      ],
+      "timestamp": 1751445974.207205
+    },
+    {
+      "id": 26,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00026.webp",
+      "label": "00026-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 28.7746,
+        "y": 25.9553,
+        "z": 1.2506,
+        "mapX": 0.63959,
+        "mapY": 0.45638
+      },
+      "orientation": {
+        "w": 0.956166,
+        "x": 0.025944,
+        "y": 0.057436,
+        "z": -0.285961
+      },
+      "neighbors": [
+        {
+          "id": 71
+        },
+        {
+          "id": 25
+        },
+        {
+          "id": 67
+        },
+        {
+          "id": 24
+        },
+        {
+          "id": 27
+        }
+      ],
+      "timestamp": 1751445982.059076
+    },
+    {
+      "id": 27,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00027.webp",
+      "label": "00027-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 23.4682,
+        "y": 27.5828,
+        "z": 1.0814,
+        "mapX": 0.52164,
+        "mapY": 0.42229
+      },
+      "orientation": {
+        "w": -0.417906,
+        "x": 0.01183,
+        "y": 0.01577,
+        "z": 0.908276
+      },
+      "neighbors": [
+        {
+          "id": 24
+        },
+        {
+          "id": 25
+        },
+        {
+          "id": 106
+        },
+        {
+          "id": 26
+        },
+        {
+          "id": 109
+        }
+      ],
+      "timestamp": 1751445997.792663
+    },
+    {
+      "id": 28,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00028.webp",
+      "label": "00028-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 19.6015,
+        "y": 19.5037,
+        "z": 0.8217,
+        "mapX": 0.43569,
+        "mapY": 0.5915
+      },
+      "orientation": {
+        "w": 0.805884,
+        "x": 0.005943,
+        "y": -0.030853,
+        "z": -0.591239
+      },
+      "neighbors": [
+        {
+          "id": 29
+        },
+        {
+          "id": 118
+        }
+      ],
+      "timestamp": 1751446012.627391
+    },
+    {
+      "id": 29,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00029.webp",
+      "label": "00029-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 20.9826,
+        "y": 12.218,
+        "z": 0.9756,
+        "mapX": 0.46639,
+        "mapY": 0.7441
+      },
+      "orientation": {
+        "w": 0.821454,
+        "x": 0.011352,
+        "y": -0.016715,
+        "z": -0.569916
+      },
+      "neighbors": [
+        {
+          "id": 61
+        },
+        {
+          "id": 28
+        }
+      ],
+      "timestamp": 1751446024.567125
+    },
+    {
+      "id": 30,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00030.webp",
+      "label": "00030-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 23.593,
+        "y": 2.7087,
+        "z": 0.8349,
+        "mapX": 0.52442,
+        "mapY": 0.94327
+      },
+      "orientation": {
+        "w": 0.966887,
+        "x": 0.033617,
+        "y": -0.012853,
+        "z": 0.252653
+      },
+      "neighbors": [
+        {
+          "id": 31
+        },
+        {
+          "id": 57
+        },
+        {
+          "id": 58
+        }
+      ],
+      "timestamp": 1751446039.978764
+    },
+    {
+      "id": 31,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00031.webp",
+      "label": "00031-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 23.6422,
+        "y": 2.7228,
+        "z": 1.4813,
+        "mapX": 0.52551,
+        "mapY": 0.94297
+      },
+      "orientation": {
+        "w": 0.78619,
+        "x": 0.003497,
+        "y": -0.10341,
+        "z": 0.609261
+      },
+      "neighbors": [
+        {
+          "id": 30
+        },
+        {
+          "id": 57
+        },
+        {
+          "id": 58
+        },
+        {
+          "id": 60
+        }
+      ],
+      "timestamp": 1751446046.917689
+    },
+    {
+      "id": 32,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00032.webp",
+      "label": "00032-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 35.8736,
+        "y": 27.8576,
+        "z": 1.3632,
+        "mapX": 0.79738,
+        "mapY": 0.41653
+      },
+      "orientation": {
+        "w": 0.99888,
+        "x": 0.021103,
+        "y": -0.022428,
+        "z": 0.035924
+      },
+      "neighbors": [
+        {
+          "id": 33
+        },
+        {
+          "id": 37
+        },
+        {
+          "id": 45
+        }
+      ],
+      "timestamp": 1751446104.44348
+    },
+    {
+      "id": 33,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00033.webp",
+      "label": "00033-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 37.1894,
+        "y": 28.1404,
+        "z": 1.3916,
+        "mapX": 0.82663,
+        "mapY": 0.41061
+      },
+      "orientation": {
+        "w": 0.999847,
+        "x": -0.000542,
+        "y": 0.013273,
+        "z": -0.011369
+      },
+      "neighbors": [
+        {
+          "id": 37
+        },
+        {
+          "id": 32
+        },
+        {
+          "id": 90
+        },
+        {
+          "id": 34
+        }
+      ],
+      "timestamp": 1751446108.096426
+    },
+    {
+      "id": 34,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00034.webp",
+      "label": "00034-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 39.9416,
+        "y": 28.2781,
+        "z": -0.3437,
+        "mapX": 0.88781,
+        "mapY": 0.40772
+      },
+      "orientation": {
+        "w": 0.818426,
+        "x": 0.074864,
+        "y": 0.09664,
+        "z": -0.561457
+      },
+      "neighbors": [
+        {
+          "id": 35
+        },
+        {
+          "id": 33
+        },
+        {
+          "id": 37
+        },
+        {
+          "id": 72
+        },
+        {
+          "id": 36
+        }
+      ],
+      "timestamp": 1751446124.901234
+    },
+    {
+      "id": 35,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00035.webp",
+      "label": "00035-pano",
+      "area": "Niveau -1",
+      "floor": -1,
+      "position": {
+        "x": 40.7762,
+        "y": 25.8208,
+        "z": -0.8251,
+        "mapX": 0.90636,
+        "mapY": 0.45919
+      },
+      "orientation": {
+        "w": 0.663921,
+        "x": 0.051417,
+        "y": 0.035913,
+        "z": -0.745168
+      },
+      "neighbors": [
+        {
+          "id": 36
+        },
+        {
+          "id": 34
+        },
+        {
+          "id": 40
+        }
+      ],
+      "timestamp": 1751446135.882827
+    },
+    {
+      "id": 36,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00036.webp",
+      "label": "00036-pano",
+      "area": "Niveau -1",
+      "floor": -1,
+      "position": {
+        "x": 41.0459,
+        "y": 24.24,
+        "z": -0.7395,
+        "mapX": 0.91235,
+        "mapY": 0.4923
+      },
+      "orientation": {
+        "w": -0.070618,
+        "x": -0.030189,
+        "y": 0.018472,
+        "z": 0.996875
+      },
+      "neighbors": [
+        {
+          "id": 35
+        },
+        {
+          "id": 40
+        },
+        {
+          "id": 34
+        },
+        {
+          "id": 37
+        }
+      ],
+      "timestamp": 1751446143.981706
+    },
+    {
+      "id": 37,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00037.webp",
+      "label": "00037-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 37.1192,
+        "y": 27.0354,
+        "z": 1.3789,
+        "mapX": 0.82507,
+        "mapY": 0.43375
+      },
+      "orientation": {
+        "w": 0.712483,
+        "x": 0.018239,
+        "y": -0.02338,
+        "z": -0.701063
+      },
+      "neighbors": [
+        {
+          "id": 33
+        },
+        {
+          "id": 32
+        },
+        {
+          "id": 45
+        },
+        {
+          "id": 90
+        },
+        {
+          "id": 34
+        },
+        {
+          "id": 36
+        },
+        {
+          "id": 38
+        }
+      ],
+      "timestamp": 1751446175.01317
+    },
+    {
+      "id": 38,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00038.webp",
+      "label": "00038-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 38.1894,
+        "y": 21.7941,
+        "z": 1.4428,
+        "mapX": 0.84886,
+        "mapY": 0.54353
+      },
+      "orientation": {
+        "w": 0.650798,
+        "x": 0.003249,
+        "y": -0.029667,
+        "z": -0.758664
+      },
+      "neighbors": [
+        {
+          "id": 43
+        },
+        {
+          "id": 86
+        },
+        {
+          "id": 92
+        },
+        {
+          "id": 44
+        },
+        {
+          "id": 39
+        },
+        {
+          "id": 37
+        }
+      ],
+      "timestamp": 1751446192.94171
+    },
+    {
+      "id": 39,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00039.webp",
+      "label": "00039-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 41.9581,
+        "y": 20.5954,
+        "z": 1.496,
+        "mapX": 0.93263,
+        "mapY": 0.56864
+      },
+      "orientation": {
+        "w": 0.863037,
+        "x": 0.029477,
+        "y": 0.01482,
+        "z": 0.504062
+      },
+      "neighbors": [
+        {
+          "id": 41
+        },
+        {
+          "id": 84
+        },
+        {
+          "id": 92
+        },
+        {
+          "id": 40
+        },
+        {
+          "id": 38
+        }
+      ],
+      "timestamp": 1751446206.756385
+    },
+    {
+      "id": 40,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00040.webp",
+      "label": "00040-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 40.9226,
+        "y": 24.2534,
+        "z": 1.3804,
+        "mapX": 0.90961,
+        "mapY": 0.49202
+      },
+      "orientation": {
+        "w": 0.996037,
+        "x": 0.01787,
+        "y": -0.022296,
+        "z": 0.084229
+      },
+      "neighbors": [
+        {
+          "id": 36
+        },
+        {
+          "id": 87
+        },
+        {
+          "id": 35
+        },
+        {
+          "id": 88
+        },
+        {
+          "id": 39
+        },
+        {
+          "id": 41
+        }
+      ],
+      "timestamp": 1751446219.881228
+    },
+    {
+      "id": 41,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00041.webp",
+      "label": "00041-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 40.7638,
+        "y": 18.8956,
+        "z": 1.3345,
+        "mapX": 0.90608,
+        "mapY": 0.60424
+      },
+      "orientation": {
+        "w": -0.336235,
+        "x": 0.041616,
+        "y": 0.034497,
+        "z": 0.940226
+      },
+      "neighbors": [
+        {
+          "id": 39
+        },
+        {
+          "id": 84
+        },
+        {
+          "id": 43
+        },
+        {
+          "id": 42
+        },
+        {
+          "id": 40
+        }
+      ],
+      "timestamp": 1751446250.437557
+    },
+    {
+      "id": 42,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00042.webp",
+      "label": "00042-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 42.384,
+        "y": 16.446,
+        "z": 1.3304,
+        "mapX": 0.9421,
+        "mapY": 0.65554
+      },
+      "orientation": {
+        "w": 0.800915,
+        "x": 0.021124,
+        "y": -0.018903,
+        "z": 0.598107
+      },
+      "neighbors": [
+        {
+          "id": 52
+        },
+        {
+          "id": 85
+        },
+        {
+          "id": 41
+        },
+        {
+          "id": 54
+        },
+        {
+          "id": 43
+        }
+      ],
+      "timestamp": 1751446261.83229
+    },
+    {
+      "id": 43,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00043.webp",
+      "label": "00043-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 38.3217,
+        "y": 19.7186,
+        "z": 1.5253,
+        "mapX": 0.8518,
+        "mapY": 0.587
+      },
+      "orientation": {
+        "w": -0.16891,
+        "x": -0.035248,
+        "y": 0.002414,
+        "z": 0.984998
+      },
+      "neighbors": [
+        {
+          "id": 38
+        },
+        {
+          "id": 93
+        },
+        {
+          "id": 41
+        },
+        {
+          "id": 44
+        },
+        {
+          "id": 83
+        },
+        {
+          "id": 42
+        }
+      ],
+      "timestamp": 1751446297.83154
+    },
+    {
+      "id": 44,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00044.webp",
+      "label": "00044-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 35.7673,
+        "y": 20.6546,
+        "z": 1.5366,
+        "mapX": 0.79502,
+        "mapY": 0.5674
+      },
+      "orientation": {
+        "w": -0.037117,
+        "x": 0.040184,
+        "y": 0.034153,
+        "z": 0.997918
+      },
+      "neighbors": [
+        {
+          "id": 38
+        },
+        {
+          "id": 43
+        },
+        {
+          "id": 70
+        },
+        {
+          "id": 45
+        }
+      ],
+      "timestamp": 1751446315.467202
+    },
+    {
+      "id": 45,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00045.webp",
+      "label": "00045-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 35.2007,
+        "y": 25.3527,
+        "z": 1.5338,
+        "mapX": 0.78243,
+        "mapY": 0.469
+      },
+      "orientation": {
+        "w": 0.956906,
+        "x": 0.000673,
+        "y": -0.018274,
+        "z": -0.289822
+      },
+      "neighbors": [
+        {
+          "id": 37
+        },
+        {
+          "id": 32
+        },
+        {
+          "id": 98
+        },
+        {
+          "id": 44
+        },
+        {
+          "id": 46
+        }
+      ],
+      "timestamp": 1751446326.920966
+    },
+    {
+      "id": 46,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00046.webp",
+      "label": "00046-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 35.8359,
+        "y": 17.1538,
+        "z": 1.604,
+        "mapX": 0.79655,
+        "mapY": 0.64072
+      },
+      "orientation": {
+        "w": 0.81616,
+        "x": 0.006373,
+        "y": -0.046888,
+        "z": -0.575885
+      },
+      "neighbors": [
+        {
+          "id": 73
+        },
+        {
+          "id": 49
+        },
+        {
+          "id": 93
+        },
+        {
+          "id": 47
+        },
+        {
+          "id": 45
+        }
+      ],
+      "timestamp": 1751446355.03838
+    },
+    {
+      "id": 47,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00047.webp",
+      "label": "00047-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 37.7379,
+        "y": 15.1187,
+        "z": 1.5744,
+        "mapX": 0.83883,
+        "mapY": 0.68334
+      },
+      "orientation": {
+        "w": 0.97155,
+        "x": 0.017438,
+        "y": -0.051641,
+        "z": -0.230475
+      },
+      "neighbors": [
+        {
+          "id": 49
+        },
+        {
+          "id": 73
+        },
+        {
+          "id": 78
+        },
+        {
+          "id": 46
+        },
+        {
+          "id": 79
+        },
+        {
+          "id": 48
+        }
+      ],
+      "timestamp": 1751446373.080003
+    },
+    {
+      "id": 48,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00048.webp",
+      "label": "00048-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 37.3133,
+        "y": 11.0914,
+        "z": 1.2708,
+        "mapX": 0.82939,
+        "mapY": 0.76769
+      },
+      "orientation": {
+        "w": 0.216274,
+        "x": 0.025599,
+        "y": 0.015946,
+        "z": 0.975867
+      },
+      "neighbors": [
+        {
+          "id": 50
+        },
+        {
+          "id": 80
+        },
+        {
+          "id": 79
+        },
+        {
+          "id": 59
+        },
+        {
+          "id": 47
+        },
+        {
+          "id": 49
+        }
+      ],
+      "timestamp": 1751446384.638829
+    },
+    {
+      "id": 49,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00049.webp",
+      "label": "00049-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 36.2229,
+        "y": 15.2628,
+        "z": 1.5997,
+        "mapX": 0.80515,
+        "mapY": 0.68033
+      },
+      "orientation": {
+        "w": 0.42684,
+        "x": 0.01404,
+        "y": -0.012137,
+        "z": 0.904137
+      },
+      "neighbors": [
+        {
+          "id": 73
+        },
+        {
+          "id": 47
+        },
+        {
+          "id": 46
+        },
+        {
+          "id": 78
+        },
+        {
+          "id": 81
+        },
+        {
+          "id": 48
+        },
+        {
+          "id": 50
+        }
+      ],
+      "timestamp": 1751446394.513587
+    },
+    {
+      "id": 50,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00050.webp",
+      "label": "00050-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 37.5072,
+        "y": 8.5355,
+        "z": 1.1883,
+        "mapX": 0.8337,
+        "mapY": 0.82123
+      },
+      "orientation": {
+        "w": 0.76705,
+        "x": 0.020583,
+        "y": -0.012529,
+        "z": -0.641135
+      },
+      "neighbors": [
+        {
+          "id": 48
+        },
+        {
+          "id": 55
+        },
+        {
+          "id": 80
+        },
+        {
+          "id": 51
+        },
+        {
+          "id": 49
+        }
+      ],
+      "timestamp": 1751446416.388164
+    },
+    {
+      "id": 51,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00051.webp",
+      "label": "00051-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 43.7979,
+        "y": 8.0807,
+        "z": 1.3161,
+        "mapX": 0.97352,
+        "mapY": 0.83075
+      },
+      "orientation": {
+        "w": 0.800356,
+        "x": 0.026503,
+        "y": -0.014687,
+        "z": 0.598759
+      },
+      "neighbors": [
+        {
+          "id": 54
+        },
+        {
+          "id": 50
+        }
+      ],
+      "timestamp": 1751446431.278845
+    },
+    {
+      "id": 52,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00052.webp",
+      "label": "00052-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 44.989,
+        "y": 17.2303,
+        "z": 1.8022,
+        "mapX": 1,
+        "mapY": 0.63912
+      },
+      "orientation": {
+        "w": 0.674943,
+        "x": 0.04313,
+        "y": -0.025203,
+        "z": 0.736177
+      },
+      "neighbors": [
+        {
+          "id": 42
+        },
+        {
+          "id": 54
+        },
+        {
+          "id": 84
+        }
+      ],
+      "timestamp": 1751446456.013129
+    },
+    {
+      "id": 53,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00053.webp",
+      "label": "00053-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 43.2489,
+        "y": 27.7647,
+        "z": 1.6099,
+        "mapX": 0.96132,
+        "mapY": 0.41848
+      },
+      "orientation": {
+        "w": 0.418047,
+        "x": 0.010193,
+        "y": -0.008183,
+        "z": 0.908331
+      },
+      "neighbors": [
+        {
+          "id": 72
+        },
+        {
+          "id": 91
+        },
+        {
+          "id": 88
+        }
+      ],
+      "timestamp": 1751446476.800939
+    },
+    {
+      "id": 54,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00054.webp",
+      "label": "00054-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 42.8382,
+        "y": 13.5383,
+        "z": 1.4711,
+        "mapX": 0.95219,
+        "mapY": 0.71645
+      },
+      "orientation": {
+        "w": -0.415812,
+        "x": 0.017576,
+        "y": 0.02688,
+        "z": 0.908883
+      },
+      "neighbors": [
+        {
+          "id": 42
+        },
+        {
+          "id": 85
+        },
+        {
+          "id": 52
+        },
+        {
+          "id": 51
+        }
+      ],
+      "timestamp": 1751446504.423363
+    },
+    {
+      "id": 55,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00055.webp",
+      "label": "00055-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 35.6884,
+        "y": 6.4033,
+        "z": 1.0749,
+        "mapX": 0.79327,
+        "mapY": 0.86588
+      },
+      "orientation": {
+        "w": 0.235562,
+        "x": 0.039757,
+        "y": 0.002786,
+        "z": 0.971042
+      },
+      "neighbors": [
+        {
+          "id": 50
+        },
+        {
+          "id": 59
+        },
+        {
+          "id": 56
+        }
+      ],
+      "timestamp": 1751446526.431921
+    },
+    {
+      "id": 56,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00056.webp",
+      "label": "00056-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 31.1483,
+        "y": 4.6904,
+        "z": 0.9288,
+        "mapX": 0.69235,
+        "mapY": 0.90176
+      },
+      "orientation": {
+        "w": -0.084511,
+        "x": 0.039075,
+        "y": 0.029997,
+        "z": 0.995204
+      },
+      "neighbors": [
+        {
+          "id": 55
+        },
+        {
+          "id": 59
+        },
+        {
+          "id": 57
+        }
+      ],
+      "timestamp": 1751446534.382774
+    },
+    {
+      "id": 57,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00057.webp",
+      "label": "00057-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 23.4774,
+        "y": 0.8665,
+        "z": 0.7745,
+        "mapX": 0.52185,
+        "mapY": 0.98185
+      },
+      "orientation": {
+        "w": 0.998034,
+        "x": 0.007465,
+        "y": -0.005315,
+        "z": 0.062004
+      },
+      "neighbors": [
+        {
+          "id": 30
+        },
+        {
+          "id": 31
+        },
+        {
+          "id": 58
+        },
+        {
+          "id": 56
+        }
+      ],
+      "timestamp": 1751446550.026433
+    },
+    {
+      "id": 58,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00058.webp",
+      "label": "00058-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 25.6718,
+        "y": 0,
+        "z": 0.8794,
+        "mapX": 0.57062,
+        "mapY": 1
+      },
+      "orientation": {
+        "w": 0.951831,
+        "x": 0.011334,
+        "y": -0.024293,
+        "z": 0.305448
+      },
+      "neighbors": [
+        {
+          "id": 57
+        },
+        {
+          "id": 30
+        },
+        {
+          "id": 31
+        }
+      ],
+      "timestamp": 1751446555.694374
+    },
+    {
+      "id": 59,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00059.webp",
+      "label": "00059-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 33.7861,
+        "y": 9.7192,
+        "z": 1.2545,
+        "mapX": 0.75099,
+        "mapY": 0.79643
+      },
+      "orientation": {
+        "w": -0.080516,
+        "x": 0.02279,
+        "y": 0.028746,
+        "z": 0.996078
+      },
+      "neighbors": [
+        {
+          "id": 62
+        },
+        {
+          "id": 48
+        },
+        {
+          "id": 55
+        },
+        {
+          "id": 56
+        },
+        {
+          "id": 60
+        }
+      ],
+      "timestamp": 1751446608.567313
+    },
+    {
+      "id": 60,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00060.webp",
+      "label": "00060-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 26.4788,
+        "y": 8.2986,
+        "z": 1.2628,
+        "mapX": 0.58856,
+        "mapY": 0.82619
+      },
+      "orientation": {
+        "w": 0.619283,
+        "x": 0.012235,
+        "y": -0.02451,
+        "z": 0.78469
+      },
+      "neighbors": [
+        {
+          "id": 61
+        },
+        {
+          "id": 31
+        },
+        {
+          "id": 59
+        }
+      ],
+      "timestamp": 1751446622.963036
+    },
+    {
+      "id": 61,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00061.webp",
+      "label": "00061-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 27.5595,
+        "y": 12.1238,
+        "z": 1.2214,
+        "mapX": 0.61258,
+        "mapY": 0.74607
+      },
+      "orientation": {
+        "w": 0.996409,
+        "x": 0.030702,
+        "y": -0.054915,
+        "z": 0.056663
+      },
+      "neighbors": [
+        {
+          "id": 63
+        },
+        {
+          "id": 60
+        },
+        {
+          "id": 76
+        },
+        {
+          "id": 62
+        },
+        {
+          "id": 29
+        }
+      ],
+      "timestamp": 1751446645.52557
+    },
+    {
+      "id": 62,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00062.webp",
+      "label": "00062-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 32.6461,
+        "y": 12.7473,
+        "z": 1.2512,
+        "mapX": 0.72565,
+        "mapY": 0.73301
+      },
+      "orientation": {
+        "w": 0.992756,
+        "x": 0.028524,
+        "y": -0.022852,
+        "z": 0.114451
+      },
+      "neighbors": [
+        {
+          "id": 64
+        },
+        {
+          "id": 74
+        },
+        {
+          "id": 77
+        },
+        {
+          "id": 59
+        },
+        {
+          "id": 63
+        },
+        {
+          "id": 61
+        }
+      ],
+      "timestamp": 1751446655.292391
+    },
+    {
+      "id": 63,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00063.webp",
+      "label": "00063-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 27.8161,
+        "y": 14.2054,
+        "z": 1.2604,
+        "mapX": 0.61829,
+        "mapY": 0.70247
+      },
+      "orientation": {
+        "w": 0.539547,
+        "x": 0.03411,
+        "y": 0.013744,
+        "z": 0.841152
+      },
+      "neighbors": [
+        {
+          "id": 61
+        },
+        {
+          "id": 76
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 62
+        }
+      ],
+      "timestamp": 1751446685.444732
+    },
+    {
+      "id": 64,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00064.webp",
+      "label": "00064-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 31.5848,
+        "y": 14.7988,
+        "z": 1.2417,
+        "mapX": 0.70206,
+        "mapY": 0.69004
+      },
+      "orientation": {
+        "w": 0.345712,
+        "x": 0.040557,
+        "y": 0.009127,
+        "z": 0.937419
+      },
+      "neighbors": [
+        {
+          "id": 74
+        },
+        {
+          "id": 62
+        },
+        {
+          "id": 75
+        },
+        {
+          "id": 65
+        },
+        {
+          "id": 63
+        }
+      ],
+      "timestamp": 1751446703.496397
+    },
+    {
+      "id": 65,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00065.webp",
+      "label": "00065-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 29.6456,
+        "y": 17.8934,
+        "z": 1.2374,
+        "mapX": 0.65895,
+        "mapY": 0.62523
+      },
+      "orientation": {
+        "w": 0.663616,
+        "x": 0.044945,
+        "y": 0.001719,
+        "z": 0.74672
+      },
+      "neighbors": [
+        {
+          "id": 68
+        },
+        {
+          "id": 66
+        },
+        {
+          "id": 103
+        },
+        {
+          "id": 64
+        }
+      ],
+      "timestamp": 1751446711.57726
+    },
+    {
+      "id": 66,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00066.webp",
+      "label": "00066-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 27.1858,
+        "y": 18.7484,
+        "z": 1.2339,
+        "mapX": 0.60428,
+        "mapY": 0.60732
+      },
+      "orientation": {
+        "w": 0.30978,
+        "x": 0.034413,
+        "y": 0.023206,
+        "z": 0.949902
+      },
+      "neighbors": [
+        {
+          "id": 68
+        },
+        {
+          "id": 65
+        },
+        {
+          "id": 102
+        },
+        {
+          "id": 67
+        }
+      ],
+      "timestamp": 1751446718.849536
+    },
+    {
+      "id": 67,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00067.webp",
+      "label": "00067-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 26.7396,
+        "y": 24.0915,
+        "z": 1.2233,
+        "mapX": 0.59436,
+        "mapY": 0.49541
+      },
+      "orientation": {
+        "w": 0.97516,
+        "x": 0.044886,
+        "y": -0.019088,
+        "z": 0.216066
+      },
+      "neighbors": [
+        {
+          "id": 25
+        },
+        {
+          "id": 26
+        },
+        {
+          "id": 106
+        },
+        {
+          "id": 105
+        },
+        {
+          "id": 68
+        },
+        {
+          "id": 66
+        }
+      ],
+      "timestamp": 1751446729.417845
+    },
+    {
+      "id": 68,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00068.webp",
+      "label": "00068-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 28.98,
+        "y": 19.9653,
+        "z": 1.2286,
+        "mapX": 0.64416,
+        "mapY": 0.58183
+      },
+      "orientation": {
+        "w": 0.790418,
+        "x": -0.00994,
+        "y": -0.039533,
+        "z": -0.611209
+      },
+      "neighbors": [
+        {
+          "id": 66
+        },
+        {
+          "id": 65
+        },
+        {
+          "id": 107
+        },
+        {
+          "id": 69
+        },
+        {
+          "id": 67
+        }
+      ],
+      "timestamp": 1751446739.184638
+    },
+    {
+      "id": 69,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00069.webp",
+      "label": "00069-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 32.6774,
+        "y": 17.522,
+        "z": 1.1521,
+        "mapX": 0.72634,
+        "mapY": 0.63301
+      },
+      "orientation": {
+        "w": 0.838762,
+        "x": -0.001281,
+        "y": -0.033736,
+        "z": 0.54345
+      },
+      "neighbors": [
+        {
+          "id": 100
+        },
+        {
+          "id": 95
+        },
+        {
+          "id": 74
+        },
+        {
+          "id": 70
+        },
+        {
+          "id": 68
+        }
+      ],
+      "timestamp": 1751446761.343214
+    },
+    {
+      "id": 70,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00070.webp",
+      "label": "00070-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 33.027,
+        "y": 21.6568,
+        "z": 1.199,
+        "mapX": 0.73411,
+        "mapY": 0.54641
+      },
+      "orientation": {
+        "w": 0.71321,
+        "x": 0.02308,
+        "y": -0.025967,
+        "z": 0.700089
+      },
+      "neighbors": [
+        {
+          "id": 97
+        },
+        {
+          "id": 44
+        },
+        {
+          "id": 99
+        },
+        {
+          "id": 98
+        },
+        {
+          "id": 69
+        },
+        {
+          "id": 71
+        }
+      ],
+      "timestamp": 1751446773.009969
+    },
+    {
+      "id": 71,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00071.webp",
+      "label": "00071-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 30.3359,
+        "y": 26.83,
+        "z": 1.1558,
+        "mapX": 0.6743,
+        "mapY": 0.43805
+      },
+      "orientation": {
+        "w": 0.981012,
+        "x": 0.026875,
+        "y": 0.164428,
+        "z": 0.099284
+      },
+      "neighbors": [
+        {
+          "id": 26
+        },
+        {
+          "id": 24
+        },
+        {
+          "id": 25
+        },
+        {
+          "id": 70
+        }
+      ],
+      "timestamp": 1751446792.450656
+    },
+    {
+      "id": 72,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00072.webp",
+      "label": "00072-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 42.3948,
+        "y": 30.9095,
+        "z": 1.4584,
+        "mapX": 0.94234,
+        "mapY": 0.35261
+      },
+      "orientation": {
+        "w": -0.468168,
+        "x": 0.010957,
+        "y": 0.05498,
+        "z": 0.881859
+      },
+      "neighbors": [
+        {
+          "id": 53
+        },
+        {
+          "id": 34
+        },
+        {
+          "id": 91
+        }
+      ],
+      "timestamp": 1751446820.861039
+    },
+    {
+      "id": 73,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00073.webp",
+      "label": "00073-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 35.5639,
+        "y": 15.4347,
+        "z": 1.4338,
+        "mapX": 0.7905,
+        "mapY": 0.67673
+      },
+      "orientation": {
+        "w": -0.13742,
+        "x": 0.025802,
+        "y": 0.007063,
+        "z": 0.990152
+      },
+      "neighbors": [
+        {
+          "id": 49
+        },
+        {
+          "id": 46
+        },
+        {
+          "id": 47
+        },
+        {
+          "id": 74
+        }
+      ],
+      "timestamp": 1751446888.447694
+    },
+    {
+      "id": 74,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00074.webp",
+      "label": "00074-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 33.2401,
+        "y": 15.0985,
+        "z": 2.2513,
+        "mapX": 0.73885,
+        "mapY": 0.68377
+      },
+      "orientation": {
+        "w": -0.025618,
+        "x": 0.013913,
+        "y": 0.019969,
+        "z": 0.999375
+      },
+      "neighbors": [
+        {
+          "id": 75
+        },
+        {
+          "id": 77
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 73
+        },
+        {
+          "id": 62
+        },
+        {
+          "id": 69
+        }
+      ],
+      "timestamp": 1751446906.547312
+    },
+    {
+      "id": 75,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00075.webp",
+      "label": "00075-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 31.8542,
+        "y": 14.9919,
+        "z": 3.5472,
+        "mapX": 0.70804,
+        "mapY": 0.686
+      },
+      "orientation": {
+        "w": -0.119016,
+        "x": 0.006453,
+        "y": 0.012197,
+        "z": 0.992797
+      },
+      "neighbors": [
+        {
+          "id": 77
+        },
+        {
+          "id": 76
+        },
+        {
+          "id": 74
+        },
+        {
+          "id": 101
+        },
+        {
+          "id": 64
+        }
+      ],
+      "timestamp": 1751446914.736251
+    },
+    {
+      "id": 76,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00076.webp",
+      "label": "00076-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 30.1457,
+        "y": 15.0852,
+        "z": 3.8725,
+        "mapX": 0.67007,
+        "mapY": 0.68404
+      },
+      "orientation": {
+        "w": 0.693993,
+        "x": 0.011817,
+        "y": -0.016631,
+        "z": -0.719692
+      },
+      "neighbors": [
+        {
+          "id": 101
+        },
+        {
+          "id": 75
+        },
+        {
+          "id": 77
+        },
+        {
+          "id": 63
+        },
+        {
+          "id": 61
+        }
+      ],
+      "timestamp": 1751446921.312146
+    },
+    {
+      "id": 77,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00077.webp",
+      "label": "00077-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 32.7789,
+        "y": 14.2628,
+        "z": 3.9106,
+        "mapX": 0.7286,
+        "mapY": 0.70127
+      },
+      "orientation": {
+        "w": 0.998071,
+        "x": -0.010919,
+        "y": 0.024505,
+        "z": 0.055995
+      },
+      "neighbors": [
+        {
+          "id": 75
+        },
+        {
+          "id": 74
+        },
+        {
+          "id": 76
+        },
+        {
+          "id": 62
+        },
+        {
+          "id": 78
+        }
+      ],
+      "timestamp": 1751446932.756782
+    },
+    {
+      "id": 78,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00078.webp",
+      "label": "00078-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 36.3331,
+        "y": 15.0252,
+        "z": 3.947,
+        "mapX": 0.8076,
+        "mapY": 0.6853
+      },
+      "orientation": {
+        "w": 0.93861,
+        "x": -0.021964,
+        "y": 0.109343,
+        "z": 0.326456
+      },
+      "neighbors": [
+        {
+          "id": 81
+        },
+        {
+          "id": 49
+        },
+        {
+          "id": 79
+        },
+        {
+          "id": 47
+        },
+        {
+          "id": 77
+        }
+      ],
+      "timestamp": 1751446944.372634
+    },
+    {
+      "id": 79,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00079.webp",
+      "label": "00079-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 38.1826,
+        "y": 13.515,
+        "z": 3.9432,
+        "mapX": 0.84871,
+        "mapY": 0.71693
+      },
+      "orientation": {
+        "w": 0.785605,
+        "x": 0.047612,
+        "y": 0.039139,
+        "z": -0.615651
+      },
+      "neighbors": [
+        {
+          "id": 78
+        },
+        {
+          "id": 82
+        },
+        {
+          "id": 47
+        },
+        {
+          "id": 80
+        },
+        {
+          "id": 48
+        }
+      ],
+      "timestamp": 1751446952.577416
+    },
+    {
+      "id": 80,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00080.webp",
+      "label": "00080-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 36.9774,
+        "y": 10.4635,
+        "z": 3.9305,
+        "mapX": 0.82192,
+        "mapY": 0.78085
+      },
+      "orientation": {
+        "w": 0.272681,
+        "x": -0.112118,
+        "y": 0.060601,
+        "z": 0.953626
+      },
+      "neighbors": [
+        {
+          "id": 48
+        },
+        {
+          "id": 79
+        },
+        {
+          "id": 50
+        },
+        {
+          "id": 81
+        }
+      ],
+      "timestamp": 1751446964.26524
+    },
+    {
+      "id": 81,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00081.webp",
+      "label": "00081-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 35.4719,
+        "y": 15.4999,
+        "z": 3.9486,
+        "mapX": 0.78846,
+        "mapY": 0.67536
+      },
+      "orientation": {
+        "w": 0.338291,
+        "x": -0.073254,
+        "y": 0.027618,
+        "z": 0.93778
+      },
+      "neighbors": [
+        {
+          "id": 78
+        },
+        {
+          "id": 94
+        },
+        {
+          "id": 49
+        },
+        {
+          "id": 82
+        },
+        {
+          "id": 80
+        }
+      ],
+      "timestamp": 1751446988.616178
+    },
+    {
+      "id": 82,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00082.webp",
+      "label": "00082-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 38.7455,
+        "y": 16.085,
+        "z": 3.9744,
+        "mapX": 0.86122,
+        "mapY": 0.6631
+      },
+      "orientation": {
+        "w": 0.693653,
+        "x": -0.046097,
+        "y": 0.067172,
+        "z": 0.715687
+      },
+      "neighbors": [
+        {
+          "id": 85
+        },
+        {
+          "id": 83
+        },
+        {
+          "id": 79
+        },
+        {
+          "id": 81
+        }
+      ],
+      "timestamp": 1751447015.173838
+    },
+    {
+      "id": 83,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00083.webp",
+      "label": "00083-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 38.4285,
+        "y": 18.2703,
+        "z": 3.9039,
+        "mapX": 0.85418,
+        "mapY": 0.61734
+      },
+      "orientation": {
+        "w": 0.752674,
+        "x": 0.024943,
+        "y": -0.022213,
+        "z": 0.657546
+      },
+      "neighbors": [
+        {
+          "id": 93
+        },
+        {
+          "id": 82
+        },
+        {
+          "id": 43
+        },
+        {
+          "id": 84
+        }
+      ],
+      "timestamp": 1751447024.943036
+    },
+    {
+      "id": 84,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00084.webp",
+      "label": "00084-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 41.2925,
+        "y": 18.3695,
+        "z": 3.6959,
+        "mapX": 0.91783,
+        "mapY": 0.61526
+      },
+      "orientation": {
+        "w": 0.87695,
+        "x": 0.004268,
+        "y": -0.029173,
+        "z": -0.479676
+      },
+      "neighbors": [
+        {
+          "id": 85
+        },
+        {
+          "id": 41
+        },
+        {
+          "id": 83
+        },
+        {
+          "id": 39
+        },
+        {
+          "id": 52
+        }
+      ],
+      "timestamp": 1751447039.168715
+    },
+    {
+      "id": 85,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00085.webp",
+      "label": "00085-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 40.8123,
+        "y": 16.2311,
+        "z": 3.7349,
+        "mapX": 0.90716,
+        "mapY": 0.66005
+      },
+      "orientation": {
+        "w": 0.991241,
+        "x": 0.030127,
+        "y": -0.037365,
+        "z": 0.123036
+      },
+      "neighbors": [
+        {
+          "id": 82
+        },
+        {
+          "id": 84
+        },
+        {
+          "id": 42
+        },
+        {
+          "id": 54
+        },
+        {
+          "id": 86
+        }
+      ],
+      "timestamp": 1751447048.58653
+    },
+    {
+      "id": 86,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00086.webp",
+      "label": "00086-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 38.3834,
+        "y": 21.4229,
+        "z": 3.6991,
+        "mapX": 0.85317,
+        "mapY": 0.5513
+      },
+      "orientation": {
+        "w": 0.664285,
+        "x": 0.039145,
+        "y": -0.010902,
+        "z": 0.746374
+      },
+      "neighbors": [
+        {
+          "id": 92
+        },
+        {
+          "id": 38
+        },
+        {
+          "id": 87
+        },
+        {
+          "id": 85
+        }
+      ],
+      "timestamp": 1751447072.198055
+    },
+    {
+      "id": 87,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00087.webp",
+      "label": "00087-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 40.245,
+        "y": 23.3116,
+        "z": 3.7975,
+        "mapX": 0.89455,
+        "mapY": 0.51175
+      },
+      "orientation": {
+        "w": 0.994585,
+        "x": 0.028611,
+        "y": -0.041691,
+        "z": 0.090801
+      },
+      "neighbors": [
+        {
+          "id": 92
+        },
+        {
+          "id": 88
+        },
+        {
+          "id": 86
+        },
+        {
+          "id": 40
+        },
+        {
+          "id": 89
+        }
+      ],
+      "timestamp": 1751447080.922891
+    },
+    {
+      "id": 88,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00088.webp",
+      "label": "00088-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 41.8044,
+        "y": 25.2538,
+        "z": 3.7985,
+        "mapX": 0.92921,
+        "mapY": 0.47107
+      },
+      "orientation": {
+        "w": 0.532564,
+        "x": 0.032075,
+        "y": -0.006715,
+        "z": 0.845755
+      },
+      "neighbors": [
+        {
+          "id": 91
+        },
+        {
+          "id": 87
+        },
+        {
+          "id": 40
+        },
+        {
+          "id": 89
+        },
+        {
+          "id": 53
+        }
+      ],
+      "timestamp": 1751447087.272803
+    },
+    {
+      "id": 89,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00089.webp",
+      "label": "00089-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 38.7177,
+        "y": 25.6339,
+        "z": 3.8133,
+        "mapX": 0.8606,
+        "mapY": 0.46311
+      },
+      "orientation": {
+        "w": 0.266544,
+        "x": 0.023091,
+        "y": 0.025138,
+        "z": 0.963218
+      },
+      "neighbors": [
+        {
+          "id": 90
+        },
+        {
+          "id": 87
+        },
+        {
+          "id": 91
+        },
+        {
+          "id": 88
+        }
+      ],
+      "timestamp": 1751447093.962627
+    },
+    {
+      "id": 90,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00090.webp",
+      "label": "00090-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 38.0963,
+        "y": 27.0782,
+        "z": 3.8676,
+        "mapX": 0.84679,
+        "mapY": 0.43286
+      },
+      "orientation": {
+        "w": 0.972249,
+        "x": 0.029972,
+        "y": -0.037712,
+        "z": 0.228936
+      },
+      "neighbors": [
+        {
+          "id": 89
+        },
+        {
+          "id": 37
+        },
+        {
+          "id": 91
+        },
+        {
+          "id": 33
+        }
+      ],
+      "timestamp": 1751447110.271842
+    },
+    {
+      "id": 91,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00091.webp",
+      "label": "00091-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 40.8835,
+        "y": 27.3903,
+        "z": 3.8637,
+        "mapX": 0.90874,
+        "mapY": 0.42632
+      },
+      "orientation": {
+        "w": 0.685013,
+        "x": 0.024827,
+        "y": 0.019189,
+        "z": 0.727855
+      },
+      "neighbors": [
+        {
+          "id": 88
+        },
+        {
+          "id": 89
+        },
+        {
+          "id": 90
+        },
+        {
+          "id": 53
+        },
+        {
+          "id": 72
+        },
+        {
+          "id": 92
+        }
+      ],
+      "timestamp": 1751447118.382128
+    },
+    {
+      "id": 92,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00092.webp",
+      "label": "00092-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 39.3995,
+        "y": 21.6177,
+        "z": 3.6986,
+        "mapX": 0.87576,
+        "mapY": 0.54722
+      },
+      "orientation": {
+        "w": 0.985323,
+        "x": 0.034869,
+        "y": -0.033189,
+        "z": -0.163771
+      },
+      "neighbors": [
+        {
+          "id": 86
+        },
+        {
+          "id": 87
+        },
+        {
+          "id": 38
+        },
+        {
+          "id": 39
+        },
+        {
+          "id": 93
+        },
+        {
+          "id": 91
+        }
+      ],
+      "timestamp": 1751447155.074472
+    },
+    {
+      "id": 93,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00093.webp",
+      "label": "00093-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 37.3085,
+        "y": 18.2748,
+        "z": 3.3239,
+        "mapX": 0.82928,
+        "mapY": 0.61724
+      },
+      "orientation": {
+        "w": 0.04658,
+        "x": 0.003032,
+        "y": 0.035046,
+        "z": 0.998295
+      },
+      "neighbors": [
+        {
+          "id": 83
+        },
+        {
+          "id": 94
+        },
+        {
+          "id": 43
+        },
+        {
+          "id": 46
+        },
+        {
+          "id": 92
+        }
+      ],
+      "timestamp": 1751447194.895643
+    },
+    {
+      "id": 94,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00094.webp",
+      "label": "00094-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 34.9963,
+        "y": 17.8566,
+        "z": 3.9206,
+        "mapX": 0.77789,
+        "mapY": 0.626
+      },
+      "orientation": {
+        "w": 0.024035,
+        "x": -0.003598,
+        "y": 0.026721,
+        "z": 0.999347
+      },
+      "neighbors": [
+        {
+          "id": 95
+        },
+        {
+          "id": 100
+        },
+        {
+          "id": 81
+        },
+        {
+          "id": 93
+        }
+      ],
+      "timestamp": 1751447205.611487
+    },
+    {
+      "id": 95,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00095.webp",
+      "label": "00095-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 33.3459,
+        "y": 17.2412,
+        "z": 3.5242,
+        "mapX": 0.7412,
+        "mapY": 0.63889
+      },
+      "orientation": {
+        "w": 0.062981,
+        "x": -0.018204,
+        "y": 0.065117,
+        "z": 0.995722
+      },
+      "neighbors": [
+        {
+          "id": 100
+        },
+        {
+          "id": 94
+        },
+        {
+          "id": 96
+        },
+        {
+          "id": 69
+        }
+      ],
+      "timestamp": 1751447222.633164
+    },
+    {
+      "id": 96,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00096.webp",
+      "label": "00096-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 32.5013,
+        "y": 19.2572,
+        "z": 3.494,
+        "mapX": 0.72243,
+        "mapY": 0.59666
+      },
+      "orientation": {
+        "w": 0.725672,
+        "x": 0.032708,
+        "y": -0.030463,
+        "z": 0.686587
+      },
+      "neighbors": [
+        {
+          "id": 100
+        },
+        {
+          "id": 95
+        },
+        {
+          "id": 97
+        }
+      ],
+      "timestamp": 1751447245.250648
+    },
+    {
+      "id": 97,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00097.webp",
+      "label": "00097-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 33.7498,
+        "y": 21.5086,
+        "z": 3.4946,
+        "mapX": 0.75018,
+        "mapY": 0.54951
+      },
+      "orientation": {
+        "w": 0.074746,
+        "x": 0.04319,
+        "y": 0.004067,
+        "z": 0.996259
+      },
+      "neighbors": [
+        {
+          "id": 70
+        },
+        {
+          "id": 98
+        },
+        {
+          "id": 96
+        },
+        {
+          "id": 99
+        }
+      ],
+      "timestamp": 1751447256.40854
+    },
+    {
+      "id": 98,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00098.webp",
+      "label": "00098-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 32.9016,
+        "y": 23.7844,
+        "z": 3.4549,
+        "mapX": 0.73132,
+        "mapY": 0.50184
+      },
+      "orientation": {
+        "w": 0.330534,
+        "x": 0.00285,
+        "y": -0.026578,
+        "z": 0.943415
+      },
+      "neighbors": [
+        {
+          "id": 97
+        },
+        {
+          "id": 99
+        },
+        {
+          "id": 70
+        },
+        {
+          "id": 45
+        }
+      ],
+      "timestamp": 1751447266.810278
+    },
+    {
+      "id": 99,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00099.webp",
+      "label": "00099-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 31.1466,
+        "y": 21.5322,
+        "z": 3.4679,
+        "mapX": 0.69232,
+        "mapY": 0.54902
+      },
+      "orientation": {
+        "w": -0.300301,
+        "x": 0.010975,
+        "y": 0.015125,
+        "z": 0.953661
+      },
+      "neighbors": [
+        {
+          "id": 107
+        },
+        {
+          "id": 103
+        },
+        {
+          "id": 97
+        },
+        {
+          "id": 98
+        },
+        {
+          "id": 70
+        },
+        {
+          "id": 100
+        }
+      ],
+      "timestamp": 1751447279.293046
+    },
+    {
+      "id": 100,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00100.webp",
+      "label": "00100-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 32.6742,
+        "y": 17.8115,
+        "z": 3.4984,
+        "mapX": 0.72627,
+        "mapY": 0.62694
+      },
+      "orientation": {
+        "w": 0.835701,
+        "x": 0.004534,
+        "y": 0.005777,
+        "z": -0.549135
+      },
+      "neighbors": [
+        {
+          "id": 95
+        },
+        {
+          "id": 96
+        },
+        {
+          "id": 94
+        },
+        {
+          "id": 69
+        },
+        {
+          "id": 101
+        },
+        {
+          "id": 99
+        }
+      ],
+      "timestamp": 1751447296.235672
+    },
+    {
+      "id": 101,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00101.webp",
+      "label": "00101-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 30.3776,
+        "y": 16.2408,
+        "z": 3.8256,
+        "mapX": 0.67522,
+        "mapY": 0.65984
+      },
+      "orientation": {
+        "w": 0.688122,
+        "x": 0.062441,
+        "y": 0.00704,
+        "z": 0.722869
+      },
+      "neighbors": [
+        {
+          "id": 76
+        },
+        {
+          "id": 75
+        },
+        {
+          "id": 100
+        },
+        {
+          "id": 102
+        }
+      ],
+      "timestamp": 1751447348.516687
+    },
+    {
+      "id": 102,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00102.webp",
+      "label": "00102-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 27.8858,
+        "y": 18.5484,
+        "z": 3.8186,
+        "mapX": 0.61984,
+        "mapY": 0.61151
+      },
+      "orientation": {
+        "w": 0.485512,
+        "x": 0.014593,
+        "y": 0.013099,
+        "z": 0.87401
+      },
+      "neighbors": [
+        {
+          "id": 103
+        },
+        {
+          "id": 107
+        },
+        {
+          "id": 66
+        },
+        {
+          "id": 101
+        }
+      ],
+      "timestamp": 1751447358.574512
+    },
+    {
+      "id": 103,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00103.webp",
+      "label": "00103-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 29.7079,
+        "y": 19.3964,
+        "z": 3.8395,
+        "mapX": 0.66034,
+        "mapY": 0.59375
+      },
+      "orientation": {
+        "w": 0.593814,
+        "x": 0.02597,
+        "y": -0.008036,
+        "z": 0.804143
+      },
+      "neighbors": [
+        {
+          "id": 107
+        },
+        {
+          "id": 102
+        },
+        {
+          "id": 99
+        },
+        {
+          "id": 65
+        },
+        {
+          "id": 104
+        }
+      ],
+      "timestamp": 1751447377.195139
+    },
+    {
+      "id": 104,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00104.webp",
+      "label": "00104-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 28.5973,
+        "y": 23.8973,
+        "z": 3.8357,
+        "mapX": 0.63565,
+        "mapY": 0.49948
+      },
+      "orientation": {
+        "w": 0.295525,
+        "x": 0.045824,
+        "y": -0.008025,
+        "z": 0.954201
+      },
+      "neighbors": [
+        {
+          "id": 106
+        },
+        {
+          "id": 105
+        },
+        {
+          "id": 107
+        },
+        {
+          "id": 103
+        }
+      ],
+      "timestamp": 1751447387.302961
+    },
+    {
+      "id": 105,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00105.webp",
+      "label": "00105-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 26.1116,
+        "y": 22.4435,
+        "z": 3.834,
+        "mapX": 0.5804,
+        "mapY": 0.52993
+      },
+      "orientation": {
+        "w": 0.650086,
+        "x": 0.044876,
+        "y": -0.004269,
+        "z": 0.758522
+      },
+      "neighbors": [
+        {
+          "id": 104
+        },
+        {
+          "id": 67
+        },
+        {
+          "id": 106
+        }
+      ],
+      "timestamp": 1751447394.336805
+    },
+    {
+      "id": 106,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00106.webp",
+      "label": "00106-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 26.7994,
+        "y": 25.6363,
+        "z": 3.8049,
+        "mapX": 0.59569,
+        "mapY": 0.46306
+      },
+      "orientation": {
+        "w": 0.850479,
+        "x": 0.029275,
+        "y": -0.03171,
+        "z": 0.524236
+      },
+      "neighbors": [
+        {
+          "id": 104
+        },
+        {
+          "id": 25
+        },
+        {
+          "id": 67
+        },
+        {
+          "id": 105
+        },
+        {
+          "id": 27
+        },
+        {
+          "id": 107
+        }
+      ],
+      "timestamp": 1751447408.433558
+    },
+    {
+      "id": 107,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00107.webp",
+      "label": "00107-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 29.0211,
+        "y": 20.7586,
+        "z": 3.8235,
+        "mapX": 0.64507,
+        "mapY": 0.56522
+      },
+      "orientation": {
+        "w": 0.733073,
+        "x": 0.024996,
+        "y": -0.093809,
+        "z": -0.673186
+      },
+      "neighbors": [
+        {
+          "id": 103
+        },
+        {
+          "id": 99
+        },
+        {
+          "id": 102
+        },
+        {
+          "id": 68
+        },
+        {
+          "id": 104
+        },
+        {
+          "id": 106
+        }
+      ],
+      "timestamp": 1751447422.190251
+    },
+    {
+      "id": 108,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00108.webp",
+      "label": "00108-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 28.6896,
+        "y": 30.561,
+        "z": 1.0843,
+        "mapX": 0.6377,
+        "mapY": 0.35991
+      },
+      "orientation": {
+        "w": 0.327434,
+        "x": 0.034641,
+        "y": 0.015578,
+        "z": 0.94411
+      },
+      "neighbors": [
+        {
+          "id": 0
+        },
+        {
+          "id": 24
+        },
+        {
+          "id": 1
+        }
+      ],
+      "timestamp": 1751447506.330606
+    },
+    {
+      "id": 109,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00109.webp",
+      "label": "00109-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 17.9756,
+        "y": 30.9667,
+        "z": 0.7788,
+        "mapX": 0.39955,
+        "mapY": 0.35141
+      },
+      "orientation": {
+        "w": -0.19398,
+        "x": 0.048794,
+        "y": 0.031132,
+        "z": 0.979296
+      },
+      "neighbors": [
+        {
+          "id": 27
+        }
+      ],
+      "timestamp": 1751447530.918171
+    },
+    {
+      "id": 110,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00110.webp",
+      "label": "00110-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 7.2318,
+        "y": 23.5438,
+        "z": 0.7778,
+        "mapX": 0.16075,
+        "mapY": 0.50688
+      },
+      "orientation": {
+        "w": -0.295504,
+        "x": 0.021672,
+        "y": 0.015109,
+        "z": 0.954976
+      },
+      "neighbors": [
+        {
+          "id": 112
+        },
+        {
+          "id": 115
+        },
+        {
+          "id": 118
+        },
+        {
+          "id": 111
+        }
+      ],
+      "timestamp": 1751447551.026886
+    },
+    {
+      "id": 111,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00111.webp",
+      "label": "00111-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 0,
+        "y": 20.9314,
+        "z": 0.844,
+        "mapX": 0,
+        "mapY": 0.5616
+      },
+      "orientation": {
+        "w": -0.225457,
+        "x": 0.03569,
+        "y": 0.009414,
+        "z": 0.973554
+      },
+      "neighbors": [
+        {
+          "id": 114
+        },
+        {
+          "id": 112
+        },
+        {
+          "id": 110
+        }
+      ],
+      "timestamp": 1751447562.145597
+    },
+    {
+      "id": 112,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00112.webp",
+      "label": "00112-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 5.9001,
+        "y": 20.8254,
+        "z": 0.8763,
+        "mapX": 0.13115,
+        "mapY": 0.56382
+      },
+      "orientation": {
+        "w": 0.758268,
+        "x": -0.010005,
+        "y": -0.04322,
+        "z": -0.650431
+      },
+      "neighbors": [
+        {
+          "id": 115
+        },
+        {
+          "id": 110
+        },
+        {
+          "id": 113
+        },
+        {
+          "id": 114
+        },
+        {
+          "id": 111
+        }
+      ],
+      "timestamp": 1751447590.987046
+    },
+    {
+      "id": 113,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00113.webp",
+      "label": "00113-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 7.5907,
+        "y": 16.6208,
+        "z": 0.9163,
+        "mapX": 0.16872,
+        "mapY": 0.65188
+      },
+      "orientation": {
+        "w": -0.40752,
+        "x": 0.003126,
+        "y": 0.027297,
+        "z": 0.912783
+      },
+      "neighbors": [
+        {
+          "id": 117
+        },
+        {
+          "id": 114
+        },
+        {
+          "id": 115
+        },
+        {
+          "id": 116
+        },
+        {
+          "id": 112
+        }
+      ],
+      "timestamp": 1751447598.922885
+    },
+    {
+      "id": 114,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00114.webp",
+      "label": "00114-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 3.5461,
+        "y": 16.2454,
+        "z": 0.906,
+        "mapX": 0.07882,
+        "mapY": 0.65975
+      },
+      "orientation": {
+        "w": 0.564851,
+        "x": 0.043415,
+        "y": -0.007948,
+        "z": 0.824012
+      },
+      "neighbors": [
+        {
+          "id": 113
+        },
+        {
+          "id": 115
+        },
+        {
+          "id": 112
+        },
+        {
+          "id": 111
+        }
+      ],
+      "timestamp": 1751447606.479848
+    },
+    {
+      "id": 115,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00115.webp",
+      "label": "00115-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 6.2407,
+        "y": 20.5102,
+        "z": 0.9536,
+        "mapX": 0.13872,
+        "mapY": 0.57042
+      },
+      "orientation": {
+        "w": 0.991718,
+        "x": 0.061118,
+        "y": -0.112801,
+        "z": -0.006013
+      },
+      "neighbors": [
+        {
+          "id": 112
+        },
+        {
+          "id": 110
+        },
+        {
+          "id": 113
+        },
+        {
+          "id": 116
+        },
+        {
+          "id": 114
+        }
+      ],
+      "timestamp": 1751447620.248489
+    },
+    {
+      "id": 116,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00116.webp",
+      "label": "00116-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 11.053,
+        "y": 19.0373,
+        "z": 0.9047,
+        "mapX": 0.24568,
+        "mapY": 0.60127
+      },
+      "orientation": {
+        "w": 0.777202,
+        "x": -0.002518,
+        "y": -0.036945,
+        "z": -0.628161
+      },
+      "neighbors": [
+        {
+          "id": 113
+        },
+        {
+          "id": 118
+        },
+        {
+          "id": 117
+        },
+        {
+          "id": 115
+        }
+      ],
+      "timestamp": 1751447633.937212
+    },
+    {
+      "id": 117,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00117.webp",
+      "label": "00117-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 9.5062,
+        "y": 14.6365,
+        "z": 0.834,
+        "mapX": 0.2113,
+        "mapY": 0.69344
+      },
+      "orientation": {
+        "w": 0.704188,
+        "x": 0.052356,
+        "y": -0.01382,
+        "z": 0.707946
+      },
+      "neighbors": [
+        {
+          "id": 113
+        },
+        {
+          "id": 116
+        }
+      ],
+      "timestamp": 1751447645.620998
+    },
+    {
+      "id": 118,
+      "image": "/tours/oron/releases/20260819T074836Z/panoramas/00118.webp",
+      "label": "00118-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 12.1361,
+        "y": 23.5638,
+        "z": 0.9055,
+        "mapX": 0.26976,
+        "mapY": 0.50647
+      },
+      "orientation": {
+        "w": 0.661401,
+        "x": -0.031614,
+        "y": -0.033023,
+        "z": -0.748638
+      },
+      "neighbors": [
+        {
+          "id": 116
+        },
+        {
+          "id": 110
+        },
+        {
+          "id": 28
+        }
+      ],
+      "timestamp": 1751447671.823543
+    }
+  ]
+}
