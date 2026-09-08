@@ -1,0 +1,3886 @@
+{
+  "site": {
+    "name": "Trey — Visite exemple",
+    "captured": "26 août 2026",
+    "panoramaCount": 109,
+    "source": "remote-tour",
+    "sourceFolder": "panorama_1740_trey",
+    "poseSource": "pano-poses-registered.csv",
+    "poseConvention": "NavVis local X forward, Y right, Z up; quaternion local-to-dataset",
+    "bounds": {
+      "width": 37.591,
+      "height": 41.195
+    }
+  },
+  "panoramas": [
+    {
+      "id": 0,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00000.webp",
+      "label": "00000-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 13.1918,
+        "y": 33.8775,
+        "z": 573.9285,
+        "mapX": 0.35093,
+        "mapY": 0.17763
+      },
+      "orientation": {
+        "w": 0.57547,
+        "x": -0.04289,
+        "y": -0.045765,
+        "z": -0.815414
+      },
+      "neighbors": [
+        {
+          "id": 2
+        },
+        {
+          "id": 60
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 5
+        }
+      ],
+      "timestamp": 1787744133.600885
+    },
+    {
+      "id": 1,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00001.webp",
+      "label": "00001-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 12.0803,
+        "y": 30.7289,
+        "z": 574.0408,
+        "mapX": 0.32137,
+        "mapY": 0.25406
+      },
+      "orientation": {
+        "w": 0.657738,
+        "x": -0.048212,
+        "y": -0.057592,
+        "z": -0.749493
+      },
+      "neighbors": [
+        {
+          "id": 6
+        },
+        {
+          "id": 0
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 34
+        }
+      ],
+      "timestamp": 1787744141.583789
+    },
+    {
+      "id": 2,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00002.webp",
+      "label": "00002-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 14.4847,
+        "y": 33.353,
+        "z": 573.8714,
+        "mapX": 0.38533,
+        "mapY": 0.19036
+      },
+      "orientation": {
+        "w": 0.996879,
+        "x": 0.020061,
+        "y": -0.033604,
+        "z": -0.068562
+      },
+      "neighbors": [
+        {
+          "id": 0
+        },
+        {
+          "id": 59
+        },
+        {
+          "id": 60
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 5
+        }
+      ],
+      "timestamp": 1787744156.643403
+    },
+    {
+      "id": 3,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00003.webp",
+      "label": "00003-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 18.5175,
+        "y": 33.6959,
+        "z": 573.8543,
+        "mapX": 0.49261,
+        "mapY": 0.18203
+      },
+      "orientation": {
+        "w": -0.228339,
+        "x": 0.051899,
+        "y": 0.040752,
+        "z": 0.971343
+      },
+      "neighbors": [
+        {
+          "id": 59
+        },
+        {
+          "id": 60
+        },
+        {
+          "id": 78
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 4
+        }
+      ],
+      "timestamp": 1787744175.98101
+    },
+    {
+      "id": 4,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00004.webp",
+      "label": "00004-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 14.1161,
+        "y": 40.1456,
+        "z": 573.2544,
+        "mapX": 0.37552,
+        "mapY": 0.02547
+      },
+      "orientation": {
+        "w": 0.492215,
+        "x": 0.04143,
+        "y": -0.028294,
+        "z": 0.869027
+      },
+      "neighbors": [
+        {
+          "id": 7
+        },
+        {
+          "id": 60
+        },
+        {
+          "id": 5
+        },
+        {
+          "id": 3
+        }
+      ],
+      "timestamp": 1787744194.097642
+    },
+    {
+      "id": 5,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00005.webp",
+      "label": "00005-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 10.3779,
+        "y": 36.293,
+        "z": 573.8432,
+        "mapX": 0.27608,
+        "mapY": 0.11899
+      },
+      "orientation": {
+        "w": 0.801443,
+        "x": -0.025234,
+        "y": -0.047075,
+        "z": -0.595681
+      },
+      "neighbors": [
+        {
+          "id": 0
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 4
+        }
+      ],
+      "timestamp": 1787744241.356631
+    },
+    {
+      "id": 6,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00006.webp",
+      "label": "00006-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 8.929,
+        "y": 31.4491,
+        "z": 574.1842,
+        "mapX": 0.23753,
+        "mapY": 0.23658
+      },
+      "orientation": {
+        "w": 0.659767,
+        "x": 0.028477,
+        "y": -0.006274,
+        "z": -0.750904
+      },
+      "neighbors": [
+        {
+          "id": 1
+        },
+        {
+          "id": 34
+        },
+        {
+          "id": 33
+        },
+        {
+          "id": 5
+        },
+        {
+          "id": 62
+        }
+      ],
+      "timestamp": 1787744256.420318
+    },
+    {
+      "id": 7,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00007.webp",
+      "label": "00007-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 15.2115,
+        "y": 41.1948,
+        "z": 573.2303,
+        "mapX": 0.40466,
+        "mapY": 0
+      },
+      "orientation": {
+        "w": 0.970295,
+        "x": 0.014895,
+        "y": -0.033581,
+        "z": -0.239119
+      },
+      "neighbors": [
+        {
+          "id": 4
+        },
+        {
+          "id": 8
+        }
+      ],
+      "timestamp": 1787744323.611849
+    },
+    {
+      "id": 8,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00008.webp",
+      "label": "00008-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 21.5233,
+        "y": 38.4756,
+        "z": 573.1964,
+        "mapX": 0.57257,
+        "mapY": 0.06601
+      },
+      "orientation": {
+        "w": 0.966468,
+        "x": -0.003796,
+        "y": -0.024627,
+        "z": -0.255573
+      },
+      "neighbors": [
+        {
+          "id": 3
+        },
+        {
+          "id": 7
+        },
+        {
+          "id": 9
+        }
+      ],
+      "timestamp": 1787744331.264716
+    },
+    {
+      "id": 9,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00009.webp",
+      "label": "00009-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 27.7461,
+        "y": 34.9943,
+        "z": 573.1006,
+        "mapX": 0.73811,
+        "mapY": 0.15052
+      },
+      "orientation": {
+        "w": 0.972355,
+        "x": 0.001126,
+        "y": -0.03878,
+        "z": -0.230264
+      },
+      "neighbors": [
+        {
+          "id": 53
+        },
+        {
+          "id": 8
+        }
+      ],
+      "timestamp": 1787744339.606497
+    },
+    {
+      "id": 10,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00010.webp",
+      "label": "00010-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 35.2094,
+        "y": 31.3662,
+        "z": 573.0332,
+        "mapX": 0.93665,
+        "mapY": 0.23859
+      },
+      "orientation": {
+        "w": 0.962524,
+        "x": 0.008394,
+        "y": -0.013527,
+        "z": -0.27073
+      },
+      "neighbors": [
+        {
+          "id": 14
+        },
+        {
+          "id": 11
+        }
+      ],
+      "timestamp": 1787744348.640328
+    },
+    {
+      "id": 11,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00011.webp",
+      "label": "00011-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 37.5907,
+        "y": 24.2772,
+        "z": 573.4476,
+        "mapX": 1,
+        "mapY": 0.41067
+      },
+      "orientation": {
+        "w": -0.282146,
+        "x": 0.022089,
+        "y": -0.000931,
+        "z": 0.959117
+      },
+      "neighbors": [
+        {
+          "id": 13
+        },
+        {
+          "id": 14
+        },
+        {
+          "id": 49
+        },
+        {
+          "id": 12
+        },
+        {
+          "id": 10
+        }
+      ],
+      "timestamp": 1787744359.460093
+    },
+    {
+      "id": 12,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00012.webp",
+      "label": "00012-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 37.2942,
+        "y": 20.3747,
+        "z": 574.0266,
+        "mapX": 0.99211,
+        "mapY": 0.50541
+      },
+      "orientation": {
+        "w": 0.058635,
+        "x": 0.034093,
+        "y": 0.031663,
+        "z": 0.997195
+      },
+      "neighbors": [
+        {
+          "id": 13
+        },
+        {
+          "id": 11
+        },
+        {
+          "id": 15
+        }
+      ],
+      "timestamp": 1787744382.457647
+    },
+    {
+      "id": 13,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00013.webp",
+      "label": "00013-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 35.8092,
+        "y": 22.9942,
+        "z": 573.8274,
+        "mapX": 0.95261,
+        "mapY": 0.44182
+      },
+      "orientation": {
+        "w": -0.217462,
+        "x": 0.021925,
+        "y": 0.018849,
+        "z": 0.97564
+      },
+      "neighbors": [
+        {
+          "id": 11
+        },
+        {
+          "id": 49
+        },
+        {
+          "id": 12
+        },
+        {
+          "id": 15
+        },
+        {
+          "id": 14
+        }
+      ],
+      "timestamp": 1787744433.714634
+    },
+    {
+      "id": 14,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00014.webp",
+      "label": "00014-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 35.9688,
+        "y": 26.9077,
+        "z": 573.9745,
+        "mapX": 0.95685,
+        "mapY": 0.34682
+      },
+      "orientation": {
+        "w": 0.830665,
+        "x": 0.005793,
+        "y": -0.016455,
+        "z": 0.556499
+      },
+      "neighbors": [
+        {
+          "id": 49
+        },
+        {
+          "id": 11
+        },
+        {
+          "id": 50
+        },
+        {
+          "id": 13
+        },
+        {
+          "id": 10
+        },
+        {
+          "id": 15
+        }
+      ],
+      "timestamp": 1787744443.383419
+    },
+    {
+      "id": 15,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00015.webp",
+      "label": "00015-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 32.4736,
+        "y": 21.4766,
+        "z": 574.1016,
+        "mapX": 0.86387,
+        "mapY": 0.47866
+      },
+      "orientation": {
+        "w": 0.527419,
+        "x": -0.023048,
+        "y": -0.015055,
+        "z": -0.849159
+      },
+      "neighbors": [
+        {
+          "id": 64
+        },
+        {
+          "id": 13
+        },
+        {
+          "id": 48
+        },
+        {
+          "id": 12
+        },
+        {
+          "id": 16
+        },
+        {
+          "id": 14
+        }
+      ],
+      "timestamp": 1787744457.990085
+    },
+    {
+      "id": 16,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00016.webp",
+      "label": "00016-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 30.3113,
+        "y": 16.54,
+        "z": 574.209,
+        "mapX": 0.80635,
+        "mapY": 0.59849
+      },
+      "orientation": {
+        "w": 0.567825,
+        "x": -0.024208,
+        "y": -0.012927,
+        "z": -0.822691
+      },
+      "neighbors": [
+        {
+          "id": 90
+        },
+        {
+          "id": 18
+        },
+        {
+          "id": 48
+        },
+        {
+          "id": 17
+        },
+        {
+          "id": 15
+        }
+      ],
+      "timestamp": 1787744467.680957
+    },
+    {
+      "id": 17,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00017.webp",
+      "label": "00017-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 34.0935,
+        "y": 14.743,
+        "z": 574.1762,
+        "mapX": 0.90697,
+        "mapY": 0.64211
+      },
+      "orientation": {
+        "w": 0.758933,
+        "x": -0.018687,
+        "y": -0.057694,
+        "z": -0.648338
+      },
+      "neighbors": [
+        {
+          "id": 18
+        },
+        {
+          "id": 16
+        },
+        {
+          "id": 90
+        }
+      ],
+      "timestamp": 1787744476.957749
+    },
+    {
+      "id": 18,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00018.webp",
+      "label": "00018-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 30.7695,
+        "y": 14.3902,
+        "z": 574.2575,
+        "mapX": 0.81854,
+        "mapY": 0.65068
+      },
+      "orientation": {
+        "w": 0.52489,
+        "x": -0.014049,
+        "y": -0.018088,
+        "z": -0.850862
+      },
+      "neighbors": [
+        {
+          "id": 16
+        },
+        {
+          "id": 90
+        },
+        {
+          "id": 17
+        },
+        {
+          "id": 19
+        }
+      ],
+      "timestamp": 1787744532.731683
+    },
+    {
+      "id": 19,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00019.webp",
+      "label": "00019-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 28.5382,
+        "y": 8.2661,
+        "z": 574.3484,
+        "mapX": 0.75918,
+        "mapY": 0.79934
+      },
+      "orientation": {
+        "w": 0.522803,
+        "x": -0.036692,
+        "y": -0.020854,
+        "z": -0.851408
+      },
+      "neighbors": [
+        {
+          "id": 18
+        }
+      ],
+      "timestamp": 1787744542.876387
+    },
+    {
+      "id": 20,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00020.webp",
+      "label": "00020-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 27.0244,
+        "y": 0,
+        "z": 574.4125,
+        "mapX": 0.71891,
+        "mapY": 1
+      },
+      "orientation": {
+        "w": -0.45993,
+        "x": 0.01408,
+        "y": 0.018948,
+        "z": 0.887641
+      },
+      "neighbors": [
+        {
+          "id": 21
+        }
+      ],
+      "timestamp": 1787744557.459056
+    },
+    {
+      "id": 21,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00021.webp",
+      "label": "00021-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 21.5133,
+        "y": 2.445,
+        "z": 574.4985,
+        "mapX": 0.5723,
+        "mapY": 0.94065
+      },
+      "orientation": {
+        "w": 0.698656,
+        "x": 0.034995,
+        "y": -0.026483,
+        "z": 0.714111
+      },
+      "neighbors": [
+        {
+          "id": 22
+        },
+        {
+          "id": 20
+        }
+      ],
+      "timestamp": 1787744604.488157
+    },
+    {
+      "id": 22,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00022.webp",
+      "label": "00022-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 21.1687,
+        "y": 7.9096,
+        "z": 574.5116,
+        "mapX": 0.56314,
+        "mapY": 0.80799
+      },
+      "orientation": {
+        "w": 0.770481,
+        "x": 0.053488,
+        "y": -0.02686,
+        "z": 0.634647
+      },
+      "neighbors": [
+        {
+          "id": 23
+        },
+        {
+          "id": 21
+        }
+      ],
+      "timestamp": 1787744616.702947
+    },
+    {
+      "id": 23,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00023.webp",
+      "label": "00023-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 17.4171,
+        "y": 9.2698,
+        "z": 574.6444,
+        "mapX": 0.46334,
+        "mapY": 0.77498
+      },
+      "orientation": {
+        "w": 0.377454,
+        "x": 0.050127,
+        "y": -0.013168,
+        "z": 0.924577
+      },
+      "neighbors": [
+        {
+          "id": 27
+        },
+        {
+          "id": 24
+        },
+        {
+          "id": 22
+        }
+      ],
+      "timestamp": 1787744635.809499
+    },
+    {
+      "id": 24,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00024.webp",
+      "label": "00024-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 16.4907,
+        "y": 13.1018,
+        "z": 574.586,
+        "mapX": 0.43869,
+        "mapY": 0.68196
+      },
+      "orientation": {
+        "w": 0.709938,
+        "x": 0.040395,
+        "y": -0.03564,
+        "z": 0.702201
+      },
+      "neighbors": [
+        {
+          "id": 25
+        },
+        {
+          "id": 27
+        },
+        {
+          "id": 23
+        }
+      ],
+      "timestamp": 1787744646.717319
+    },
+    {
+      "id": 25,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00025.webp",
+      "label": "00025-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 14.8089,
+        "y": 15.3421,
+        "z": 574.5688,
+        "mapX": 0.39395,
+        "mapY": 0.62757
+      },
+      "orientation": {
+        "w": 0.038291,
+        "x": 0.026675,
+        "y": 0.008835,
+        "z": 0.998871
+      },
+      "neighbors": [
+        {
+          "id": 24
+        },
+        {
+          "id": 26
+        },
+        {
+          "id": 27
+        }
+      ],
+      "timestamp": 1787744660.044105
+    },
+    {
+      "id": 26,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00026.webp",
+      "label": "00026-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 11.9521,
+        "y": 17.1594,
+        "z": 574.692,
+        "mapX": 0.31795,
+        "mapY": 0.58346
+      },
+      "orientation": {
+        "w": 0.089487,
+        "x": 0.042024,
+        "y": 0.027296,
+        "z": 0.994727
+      },
+      "neighbors": [
+        {
+          "id": 25
+        },
+        {
+          "id": 28
+        },
+        {
+          "id": 27
+        }
+      ],
+      "timestamp": 1787744669.368813
+    },
+    {
+      "id": 27,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00027.webp",
+      "label": "00027-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 14.3163,
+        "y": 11.1639,
+        "z": 574.6914,
+        "mapX": 0.38085,
+        "mapY": 0.729
+      },
+      "orientation": {
+        "w": 0.998932,
+        "x": 0.017264,
+        "y": -0.041226,
+        "z": 0.011717
+      },
+      "neighbors": [
+        {
+          "id": 24
+        },
+        {
+          "id": 23
+        },
+        {
+          "id": 25
+        },
+        {
+          "id": 26
+        },
+        {
+          "id": 28
+        }
+      ],
+      "timestamp": 1787744689.576461
+    },
+    {
+      "id": 28,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00028.webp",
+      "label": "00028-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 7.6585,
+        "y": 13.0174,
+        "z": 574.9469,
+        "mapX": 0.20373,
+        "mapY": 0.684
+      },
+      "orientation": {
+        "w": 0.423425,
+        "x": 0.037026,
+        "y": -0.023939,
+        "z": 0.904858
+      },
+      "neighbors": [
+        {
+          "id": 29
+        },
+        {
+          "id": 26
+        },
+        {
+          "id": 27
+        }
+      ],
+      "timestamp": 1787744717.566938
+    },
+    {
+      "id": 29,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00029.webp",
+      "label": "00029-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 2.8549,
+        "y": 15.7091,
+        "z": 575.0418,
+        "mapX": 0.07595,
+        "mapY": 0.61866
+      },
+      "orientation": {
+        "w": 0.258524,
+        "x": 0.059724,
+        "y": -0.008084,
+        "z": 0.964123
+      },
+      "neighbors": [
+        {
+          "id": 30
+        },
+        {
+          "id": 28
+        }
+      ],
+      "timestamp": 1787744726.831744
+    },
+    {
+      "id": 30,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00030.webp",
+      "label": "00030-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 4.4846,
+        "y": 20.3814,
+        "z": 574.8701,
+        "mapX": 0.1193,
+        "mapY": 0.50524
+      },
+      "orientation": {
+        "w": 0.789227,
+        "x": 0.033071,
+        "y": -0.026167,
+        "z": 0.612653
+      },
+      "neighbors": [
+        {
+          "id": 31
+        },
+        {
+          "id": 32
+        },
+        {
+          "id": 29
+        }
+      ],
+      "timestamp": 1787744778.21477
+    },
+    {
+      "id": 31,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00031.webp",
+      "label": "00031-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 1.2531,
+        "y": 21.8327,
+        "z": 574.8112,
+        "mapX": 0.03333,
+        "mapY": 0.47001
+      },
+      "orientation": {
+        "w": -0.48722,
+        "x": 0.036674,
+        "y": 0.042197,
+        "z": 0.871488
+      },
+      "neighbors": [
+        {
+          "id": 63
+        },
+        {
+          "id": 30
+        },
+        {
+          "id": 32
+        }
+      ],
+      "timestamp": 1787744800.334372
+    },
+    {
+      "id": 32,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00032.webp",
+      "label": "00032-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 5.4231,
+        "y": 24.5805,
+        "z": 575.1367,
+        "mapX": 0.14427,
+        "mapY": 0.40331
+      },
+      "orientation": {
+        "w": 0.969395,
+        "x": 0.200463,
+        "y": -0.058029,
+        "z": 0.129307
+      },
+      "neighbors": [
+        {
+          "id": 33
+        },
+        {
+          "id": 30
+        },
+        {
+          "id": 31
+        }
+      ],
+      "timestamp": 1787744824.43093
+    },
+    {
+      "id": 33,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00033.webp",
+      "label": "00033-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 7.1933,
+        "y": 27.2115,
+        "z": 575.0363,
+        "mapX": 0.19136,
+        "mapY": 0.33944
+      },
+      "orientation": {
+        "w": 0.972244,
+        "x": 0.141756,
+        "y": -0.185863,
+        "z": -0.010075
+      },
+      "neighbors": [
+        {
+          "id": 32
+        },
+        {
+          "id": 34
+        },
+        {
+          "id": 6
+        }
+      ],
+      "timestamp": 1787744835.150732
+    },
+    {
+      "id": 34,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00034.webp",
+      "label": "00034-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 10.7153,
+        "y": 27.424,
+        "z": 573.9439,
+        "mapX": 0.28505,
+        "mapY": 0.33429
+      },
+      "orientation": {
+        "w": 0.890222,
+        "x": 0.117508,
+        "y": 0.345249,
+        "z": -0.272946
+      },
+      "neighbors": [
+        {
+          "id": 35
+        },
+        {
+          "id": 36
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 33
+        },
+        {
+          "id": 6
+        }
+      ],
+      "timestamp": 1787744861.802295
+    },
+    {
+      "id": 35,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00035.webp",
+      "label": "00035-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 12.2883,
+        "y": 26.9489,
+        "z": 574.0188,
+        "mapX": 0.3269,
+        "mapY": 0.34582
+      },
+      "orientation": {
+        "w": 0.95532,
+        "x": 0.054871,
+        "y": 0.250728,
+        "z": -0.146591
+      },
+      "neighbors": [
+        {
+          "id": 34
+        },
+        {
+          "id": 36
+        },
+        {
+          "id": 37
+        },
+        {
+          "id": 38
+        }
+      ],
+      "timestamp": 1787744896.817546
+    },
+    {
+      "id": 36,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00036.webp",
+      "label": "00036-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 13.9067,
+        "y": 25.8592,
+        "z": 574.0212,
+        "mapX": 0.36995,
+        "mapY": 0.37227
+      },
+      "orientation": {
+        "w": 0.947025,
+        "x": 0.035492,
+        "y": 0.265838,
+        "z": -0.176673
+      },
+      "neighbors": [
+        {
+          "id": 37
+        },
+        {
+          "id": 35
+        },
+        {
+          "id": 38
+        },
+        {
+          "id": 34
+        }
+      ],
+      "timestamp": 1787744906.530376
+    },
+    {
+      "id": 37,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00037.webp",
+      "label": "00037-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 12.9692,
+        "y": 24.4339,
+        "z": 573.8228,
+        "mapX": 0.34501,
+        "mapY": 0.40687
+      },
+      "orientation": {
+        "w": 0.900429,
+        "x": -0.272522,
+        "y": 0.332174,
+        "z": 0.067967
+      },
+      "neighbors": [
+        {
+          "id": 36
+        },
+        {
+          "id": 38
+        },
+        {
+          "id": 35
+        }
+      ],
+      "timestamp": 1787744923.488057
+    },
+    {
+      "id": 38,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00038.webp",
+      "label": "00038-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 14.0433,
+        "y": 23.1354,
+        "z": 574.5193,
+        "mapX": 0.37358,
+        "mapY": 0.43839
+      },
+      "orientation": {
+        "w": 0.995585,
+        "x": -0.000328,
+        "y": -0.046794,
+        "z": 0.081362
+      },
+      "neighbors": [
+        {
+          "id": 37
+        },
+        {
+          "id": 36
+        },
+        {
+          "id": 35
+        },
+        {
+          "id": 39
+        }
+      ],
+      "timestamp": 1787744946.197719
+    },
+    {
+      "id": 39,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00039.webp",
+      "label": "00039-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 19.543,
+        "y": 21.5352,
+        "z": 574.4279,
+        "mapX": 0.51989,
+        "mapY": 0.47723
+      },
+      "orientation": {
+        "w": 0.602967,
+        "x": -0.00842,
+        "y": 0.005359,
+        "z": 0.797704
+      },
+      "neighbors": [
+        {
+          "id": 42
+        },
+        {
+          "id": 40
+        },
+        {
+          "id": 43
+        },
+        {
+          "id": 93
+        },
+        {
+          "id": 38
+        }
+      ],
+      "timestamp": 1787744977.53512
+    },
+    {
+      "id": 40,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00040.webp",
+      "label": "00040-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 19.4041,
+        "y": 22.6907,
+        "z": 574.1921,
+        "mapX": 0.51619,
+        "mapY": 0.44918
+      },
+      "orientation": {
+        "w": 0.771562,
+        "x": -0.170822,
+        "y": 0.219501,
+        "z": 0.572128
+      },
+      "neighbors": [
+        {
+          "id": 39
+        },
+        {
+          "id": 42
+        },
+        {
+          "id": 43
+        },
+        {
+          "id": 41
+        },
+        {
+          "id": 44
+        }
+      ],
+      "timestamp": 1787745000.25268
+    },
+    {
+      "id": 41,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00041.webp",
+      "label": "00041-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 19.8363,
+        "y": 24.4824,
+        "z": 574.2365,
+        "mapX": 0.52769,
+        "mapY": 0.40569
+      },
+      "orientation": {
+        "w": 0.916281,
+        "x": -0.090185,
+        "y": 0.27082,
+        "z": 0.280983
+      },
+      "neighbors": [
+        {
+          "id": 44
+        },
+        {
+          "id": 40
+        },
+        {
+          "id": 43
+        },
+        {
+          "id": 42
+        }
+      ],
+      "timestamp": 1787745010.214493
+    },
+    {
+      "id": 42,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00042.webp",
+      "label": "00042-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 20.4074,
+        "y": 22.0022,
+        "z": 574.265,
+        "mapX": 0.54288,
+        "mapY": 0.4659
+      },
+      "orientation": {
+        "w": 0.873335,
+        "x": -0.110303,
+        "y": 0.23047,
+        "z": 0.414732
+      },
+      "neighbors": [
+        {
+          "id": 39
+        },
+        {
+          "id": 43
+        },
+        {
+          "id": 40
+        },
+        {
+          "id": 45
+        },
+        {
+          "id": 93
+        },
+        {
+          "id": 41
+        }
+      ],
+      "timestamp": 1787745042.232907
+    },
+    {
+      "id": 43,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00043.webp",
+      "label": "00043-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 21.0234,
+        "y": 22.8902,
+        "z": 574.7681,
+        "mapX": 0.55927,
+        "mapY": 0.44434
+      },
+      "orientation": {
+        "w": 0.814187,
+        "x": -0.028809,
+        "y": 0.068513,
+        "z": 0.575826
+      },
+      "neighbors": [
+        {
+          "id": 42
+        },
+        {
+          "id": 45
+        },
+        {
+          "id": 40
+        },
+        {
+          "id": 39
+        },
+        {
+          "id": 41
+        },
+        {
+          "id": 44
+        }
+      ],
+      "timestamp": 1787745055.785697
+    },
+    {
+      "id": 44,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00044.webp",
+      "label": "00044-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 19.1446,
+        "y": 25.1565,
+        "z": 575.1629,
+        "mapX": 0.50929,
+        "mapY": 0.38933
+      },
+      "orientation": {
+        "w": -0.358766,
+        "x": 0.732127,
+        "y": 0.248826,
+        "z": -0.522841
+      },
+      "neighbors": [
+        {
+          "id": 41
+        },
+        {
+          "id": 40
+        },
+        {
+          "id": 80
+        },
+        {
+          "id": 43
+        },
+        {
+          "id": 45
+        }
+      ],
+      "timestamp": 1787745080.917251
+    },
+    {
+      "id": 45,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00045.webp",
+      "label": "00045-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 22.3929,
+        "y": 22.5114,
+        "z": 574.2365,
+        "mapX": 0.5957,
+        "mapY": 0.45354
+      },
+      "orientation": {
+        "w": 0.805754,
+        "x": -0.051917,
+        "y": 0.03696,
+        "z": 0.588812
+      },
+      "neighbors": [
+        {
+          "id": 43
+        },
+        {
+          "id": 46
+        },
+        {
+          "id": 42
+        },
+        {
+          "id": 44
+        }
+      ],
+      "timestamp": 1787745151.163996
+    },
+    {
+      "id": 46,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00046.webp",
+      "label": "00046-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 23.1904,
+        "y": 21.0645,
+        "z": 574.2795,
+        "mapX": 0.61692,
+        "mapY": 0.48866
+      },
+      "orientation": {
+        "w": 0.951885,
+        "x": -0.0017,
+        "y": -0.017742,
+        "z": -0.305936
+      },
+      "neighbors": [
+        {
+          "id": 92
+        },
+        {
+          "id": 45
+        },
+        {
+          "id": 93
+        },
+        {
+          "id": 47
+        }
+      ],
+      "timestamp": 1787745182.196009
+    },
+    {
+      "id": 47,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00047.webp",
+      "label": "00047-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 26.7768,
+        "y": 19.9539,
+        "z": 574.2765,
+        "mapX": 0.71233,
+        "mapY": 0.51562
+      },
+      "orientation": {
+        "w": 0.996515,
+        "x": 0.029789,
+        "y": 0.077689,
+        "z": -0.005855
+      },
+      "neighbors": [
+        {
+          "id": 91
+        },
+        {
+          "id": 48
+        },
+        {
+          "id": 92
+        },
+        {
+          "id": 46
+        }
+      ],
+      "timestamp": 1787745199.15812
+    },
+    {
+      "id": 48,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00048.webp",
+      "label": "00048-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 29.0454,
+        "y": 19.1903,
+        "z": 574.2394,
+        "mapX": 0.77268,
+        "mapY": 0.53416
+      },
+      "orientation": {
+        "w": 0.936982,
+        "x": -0.023147,
+        "y": 0.046221,
+        "z": 0.345532
+      },
+      "neighbors": [
+        {
+          "id": 91
+        },
+        {
+          "id": 47
+        },
+        {
+          "id": 90
+        },
+        {
+          "id": 16
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 15
+        }
+      ],
+      "timestamp": 1787745238.476429
+    },
+    {
+      "id": 49,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00049.webp",
+      "label": "00049-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 34.06,
+        "y": 25.3443,
+        "z": 573.9682,
+        "mapX": 0.90608,
+        "mapY": 0.38477
+      },
+      "orientation": {
+        "w": 0.268909,
+        "x": 0.042181,
+        "y": 0.012562,
+        "z": 0.962159
+      },
+      "neighbors": [
+        {
+          "id": 50
+        },
+        {
+          "id": 14
+        },
+        {
+          "id": 13
+        },
+        {
+          "id": 11
+        }
+      ],
+      "timestamp": 1787745311.225137
+    },
+    {
+      "id": 50,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00050.webp",
+      "label": "00050-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 32.905,
+        "y": 25.8938,
+        "z": 573.8967,
+        "mapX": 0.87535,
+        "mapY": 0.37143
+      },
+      "orientation": {
+        "w": 0.071686,
+        "x": -0.050525,
+        "y": -0.005864,
+        "z": 0.99613
+      },
+      "neighbors": [
+        {
+          "id": 49
+        },
+        {
+          "id": 51
+        },
+        {
+          "id": 14
+        }
+      ],
+      "timestamp": 1787745320.953973
+    },
+    {
+      "id": 51,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00051.webp",
+      "label": "00051-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 31.2118,
+        "y": 27.0864,
+        "z": 573.9673,
+        "mapX": 0.83031,
+        "mapY": 0.34248
+      },
+      "orientation": {
+        "w": 0.500104,
+        "x": 0.037977,
+        "y": -0.01074,
+        "z": 0.865066
+      },
+      "neighbors": [
+        {
+          "id": 50
+        },
+        {
+          "id": 52
+        },
+        {
+          "id": 82
+        }
+      ],
+      "timestamp": 1787745328.608833
+    },
+    {
+      "id": 52,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00052.webp",
+      "label": "00052-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 29.0677,
+        "y": 27.8115,
+        "z": 573.9768,
+        "mapX": 0.77327,
+        "mapY": 0.32488
+      },
+      "orientation": {
+        "w": 0.247985,
+        "x": 0.006584,
+        "y": 0.010123,
+        "z": 0.968689
+      },
+      "neighbors": [
+        {
+          "id": 51
+        },
+        {
+          "id": 53
+        },
+        {
+          "id": 89
+        }
+      ],
+      "timestamp": 1787745349.659428
+    },
+    {
+      "id": 53,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00053.webp",
+      "label": "00053-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 25.88,
+        "y": 29.0016,
+        "z": 573.982,
+        "mapX": 0.68847,
+        "mapY": 0.29599
+      },
+      "orientation": {
+        "w": 0.22359,
+        "x": 0.034896,
+        "y": -0.004508,
+        "z": 0.974048
+      },
+      "neighbors": [
+        {
+          "id": 56
+        },
+        {
+          "id": 72
+        },
+        {
+          "id": 54
+        },
+        {
+          "id": 52
+        },
+        {
+          "id": 9
+        }
+      ],
+      "timestamp": 1787745357.945311
+    },
+    {
+      "id": 54,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00054.webp",
+      "label": "00054-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 22.7264,
+        "y": 29.4576,
+        "z": 574.0032,
+        "mapX": 0.60457,
+        "mapY": 0.28492
+      },
+      "orientation": {
+        "w": 0.091877,
+        "x": 0.034725,
+        "y": 0.000061,
+        "z": 0.995165
+      },
+      "neighbors": [
+        {
+          "id": 55
+        },
+        {
+          "id": 61
+        },
+        {
+          "id": 57
+        },
+        {
+          "id": 53
+        }
+      ],
+      "timestamp": 1787745366.504239
+    },
+    {
+      "id": 55,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00055.webp",
+      "label": "00055-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 22.0136,
+        "y": 27.7243,
+        "z": 574.0317,
+        "mapX": 0.58561,
+        "mapY": 0.327
+      },
+      "orientation": {
+        "w": 0.757193,
+        "x": -0.012467,
+        "y": -0.035346,
+        "z": -0.652115
+      },
+      "neighbors": [
+        {
+          "id": 54
+        },
+        {
+          "id": 57
+        },
+        {
+          "id": 61
+        },
+        {
+          "id": 79
+        },
+        {
+          "id": 80
+        },
+        {
+          "id": 56
+        }
+      ],
+      "timestamp": 1787745377.050964
+    },
+    {
+      "id": 56,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00056.webp",
+      "label": "00056-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 25.113,
+        "y": 26.2592,
+        "z": 574.197,
+        "mapX": 0.66806,
+        "mapY": 0.36256
+      },
+      "orientation": {
+        "w": -0.185976,
+        "x": 0.041346,
+        "y": 0.010426,
+        "z": 0.981629
+      },
+      "neighbors": [
+        {
+          "id": 66
+        },
+        {
+          "id": 53
+        },
+        {
+          "id": 71
+        },
+        {
+          "id": 55
+        },
+        {
+          "id": 57
+        }
+      ],
+      "timestamp": 1787745390.999789
+    },
+    {
+      "id": 57,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00057.webp",
+      "label": "00057-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 20.0977,
+        "y": 28.8174,
+        "z": 574.0246,
+        "mapX": 0.53465,
+        "mapY": 0.30046
+      },
+      "orientation": {
+        "w": 0.271337,
+        "x": -0.015924,
+        "y": 0.011267,
+        "z": 0.962287
+      },
+      "neighbors": [
+        {
+          "id": 61
+        },
+        {
+          "id": 55
+        },
+        {
+          "id": 54
+        },
+        {
+          "id": 58
+        },
+        {
+          "id": 56
+        }
+      ],
+      "timestamp": 1787745415.327279
+    },
+    {
+      "id": 58,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00058.webp",
+      "label": "00058-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 17.3406,
+        "y": 29.5992,
+        "z": 573.9766,
+        "mapX": 0.4613,
+        "mapY": 0.28148
+      },
+      "orientation": {
+        "w": -0.027369,
+        "x": 0.010306,
+        "y": 0.011857,
+        "z": 0.999502
+      },
+      "neighbors": [
+        {
+          "id": 59
+        },
+        {
+          "id": 57
+        },
+        {
+          "id": 61
+        }
+      ],
+      "timestamp": 1787745426.386108
+    },
+    {
+      "id": 59,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00059.webp",
+      "label": "00059-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 16.4137,
+        "y": 31.9906,
+        "z": 573.9122,
+        "mapX": 0.43664,
+        "mapY": 0.22343
+      },
+      "orientation": {
+        "w": 0.986755,
+        "x": 0.029326,
+        "y": -0.005894,
+        "z": 0.159434
+      },
+      "neighbors": [
+        {
+          "id": 2
+        },
+        {
+          "id": 58
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 60
+        }
+      ],
+      "timestamp": 1787745457.420611
+    },
+    {
+      "id": 60,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00060.webp",
+      "label": "00060-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 15.8124,
+        "y": 35.3898,
+        "z": 573.6487,
+        "mapX": 0.42065,
+        "mapY": 0.14091
+      },
+      "orientation": {
+        "w": 0.559965,
+        "x": 0.009522,
+        "y": -0.005253,
+        "z": -0.828445
+      },
+      "neighbors": [
+        {
+          "id": 2
+        },
+        {
+          "id": 0
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 59
+        },
+        {
+          "id": 4
+        },
+        {
+          "id": 61
+        }
+      ],
+      "timestamp": 1787745474.620279
+    },
+    {
+      "id": 61,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00061.webp",
+      "label": "00061-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 20.8408,
+        "y": 30.55,
+        "z": 573.9944,
+        "mapX": 0.55441,
+        "mapY": 0.2584
+      },
+      "orientation": {
+        "w": 0.93423,
+        "x": -0.015479,
+        "y": 0.042137,
+        "z": 0.353836
+      },
+      "neighbors": [
+        {
+          "id": 57
+        },
+        {
+          "id": 54
+        },
+        {
+          "id": 55
+        },
+        {
+          "id": 58
+        },
+        {
+          "id": 60
+        }
+      ],
+      "timestamp": 1787745506.155737
+    },
+    {
+      "id": 62,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00062.webp",
+      "label": "00062-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 3.2259,
+        "y": 32.183,
+        "z": 574.0695,
+        "mapX": 0.08582,
+        "mapY": 0.21876
+      },
+      "orientation": {
+        "w": -0.478368,
+        "x": 0.013808,
+        "y": -0.000825,
+        "z": 0.878051
+      },
+      "neighbors": [
+        {
+          "id": 6
+        }
+      ],
+      "timestamp": 1787745566.392696
+    },
+    {
+      "id": 63,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00063.webp",
+      "label": "00063-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 0,
+        "y": 24.1325,
+        "z": 574.5367,
+        "mapX": 0,
+        "mapY": 0.41419
+      },
+      "orientation": {
+        "w": 0.523925,
+        "x": -0.011776,
+        "y": -0.016945,
+        "z": -0.851514
+      },
+      "neighbors": [
+        {
+          "id": 31
+        }
+      ],
+      "timestamp": 1787745577.639575
+    },
+    {
+      "id": 64,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00064.webp",
+      "label": "00064-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 31.2034,
+        "y": 21.8099,
+        "z": 574.2079,
+        "mapX": 0.83008,
+        "mapY": 0.47057
+      },
+      "orientation": {
+        "w": 0.244653,
+        "x": 0.066438,
+        "y": -0.014252,
+        "z": 0.967227
+      },
+      "neighbors": [
+        {
+          "id": 15
+        },
+        {
+          "id": 89
+        },
+        {
+          "id": 48
+        },
+        {
+          "id": 65
+        }
+      ],
+      "timestamp": 1787745678.948914
+    },
+    {
+      "id": 65,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00065.webp",
+      "label": "00065-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 27.7008,
+        "y": 23.845,
+        "z": 574.2566,
+        "mapX": 0.73691,
+        "mapY": 0.42116
+      },
+      "orientation": {
+        "w": 0.554701,
+        "x": 0.028416,
+        "y": -0.005207,
+        "z": 0.831548
+      },
+      "neighbors": [
+        {
+          "id": 89
+        },
+        {
+          "id": 66
+        },
+        {
+          "id": 67
+        },
+        {
+          "id": 64
+        }
+      ],
+      "timestamp": 1787745696.85645
+    },
+    {
+      "id": 66,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00066.webp",
+      "label": "00066-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 26.088,
+        "y": 24.6652,
+        "z": 575.3741,
+        "mapX": 0.694,
+        "mapY": 0.40125
+      },
+      "orientation": {
+        "w": 0.6261,
+        "x": 0.002879,
+        "y": -0.002562,
+        "z": -0.779733
+      },
+      "neighbors": [
+        {
+          "id": 67
+        },
+        {
+          "id": 70
+        },
+        {
+          "id": 65
+        },
+        {
+          "id": 56
+        }
+      ],
+      "timestamp": 1787745709.252206
+    },
+    {
+      "id": 67,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00067.webp",
+      "label": "00067-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 27.1634,
+        "y": 23.7117,
+        "z": 576.6453,
+        "mapX": 0.72261,
+        "mapY": 0.4244
+      },
+      "orientation": {
+        "w": 0.894016,
+        "x": 0.000699,
+        "y": 0.019874,
+        "z": 0.447593
+      },
+      "neighbors": [
+        {
+          "id": 85
+        },
+        {
+          "id": 66
+        },
+        {
+          "id": 68
+        },
+        {
+          "id": 83
+        },
+        {
+          "id": 65
+        },
+        {
+          "id": 84
+        }
+      ],
+      "timestamp": 1787745720.536021
+    },
+    {
+      "id": 68,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00068.webp",
+      "label": "00068-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 28.1206,
+        "y": 25.6012,
+        "z": 577.0049,
+        "mapX": 0.74807,
+        "mapY": 0.37853
+      },
+      "orientation": {
+        "w": 0.255864,
+        "x": -0.021659,
+        "y": 0.000832,
+        "z": 0.96647
+      },
+      "neighbors": [
+        {
+          "id": 81
+        },
+        {
+          "id": 83
+        },
+        {
+          "id": 67
+        },
+        {
+          "id": 69
+        },
+        {
+          "id": 88
+        },
+        {
+          "id": 84
+        },
+        {
+          "id": 87
+        }
+      ],
+      "timestamp": 1787745744.656619
+    },
+    {
+      "id": 69,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00069.webp",
+      "label": "00069-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 26.0092,
+        "y": 26.5125,
+        "z": 577.0373,
+        "mapX": 0.69191,
+        "mapY": 0.35641
+      },
+      "orientation": {
+        "w": 0.019821,
+        "x": -0.018456,
+        "y": 0.0107,
+        "z": 0.999576
+      },
+      "neighbors": [
+        {
+          "id": 71
+        },
+        {
+          "id": 70
+        },
+        {
+          "id": 81
+        },
+        {
+          "id": 68
+        },
+        {
+          "id": 72
+        }
+      ],
+      "timestamp": 1787745755.829405
+    },
+    {
+      "id": 70,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00070.webp",
+      "label": "00070-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 24.8574,
+        "y": 25.0801,
+        "z": 577.0145,
+        "mapX": 0.66127,
+        "mapY": 0.39118
+      },
+      "orientation": {
+        "w": 0.764642,
+        "x": 0.065609,
+        "y": 0.010694,
+        "z": -0.641018
+      },
+      "neighbors": [
+        {
+          "id": 85
+        },
+        {
+          "id": 69
+        },
+        {
+          "id": 66
+        },
+        {
+          "id": 71
+        }
+      ],
+      "timestamp": 1787745763.44931
+    },
+    {
+      "id": 71,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00071.webp",
+      "label": "00071-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 25.6278,
+        "y": 27.0806,
+        "z": 576.948,
+        "mapX": 0.68176,
+        "mapY": 0.34262
+      },
+      "orientation": {
+        "w": 0.812716,
+        "x": -0.041966,
+        "y": 0.083531,
+        "z": 0.575112
+      },
+      "neighbors": [
+        {
+          "id": 69
+        },
+        {
+          "id": 72
+        },
+        {
+          "id": 70
+        },
+        {
+          "id": 73
+        },
+        {
+          "id": 56
+        }
+      ],
+      "timestamp": 1787745772.587239
+    },
+    {
+      "id": 72,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00072.webp",
+      "label": "00072-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 25.2526,
+        "y": 28.7624,
+        "z": 577.0174,
+        "mapX": 0.67178,
+        "mapY": 0.3018
+      },
+      "orientation": {
+        "w": -0.077703,
+        "x": -0.059414,
+        "y": -0.017311,
+        "z": 0.995054
+      },
+      "neighbors": [
+        {
+          "id": 73
+        },
+        {
+          "id": 71
+        },
+        {
+          "id": 69
+        },
+        {
+          "id": 53
+        }
+      ],
+      "timestamp": 1787745794.62475
+    },
+    {
+      "id": 73,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00073.webp",
+      "label": "00073-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 24.1265,
+        "y": 28.6907,
+        "z": 576.928,
+        "mapX": 0.64182,
+        "mapY": 0.30354
+      },
+      "orientation": {
+        "w": 0.182899,
+        "x": -0.110694,
+        "y": 0.015592,
+        "z": 0.976756
+      },
+      "neighbors": [
+        {
+          "id": 72
+        },
+        {
+          "id": 71
+        },
+        {
+          "id": 74
+        }
+      ],
+      "timestamp": 1787745800.641789
+    },
+    {
+      "id": 74,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00074.webp",
+      "label": "00074-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 22.2288,
+        "y": 30.0532,
+        "z": 577.0292,
+        "mapX": 0.59134,
+        "mapY": 0.27046
+      },
+      "orientation": {
+        "w": 0.354591,
+        "x": -0.028126,
+        "y": 0.01372,
+        "z": 0.934498
+      },
+      "neighbors": [
+        {
+          "id": 76
+        },
+        {
+          "id": 75
+        },
+        {
+          "id": 79
+        },
+        {
+          "id": 73
+        }
+      ],
+      "timestamp": 1787745808.911526
+    },
+    {
+      "id": 75,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00075.webp",
+      "label": "00075-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 22.6909,
+        "y": 31.9762,
+        "z": 576.9176,
+        "mapX": 0.60363,
+        "mapY": 0.22378
+      },
+      "orientation": {
+        "w": 0.943274,
+        "x": 0.0396,
+        "y": 0.196831,
+        "z": -0.26443
+      },
+      "neighbors": [
+        {
+          "id": 74
+        },
+        {
+          "id": 76
+        },
+        {
+          "id": 77
+        }
+      ],
+      "timestamp": 1787745818.458321
+    },
+    {
+      "id": 76,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00076.webp",
+      "label": "00076-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 21.093,
+        "y": 30.7397,
+        "z": 577.0451,
+        "mapX": 0.56112,
+        "mapY": 0.2538
+      },
+      "orientation": {
+        "w": 0.213429,
+        "x": 0.031237,
+        "y": 0.020935,
+        "z": 0.976235
+      },
+      "neighbors": [
+        {
+          "id": 74
+        },
+        {
+          "id": 77
+        },
+        {
+          "id": 75
+        },
+        {
+          "id": 79
+        },
+        {
+          "id": 78
+        }
+      ],
+      "timestamp": 1787745833.752073
+    },
+    {
+      "id": 77,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00077.webp",
+      "label": "00077-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 19.5836,
+        "y": 31.7893,
+        "z": 576.9586,
+        "mapX": 0.52097,
+        "mapY": 0.22832
+      },
+      "orientation": {
+        "w": 0.222667,
+        "x": -0.006994,
+        "y": 0.00039,
+        "z": 0.974869
+      },
+      "neighbors": [
+        {
+          "id": 76
+        },
+        {
+          "id": 78
+        },
+        {
+          "id": 75
+        }
+      ],
+      "timestamp": 1787745848.087958
+    },
+    {
+      "id": 78,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00078.webp",
+      "label": "00078-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 19.3485,
+        "y": 34.1602,
+        "z": 577.4747,
+        "mapX": 0.51471,
+        "mapY": 0.17076
+      },
+      "orientation": {
+        "w": 0.743634,
+        "x": 0.032114,
+        "y": -0.019786,
+        "z": 0.667522
+      },
+      "neighbors": [
+        {
+          "id": 77
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 76
+        },
+        {
+          "id": 79
+        }
+      ],
+      "timestamp": 1787745865.982542
+    },
+    {
+      "id": 79,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00079.webp",
+      "label": "00079-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 21.4665,
+        "y": 28.0863,
+        "z": 577.0241,
+        "mapX": 0.57106,
+        "mapY": 0.31821
+      },
+      "orientation": {
+        "w": -0.372932,
+        "x": -0.03847,
+        "y": -0.006524,
+        "z": 0.927038
+      },
+      "neighbors": [
+        {
+          "id": 80
+        },
+        {
+          "id": 74
+        },
+        {
+          "id": 76
+        },
+        {
+          "id": 55
+        },
+        {
+          "id": 78
+        }
+      ],
+      "timestamp": 1787745916.202715
+    },
+    {
+      "id": 80,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00080.webp",
+      "label": "00080-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 20.9049,
+        "y": 26.6817,
+        "z": 576.9999,
+        "mapX": 0.55612,
+        "mapY": 0.3523
+      },
+      "orientation": {
+        "w": -0.406356,
+        "x": 0.102939,
+        "y": 0.092677,
+        "z": 0.903155
+      },
+      "neighbors": [
+        {
+          "id": 79
+        },
+        {
+          "id": 44
+        },
+        {
+          "id": 55
+        },
+        {
+          "id": 81
+        }
+      ],
+      "timestamp": 1787745947.655114
+    },
+    {
+      "id": 81,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00081.webp",
+      "label": "00081-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 27.9864,
+        "y": 25.8979,
+        "z": 577.0124,
+        "mapX": 0.7445,
+        "mapY": 0.37133
+      },
+      "orientation": {
+        "w": 0.925438,
+        "x": -0.008255,
+        "y": 0.010228,
+        "z": 0.378671
+      },
+      "neighbors": [
+        {
+          "id": 68
+        },
+        {
+          "id": 83
+        },
+        {
+          "id": 69
+        },
+        {
+          "id": 82
+        },
+        {
+          "id": 87
+        },
+        {
+          "id": 80
+        }
+      ],
+      "timestamp": 1787746004.44315
+    },
+    {
+      "id": 82,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00082.webp",
+      "label": "00082-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 30.8362,
+        "y": 27.1643,
+        "z": 577.02,
+        "mapX": 0.82031,
+        "mapY": 0.34059
+      },
+      "orientation": {
+        "w": 0.891139,
+        "x": 0.02823,
+        "y": -0.03281,
+        "z": 0.451662
+      },
+      "neighbors": [
+        {
+          "id": 83
+        },
+        {
+          "id": 51
+        },
+        {
+          "id": 81
+        }
+      ],
+      "timestamp": 1787746018.28087
+    },
+    {
+      "id": 83,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00083.webp",
+      "label": "00083-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 28.4894,
+        "y": 25.518,
+        "z": 576.9192,
+        "mapX": 0.75789,
+        "mapY": 0.38055
+      },
+      "orientation": {
+        "w": 0.914919,
+        "x": 0.050516,
+        "y": 0.155711,
+        "z": -0.368952
+      },
+      "neighbors": [
+        {
+          "id": 68
+        },
+        {
+          "id": 81
+        },
+        {
+          "id": 67
+        },
+        {
+          "id": 84
+        },
+        {
+          "id": 82
+        },
+        {
+          "id": 89
+        }
+      ],
+      "timestamp": 1787746041.309554
+    },
+    {
+      "id": 84,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00084.webp",
+      "label": "00084-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 29.775,
+        "y": 23.501,
+        "z": 577.0404,
+        "mapX": 0.79208,
+        "mapY": 0.42952
+      },
+      "orientation": {
+        "w": 0.994832,
+        "x": 0.018905,
+        "y": -0.032518,
+        "z": -0.094308
+      },
+      "neighbors": [
+        {
+          "id": 83
+        },
+        {
+          "id": 67
+        },
+        {
+          "id": 68
+        },
+        {
+          "id": 89
+        },
+        {
+          "id": 85
+        }
+      ],
+      "timestamp": 1787746051.612364
+    },
+    {
+      "id": 85,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00085.webp",
+      "label": "00085-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 26.1352,
+        "y": 24.5389,
+        "z": 577.9498,
+        "mapX": 0.69526,
+        "mapY": 0.40432
+      },
+      "orientation": {
+        "w": 0.567929,
+        "x": 0.067848,
+        "y": -0.009015,
+        "z": -0.820227
+      },
+      "neighbors": [
+        {
+          "id": 70
+        },
+        {
+          "id": 67
+        },
+        {
+          "id": 86
+        },
+        {
+          "id": 84
+        }
+      ],
+      "timestamp": 1787746083.684827
+    },
+    {
+      "id": 86,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00086.webp",
+      "label": "00086-pano",
+      "area": "Niveau 2",
+      "floor": 2,
+      "position": {
+        "x": 27.1947,
+        "y": 23.741,
+        "z": 579.2808,
+        "mapX": 0.72344,
+        "mapY": 0.42369
+      },
+      "orientation": {
+        "w": 0.864039,
+        "x": 0.029048,
+        "y": -0.017473,
+        "z": 0.502283
+      },
+      "neighbors": [
+        {
+          "id": 85
+        },
+        {
+          "id": 88
+        },
+        {
+          "id": 105
+        },
+        {
+          "id": 87
+        }
+      ],
+      "timestamp": 1787746094.619631
+    },
+    {
+      "id": 87,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00087.webp",
+      "label": "00087-pano",
+      "area": "Niveau 2",
+      "floor": 2,
+      "position": {
+        "x": 28.4857,
+        "y": 27.8965,
+        "z": 579.6412,
+        "mapX": 0.75779,
+        "mapY": 0.32282
+      },
+      "orientation": {
+        "w": 0.818678,
+        "x": -0.029431,
+        "y": 0.027731,
+        "z": 0.572827
+      },
+      "neighbors": [
+        {
+          "id": 88
+        },
+        {
+          "id": 81
+        },
+        {
+          "id": 68
+        },
+        {
+          "id": 86
+        }
+      ],
+      "timestamp": 1787746121.594205
+    },
+    {
+      "id": 88,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00088.webp",
+      "label": "00088-pano",
+      "area": "Niveau 2",
+      "floor": 2,
+      "position": {
+        "x": 28.1812,
+        "y": 25.5275,
+        "z": 579.5628,
+        "mapX": 0.74969,
+        "mapY": 0.38032
+      },
+      "orientation": {
+        "w": -0.44261,
+        "x": -0.036964,
+        "y": -0.013392,
+        "z": 0.895852
+      },
+      "neighbors": [
+        {
+          "id": 86
+        },
+        {
+          "id": 87
+        },
+        {
+          "id": 68
+        },
+        {
+          "id": 89
+        }
+      ],
+      "timestamp": 1787746154.59957
+    },
+    {
+      "id": 89,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00089.webp",
+      "label": "00089-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 28.9621,
+        "y": 24.3139,
+        "z": 574.2647,
+        "mapX": 0.77046,
+        "mapY": 0.40978
+      },
+      "orientation": {
+        "w": 0.988303,
+        "x": 0.021346,
+        "y": 0.026323,
+        "z": 0.148689
+      },
+      "neighbors": [
+        {
+          "id": 65
+        },
+        {
+          "id": 83
+        },
+        {
+          "id": 84
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 52
+        },
+        {
+          "id": 88
+        },
+        {
+          "id": 90
+        }
+      ],
+      "timestamp": 1787746222.818423
+    },
+    {
+      "id": 90,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00090.webp",
+      "label": "00090-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 29.4463,
+        "y": 16.5802,
+        "z": 574.3579,
+        "mapX": 0.78334,
+        "mapY": 0.59752
+      },
+      "orientation": {
+        "w": -0.44085,
+        "x": -0.024112,
+        "y": -0.021995,
+        "z": 0.896987
+      },
+      "neighbors": [
+        {
+          "id": 16
+        },
+        {
+          "id": 91
+        },
+        {
+          "id": 18
+        },
+        {
+          "id": 48
+        },
+        {
+          "id": 17
+        },
+        {
+          "id": 89
+        }
+      ],
+      "timestamp": 1787746249.229959
+    },
+    {
+      "id": 91,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00091.webp",
+      "label": "00091-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 27.1986,
+        "y": 17.7077,
+        "z": 574.4291,
+        "mapX": 0.72355,
+        "mapY": 0.57015
+      },
+      "orientation": {
+        "w": 0.197123,
+        "x": -0.03673,
+        "y": 0.01578,
+        "z": 0.979563
+      },
+      "neighbors": [
+        {
+          "id": 47
+        },
+        {
+          "id": 48
+        },
+        {
+          "id": 90
+        },
+        {
+          "id": 96
+        },
+        {
+          "id": 92
+        }
+      ],
+      "timestamp": 1787746271.479576
+    },
+    {
+      "id": 92,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00092.webp",
+      "label": "00092-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 23.1817,
+        "y": 19.4339,
+        "z": 574.4518,
+        "mapX": 0.61669,
+        "mapY": 0.52824
+      },
+      "orientation": {
+        "w": 0.244377,
+        "x": -0.046754,
+        "y": 0.021177,
+        "z": 0.968321
+      },
+      "neighbors": [
+        {
+          "id": 46
+        },
+        {
+          "id": 93
+        },
+        {
+          "id": 97
+        },
+        {
+          "id": 47
+        },
+        {
+          "id": 91
+        }
+      ],
+      "timestamp": 1787746282.047425
+    },
+    {
+      "id": 93,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00093.webp",
+      "label": "00093-pano",
+      "area": "Niveau principal",
+      "floor": 0,
+      "position": {
+        "x": 21.2356,
+        "y": 20.5931,
+        "z": 575.5528,
+        "mapX": 0.56492,
+        "mapY": 0.5001
+      },
+      "orientation": {
+        "w": 0.519299,
+        "x": 0.008758,
+        "y": -0.008567,
+        "z": -0.854505
+      },
+      "neighbors": [
+        {
+          "id": 94
+        },
+        {
+          "id": 42
+        },
+        {
+          "id": 39
+        },
+        {
+          "id": 46
+        },
+        {
+          "id": 92
+        }
+      ],
+      "timestamp": 1787746294.6712
+    },
+    {
+      "id": 94,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00094.webp",
+      "label": "00094-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 20.4616,
+        "y": 19.2032,
+        "z": 576.7124,
+        "mapX": 0.54433,
+        "mapY": 0.53384
+      },
+      "orientation": {
+        "w": 0.663732,
+        "x": -0.007334,
+        "y": -0.02924,
+        "z": -0.747363
+      },
+      "neighbors": [
+        {
+          "id": 93
+        },
+        {
+          "id": 95
+        },
+        {
+          "id": 97
+        }
+      ],
+      "timestamp": 1787746305.558008
+    },
+    {
+      "id": 95,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00095.webp",
+      "label": "00095-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 22.2101,
+        "y": 17.6644,
+        "z": 576.8798,
+        "mapX": 0.59084,
+        "mapY": 0.5712
+      },
+      "orientation": {
+        "w": 0.995714,
+        "x": 0.006442,
+        "y": 0.083315,
+        "z": -0.039644
+      },
+      "neighbors": [
+        {
+          "id": 97
+        },
+        {
+          "id": 98
+        },
+        {
+          "id": 94
+        },
+        {
+          "id": 103
+        },
+        {
+          "id": 102
+        },
+        {
+          "id": 96
+        }
+      ],
+      "timestamp": 1787746322.926698
+    },
+    {
+      "id": 96,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00096.webp",
+      "label": "00096-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 26.8582,
+        "y": 16.0972,
+        "z": 576.8312,
+        "mapX": 0.71449,
+        "mapY": 0.60924
+      },
+      "orientation": {
+        "w": 0.976775,
+        "x": 0.003701,
+        "y": -0.042696,
+        "z": -0.209937
+      },
+      "neighbors": [
+        {
+          "id": 91
+        },
+        {
+          "id": 106
+        },
+        {
+          "id": 100
+        },
+        {
+          "id": 97
+        },
+        {
+          "id": 95
+        }
+      ],
+      "timestamp": 1787746341.043395
+    },
+    {
+      "id": 97,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00097.webp",
+      "label": "00097-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 22.8534,
+        "y": 18.5639,
+        "z": 576.8287,
+        "mapX": 0.60795,
+        "mapY": 0.54936
+      },
+      "orientation": {
+        "w": 0.857216,
+        "x": -0.05292,
+        "y": 0.111633,
+        "z": 0.499919
+      },
+      "neighbors": [
+        {
+          "id": 95
+        },
+        {
+          "id": 98
+        },
+        {
+          "id": 108
+        },
+        {
+          "id": 94
+        },
+        {
+          "id": 92
+        },
+        {
+          "id": 96
+        }
+      ],
+      "timestamp": 1787746378.797771
+    },
+    {
+      "id": 98,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00098.webp",
+      "label": "00098-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 23.0151,
+        "y": 19.0081,
+        "z": 578.1697,
+        "mapX": 0.61226,
+        "mapY": 0.53858
+      },
+      "orientation": {
+        "w": 0.995537,
+        "x": 0.010197,
+        "y": -0.011905,
+        "z": 0.093066
+      },
+      "neighbors": [
+        {
+          "id": 108
+        },
+        {
+          "id": 97
+        },
+        {
+          "id": 99
+        },
+        {
+          "id": 95
+        },
+        {
+          "id": 103
+        }
+      ],
+      "timestamp": 1787746398.201528
+    },
+    {
+      "id": 99,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00099.webp",
+      "label": "00099-pano",
+      "area": "Niveau 2",
+      "floor": 2,
+      "position": {
+        "x": 24.02,
+        "y": 19.044,
+        "z": 579.2455,
+        "mapX": 0.63899,
+        "mapY": 0.53771
+      },
+      "orientation": {
+        "w": 0.9814,
+        "x": 0.017993,
+        "y": 0.053614,
+        "z": -0.183455
+      },
+      "neighbors": [
+        {
+          "id": 108
+        },
+        {
+          "id": 98
+        },
+        {
+          "id": 104
+        },
+        {
+          "id": 106
+        },
+        {
+          "id": 100
+        }
+      ],
+      "timestamp": 1787746418.303096
+    },
+    {
+      "id": 100,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00100.webp",
+      "label": "00100-pano",
+      "area": "Niveau 2",
+      "floor": 2,
+      "position": {
+        "x": 24.5602,
+        "y": 16.9316,
+        "z": 579.2097,
+        "mapX": 0.65336,
+        "mapY": 0.58899
+      },
+      "orientation": {
+        "w": 0.689167,
+        "x": 0.008663,
+        "y": 0.020056,
+        "z": -0.724273
+      },
+      "neighbors": [
+        {
+          "id": 103
+        },
+        {
+          "id": 106
+        },
+        {
+          "id": 99
+        },
+        {
+          "id": 96
+        },
+        {
+          "id": 101
+        }
+      ],
+      "timestamp": 1787746427.973937
+    },
+    {
+      "id": 101,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00101.webp",
+      "label": "00101-pano",
+      "area": "Niveau 2",
+      "floor": 2,
+      "position": {
+        "x": 23.0001,
+        "y": 13.5885,
+        "z": 579.2411,
+        "mapX": 0.61186,
+        "mapY": 0.67014
+      },
+      "orientation": {
+        "w": -0.338711,
+        "x": 0.010905,
+        "y": -0.000952,
+        "z": 0.940827
+      },
+      "neighbors": [
+        {
+          "id": 102
+        },
+        {
+          "id": 103
+        },
+        {
+          "id": 100
+        }
+      ],
+      "timestamp": 1787746440.711702
+    },
+    {
+      "id": 102,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00102.webp",
+      "label": "00102-pano",
+      "area": "Niveau 2",
+      "floor": 2,
+      "position": {
+        "x": 20.7922,
+        "y": 14.4553,
+        "z": 579.2199,
+        "mapX": 0.55312,
+        "mapY": 0.6491
+      },
+      "orientation": {
+        "w": 0.274733,
+        "x": 0.049146,
+        "y": -0.010716,
+        "z": 0.960204
+      },
+      "neighbors": [
+        {
+          "id": 101
+        },
+        {
+          "id": 103
+        },
+        {
+          "id": 95
+        }
+      ],
+      "timestamp": 1787746448.116596
+    },
+    {
+      "id": 103,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00103.webp",
+      "label": "00103-pano",
+      "area": "Niveau 2",
+      "floor": 2,
+      "position": {
+        "x": 22.6494,
+        "y": 16.8251,
+        "z": 579.2006,
+        "mapX": 0.60253,
+        "mapY": 0.59157
+      },
+      "orientation": {
+        "w": 0.8215,
+        "x": 0.010977,
+        "y": -0.019593,
+        "z": 0.569766
+      },
+      "neighbors": [
+        {
+          "id": 100
+        },
+        {
+          "id": 98
+        },
+        {
+          "id": 95
+        },
+        {
+          "id": 102
+        },
+        {
+          "id": 101
+        },
+        {
+          "id": 104
+        }
+      ],
+      "timestamp": 1787746456.861908
+    },
+    {
+      "id": 104,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00104.webp",
+      "label": "00104-pano",
+      "area": "Niveau 2",
+      "floor": 2,
+      "position": {
+        "x": 24.3694,
+        "y": 20.7736,
+        "z": 579.2268,
+        "mapX": 0.64828,
+        "mapY": 0.49572
+      },
+      "orientation": {
+        "w": 0.650199,
+        "x": 0.010976,
+        "y": -0.008822,
+        "z": 0.759634
+      },
+      "neighbors": [
+        {
+          "id": 105
+        },
+        {
+          "id": 99
+        },
+        {
+          "id": 108
+        },
+        {
+          "id": 107
+        },
+        {
+          "id": 103
+        }
+      ],
+      "timestamp": 1787746466.754287
+    },
+    {
+      "id": 105,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00105.webp",
+      "label": "00105-pano",
+      "area": "Niveau 2",
+      "floor": 2,
+      "position": {
+        "x": 25.9283,
+        "y": 21.4569,
+        "z": 579.2446,
+        "mapX": 0.68975,
+        "mapY": 0.47914
+      },
+      "orientation": {
+        "w": 0.612149,
+        "x": -0.008812,
+        "y": -0.025029,
+        "z": -0.790297
+      },
+      "neighbors": [
+        {
+          "id": 104
+        },
+        {
+          "id": 107
+        },
+        {
+          "id": 86
+        },
+        {
+          "id": 106
+        }
+      ],
+      "timestamp": 1787746490.556899
+    },
+    {
+      "id": 106,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00106.webp",
+      "label": "00106-pano",
+      "area": "Niveau 2",
+      "floor": 2,
+      "position": {
+        "x": 26.0342,
+        "y": 18.4082,
+        "z": 579.145,
+        "mapX": 0.69257,
+        "mapY": 0.55314
+      },
+      "orientation": {
+        "w": 0.95753,
+        "x": 0.08803,
+        "y": 0.186857,
+        "z": -0.201176
+      },
+      "neighbors": [
+        {
+          "id": 107
+        },
+        {
+          "id": 100
+        },
+        {
+          "id": 99
+        },
+        {
+          "id": 105
+        },
+        {
+          "id": 96
+        }
+      ],
+      "timestamp": 1787746516.738412
+    },
+    {
+      "id": 107,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00107.webp",
+      "label": "00107-pano",
+      "area": "Niveau 2",
+      "floor": 2,
+      "position": {
+        "x": 26.9079,
+        "y": 19.9982,
+        "z": 579.1712,
+        "mapX": 0.71581,
+        "mapY": 0.51454
+      },
+      "orientation": {
+        "w": 0.911987,
+        "x": -0.050667,
+        "y": 0.086914,
+        "z": 0.397692
+      },
+      "neighbors": [
+        {
+          "id": 105
+        },
+        {
+          "id": 106
+        },
+        {
+          "id": 104
+        },
+        {
+          "id": 108
+        }
+      ],
+      "timestamp": 1787746524.032329
+    },
+    {
+      "id": 108,
+      "image": "/tours/trey/releases/20260908T080000Z/panoramas/00108.webp",
+      "label": "00108-pano",
+      "area": "Niveau 1",
+      "floor": 1,
+      "position": {
+        "x": 23.56,
+        "y": 19.1066,
+        "z": 578.6702,
+        "mapX": 0.62675,
+        "mapY": 0.53619
+      },
+      "orientation": {
+        "w": 0.797636,
+        "x": 0.479445,
+        "y": 0.328955,
+        "z": -0.160308
+      },
+      "neighbors": [
+        {
+          "id": 99
+        },
+        {
+          "id": 98
+        },
+        {
+          "id": 104
+        },
+        {
+          "id": 97
+        },
+        {
+          "id": 107
+        }
+      ],
+      "timestamp": 1787746550.20288
+    }
+  ]
+}
